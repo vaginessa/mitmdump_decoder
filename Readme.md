@@ -7,7 +7,7 @@ A helper script for mitmproxy to decode protobuf serialized requests and respons
 It also parses the GetMapObjects responses into a geojson format file that can be viewed using the 'ui'.  The ui is completely clientside, so it should be hostable with any static file server (I use 'http-server').
 
 ## Dependencies
-
+Python 2.7
 Requires mitmproxy, protobuf, geojson, numpy
 
 
