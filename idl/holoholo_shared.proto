@@ -284,6 +284,61 @@ message Rpc {
         INVENTORY_FULL = 4;
       }
     }
+    message StartGymBattleOutProto {
+      enum Result {
+        UNSET = 0;
+        SUCCESS = 1;
+        ERROR_GYM_NOT_FOUND = 2;
+        ERROR_GYM_NEUTRAL = 3;
+        ERROR_GYM_WRONG_TEAM = 4;
+        ERROR_GYM_EMPTY = 5;
+        ERROR_INVALID_DEFENDER = 6;
+        ERROR_TRAINING_INVALID_ATTACKER_COUNT = 7;
+        ERROR_ALL_POKEMON_FAINTED = 8;
+        ERROR_TOO_MANY_BATTLES = 9;
+        ERROR_TOO_MANY_PLAYERS = 10;
+        ERROR_GYM_BATTLE_LOCKOUT = 11;
+        ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 12;
+        ERROR_NOT_IN_RANGE = 13;
+      }
+    }
+    message AttackGymOutProto {
+      enum Result {
+        UNSET = 0;
+        SUCCESS = 1;
+        ERROR_INVALID_ATTACK_ACTIONS = 2;
+        ERROR_NOT_IN_RANGE = 3;
+      }
+    }
+    message BattleActionProto {
+      enum ActionType {
+        UNSET = 0;
+        ATTACK = 1;
+        DODGE = 2;
+        SPECIAL_ATTACK = 3;
+        SWAP_POKEMON = 4;
+        FAINT = 5;
+        PLAYER_JOIN = 6;
+        PLAYER_QUIT = 7;
+        VICTORY = 8;
+        DEFEAT = 9;
+        TIMED_OUT = 10;
+      }
+    }
+    message BattleLogProto {
+      enum BattleType {
+        BATTLE_TYPE_UNSET = 0;
+        NORMAL = 1;
+        TRAINING = 2;
+      }
+      enum State {
+        STATE_UNSET = 0;
+        ACTIVE = 1;
+        VICTORY = 2;
+        DEFEATED = 3;
+        TIMED_OUT = 4;
+      }
+    }
   }
 }
 
@@ -382,6 +437,34 @@ message PokemonFortProto {
     int64 LureExpiryMs = 4;
   }
   Custom_FortLureInfoProto FortLureInfo = 13;
+}
+
+message PlayerPublicProfileProto {
+  string Name = 1;
+  int32 Level = 2;
+  PlayerAvatarProto Avatar = 3;
+}
+
+message PlayerAvatarProto {
+  int32 Avatar = 8;
+  int32 Skin = 2;
+  int32 Hair = 3;
+  int32 Shirt = 4;
+  int32 Pants = 5;
+  int32 Hat = 6;
+  int32 Shoes = 7;
+  int32 Eyes = 9;
+  int32 Backpack = 10;
+}
+
+message GymStateProto {
+  PokemonFortProto FortMapData = 1;
+  repeated GymMembershipProto GymMembership = 2;
+}
+
+message GymMembershipProto {
+  PokemonProto Pokemon = 1;
+  PlayerPublicProfileProto TrainerPublicProfile = 2;
 }
 
 

@@ -13,18 +13,703 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import holoholo_shared_pb2 as holoholo__shared__pb2
 
+from holoholo_shared_pb2 import *
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='gymbattlev2.proto',
   package='Holoholo',
   syntax='proto3',
-  serialized_pb=_b('\n\x11gymbattlev2.proto\x12\x08Holoholob\x06proto3')
-)
+  serialized_pb=_b('\n\x11gymbattlev2.proto\x12\x08Holoholo\x1a\x15holoholo_shared.proto\"\x90\x01\n\x13StartGymBattleProto\x12\r\n\x05GymId\x18\x01 \x01(\t\x12\x1a\n\x12\x41ttackingPokemonId\x18\x02 \x03(\x04\x12\x1a\n\x12\x44\x65\x66\x65ndingPokemonId\x18\x03 \x01(\x04\x12\x18\n\x10PlayerLatDegrees\x18\x04 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x05 \x01(\x01\"\xfa\x01\n\x16StartGymBattleOutProto\x12\x41\n\x06Result\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.StartGymBattleOutProto.Result\x12\x15\n\rBattleStartMs\x18\x02 \x01(\x03\x12\x13\n\x0b\x42\x61ttleEndMs\x18\x03 \x01(\x03\x12\x10\n\x08\x42\x61ttleId\x18\x04 \x01(\t\x12\x32\n\x08\x44\x65\x66\x65nder\x18\x05 \x01(\x0b\x32 .Holoholo.BattleParticipantProto\x12+\n\tBattleLog\x18\x06 \x01(\x0b\x32\x18.Holoholo.BattleLogProto\"\xd5\x01\n\x0e\x41ttackGymProto\x12\r\n\x05GymId\x18\x01 \x01(\t\x12\x10\n\x08\x42\x61ttleId\x18\x02 \x01(\t\x12\x34\n\x0f\x41ttackerActions\x18\x03 \x03(\x0b\x32\x1b.Holoholo.BattleActionProto\x12\x38\n\x13LastRetrievedAction\x18\x04 \x01(\x0b\x32\x1b.Holoholo.BattleActionProto\x12\x18\n\x10PlayerLatDegrees\x18\x05 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x06 \x01(\x01\"\xcc\x03\n\x11\x42\x61ttleActionProto\x12>\n\x04Type\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.BattleActionProto.ActionType\x12\x15\n\rActionStartMs\x18\x02 \x01(\x03\x12\x12\n\nDurationMs\x18\x03 \x01(\x05\x12\x13\n\x0b\x45nergyDelta\x18\x05 \x01(\x05\x12\x15\n\rAttackerIndex\x18\x06 \x01(\x05\x12\x13\n\x0bTargetIndex\x18\x07 \x01(\x05\x12\x17\n\x0f\x41\x63tivePokemonId\x18\x08 \x01(\x04\x12\x36\n\x0cJoinedPlayer\x18\t \x01(\x0b\x32 .Holoholo.BattleParticipantProto\x12\x33\n\rBattleResults\x18\n \x01(\x0b\x32\x1c.Holoholo.BattleResultsProto\x12\x1b\n\x13\x44\x61mageWindowStartMs\x18\x0b \x01(\x03\x12\x19\n\x11\x44\x61mageWindowEndMs\x18\x0c \x01(\x03\x12\x34\n\nQuitPlayer\x18\r \x01(\x0b\x32 .Holoholo.BattleParticipantProto\x12\x17\n\x0fTargetPokemonId\x18\x0e \x01(\x04\"\xee\x01\n\x11\x41ttackGymOutProto\x12<\n\x06Result\x18\x01 \x01(\x0e\x32,.Holoholo.Rpc.Types.AttackGymOutProto.Result\x12+\n\tBattleLog\x18\x02 \x01(\x0b\x32\x18.Holoholo.BattleLogProto\x12\x10\n\x08\x42\x61ttleId\x18\x03 \x01(\t\x12-\n\x0e\x41\x63tiveDefender\x18\x04 \x01(\x0b\x32\x15.Holoholo.PokemonInfo\x12-\n\x0e\x41\x63tiveAttacker\x18\x05 \x01(\x0b\x32\x15.Holoholo.PokemonInfo\"\xe7\x01\n\x16\x42\x61ttleParticipantProto\x12,\n\rActivePokemon\x18\x01 \x01(\x0b\x32\x15.Holoholo.PokemonInfo\x12@\n\x14TrainerPublicProfile\x18\x02 \x01(\x0b\x32\".Holoholo.PlayerPublicProfileProto\x12-\n\x0eReservePokemon\x18\x03 \x03(\x0b\x32\x15.Holoholo.PokemonInfo\x12.\n\x0f\x44\x65\x66\x65\x61tedPokemon\x18\x04 \x03(\x0b\x32\x15.Holoholo.PokemonInfo\"\xfe\x01\n\x0e\x42\x61ttleLogProto\x12\x37\n\x05State\x18\x01 \x01(\x0e\x32(.Holoholo.Rpc.Types.BattleLogProto.State\x12\x41\n\nBattleType\x18\x02 \x01(\x0e\x32-.Holoholo.Rpc.Types.BattleLogProto.BattleType\x12\x10\n\x08ServerMs\x18\x03 \x01(\x03\x12\x32\n\rBattleActions\x18\x04 \x03(\x0b\x32\x1b.Holoholo.BattleActionProto\x12\x15\n\rBattleStartMs\x18\x05 \x01(\x03\x12\x13\n\x0b\x42\x61ttleEndMs\x18\x06 \x01(\x03\"\xc4\x01\n\x12\x42\x61ttleResultsProto\x12)\n\x08GymState\x18\x01 \x01(\x0b\x32\x17.Holoholo.GymStateProto\x12\x33\n\tAttackers\x18\x02 \x03(\x0b\x32 .Holoholo.BattleParticipantProto\x12\x17\n\x0fPlayerXpAwarded\x18\x03 \x03(\x05\x12\x1d\n\x15NextDefenderPokemonId\x18\x04 \x01(\x03\x12\x16\n\x0eGymPointsDelta\x18\x05 \x01(\x05\"d\n\x0bPokemonInfo\x12\'\n\x07Pokemon\x18\x01 \x01(\x0b\x32\x16.Holoholo.PokemonProto\x12\x15\n\rCurrentHealth\x18\x02 \x01(\x05\x12\x15\n\rCurrentEnergy\x18\x03 \x01(\x05P\x00\x62\x06proto3')
+  ,
+  dependencies=[holoholo__shared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
+
+_STARTGYMBATTLEPROTO = _descriptor.Descriptor(
+  name='StartGymBattleProto',
+  full_name='Holoholo.StartGymBattleProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='GymId', full_name='Holoholo.StartGymBattleProto.GymId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='AttackingPokemonId', full_name='Holoholo.StartGymBattleProto.AttackingPokemonId', index=1,
+      number=2, type=4, cpp_type=4, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='DefendingPokemonId', full_name='Holoholo.StartGymBattleProto.DefendingPokemonId', index=2,
+      number=3, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='PlayerLatDegrees', full_name='Holoholo.StartGymBattleProto.PlayerLatDegrees', index=3,
+      number=4, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='PlayerLngDegrees', full_name='Holoholo.StartGymBattleProto.PlayerLngDegrees', index=4,
+      number=5, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=55,
+  serialized_end=199,
+)
+
+
+_STARTGYMBATTLEOUTPROTO = _descriptor.Descriptor(
+  name='StartGymBattleOutProto',
+  full_name='Holoholo.StartGymBattleOutProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Result', full_name='Holoholo.StartGymBattleOutProto.Result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleStartMs', full_name='Holoholo.StartGymBattleOutProto.BattleStartMs', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleEndMs', full_name='Holoholo.StartGymBattleOutProto.BattleEndMs', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleId', full_name='Holoholo.StartGymBattleOutProto.BattleId', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Defender', full_name='Holoholo.StartGymBattleOutProto.Defender', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleLog', full_name='Holoholo.StartGymBattleOutProto.BattleLog', index=5,
+      number=6, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=202,
+  serialized_end=452,
+)
+
+
+_ATTACKGYMPROTO = _descriptor.Descriptor(
+  name='AttackGymProto',
+  full_name='Holoholo.AttackGymProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='GymId', full_name='Holoholo.AttackGymProto.GymId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleId', full_name='Holoholo.AttackGymProto.BattleId', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='AttackerActions', full_name='Holoholo.AttackGymProto.AttackerActions', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='LastRetrievedAction', full_name='Holoholo.AttackGymProto.LastRetrievedAction', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='PlayerLatDegrees', full_name='Holoholo.AttackGymProto.PlayerLatDegrees', index=4,
+      number=5, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='PlayerLngDegrees', full_name='Holoholo.AttackGymProto.PlayerLngDegrees', index=5,
+      number=6, type=1, cpp_type=5, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=455,
+  serialized_end=668,
+)
+
+
+_BATTLEACTIONPROTO = _descriptor.Descriptor(
+  name='BattleActionProto',
+  full_name='Holoholo.BattleActionProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Type', full_name='Holoholo.BattleActionProto.Type', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ActionStartMs', full_name='Holoholo.BattleActionProto.ActionStartMs', index=1,
+      number=2, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='DurationMs', full_name='Holoholo.BattleActionProto.DurationMs', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='EnergyDelta', full_name='Holoholo.BattleActionProto.EnergyDelta', index=3,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='AttackerIndex', full_name='Holoholo.BattleActionProto.AttackerIndex', index=4,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='TargetIndex', full_name='Holoholo.BattleActionProto.TargetIndex', index=5,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ActivePokemonId', full_name='Holoholo.BattleActionProto.ActivePokemonId', index=6,
+      number=8, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='JoinedPlayer', full_name='Holoholo.BattleActionProto.JoinedPlayer', index=7,
+      number=9, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleResults', full_name='Holoholo.BattleActionProto.BattleResults', index=8,
+      number=10, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='DamageWindowStartMs', full_name='Holoholo.BattleActionProto.DamageWindowStartMs', index=9,
+      number=11, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='DamageWindowEndMs', full_name='Holoholo.BattleActionProto.DamageWindowEndMs', index=10,
+      number=12, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='QuitPlayer', full_name='Holoholo.BattleActionProto.QuitPlayer', index=11,
+      number=13, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='TargetPokemonId', full_name='Holoholo.BattleActionProto.TargetPokemonId', index=12,
+      number=14, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=671,
+  serialized_end=1131,
+)
+
+
+_ATTACKGYMOUTPROTO = _descriptor.Descriptor(
+  name='AttackGymOutProto',
+  full_name='Holoholo.AttackGymOutProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Result', full_name='Holoholo.AttackGymOutProto.Result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleLog', full_name='Holoholo.AttackGymOutProto.BattleLog', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleId', full_name='Holoholo.AttackGymOutProto.BattleId', index=2,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ActiveDefender', full_name='Holoholo.AttackGymOutProto.ActiveDefender', index=3,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ActiveAttacker', full_name='Holoholo.AttackGymOutProto.ActiveAttacker', index=4,
+      number=5, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1134,
+  serialized_end=1372,
+)
+
+
+_BATTLEPARTICIPANTPROTO = _descriptor.Descriptor(
+  name='BattleParticipantProto',
+  full_name='Holoholo.BattleParticipantProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='ActivePokemon', full_name='Holoholo.BattleParticipantProto.ActivePokemon', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='TrainerPublicProfile', full_name='Holoholo.BattleParticipantProto.TrainerPublicProfile', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ReservePokemon', full_name='Holoholo.BattleParticipantProto.ReservePokemon', index=2,
+      number=3, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='DefeatedPokemon', full_name='Holoholo.BattleParticipantProto.DefeatedPokemon', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1375,
+  serialized_end=1606,
+)
+
+
+_BATTLELOGPROTO = _descriptor.Descriptor(
+  name='BattleLogProto',
+  full_name='Holoholo.BattleLogProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='State', full_name='Holoholo.BattleLogProto.State', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleType', full_name='Holoholo.BattleLogProto.BattleType', index=1,
+      number=2, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ServerMs', full_name='Holoholo.BattleLogProto.ServerMs', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleActions', full_name='Holoholo.BattleLogProto.BattleActions', index=3,
+      number=4, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleStartMs', full_name='Holoholo.BattleLogProto.BattleStartMs', index=4,
+      number=5, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='BattleEndMs', full_name='Holoholo.BattleLogProto.BattleEndMs', index=5,
+      number=6, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1609,
+  serialized_end=1863,
+)
+
+
+_BATTLERESULTSPROTO = _descriptor.Descriptor(
+  name='BattleResultsProto',
+  full_name='Holoholo.BattleResultsProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='GymState', full_name='Holoholo.BattleResultsProto.GymState', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Attackers', full_name='Holoholo.BattleResultsProto.Attackers', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='PlayerXpAwarded', full_name='Holoholo.BattleResultsProto.PlayerXpAwarded', index=2,
+      number=3, type=5, cpp_type=1, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='NextDefenderPokemonId', full_name='Holoholo.BattleResultsProto.NextDefenderPokemonId', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='GymPointsDelta', full_name='Holoholo.BattleResultsProto.GymPointsDelta', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1866,
+  serialized_end=2062,
+)
+
+
+_POKEMONINFO = _descriptor.Descriptor(
+  name='PokemonInfo',
+  full_name='Holoholo.PokemonInfo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Pokemon', full_name='Holoholo.PokemonInfo.Pokemon', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='CurrentHealth', full_name='Holoholo.PokemonInfo.CurrentHealth', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='CurrentEnergy', full_name='Holoholo.PokemonInfo.CurrentEnergy', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=2064,
+  serialized_end=2164,
+)
+
+_STARTGYMBATTLEOUTPROTO.fields_by_name['Result'].enum_type = holoholo__shared__pb2._RPC_TYPES_STARTGYMBATTLEOUTPROTO_RESULT
+_STARTGYMBATTLEOUTPROTO.fields_by_name['Defender'].message_type = _BATTLEPARTICIPANTPROTO
+_STARTGYMBATTLEOUTPROTO.fields_by_name['BattleLog'].message_type = _BATTLELOGPROTO
+_ATTACKGYMPROTO.fields_by_name['AttackerActions'].message_type = _BATTLEACTIONPROTO
+_ATTACKGYMPROTO.fields_by_name['LastRetrievedAction'].message_type = _BATTLEACTIONPROTO
+_BATTLEACTIONPROTO.fields_by_name['Type'].enum_type = holoholo__shared__pb2._RPC_TYPES_BATTLEACTIONPROTO_ACTIONTYPE
+_BATTLEACTIONPROTO.fields_by_name['JoinedPlayer'].message_type = _BATTLEPARTICIPANTPROTO
+_BATTLEACTIONPROTO.fields_by_name['BattleResults'].message_type = _BATTLERESULTSPROTO
+_BATTLEACTIONPROTO.fields_by_name['QuitPlayer'].message_type = _BATTLEPARTICIPANTPROTO
+_ATTACKGYMOUTPROTO.fields_by_name['Result'].enum_type = holoholo__shared__pb2._RPC_TYPES_ATTACKGYMOUTPROTO_RESULT
+_ATTACKGYMOUTPROTO.fields_by_name['BattleLog'].message_type = _BATTLELOGPROTO
+_ATTACKGYMOUTPROTO.fields_by_name['ActiveDefender'].message_type = _POKEMONINFO
+_ATTACKGYMOUTPROTO.fields_by_name['ActiveAttacker'].message_type = _POKEMONINFO
+_BATTLEPARTICIPANTPROTO.fields_by_name['ActivePokemon'].message_type = _POKEMONINFO
+_BATTLEPARTICIPANTPROTO.fields_by_name['TrainerPublicProfile'].message_type = holoholo__shared__pb2._PLAYERPUBLICPROFILEPROTO
+_BATTLEPARTICIPANTPROTO.fields_by_name['ReservePokemon'].message_type = _POKEMONINFO
+_BATTLEPARTICIPANTPROTO.fields_by_name['DefeatedPokemon'].message_type = _POKEMONINFO
+_BATTLELOGPROTO.fields_by_name['State'].enum_type = holoholo__shared__pb2._RPC_TYPES_BATTLELOGPROTO_STATE
+_BATTLELOGPROTO.fields_by_name['BattleType'].enum_type = holoholo__shared__pb2._RPC_TYPES_BATTLELOGPROTO_BATTLETYPE
+_BATTLELOGPROTO.fields_by_name['BattleActions'].message_type = _BATTLEACTIONPROTO
+_BATTLERESULTSPROTO.fields_by_name['GymState'].message_type = holoholo__shared__pb2._GYMSTATEPROTO
+_BATTLERESULTSPROTO.fields_by_name['Attackers'].message_type = _BATTLEPARTICIPANTPROTO
+_POKEMONINFO.fields_by_name['Pokemon'].message_type = holoholo__shared__pb2._POKEMONPROTO
+DESCRIPTOR.message_types_by_name['StartGymBattleProto'] = _STARTGYMBATTLEPROTO
+DESCRIPTOR.message_types_by_name['StartGymBattleOutProto'] = _STARTGYMBATTLEOUTPROTO
+DESCRIPTOR.message_types_by_name['AttackGymProto'] = _ATTACKGYMPROTO
+DESCRIPTOR.message_types_by_name['BattleActionProto'] = _BATTLEACTIONPROTO
+DESCRIPTOR.message_types_by_name['AttackGymOutProto'] = _ATTACKGYMOUTPROTO
+DESCRIPTOR.message_types_by_name['BattleParticipantProto'] = _BATTLEPARTICIPANTPROTO
+DESCRIPTOR.message_types_by_name['BattleLogProto'] = _BATTLELOGPROTO
+DESCRIPTOR.message_types_by_name['BattleResultsProto'] = _BATTLERESULTSPROTO
+DESCRIPTOR.message_types_by_name['PokemonInfo'] = _POKEMONINFO
+
+StartGymBattleProto = _reflection.GeneratedProtocolMessageType('StartGymBattleProto', (_message.Message,), dict(
+  DESCRIPTOR = _STARTGYMBATTLEPROTO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.StartGymBattleProto)
+  ))
+_sym_db.RegisterMessage(StartGymBattleProto)
+
+StartGymBattleOutProto = _reflection.GeneratedProtocolMessageType('StartGymBattleOutProto', (_message.Message,), dict(
+  DESCRIPTOR = _STARTGYMBATTLEOUTPROTO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.StartGymBattleOutProto)
+  ))
+_sym_db.RegisterMessage(StartGymBattleOutProto)
+
+AttackGymProto = _reflection.GeneratedProtocolMessageType('AttackGymProto', (_message.Message,), dict(
+  DESCRIPTOR = _ATTACKGYMPROTO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.AttackGymProto)
+  ))
+_sym_db.RegisterMessage(AttackGymProto)
+
+BattleActionProto = _reflection.GeneratedProtocolMessageType('BattleActionProto', (_message.Message,), dict(
+  DESCRIPTOR = _BATTLEACTIONPROTO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.BattleActionProto)
+  ))
+_sym_db.RegisterMessage(BattleActionProto)
+
+AttackGymOutProto = _reflection.GeneratedProtocolMessageType('AttackGymOutProto', (_message.Message,), dict(
+  DESCRIPTOR = _ATTACKGYMOUTPROTO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.AttackGymOutProto)
+  ))
+_sym_db.RegisterMessage(AttackGymOutProto)
+
+BattleParticipantProto = _reflection.GeneratedProtocolMessageType('BattleParticipantProto', (_message.Message,), dict(
+  DESCRIPTOR = _BATTLEPARTICIPANTPROTO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.BattleParticipantProto)
+  ))
+_sym_db.RegisterMessage(BattleParticipantProto)
+
+BattleLogProto = _reflection.GeneratedProtocolMessageType('BattleLogProto', (_message.Message,), dict(
+  DESCRIPTOR = _BATTLELOGPROTO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.BattleLogProto)
+  ))
+_sym_db.RegisterMessage(BattleLogProto)
+
+BattleResultsProto = _reflection.GeneratedProtocolMessageType('BattleResultsProto', (_message.Message,), dict(
+  DESCRIPTOR = _BATTLERESULTSPROTO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.BattleResultsProto)
+  ))
+_sym_db.RegisterMessage(BattleResultsProto)
+
+PokemonInfo = _reflection.GeneratedProtocolMessageType('PokemonInfo', (_message.Message,), dict(
+  DESCRIPTOR = _POKEMONINFO,
+  __module__ = 'gymbattlev2_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.PokemonInfo)
+  ))
+_sym_db.RegisterMessage(PokemonInfo)
 
 
 # @@protoc_insertion_point(module_scope)

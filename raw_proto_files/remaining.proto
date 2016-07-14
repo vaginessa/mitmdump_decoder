@@ -487,54 +487,7 @@ message AttackGymProto {
   double PlayerLatDegrees = 5;
   double PlayerLngDegrees = 6;
 }
-message BattleActionProto {
-  Rpc.ActionType.Types.BattleActionProto.ActionType Type = 1;
-  int64 ActionStartMs = 2;
-  int32 DurationMs = 3;
-  int32 EnergyDelta = 5;
-  int32 AttackerIndex = 6;
-  int32 TargetIndex = 7;
-  uint64 ActivePokemonId = 8;
-  Holoholo.Rpc.BattleParticipantProto JoinedPlayer = 9;
-  Holoholo.Rpc.BattleResultsProto BattleResults = 10;
-  int64 DamageWindowStartMs = 11;
-  int64 DamageWindowEndMs = 12;
-  Holoholo.Rpc.BattleParticipantProto QuitPlayer = 13;
-  uint64 TargetPokemonId = 14;
-}
-message AttackGymOutProto {
-  Rpc.Result.Types.AttackGymOutProto.Result Result = 1;
-  Holoholo.Rpc.BattleLogProto BattleLog = 2;
-  string BattleId = 3;
-  Holoholo.Rpc.PokemonInfo ActiveDefender = 4;
-  Holoholo.Rpc.PokemonInfo ActiveAttacker = 5;
-}
-message BattleParticipantProto {
-  Holoholo.Rpc.PokemonInfo ActivePokemon = 1;
-  Holoholo.Rpc.PlayerPublicProfileProto TrainerPublicProfile = 2;
-  repeated Holoholo.Rpc.PokemonInfo ReservePokemon = 3;
-  repeated Holoholo.Rpc.PokemonInfo DefeatedPokemon = 4;
-}
-message PokemonInfo {
-  Holoholo.Rpc.PokemonProto Pokemon = 1;
-  int32 CurrentHealth = 2;
-  int32 CurrentEnergy = 3;
-}
-message BattleResultsProto {
-  Holoholo.Rpc.GymStateProto GymState = 1;
-  repeated Holoholo.Rpc.BattleParticipantProto Attackers = 2;
-  repeated int32 PlayerXpAwarded = 3;
-  int64 NextDefenderPokemonId = 4;
-  int32 GymPointsDelta = 5;
-}
-message BattleLogProto {
-  Rpc.State.Types.BattleLogProto.State State = 1;
-  Rpc.BattleType.Types.BattleLogProto.BattleType BattleType = 2;
-  int64 ServerMs = 3;
-  repeated Holoholo.Rpc.BattleActionProto BattleActions = 4;
-  int64 BattleStartMs = 5;
-  int64 BattleEndMs = 6;
-}
+
 message HoloInventoryItemProto {
   PokemonProto Pokemon = 1;
   ItemProto Item = 2;

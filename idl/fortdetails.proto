@@ -76,31 +76,4 @@ message GetGymDetailsOutProto {
   string Description = 5;
 }
 
-message GymStateProto {
-  PokemonFortProto FortMapData = 1;
-  repeated GymMembershipProto GymMembership = 2;
-}
-
-message GymMembershipProto {
-  PokemonProto Pokemon = 1;
-  PlayerPublicProfileProto TrainerPublicProfile = 2;
-}
-
-message PlayerPublicProfileProto {
-  string Name = 1;
-  int32 Level = 2;
-  PlayerAvatarProto Avatar = 3;
-}
-
-message PlayerAvatarProto {
-  int32 Avatar = 8;
-  int32 Skin = 2;
-  int32 Hair = 3;
-  int32 Shirt = 4;
-  int32 Pants = 5;
-  int32 Hat = 6;
-  int32 Shoes = 7;
-  int32 Eyes = 9;
-  int32 Backpack = 10;
-}
 
