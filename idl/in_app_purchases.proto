@@ -18,3 +18,12 @@ message IapItemDisplayProto {
   repeated int32 Counts = 5;
 }
 
+message IapSettingsProto {
+  int32 DailyBonusCoins = 1;
+  repeated int32 DailyDefenderBonusPerPokemon = 2;
+  int32 DailyDefenderBonusMaxDefenders = 3;
+  repeated string DailyDefenderBonusCurrency = 4;
+  int64 MinTimeBetweenClaimsMs = 5;
+  bool DailyBonusEnabled = 6;
+  bool DailyDefenderBonusEnabled = 7;
+}

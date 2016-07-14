@@ -406,15 +406,6 @@ message EncounterSettingsProto {
   float NiceThrowThreshold = 4;
   int32 MilestoneThreshold = 5;
 }
-message IapSettingsProto {
-  int32 DailyBonusCoins = 1;
-  repeated int32 DailyDefenderBonusPerPokemon = 2;
-  int32 DailyDefenderBonusMaxDefenders = 3;
-  repeated string DailyDefenderBonusCurrency = 4;
-  int64 MinTimeBetweenClaimsMs = 5;
-  bool DailyBonusEnabled = 6;
-  bool DailyDefenderBonusEnabled = 7;
-}
 message PokemonUpgradeSettingsProto {
   int32 UpgradesPerLevel = 1;
   int32 AllowedLevelsAbovePlayer = 2;
@@ -464,113 +455,7 @@ message GetRemoteConfigVersionsOutProto {
   uint64 AssetDigestTimestamp = 3;
 }
 
-message StartGymBattleProto {
-  string GymId = 1;
-  repeated uint64 AttackingPokemonId = 2;
-  uint64 DefendingPokemonId = 3;
-  double PlayerLatDegrees = 4;
-  double PlayerLngDegrees = 5;
-}
-message StartGymBattleOutProto {
-  Rpc.Result.Types.StartGymBattleOutProto.Result Result = 1;
-  int64 BattleStartMs = 2;
-  int64 BattleEndMs = 3;
-  string BattleId = 4;
-  Holoholo.Rpc.BattleParticipantProto Defender = 5;
-  Holoholo.Rpc.BattleLogProto BattleLog = 6;
-}
-message AttackGymProto {
-  string GymId = 1;
-  string BattleId = 2;
-  repeated Holoholo.Rpc.BattleActionProto AttackerActions = 3;
-  Holoholo.Rpc.BattleActionProto LastRetrievedAction = 4;
-  double PlayerLatDegrees = 5;
-  double PlayerLngDegrees = 6;
-}
 
-message HoloInventoryItemProto {
-  PokemonProto Pokemon = 1;
-  ItemProto Item = 2;
-  Holoholo.Rpc.PokedexEntryProto PokedexEntry = 3;
-  Holoholo.Rpc.PlayerStatsProto PlayerStats = 4;
-  Holoholo.Rpc.PlayerCurrencyProto PlayerCurrency = 5;
-  Holoholo.Rpc.PlayerCameraProto PlayerCamera = 6;
-  Holoholo.Rpc.InventoryUpgradesProto InventoryUpgrades = 7;
-  Holoholo.Rpc.AppliedItemsProto AppliedItems = 8;
-  Holoholo.Rpc.EggIncubatorsProto EggIncubators = 9;
-  Holoholo.Rpc.PokemonFamilyProto PokemonFamily = 10;
-}
-message PokedexEntryProto {
-  int32 PokedexEntryNumber = 1;
-  int32 TimesEncountered = 2;
-  int32 TimesCaptured = 3;
-  int32 EvolutionStonePieces = 4;
-  int32 EvolutionStones = 5;
-}
-message PlayerStatsProto {
-  int32 Level = 1;
-  int64 Experience = 2;
-  int64 PrevLevelExp = 3;
-  int64 NextLevelExp = 4;
-  float KmWalked = 5;
-  int32 NumPokemonEncountered = 6;
-  int32 NumUniquePokedexEntries = 7;
-  int32 NumPokemonCaptured = 8;
-  int32 NumEvolutions = 9;
-  int32 PokeStopVisits = 10;
-  int32 NumberOfPokeballThrown = 11;
-  int32 NumEggsHatched = 12;
-  int32 BigMagikarpCaught = 13;
-  int32 NumBattleAttackWon = 14;
-  int32 NumBattleAttackTotal = 15;
-  int32 NumBattleDefendedWon = 16;
-  int32 NumBattleTrainingWon = 17;
-  int32 NumBattleTrainingTotal = 18;
-  int32 PrestigeRaisedTotal = 19;
-  int32 PrestigeDroppedTotal = 20;
-  int32 NumPokemonDeployed = 21;
-  repeated int32 NumPokemonCaughtByType = 22;
-  int32 SmallRattataCaught = 23;
-}
-message PlayerCurrencyProto {
-  int32 Gems = 1;
-}
-message PlayerCameraProto {
-  bool DefaultCamera = 1;
-}
-message InventoryUpgradesProto {
-  repeated Holoholo.Rpc.InventoryUpgradeProto InventoryUpgrade = 1;
-}
-message InventoryUpgradeProto {
-  Rpc.Item Item = 1;
-  Rpc.InventoryUpgradeType UpgradeType = 2;
-  int32 AdditionalStorage = 3;
-}
-message EggIncubatorsProto {
-  repeated Holoholo.Rpc.EggIncubatorProto EggIncubator = 1;
-}
-message EggIncubatorProto {
-  string ItemId = 1;
-  Rpc.Item Item = 2;
-  Rpc.EggIncubatorType IncubatorType = 3;
-  int32 UsesRemaining = 4;
-  int64 PokemonId = 5;
-  double StartKmWalked = 6;
-  double TargetKmWalked = 7;
-}
-message AppliedItemsProto {
-  repeated Holoholo.Rpc.AppliedItemProto Item = 4;
-}
-message AppliedItemProto {
-  Rpc.Item Item = 1;
-  Rpc.HoloItemType ItemType = 2;
-  int64 ExpirationMs = 3;
-  int64 AppliedMs = 4;
-}
-message PokemonFamilyProto {
-  Rpc.HoloPokemonFamilyId FamilyId = 1;
-  int32 Candy = 2;
-}
 message ActionLogEntry {
   int64 TimestampMs = 1;
   bool Sfida = 2;
