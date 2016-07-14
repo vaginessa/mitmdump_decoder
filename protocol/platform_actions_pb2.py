@@ -13,18 +13,107 @@ from google.protobuf import descriptor_pb2
 _sym_db = _symbol_database.Default()
 
 
+import holoholo_shared_pb2 as holoholo__shared__pb2
 
+from holoholo_shared_pb2 import *
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='platform_actions.proto',
   package='Holoholo.Rpc',
   syntax='proto3',
-  serialized_pb=_b('\n\x16platform_actions.proto\x12\x0cHoloholo.Rpcb\x06proto3')
-)
+  serialized_pb=_b('\n\x16platform_actions.proto\x12\x0cHoloholo.Rpc\x1a\x15holoholo_shared.proto\";\n\x14NicknamePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\x12\x10\n\x08Nickname\x18\x02 \x01(\t\"]\n\x17NicknamePokemonOutProto\x12\x42\n\x06Result\x18\x01 \x01(\x0e\x32\x32.Holoholo.Rpc.Types.NicknamePokemonOutProto.ResultP\x00\x62\x06proto3')
+  ,
+  dependencies=[holoholo__shared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
+
+_NICKNAMEPOKEMONPROTO = _descriptor.Descriptor(
+  name='NicknamePokemonProto',
+  full_name='Holoholo.Rpc.NicknamePokemonProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='PokemonId', full_name='Holoholo.Rpc.NicknamePokemonProto.PokemonId', index=0,
+      number=1, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Nickname', full_name='Holoholo.Rpc.NicknamePokemonProto.Nickname', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=63,
+  serialized_end=122,
+)
+
+
+_NICKNAMEPOKEMONOUTPROTO = _descriptor.Descriptor(
+  name='NicknamePokemonOutProto',
+  full_name='Holoholo.Rpc.NicknamePokemonOutProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Result', full_name='Holoholo.Rpc.NicknamePokemonOutProto.Result', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=124,
+  serialized_end=217,
+)
+
+_NICKNAMEPOKEMONOUTPROTO.fields_by_name['Result'].enum_type = holoholo__shared__pb2._TYPES_NICKNAMEPOKEMONOUTPROTO_RESULT
+DESCRIPTOR.message_types_by_name['NicknamePokemonProto'] = _NICKNAMEPOKEMONPROTO
+DESCRIPTOR.message_types_by_name['NicknamePokemonOutProto'] = _NICKNAMEPOKEMONOUTPROTO
+
+NicknamePokemonProto = _reflection.GeneratedProtocolMessageType('NicknamePokemonProto', (_message.Message,), dict(
+  DESCRIPTOR = _NICKNAMEPOKEMONPROTO,
+  __module__ = 'platform_actions_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.NicknamePokemonProto)
+  ))
+_sym_db.RegisterMessage(NicknamePokemonProto)
+
+NicknamePokemonOutProto = _reflection.GeneratedProtocolMessageType('NicknamePokemonOutProto', (_message.Message,), dict(
+  DESCRIPTOR = _NICKNAMEPOKEMONOUTPROTO,
+  __module__ = 'platform_actions_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.NicknamePokemonOutProto)
+  ))
+_sym_db.RegisterMessage(NicknamePokemonOutProto)
 
 
 # @@protoc_insertion_point(module_scope)

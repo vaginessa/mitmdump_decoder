@@ -338,6 +338,15 @@ message Types {
       TIMED_OUT = 4;
     }
   }
+  message NicknamePokemonOutProto {
+    enum Result {
+      UNSET = 0;
+      SUCCESS = 1;
+      ERROR_INVALID_NICKNAME = 2;
+      ERROR_POKEMON_NOT_FOUND = 3;
+      ERROR_POKEMON_IS_EGG = 4;
+    }
+  }
 }
 
 message PokemonProto {

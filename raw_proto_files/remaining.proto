@@ -577,13 +577,6 @@ message ReleasePokemonOutProto {
   Rpc.Status.Types.ReleasePokemonOutProto.Status Status = 1;
   int32 CandyAwarded = 2;
 }
-message NicknamePokemonProto {
-  uint64 PokemonId = 1;
-  string Nickname = 2;
-}
-message NicknamePokemonOutProto {
-  Rpc.Result.Types.NicknamePokemonOutProto.Result Result = 1;
-}
 message DebugDeletePlayerProto {
 }
 message DebugDeletePlayerOutProto {
