@@ -20,16 +20,16 @@ from holoholo_shared_pb2 import *
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='map.proto',
-  package='Holoholo',
+  package='Holoholo.Rpc',
   syntax='proto3',
-  serialized_pb=_b('\n\tmap.proto\x12\x08Holoholo\x1a\x15holoholo_shared.proto\"_\n\x12GetMapObjectsProto\x12\x0e\n\x06\x43\x65llId\x18\x01 \x03(\x04\x12\x13\n\x0bSinceTimeMs\x18\x02 \x03(\x03\x12\x11\n\tPlayerLat\x18\x03 \x01(\x01\x12\x11\n\tPlayerLng\x18\x04 \x01(\x01\"}\n\x15GetMapObjectsOutProto\x12-\n\x07MapCell\x18\x01 \x03(\x0b\x32\x1c.Holoholo.ClientMapCellProto\x12\x35\n\x06Status\x18\x02 \x01(\x0e\x32%.Holoholo.GetMapObjectsOutProtoStatus\"\xda\x03\n\x12\x43lientMapCellProto\x12\x10\n\x08S2CellId\x18\x01 \x01(\x04\x12\x12\n\nAsOfTimeMs\x18\x02 \x01(\x03\x12(\n\x04\x46ort\x18\x03 \x03(\x0b\x32\x1a.Holoholo.PokemonFortProto\x12\x33\n\nSpawnPoint\x18\x04 \x03(\x0b\x32\x1f.Holoholo.ClientSpawnPointProto\x12\x15\n\rDeletedObject\x18\x06 \x03(\t\x12\x17\n\x0fIsTruncatedList\x18\x07 \x01(\x08\x12\x36\n\x0b\x46ortSummary\x18\x08 \x03(\x0b\x32!.Holoholo.PokemonSummaryFortProto\x12<\n\x13\x44\x65\x63imatedSpawnPoint\x18\t \x03(\x0b\x32\x1f.Holoholo.ClientSpawnPointProto\x12\x33\n\rNearbyPokemon\x18\x0b \x03(\x0b\x32\x1c.Holoholo.NearbyPokemonProto\x12/\n\x0bWildPokemon\x18\x05 \x03(\x0b\x32\x1a.Holoholo.WildPokemonProto\x12\x33\n\x10\x43\x61tchablePokemon\x18\n \x03(\x0b\x32\x19.Holoholo.MapPokemonProto\"m\n\x17PokemonSummaryFortProto\x12\x15\n\rFortSummaryId\x18\x01 \x01(\t\x12\x16\n\x0eLastModifiedMs\x18\x02 \x01(\x03\x12\x10\n\x08Latitude\x18\x03 \x01(\x01\x12\x11\n\tLongitude\x18\x04 \x01(\x01\"v\n\x12NearbyPokemonProto\x12\x33\n\rPokedexNumber\x18\x01 \x01(\x0e\x32\x1c.Holoholo.Custom_PokemonName\x12\x16\n\x0e\x44istanceMeters\x18\x02 \x01(\x02\x12\x13\n\x0b\x45ncounterId\x18\x03 \x01(\x04\"\xbd\x01\n\x10WildPokemonProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x04\x12\x16\n\x0eLastModifiedMs\x18\x02 \x01(\x03\x12\x10\n\x08Latitude\x18\x03 \x01(\x01\x12\x11\n\tLongitude\x18\x04 \x01(\x01\x12\x14\n\x0cSpawnPointId\x18\x05 \x01(\t\x12\'\n\x07Pokemon\x18\x07 \x01(\x0b\x32\x16.Holoholo.PokemonProto\x12\x18\n\x10TimeTillHiddenMs\x18\x0b \x01(\x05\"<\n\x15\x43lientSpawnPointProto\x12\x10\n\x08Latitude\x18\x02 \x01(\x01\x12\x11\n\tLongitude\x18\x03 \x01(\x01\"\xb0\x01\n\x0fMapPokemonProto\x12\x14\n\x0cSpawnPointId\x18\x01 \x01(\t\x12\x13\n\x0b\x45ncounterId\x18\x02 \x01(\x04\x12\x33\n\rPokedexTypeId\x18\x03 \x01(\x0e\x32\x1c.Holoholo.Custom_PokemonName\x12\x18\n\x10\x45xpirationTimeMs\x18\x04 \x01(\x03\x12\x10\n\x08Latitude\x18\x05 \x01(\x01\x12\x11\n\tLongitude\x18\x06 \x01(\x01*P\n\x1bGetMapObjectsOutProtoStatus\x12\x10\n\x0cUNSET_STATUS\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0eLOCATION_UNSET\x10\x02P\x00\x62\x06proto3')
+  serialized_pb=_b('\n\tmap.proto\x12\x0cHoloholo.Rpc\x1a\x15holoholo_shared.proto\"_\n\x12GetMapObjectsProto\x12\x0e\n\x06\x43\x65llId\x18\x01 \x03(\x04\x12\x13\n\x0bSinceTimeMs\x18\x02 \x03(\x03\x12\x11\n\tPlayerLat\x18\x03 \x01(\x01\x12\x11\n\tPlayerLng\x18\x04 \x01(\x01\"\x85\x01\n\x15GetMapObjectsOutProto\x12\x31\n\x07MapCell\x18\x01 \x03(\x0b\x32 .Holoholo.Rpc.ClientMapCellProto\x12\x39\n\x06Status\x18\x02 \x01(\x0e\x32).Holoholo.Rpc.GetMapObjectsOutProtoStatus\"\xf6\x03\n\x12\x43lientMapCellProto\x12\x10\n\x08S2CellId\x18\x01 \x01(\x04\x12\x12\n\nAsOfTimeMs\x18\x02 \x01(\x03\x12,\n\x04\x46ort\x18\x03 \x03(\x0b\x32\x1e.Holoholo.Rpc.PokemonFortProto\x12\x37\n\nSpawnPoint\x18\x04 \x03(\x0b\x32#.Holoholo.Rpc.ClientSpawnPointProto\x12\x15\n\rDeletedObject\x18\x06 \x03(\t\x12\x17\n\x0fIsTruncatedList\x18\x07 \x01(\x08\x12:\n\x0b\x46ortSummary\x18\x08 \x03(\x0b\x32%.Holoholo.Rpc.PokemonSummaryFortProto\x12@\n\x13\x44\x65\x63imatedSpawnPoint\x18\t \x03(\x0b\x32#.Holoholo.Rpc.ClientSpawnPointProto\x12\x37\n\rNearbyPokemon\x18\x0b \x03(\x0b\x32 .Holoholo.Rpc.NearbyPokemonProto\x12\x33\n\x0bWildPokemon\x18\x05 \x03(\x0b\x32\x1e.Holoholo.Rpc.WildPokemonProto\x12\x37\n\x10\x43\x61tchablePokemon\x18\n \x03(\x0b\x32\x1d.Holoholo.Rpc.MapPokemonProto\"m\n\x17PokemonSummaryFortProto\x12\x15\n\rFortSummaryId\x18\x01 \x01(\t\x12\x16\n\x0eLastModifiedMs\x18\x02 \x01(\x03\x12\x10\n\x08Latitude\x18\x03 \x01(\x01\x12\x11\n\tLongitude\x18\x04 \x01(\x01\"z\n\x12NearbyPokemonProto\x12\x37\n\rPokedexNumber\x18\x01 \x01(\x0e\x32 .Holoholo.Rpc.Custom_PokemonName\x12\x16\n\x0e\x44istanceMeters\x18\x02 \x01(\x02\x12\x13\n\x0b\x45ncounterId\x18\x03 \x01(\x04\"\xc1\x01\n\x10WildPokemonProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x04\x12\x16\n\x0eLastModifiedMs\x18\x02 \x01(\x03\x12\x10\n\x08Latitude\x18\x03 \x01(\x01\x12\x11\n\tLongitude\x18\x04 \x01(\x01\x12\x14\n\x0cSpawnPointId\x18\x05 \x01(\t\x12+\n\x07Pokemon\x18\x07 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x18\n\x10TimeTillHiddenMs\x18\x0b \x01(\x05\"<\n\x15\x43lientSpawnPointProto\x12\x10\n\x08Latitude\x18\x02 \x01(\x01\x12\x11\n\tLongitude\x18\x03 \x01(\x01\"\xb4\x01\n\x0fMapPokemonProto\x12\x14\n\x0cSpawnPointId\x18\x01 \x01(\t\x12\x13\n\x0b\x45ncounterId\x18\x02 \x01(\x04\x12\x37\n\rPokedexTypeId\x18\x03 \x01(\x0e\x32 .Holoholo.Rpc.Custom_PokemonName\x12\x18\n\x10\x45xpirationTimeMs\x18\x04 \x01(\x03\x12\x10\n\x08Latitude\x18\x05 \x01(\x01\x12\x11\n\tLongitude\x18\x06 \x01(\x01*P\n\x1bGetMapObjectsOutProtoStatus\x12\x10\n\x0cUNSET_STATUS\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x12\n\x0eLOCATION_UNSET\x10\x02P\x00\x62\x06proto3')
   ,
   dependencies=[holoholo__shared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _GETMAPOBJECTSOUTPROTOSTATUS = _descriptor.EnumDescriptor(
   name='GetMapObjectsOutProtoStatus',
-  full_name='Holoholo.GetMapObjectsOutProtoStatus',
+  full_name='Holoholo.Rpc.GetMapObjectsOutProtoStatus',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -48,8 +48,8 @@ _GETMAPOBJECTSOUTPROTOSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1411,
-  serialized_end=1491,
+  serialized_start=1464,
+  serialized_end=1544,
 )
 _sym_db.RegisterEnumDescriptor(_GETMAPOBJECTSOUTPROTOSTATUS)
 
@@ -62,34 +62,34 @@ LOCATION_UNSET = 2
 
 _GETMAPOBJECTSPROTO = _descriptor.Descriptor(
   name='GetMapObjectsProto',
-  full_name='Holoholo.GetMapObjectsProto',
+  full_name='Holoholo.Rpc.GetMapObjectsProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='CellId', full_name='Holoholo.GetMapObjectsProto.CellId', index=0,
+      name='CellId', full_name='Holoholo.Rpc.GetMapObjectsProto.CellId', index=0,
       number=1, type=4, cpp_type=4, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='SinceTimeMs', full_name='Holoholo.GetMapObjectsProto.SinceTimeMs', index=1,
+      name='SinceTimeMs', full_name='Holoholo.Rpc.GetMapObjectsProto.SinceTimeMs', index=1,
       number=2, type=3, cpp_type=2, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PlayerLat', full_name='Holoholo.GetMapObjectsProto.PlayerLat', index=2,
+      name='PlayerLat', full_name='Holoholo.Rpc.GetMapObjectsProto.PlayerLat', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PlayerLng', full_name='Holoholo.GetMapObjectsProto.PlayerLng', index=3,
+      name='PlayerLng', full_name='Holoholo.Rpc.GetMapObjectsProto.PlayerLng', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -107,27 +107,27 @@ _GETMAPOBJECTSPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=46,
-  serialized_end=141,
+  serialized_start=50,
+  serialized_end=145,
 )
 
 
 _GETMAPOBJECTSOUTPROTO = _descriptor.Descriptor(
   name='GetMapObjectsOutProto',
-  full_name='Holoholo.GetMapObjectsOutProto',
+  full_name='Holoholo.Rpc.GetMapObjectsOutProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='MapCell', full_name='Holoholo.GetMapObjectsOutProto.MapCell', index=0,
+      name='MapCell', full_name='Holoholo.Rpc.GetMapObjectsOutProto.MapCell', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Status', full_name='Holoholo.GetMapObjectsOutProto.Status', index=1,
+      name='Status', full_name='Holoholo.Rpc.GetMapObjectsOutProto.Status', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -145,90 +145,90 @@ _GETMAPOBJECTSOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=143,
-  serialized_end=268,
+  serialized_start=148,
+  serialized_end=281,
 )
 
 
 _CLIENTMAPCELLPROTO = _descriptor.Descriptor(
   name='ClientMapCellProto',
-  full_name='Holoholo.ClientMapCellProto',
+  full_name='Holoholo.Rpc.ClientMapCellProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='S2CellId', full_name='Holoholo.ClientMapCellProto.S2CellId', index=0,
+      name='S2CellId', full_name='Holoholo.Rpc.ClientMapCellProto.S2CellId', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='AsOfTimeMs', full_name='Holoholo.ClientMapCellProto.AsOfTimeMs', index=1,
+      name='AsOfTimeMs', full_name='Holoholo.Rpc.ClientMapCellProto.AsOfTimeMs', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Fort', full_name='Holoholo.ClientMapCellProto.Fort', index=2,
+      name='Fort', full_name='Holoholo.Rpc.ClientMapCellProto.Fort', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='SpawnPoint', full_name='Holoholo.ClientMapCellProto.SpawnPoint', index=3,
+      name='SpawnPoint', full_name='Holoholo.Rpc.ClientMapCellProto.SpawnPoint', index=3,
       number=4, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='DeletedObject', full_name='Holoholo.ClientMapCellProto.DeletedObject', index=4,
+      name='DeletedObject', full_name='Holoholo.Rpc.ClientMapCellProto.DeletedObject', index=4,
       number=6, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='IsTruncatedList', full_name='Holoholo.ClientMapCellProto.IsTruncatedList', index=5,
+      name='IsTruncatedList', full_name='Holoholo.Rpc.ClientMapCellProto.IsTruncatedList', index=5,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='FortSummary', full_name='Holoholo.ClientMapCellProto.FortSummary', index=6,
+      name='FortSummary', full_name='Holoholo.Rpc.ClientMapCellProto.FortSummary', index=6,
       number=8, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='DecimatedSpawnPoint', full_name='Holoholo.ClientMapCellProto.DecimatedSpawnPoint', index=7,
+      name='DecimatedSpawnPoint', full_name='Holoholo.Rpc.ClientMapCellProto.DecimatedSpawnPoint', index=7,
       number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='NearbyPokemon', full_name='Holoholo.ClientMapCellProto.NearbyPokemon', index=8,
+      name='NearbyPokemon', full_name='Holoholo.Rpc.ClientMapCellProto.NearbyPokemon', index=8,
       number=11, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='WildPokemon', full_name='Holoholo.ClientMapCellProto.WildPokemon', index=9,
+      name='WildPokemon', full_name='Holoholo.Rpc.ClientMapCellProto.WildPokemon', index=9,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='CatchablePokemon', full_name='Holoholo.ClientMapCellProto.CatchablePokemon', index=10,
+      name='CatchablePokemon', full_name='Holoholo.Rpc.ClientMapCellProto.CatchablePokemon', index=10,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -246,41 +246,41 @@ _CLIENTMAPCELLPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=271,
-  serialized_end=745,
+  serialized_start=284,
+  serialized_end=786,
 )
 
 
 _POKEMONSUMMARYFORTPROTO = _descriptor.Descriptor(
   name='PokemonSummaryFortProto',
-  full_name='Holoholo.PokemonSummaryFortProto',
+  full_name='Holoholo.Rpc.PokemonSummaryFortProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='FortSummaryId', full_name='Holoholo.PokemonSummaryFortProto.FortSummaryId', index=0,
+      name='FortSummaryId', full_name='Holoholo.Rpc.PokemonSummaryFortProto.FortSummaryId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='LastModifiedMs', full_name='Holoholo.PokemonSummaryFortProto.LastModifiedMs', index=1,
+      name='LastModifiedMs', full_name='Holoholo.Rpc.PokemonSummaryFortProto.LastModifiedMs', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Latitude', full_name='Holoholo.PokemonSummaryFortProto.Latitude', index=2,
+      name='Latitude', full_name='Holoholo.Rpc.PokemonSummaryFortProto.Latitude', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Longitude', full_name='Holoholo.PokemonSummaryFortProto.Longitude', index=3,
+      name='Longitude', full_name='Holoholo.Rpc.PokemonSummaryFortProto.Longitude', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -298,34 +298,34 @@ _POKEMONSUMMARYFORTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=747,
-  serialized_end=856,
+  serialized_start=788,
+  serialized_end=897,
 )
 
 
 _NEARBYPOKEMONPROTO = _descriptor.Descriptor(
   name='NearbyPokemonProto',
-  full_name='Holoholo.NearbyPokemonProto',
+  full_name='Holoholo.Rpc.NearbyPokemonProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='PokedexNumber', full_name='Holoholo.NearbyPokemonProto.PokedexNumber', index=0,
+      name='PokedexNumber', full_name='Holoholo.Rpc.NearbyPokemonProto.PokedexNumber', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='DistanceMeters', full_name='Holoholo.NearbyPokemonProto.DistanceMeters', index=1,
+      name='DistanceMeters', full_name='Holoholo.Rpc.NearbyPokemonProto.DistanceMeters', index=1,
       number=2, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='EncounterId', full_name='Holoholo.NearbyPokemonProto.EncounterId', index=2,
+      name='EncounterId', full_name='Holoholo.Rpc.NearbyPokemonProto.EncounterId', index=2,
       number=3, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -343,62 +343,62 @@ _NEARBYPOKEMONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=858,
-  serialized_end=976,
+  serialized_start=899,
+  serialized_end=1021,
 )
 
 
 _WILDPOKEMONPROTO = _descriptor.Descriptor(
   name='WildPokemonProto',
-  full_name='Holoholo.WildPokemonProto',
+  full_name='Holoholo.Rpc.WildPokemonProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='EncounterId', full_name='Holoholo.WildPokemonProto.EncounterId', index=0,
+      name='EncounterId', full_name='Holoholo.Rpc.WildPokemonProto.EncounterId', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='LastModifiedMs', full_name='Holoholo.WildPokemonProto.LastModifiedMs', index=1,
+      name='LastModifiedMs', full_name='Holoholo.Rpc.WildPokemonProto.LastModifiedMs', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Latitude', full_name='Holoholo.WildPokemonProto.Latitude', index=2,
+      name='Latitude', full_name='Holoholo.Rpc.WildPokemonProto.Latitude', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Longitude', full_name='Holoholo.WildPokemonProto.Longitude', index=3,
+      name='Longitude', full_name='Holoholo.Rpc.WildPokemonProto.Longitude', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='SpawnPointId', full_name='Holoholo.WildPokemonProto.SpawnPointId', index=4,
+      name='SpawnPointId', full_name='Holoholo.Rpc.WildPokemonProto.SpawnPointId', index=4,
       number=5, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Pokemon', full_name='Holoholo.WildPokemonProto.Pokemon', index=5,
+      name='Pokemon', full_name='Holoholo.Rpc.WildPokemonProto.Pokemon', index=5,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='TimeTillHiddenMs', full_name='Holoholo.WildPokemonProto.TimeTillHiddenMs', index=6,
+      name='TimeTillHiddenMs', full_name='Holoholo.Rpc.WildPokemonProto.TimeTillHiddenMs', index=6,
       number=11, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -416,27 +416,27 @@ _WILDPOKEMONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=979,
-  serialized_end=1168,
+  serialized_start=1024,
+  serialized_end=1217,
 )
 
 
 _CLIENTSPAWNPOINTPROTO = _descriptor.Descriptor(
   name='ClientSpawnPointProto',
-  full_name='Holoholo.ClientSpawnPointProto',
+  full_name='Holoholo.Rpc.ClientSpawnPointProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Latitude', full_name='Holoholo.ClientSpawnPointProto.Latitude', index=0,
+      name='Latitude', full_name='Holoholo.Rpc.ClientSpawnPointProto.Latitude', index=0,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Longitude', full_name='Holoholo.ClientSpawnPointProto.Longitude', index=1,
+      name='Longitude', full_name='Holoholo.Rpc.ClientSpawnPointProto.Longitude', index=1,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -454,55 +454,55 @@ _CLIENTSPAWNPOINTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1170,
-  serialized_end=1230,
+  serialized_start=1219,
+  serialized_end=1279,
 )
 
 
 _MAPPOKEMONPROTO = _descriptor.Descriptor(
   name='MapPokemonProto',
-  full_name='Holoholo.MapPokemonProto',
+  full_name='Holoholo.Rpc.MapPokemonProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='SpawnPointId', full_name='Holoholo.MapPokemonProto.SpawnPointId', index=0,
+      name='SpawnPointId', full_name='Holoholo.Rpc.MapPokemonProto.SpawnPointId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='EncounterId', full_name='Holoholo.MapPokemonProto.EncounterId', index=1,
+      name='EncounterId', full_name='Holoholo.Rpc.MapPokemonProto.EncounterId', index=1,
       number=2, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PokedexTypeId', full_name='Holoholo.MapPokemonProto.PokedexTypeId', index=2,
+      name='PokedexTypeId', full_name='Holoholo.Rpc.MapPokemonProto.PokedexTypeId', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ExpirationTimeMs', full_name='Holoholo.MapPokemonProto.ExpirationTimeMs', index=3,
+      name='ExpirationTimeMs', full_name='Holoholo.Rpc.MapPokemonProto.ExpirationTimeMs', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Latitude', full_name='Holoholo.MapPokemonProto.Latitude', index=4,
+      name='Latitude', full_name='Holoholo.Rpc.MapPokemonProto.Latitude', index=4,
       number=5, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Longitude', full_name='Holoholo.MapPokemonProto.Longitude', index=5,
+      name='Longitude', full_name='Holoholo.Rpc.MapPokemonProto.Longitude', index=5,
       number=6, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
@@ -520,8 +520,8 @@ _MAPPOKEMONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1233,
-  serialized_end=1409,
+  serialized_start=1282,
+  serialized_end=1462,
 )
 
 _GETMAPOBJECTSOUTPROTO.fields_by_name['MapCell'].message_type = _CLIENTMAPCELLPROTO
@@ -549,56 +549,56 @@ DESCRIPTOR.enum_types_by_name['GetMapObjectsOutProtoStatus'] = _GETMAPOBJECTSOUT
 GetMapObjectsProto = _reflection.GeneratedProtocolMessageType('GetMapObjectsProto', (_message.Message,), dict(
   DESCRIPTOR = _GETMAPOBJECTSPROTO,
   __module__ = 'map_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.GetMapObjectsProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.GetMapObjectsProto)
   ))
 _sym_db.RegisterMessage(GetMapObjectsProto)
 
 GetMapObjectsOutProto = _reflection.GeneratedProtocolMessageType('GetMapObjectsOutProto', (_message.Message,), dict(
   DESCRIPTOR = _GETMAPOBJECTSOUTPROTO,
   __module__ = 'map_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.GetMapObjectsOutProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.GetMapObjectsOutProto)
   ))
 _sym_db.RegisterMessage(GetMapObjectsOutProto)
 
 ClientMapCellProto = _reflection.GeneratedProtocolMessageType('ClientMapCellProto', (_message.Message,), dict(
   DESCRIPTOR = _CLIENTMAPCELLPROTO,
   __module__ = 'map_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.ClientMapCellProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.ClientMapCellProto)
   ))
 _sym_db.RegisterMessage(ClientMapCellProto)
 
 PokemonSummaryFortProto = _reflection.GeneratedProtocolMessageType('PokemonSummaryFortProto', (_message.Message,), dict(
   DESCRIPTOR = _POKEMONSUMMARYFORTPROTO,
   __module__ = 'map_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.PokemonSummaryFortProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.PokemonSummaryFortProto)
   ))
 _sym_db.RegisterMessage(PokemonSummaryFortProto)
 
 NearbyPokemonProto = _reflection.GeneratedProtocolMessageType('NearbyPokemonProto', (_message.Message,), dict(
   DESCRIPTOR = _NEARBYPOKEMONPROTO,
   __module__ = 'map_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.NearbyPokemonProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.NearbyPokemonProto)
   ))
 _sym_db.RegisterMessage(NearbyPokemonProto)
 
 WildPokemonProto = _reflection.GeneratedProtocolMessageType('WildPokemonProto', (_message.Message,), dict(
   DESCRIPTOR = _WILDPOKEMONPROTO,
   __module__ = 'map_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.WildPokemonProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.WildPokemonProto)
   ))
 _sym_db.RegisterMessage(WildPokemonProto)
 
 ClientSpawnPointProto = _reflection.GeneratedProtocolMessageType('ClientSpawnPointProto', (_message.Message,), dict(
   DESCRIPTOR = _CLIENTSPAWNPOINTPROTO,
   __module__ = 'map_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.ClientSpawnPointProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.ClientSpawnPointProto)
   ))
 _sym_db.RegisterMessage(ClientSpawnPointProto)
 
 MapPokemonProto = _reflection.GeneratedProtocolMessageType('MapPokemonProto', (_message.Message,), dict(
   DESCRIPTOR = _MAPPOKEMONPROTO,
   __module__ = 'map_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.MapPokemonProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.MapPokemonProto)
   ))
 _sym_db.RegisterMessage(MapPokemonProto)
 

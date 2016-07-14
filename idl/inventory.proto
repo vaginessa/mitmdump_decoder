@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package Holoholo;
+package Holoholo.Rpc;
 import public "holoholo_shared.proto";
 
 message GetInventoryProto {

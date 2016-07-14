@@ -20,16 +20,16 @@ from holoholo_shared_pb2 import *
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='in_app_purchases.proto',
-  package='Holoholo',
+  package='Holoholo.Rpc',
   syntax='proto3',
-  serialized_pb=_b('\n\x16in_app_purchases.proto\x12\x08Holoholo\x1a\x15holoholo_shared.proto\"\x99\x01\n\x13IapItemDisplayProto\x12\x0b\n\x03Sku\x18\x01 \x01(\t\x12/\n\x08\x43\x61tegory\x18\x02 \x01(\x0e\x32\x1d.Holoholo.HoloIapItemCategory\x12\x11\n\tSortOrder\x18\x03 \x01(\x05\x12!\n\x05Items\x18\x04 \x03(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x0e\n\x06\x43ounts\x18\x05 \x03(\x05*\x94\x01\n\x13HoloIapItemCategory\x12\x15\n\x11IAP_CATEGORY_NONE\x10\x00\x12\x17\n\x13IAP_CATEGORY_BUNDLE\x10\x01\x12\x16\n\x12IAP_CATEGORY_ITEMS\x10\x02\x12\x19\n\x15IAP_CATEGORY_UPGRADES\x10\x03\x12\x1a\n\x16IAP_CATEGORY_POKECOINS\x10\x04P\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x16in_app_purchases.proto\x12\x0cHoloholo.Rpc\x1a\x15holoholo_shared.proto\"\x9d\x01\n\x13IapItemDisplayProto\x12\x0b\n\x03Sku\x18\x01 \x01(\t\x12\x33\n\x08\x43\x61tegory\x18\x02 \x01(\x0e\x32!.Holoholo.Rpc.HoloIapItemCategory\x12\x11\n\tSortOrder\x18\x03 \x01(\x05\x12!\n\x05Items\x18\x04 \x03(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x0e\n\x06\x43ounts\x18\x05 \x03(\x05*\x94\x01\n\x13HoloIapItemCategory\x12\x15\n\x11IAP_CATEGORY_NONE\x10\x00\x12\x17\n\x13IAP_CATEGORY_BUNDLE\x10\x01\x12\x16\n\x12IAP_CATEGORY_ITEMS\x10\x02\x12\x19\n\x15IAP_CATEGORY_UPGRADES\x10\x03\x12\x1a\n\x16IAP_CATEGORY_POKECOINS\x10\x04P\x00\x62\x06proto3')
   ,
   dependencies=[holoholo__shared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _HOLOIAPITEMCATEGORY = _descriptor.EnumDescriptor(
   name='HoloIapItemCategory',
-  full_name='Holoholo.HoloIapItemCategory',
+  full_name='Holoholo.Rpc.HoloIapItemCategory',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -56,8 +56,8 @@ _HOLOIAPITEMCATEGORY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=216,
-  serialized_end=364,
+  serialized_start=224,
+  serialized_end=372,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOIAPITEMCATEGORY)
 
@@ -72,41 +72,41 @@ IAP_CATEGORY_POKECOINS = 4
 
 _IAPITEMDISPLAYPROTO = _descriptor.Descriptor(
   name='IapItemDisplayProto',
-  full_name='Holoholo.IapItemDisplayProto',
+  full_name='Holoholo.Rpc.IapItemDisplayProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Sku', full_name='Holoholo.IapItemDisplayProto.Sku', index=0,
+      name='Sku', full_name='Holoholo.Rpc.IapItemDisplayProto.Sku', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Category', full_name='Holoholo.IapItemDisplayProto.Category', index=1,
+      name='Category', full_name='Holoholo.Rpc.IapItemDisplayProto.Category', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='SortOrder', full_name='Holoholo.IapItemDisplayProto.SortOrder', index=2,
+      name='SortOrder', full_name='Holoholo.Rpc.IapItemDisplayProto.SortOrder', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Items', full_name='Holoholo.IapItemDisplayProto.Items', index=3,
+      name='Items', full_name='Holoholo.Rpc.IapItemDisplayProto.Items', index=3,
       number=4, type=14, cpp_type=8, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Counts', full_name='Holoholo.IapItemDisplayProto.Counts', index=4,
+      name='Counts', full_name='Holoholo.Rpc.IapItemDisplayProto.Counts', index=4,
       number=5, type=5, cpp_type=1, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -124,19 +124,19 @@ _IAPITEMDISPLAYPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=60,
-  serialized_end=213,
+  serialized_start=64,
+  serialized_end=221,
 )
 
 _IAPITEMDISPLAYPROTO.fields_by_name['Category'].enum_type = _HOLOIAPITEMCATEGORY
-_IAPITEMDISPLAYPROTO.fields_by_name['Items'].enum_type = holoholo__shared__pb2._RPC_ITEM
+_IAPITEMDISPLAYPROTO.fields_by_name['Items'].enum_type = holoholo__shared__pb2._ITEM
 DESCRIPTOR.message_types_by_name['IapItemDisplayProto'] = _IAPITEMDISPLAYPROTO
 DESCRIPTOR.enum_types_by_name['HoloIapItemCategory'] = _HOLOIAPITEMCATEGORY
 
 IapItemDisplayProto = _reflection.GeneratedProtocolMessageType('IapItemDisplayProto', (_message.Message,), dict(
   DESCRIPTOR = _IAPITEMDISPLAYPROTO,
   __module__ = 'in_app_purchases_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.IapItemDisplayProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.IapItemDisplayProto)
   ))
 _sym_db.RegisterMessage(IapItemDisplayProto)
 

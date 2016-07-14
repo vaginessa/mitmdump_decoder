@@ -1,2 +1,2 @@
 syntax = "proto3";
-package Holoholo;
+package Holoholo.Rpc;

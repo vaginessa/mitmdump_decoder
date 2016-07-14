@@ -18,15 +18,15 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='holoholo_shared.proto',
-  package='Holoholo',
+  package='Holoholo.Rpc',
   syntax='proto3',
-  serialized_pb=_b('\n\x15holoholo_shared.proto\x12\x08Holoholo\"\xa5\x1a\n\x03Rpc\x1a\xf1\x07\n\x05Types\x1a|\n\x12\x46ortSearchOutProto\"f\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x10\n\x0cOUT_OF_RANGE\x10\x02\x12\x16\n\x12IN_COOLDOWN_PERIOD\x10\x03\x12\x12\n\x0eINVENTORY_FULL\x10\x04\x1a\x94\x03\n\x16StartGymBattleOutProto\"\xf9\x02\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x17\n\x13\x45RROR_GYM_NOT_FOUND\x10\x02\x12\x15\n\x11\x45RROR_GYM_NEUTRAL\x10\x03\x12\x18\n\x14\x45RROR_GYM_WRONG_TEAM\x10\x04\x12\x13\n\x0f\x45RROR_GYM_EMPTY\x10\x05\x12\x1a\n\x16\x45RROR_INVALID_DEFENDER\x10\x06\x12)\n%ERROR_TRAINING_INVALID_ATTACKER_COUNT\x10\x07\x12\x1d\n\x19\x45RROR_ALL_POKEMON_FAINTED\x10\x08\x12\x1a\n\x16\x45RROR_TOO_MANY_BATTLES\x10\t\x12\x1a\n\x16\x45RROR_TOO_MANY_PLAYERS\x10\n\x12\x1c\n\x18\x45RROR_GYM_BATTLE_LOCKOUT\x10\x0b\x12$\n ERROR_PLAYER_BELOW_MINIMUM_LEVEL\x10\x0c\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\r\x1ao\n\x11\x41ttackGymOutProto\"Z\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12 \n\x1c\x45RROR_INVALID_ATTACK_ACTIONS\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\x1a\xbf\x01\n\x11\x42\x61ttleActionProto\"\xa9\x01\n\nActionType\x12\t\n\x05UNSET\x10\x00\x12\n\n\x06\x41TTACK\x10\x01\x12\t\n\x05\x44ODGE\x10\x02\x12\x12\n\x0eSPECIAL_ATTACK\x10\x03\x12\x10\n\x0cSWAP_POKEMON\x10\x04\x12\t\n\x05\x46\x41INT\x10\x05\x12\x0f\n\x0bPLAYER_JOIN\x10\x06\x12\x0f\n\x0bPLAYER_QUIT\x10\x07\x12\x0b\n\x07VICTORY\x10\x08\x12\n\n\x06\x44\x45\x46\x45\x41T\x10\t\x12\r\n\tTIMED_OUT\x10\n\x1a\x9f\x01\n\x0e\x42\x61ttleLogProto\"=\n\nBattleType\x12\x15\n\x11\x42\x41TTLE_TYPE_UNSET\x10\x00\x12\n\n\x06NORMAL\x10\x01\x12\x0c\n\x08TRAINING\x10\x02\"N\n\x05State\x12\x0f\n\x0bSTATE_UNSET\x10\x00\x12\n\n\x06\x41\x43TIVE\x10\x01\x12\x0b\n\x07VICTORY\x10\x02\x12\x0c\n\x08\x44\x45\x46\x45\x41TED\x10\x03\x12\r\n\tTIMED_OUT\x10\x04\"\xbc\x0c\n\x06Method\x12\x10\n\x0cMETHOD_UNSET\x10\x00\x12\x11\n\rPLAYER_UPDATE\x10\x01\x12\x0e\n\nGET_PLAYER\x10\x02\x12\x11\n\rGET_INVENTORY\x10\x04\x12\x15\n\x11\x44OWNLOAD_SETTINGS\x10\x05\x12\x1b\n\x17\x44OWNLOAD_ITEM_TEMPLATES\x10\x06\x12\"\n\x1e\x44OWNLOAD_REMOTE_CONFIG_VERSION\x10\x07\x12\x0f\n\x0b\x46ORT_SEARCH\x10\x65\x12\r\n\tENCOUNTER\x10\x66\x12\x11\n\rCATCH_POKEMON\x10g\x12\x10\n\x0c\x46ORT_DETAILS\x10h\x12\x0c\n\x08ITEM_USE\x10i\x12\x13\n\x0fGET_MAP_OBJECTS\x10j\x12\x17\n\x13\x46ORT_DEPLOY_POKEMON\x10n\x12\x17\n\x13\x46ORT_RECALL_POKEMON\x10o\x12\x13\n\x0fRELEASE_POKEMON\x10p\x12\x13\n\x0fUSE_ITEM_POTION\x10q\x12\x14\n\x10USE_ITEM_CAPTURE\x10r\x12\x11\n\rUSE_ITEM_FLEE\x10s\x12\x13\n\x0fUSE_ITEM_REVIVE\x10t\x12\x10\n\x0cTRADE_SEARCH\x10u\x12\x0f\n\x0bTRADE_OFFER\x10v\x12\x12\n\x0eTRADE_RESPONSE\x10w\x12\x10\n\x0cTRADE_RESULT\x10x\x12\x16\n\x12GET_PLAYER_PROFILE\x10y\x12\x11\n\rGET_ITEM_PACK\x10z\x12\x11\n\rBUY_ITEM_PACK\x10{\x12\x10\n\x0c\x42UY_GEM_PACK\x10|\x12\x12\n\x0e\x45VOLVE_POKEMON\x10}\x12\x14\n\x10GET_HATCHED_EGGS\x10~\x12\x1f\n\x1b\x45NCOUNTER_TUTORIAL_COMPLETE\x10\x7f\x12\x15\n\x10LEVEL_UP_REWARDS\x10\x80\x01\x12\x19\n\x14\x43HECK_AWARDED_BADGES\x10\x81\x01\x12\x11\n\x0cUSE_ITEM_GYM\x10\x85\x01\x12\x14\n\x0fGET_GYM_DETAILS\x10\x86\x01\x12\x15\n\x10START_GYM_BATTLE\x10\x87\x01\x12\x0f\n\nATTACK_GYM\x10\x88\x01\x12\x1b\n\x16RECYCLE_INVENTORY_ITEM\x10\x89\x01\x12\x18\n\x13\x43OLLECT_DAILY_BONUS\x10\x8a\x01\x12\x16\n\x11USE_ITEM_XP_BOOST\x10\x8b\x01\x12\x1b\n\x16USE_ITEM_EGG_INCUBATOR\x10\x8c\x01\x12\x10\n\x0bUSE_INCENSE\x10\x8d\x01\x12\x18\n\x13GET_INCENSE_POKEMON\x10\x8e\x01\x12\x16\n\x11INCENSE_ENCOUNTER\x10\x8f\x01\x12\x16\n\x11\x41\x44\x44_FORT_MODIFIER\x10\x90\x01\x12\x13\n\x0e\x44ISK_ENCOUNTER\x10\x91\x01\x12!\n\x1c\x43OLLECT_DAILY_DEFENDER_BONUS\x10\x92\x01\x12\x14\n\x0fUPGRADE_POKEMON\x10\x93\x01\x12\x19\n\x14SET_FAVORITE_POKEMON\x10\x94\x01\x12\x15\n\x10NICKNAME_POKEMON\x10\x95\x01\x12\x10\n\x0b\x45QUIP_BADGE\x10\x96\x01\x12\x19\n\x14SET_CONTACT_SETTINGS\x10\x97\x01\x12\x15\n\x10GET_ASSET_DIGEST\x10\xac\x02\x12\x16\n\x11GET_DOWNLOAD_URLS\x10\xad\x02\x12\x1c\n\x17GET_SUGGESTED_CODENAMES\x10\x91\x03\x12\x1d\n\x18\x43HECK_CODENAME_AVAILABLE\x10\x92\x03\x12\x13\n\x0e\x43LAIM_CODENAME\x10\x93\x03\x12\x0f\n\nSET_AVATAR\x10\x94\x03\x12\x14\n\x0fSET_PLAYER_TEAM\x10\x95\x03\x12\x1b\n\x16MARK_TUTORIAL_COMPLETE\x10\x96\x03\x12\x16\n\x11LOAD_SPAWN_POINTS\x10\xf4\x03\x12\t\n\x04\x45\x43HO\x10\x9a\x05\x12\x1b\n\x16\x44\x45\x42UG_UPDATE_INVENTORY\x10\xbc\x05\x12\x18\n\x13\x44\x45\x42UG_DELETE_PLAYER\x10\xbd\x05\x12\x17\n\x12SFIDA_REGISTRATION\x10\xa0\x06\x12\x15\n\x10SFIDA_ACTION_LOG\x10\xa1\x06\x12\x18\n\x13SFIDA_CERTIFICATION\x10\xa2\x06\x12\x11\n\x0cSFIDA_UPDATE\x10\xa3\x06\x12\x11\n\x0cSFIDA_ACTION\x10\xa4\x06\x12\x11\n\x0cSFIDA_DOWSER\x10\xa5\x06\x12\x12\n\rSFIDA_CAPTURE\x10\xa6\x06\"#\n\x08\x46ortType\x12\x07\n\x03GYM\x10\x00\x12\x0e\n\nCHECKPOINT\x10\x01\"\xc5\x05\n\x04Item\x12\x10\n\x0cITEM_UNKNOWN\x10\x00\x12\x12\n\x0eITEM_POKE_BALL\x10\x01\x12\x13\n\x0fITEM_GREAT_BALL\x10\x02\x12\x13\n\x0fITEM_ULTRA_BALL\x10\x03\x12\x14\n\x10ITEM_MASTER_BALL\x10\x04\x12\x0f\n\x0bITEM_POTION\x10\x65\x12\x15\n\x11ITEM_SUPER_POTION\x10\x66\x12\x15\n\x11ITEM_HYPER_POTION\x10g\x12\x13\n\x0fITEM_MAX_POTION\x10h\x12\x10\n\x0bITEM_REVIVE\x10\xc9\x01\x12\x14\n\x0fITEM_MAX_REVIVE\x10\xca\x01\x12\x13\n\x0eITEM_LUCKY_EGG\x10\xad\x02\x12\x1a\n\x15ITEM_INCENSE_ORDINARY\x10\x91\x03\x12\x17\n\x12ITEM_INCENSE_SPICY\x10\x92\x03\x12\x16\n\x11ITEM_INCENSE_COOL\x10\x93\x03\x12\x18\n\x13ITEM_INCENSE_FLORAL\x10\x94\x03\x12\x13\n\x0eITEM_TROY_DISK\x10\xf5\x03\x12\x12\n\rITEM_X_ATTACK\x10\xda\x04\x12\x13\n\x0eITEM_X_DEFENSE\x10\xdb\x04\x12\x13\n\x0eITEM_X_MIRACLE\x10\xdc\x04\x12\x14\n\x0fITEM_RAZZ_BERRY\x10\xbd\x05\x12\x14\n\x0fITEM_BLUK_BERRY\x10\xbe\x05\x12\x15\n\x10ITEM_NANAB_BERRY\x10\xbf\x05\x12\x15\n\x10ITEM_WEPAR_BERRY\x10\xc0\x05\x12\x15\n\x10ITEM_PINAP_BERRY\x10\xc1\x05\x12\x18\n\x13ITEM_SPECIAL_CAMERA\x10\xa1\x06\x12#\n\x1eITEM_INCUBATOR_BASIC_UNLIMITED\x10\x85\x07\x12\x19\n\x14ITEM_INCUBATOR_BASIC\x10\x86\x07\x12!\n\x1cITEM_POKEMON_STORAGE_UPGRADE\x10\xe9\x07\x12\x1e\n\x19ITEM_ITEM_STORAGE_UPGRADE\x10\xea\x07\"\xfd\x04\n\x0cPokemonProto\x12\n\n\x02Id\x18\x01 \x01(\x05\x12\x11\n\tPokemonId\x18\x02 \x01(\x05\x12\n\n\x02\x43p\x18\x03 \x01(\x05\x12\x0f\n\x07Stamina\x18\x04 \x01(\x05\x12\x12\n\nMaxStamina\x18\x05 \x01(\x05\x12\r\n\x05Move1\x18\x06 \x01(\x05\x12\r\n\x05Move2\x18\x07 \x01(\x05\x12\x16\n\x0e\x44\x65ployedFortId\x18\x08 \x01(\x05\x12\x11\n\tOwnerName\x18\t \x01(\t\x12\r\n\x05IsEgg\x18\n \x01(\x05\x12\x19\n\x11\x45ggKmWalkedTarget\x18\x0b \x01(\x05\x12\x18\n\x10\x45ggKmWalkedStart\x18\x0c \x01(\x05\x12\x0e\n\x06Origin\x18\x0e \x01(\x05\x12\x0f\n\x07HeightM\x18\x0f \x01(\x02\x12\x10\n\x08WeightKg\x18\x10 \x01(\x02\x12\x18\n\x10IndividualAttack\x18\x11 \x01(\x05\x12\x19\n\x11IndividualDefense\x18\x12 \x01(\x05\x12\x19\n\x11IndividualStamina\x18\x13 \x01(\x05\x12\x14\n\x0c\x43pMultiplier\x18\x14 \x01(\x05\x12\x10\n\x08Pokeball\x18\x15 \x01(\x05\x12\x18\n\x10\x43\x61pturedS2CellId\x18\x16 \x01(\x04\x12\x17\n\x0f\x42\x61ttlesAttacked\x18\x17 \x01(\x05\x12\x17\n\x0f\x42\x61ttlesDefended\x18\x18 \x01(\x05\x12\x16\n\x0e\x45ggIncubatorId\x18\x19 \x01(\x05\x12\x16\n\x0e\x43reationTimeMs\x18\x1a \x01(\x04\x12\x13\n\x0bNumUpgrades\x18\x1b \x01(\x05\x12\x1e\n\x16\x41\x64\x64itionalCpMultiplier\x18\x1c \x01(\x05\x12\x10\n\x08\x46\x61vorite\x18\x1d \x01(\x05\x12\x10\n\x08Nickname\x18\x1e \x01(\t\x12\x10\n\x08\x46romFort\x18\x1f \x01(\x05\"L\n\tItemProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\r\n\x05\x43ount\x18\x02 \x01(\x05\x12\x0e\n\x06Unseen\x18\x03 \x01(\x08\"\xc0\x06\n\x10PokemonFortProto\x12\x0e\n\x06\x46ortId\x18\x01 \x01(\t\x12\x16\n\x0eLastModifiedMs\x18\x02 \x01(\x03\x12\x10\n\x08Latitude\x18\x03 \x01(\x01\x12\x11\n\tLongitude\x18\x04 \x01(\x01\x12\x0f\n\x07\x45nabled\x18\x08 \x01(\x08\x12(\n\x04Team\x18\x05 \x01(\x0e\x32\x1a.Holoholo.Custom_TeamColor\x12\x34\n\x0eGuardPokemonId\x18\x06 \x01(\x0e\x32\x1c.Holoholo.Custom_PokemonName\x12\x19\n\x11GuardPokemonLevel\x18\x07 \x01(\x05\x12\x11\n\tGymPoints\x18\n \x01(\x03\x12\x12\n\nIsInBattle\x18\x0b \x01(\x08\x12(\n\x08\x46ortType\x18\t \x01(\x0e\x32\x16.Holoholo.Rpc.FortType\x12\x1a\n\x12\x43ooldownCompleteMs\x18\x0e \x01(\x03\x12\x37\n\x07Sponsor\x18\x0f \x01(\x0e\x32&.Holoholo.PokemonFortProto.FortSponsor\x12\x43\n\rRenderingType\x18\x10 \x01(\x0e\x32,.Holoholo.PokemonFortProto.FortRenderingType\x12\x1a\n\x12\x41\x63tiveFortModifier\x18\x0c \x01(\x0c\x12I\n\x0c\x46ortLureInfo\x18\r \x01(\x0b\x32\x33.Holoholo.PokemonFortProto.Custom_FortLureInfoProto\x1a\x87\x01\n\x18\x43ustom_FortLureInfoProto\x12\x0e\n\x06\x46ortId\x18\x01 \x01(\t\x12\x10\n\x08NotSure2\x18\x02 \x01(\x01\x12\x33\n\rActivePokemon\x18\x03 \x01(\x0e\x32\x1c.Holoholo.Custom_PokemonName\x12\x14\n\x0cLureExpiryMs\x18\x04 \x01(\x03\"B\n\x0b\x46ortSponsor\x12\x11\n\rUNSET_SPONSOR\x10\x00\x12\r\n\tMCDONALDS\x10\x01\x12\x11\n\rPOKEMON_STORE\x10\x02\"3\n\x11\x46ortRenderingType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x11\n\rINTERNAL_TEST\x10\x01\"d\n\x18PlayerPublicProfileProto\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\r\n\x05Level\x18\x02 \x01(\x05\x12+\n\x06\x41vatar\x18\x03 \x01(\x0b\x32\x1b.Holoholo.PlayerAvatarProto\"\x99\x01\n\x11PlayerAvatarProto\x12\x0e\n\x06\x41vatar\x18\x08 \x01(\x05\x12\x0c\n\x04Skin\x18\x02 \x01(\x05\x12\x0c\n\x04Hair\x18\x03 \x01(\x05\x12\r\n\x05Shirt\x18\x04 \x01(\x05\x12\r\n\x05Pants\x18\x05 \x01(\x05\x12\x0b\n\x03Hat\x18\x06 \x01(\x05\x12\r\n\x05Shoes\x18\x07 \x01(\x05\x12\x0c\n\x04\x45yes\x18\t \x01(\x05\x12\x10\n\x08\x42\x61\x63kpack\x18\n \x01(\x05\"u\n\rGymStateProto\x12/\n\x0b\x46ortMapData\x18\x01 \x01(\x0b\x32\x1a.Holoholo.PokemonFortProto\x12\x33\n\rGymMembership\x18\x02 \x03(\x0b\x32\x1c.Holoholo.GymMembershipProto\"\x7f\n\x12GymMembershipProto\x12\'\n\x07Pokemon\x18\x01 \x01(\x0b\x32\x16.Holoholo.PokemonProto\x12@\n\x14TrainerPublicProfile\x18\x02 \x01(\x0b\x32\".Holoholo.PlayerPublicProfileProto*>\n\x10\x43ustom_TeamColor\x12\x0b\n\x07NEUTRAL\x10\x00\x12\x08\n\x04\x42LUE\x10\x01\x12\x07\n\x03RED\x10\x02\x12\n\n\x06YELLOW\x10\x03*\x9c\x10\n\x12\x43ustom_PokemonName\x12\r\n\tMISSINGNO\x10\x00\x12\r\n\tBULBASAUR\x10\x01\x12\x0b\n\x07IVYSAUR\x10\x02\x12\x0c\n\x08VENUSAUR\x10\x03\x12\x0e\n\nCHARMENDER\x10\x04\x12\x0e\n\nCHARMELEON\x10\x05\x12\r\n\tCHARIZARD\x10\x06\x12\x0c\n\x08SQUIRTLE\x10\x07\x12\r\n\tWARTORTLE\x10\x08\x12\r\n\tBLASTOISE\x10\t\x12\x0c\n\x08\x43\x41TERPIE\x10\n\x12\x0b\n\x07METAPOD\x10\x0b\x12\x0e\n\nBUTTERFREE\x10\x0c\x12\n\n\x06WEEDLE\x10\r\x12\n\n\x06KAKUNA\x10\x0e\x12\x0c\n\x08\x42\x45\x45\x44RILL\x10\x0f\x12\n\n\x06PIDGEY\x10\x10\x12\r\n\tPIDGEOTTO\x10\x11\x12\x0b\n\x07PIDGEOT\x10\x12\x12\x0b\n\x07RATTATA\x10\x13\x12\x0c\n\x08RATICATE\x10\x14\x12\x0b\n\x07SPEAROW\x10\x15\x12\n\n\x06\x46\x45\x41ROW\x10\x16\x12\t\n\x05\x45KANS\x10\x17\x12\t\n\x05\x41RBOK\x10\x18\x12\x0b\n\x07PIKACHU\x10\x19\x12\n\n\x06RAICHU\x10\x1a\x12\r\n\tSANDSHREW\x10\x1b\x12\x0c\n\x08SANDLASH\x10\x1c\x12\x12\n\x0eNIDORAN_FEMALE\x10\x1d\x12\x0c\n\x08NIDORINA\x10\x1e\x12\r\n\tNIDOQUEEN\x10\x1f\x12\x10\n\x0cNIDORAN_MALE\x10 \x12\x0c\n\x08NIDORINO\x10!\x12\x0c\n\x08NIDOKING\x10\"\x12\x0b\n\x07\x43LEFARY\x10#\x12\x0c\n\x08\x43LEFABLE\x10$\x12\n\n\x06VULPIX\x10%\x12\r\n\tNINETALES\x10&\x12\x0e\n\nJIGGLYPUFF\x10\'\x12\x0e\n\nWIGGLYTUFF\x10(\x12\t\n\x05ZUBAT\x10)\x12\n\n\x06GOLBAT\x10*\x12\n\n\x06ODDISH\x10+\x12\t\n\x05GLOOM\x10,\x12\r\n\tVILEPLUME\x10-\x12\t\n\x05PARAS\x10.\x12\x0c\n\x08PARASECT\x10/\x12\x0b\n\x07VENONAT\x10\x30\x12\x0c\n\x08VENOMOTH\x10\x31\x12\x0b\n\x07\x44IGLETT\x10\x32\x12\x0b\n\x07\x44UGTRIO\x10\x33\x12\n\n\x06MEOWTH\x10\x34\x12\x0b\n\x07PERSIAN\x10\x35\x12\x0b\n\x07PSYDUCK\x10\x36\x12\x0b\n\x07GOLDUCK\x10\x37\x12\n\n\x06MANKEY\x10\x38\x12\x0c\n\x08PRIMEAPE\x10\x39\x12\r\n\tGROWLITHE\x10:\x12\x0c\n\x08\x41RCANINE\x10;\x12\x0b\n\x07POLIWAG\x10<\x12\r\n\tPOLIWHIRL\x10=\x12\r\n\tPOLIWRATH\x10>\x12\x08\n\x04\x41\x42RA\x10?\x12\x0b\n\x07KADABRA\x10@\x12\r\n\tALAKHAZAM\x10\x41\x12\n\n\x06MACHOP\x10\x42\x12\x0b\n\x07MACHOKE\x10\x43\x12\x0b\n\x07MACHAMP\x10\x44\x12\x0e\n\nBELLSPROUT\x10\x45\x12\x0e\n\nWEEPINBELL\x10\x46\x12\x0f\n\x0bVICTREEBELL\x10G\x12\r\n\tTENTACOOL\x10H\x12\x0e\n\nTENTACRUEL\x10I\x12\x0b\n\x07GEODUGE\x10J\x12\x0c\n\x08GRAVELER\x10K\x12\t\n\x05GOLEM\x10L\x12\n\n\x06PONYTA\x10M\x12\x0c\n\x08RAPIDASH\x10N\x12\x0c\n\x08SLOWPOKE\x10O\x12\x0b\n\x07SLOWBRO\x10P\x12\r\n\tMAGNEMITE\x10Q\x12\x0c\n\x08MAGNETON\x10R\x12\r\n\tFARFETCHD\x10S\x12\t\n\x05\x44ODUO\x10T\x12\n\n\x06\x44ODRIO\x10U\x12\x08\n\x04SEEL\x10V\x12\x0b\n\x07\x44\x45WGONG\x10W\x12\n\n\x06GRIMER\x10X\x12\x07\n\x03MUK\x10Y\x12\x0c\n\x08SHELLDER\x10Z\x12\x0c\n\x08\x43LOYSTER\x10[\x12\n\n\x06GASTLY\x10\\\x12\x0b\n\x07HAUNTER\x10]\x12\n\n\x06GENGAR\x10^\x12\x08\n\x04ONIX\x10_\x12\x0b\n\x07\x44ROWZEE\x10`\x12\t\n\x05HYPNO\x10\x61\x12\n\n\x06KRABBY\x10\x62\x12\x0b\n\x07KINGLER\x10\x63\x12\x0b\n\x07VOLTORB\x10\x64\x12\r\n\tELECTRODE\x10\x65\x12\r\n\tEXEGGCUTE\x10\x66\x12\r\n\tEXEGGUTOR\x10g\x12\n\n\x06\x43UBONE\x10h\x12\x0b\n\x07MAROWAK\x10i\x12\r\n\tHITMONLEE\x10j\x12\x0e\n\nHITMONCHAN\x10k\x12\r\n\tLICKITUNG\x10l\x12\x0b\n\x07KOFFING\x10m\x12\x0b\n\x07WEEZING\x10n\x12\x0b\n\x07RHYHORN\x10o\x12\n\n\x06RHYDON\x10p\x12\x0b\n\x07\x43HANSEY\x10q\x12\x0b\n\x07TANGELA\x10r\x12\x0e\n\nKANGASKHAN\x10s\x12\n\n\x06HORSEA\x10t\x12\n\n\x06SEADRA\x10u\x12\x0b\n\x07GOLDEEN\x10v\x12\x0b\n\x07SEAKING\x10w\x12\n\n\x06STARYU\x10x\x12\x0b\n\x07STARMIE\x10y\x12\x0b\n\x07MR_MIME\x10z\x12\x0b\n\x07SCYTHER\x10{\x12\x08\n\x04JYNX\x10|\x12\x0e\n\nELECTABUZZ\x10}\x12\n\n\x06MAGMAR\x10~\x12\n\n\x06PINSIR\x10\x7f\x12\x0b\n\x06TAUROS\x10\x80\x01\x12\r\n\x08MAGIKARP\x10\x81\x01\x12\r\n\x08GYARADOS\x10\x82\x01\x12\x0b\n\x06LAPRAS\x10\x83\x01\x12\n\n\x05\x44ITTO\x10\x84\x01\x12\n\n\x05\x45\x45VEE\x10\x85\x01\x12\r\n\x08VAPOREON\x10\x86\x01\x12\x0c\n\x07JOLTEON\x10\x87\x01\x12\x0c\n\x07\x46LAREON\x10\x88\x01\x12\x0c\n\x07PORYGON\x10\x89\x01\x12\x0c\n\x07OMANYTE\x10\x8a\x01\x12\x0c\n\x07OMASTAR\x10\x8b\x01\x12\x0b\n\x06KABUTO\x10\x8c\x01\x12\r\n\x08KABUTOPS\x10\x8d\x01\x12\x0f\n\nAERODACTYL\x10\x8e\x01\x12\x0c\n\x07SNORLAX\x10\x8f\x01\x12\r\n\x08\x41RTICUNO\x10\x90\x01\x12\x0b\n\x06ZAPDOS\x10\x91\x01\x12\x0c\n\x07MOLTRES\x10\x92\x01\x12\x0c\n\x07\x44RATINI\x10\x93\x01\x12\x0e\n\tDRAGONAIR\x10\x94\x01\x12\x0e\n\tDRAGONITE\x10\x95\x01\x12\x0b\n\x06MEWTWO\x10\x96\x01\x12\x08\n\x03MEW\x10\x97\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x15holoholo_shared.proto\x12\x0cHoloholo.Rpc\"\xf1\x07\n\x05Types\x1a|\n\x12\x46ortSearchOutProto\"f\n\x06Result\x12\x11\n\rNO_RESULT_SET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x10\n\x0cOUT_OF_RANGE\x10\x02\x12\x16\n\x12IN_COOLDOWN_PERIOD\x10\x03\x12\x12\n\x0eINVENTORY_FULL\x10\x04\x1a\x94\x03\n\x16StartGymBattleOutProto\"\xf9\x02\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x17\n\x13\x45RROR_GYM_NOT_FOUND\x10\x02\x12\x15\n\x11\x45RROR_GYM_NEUTRAL\x10\x03\x12\x18\n\x14\x45RROR_GYM_WRONG_TEAM\x10\x04\x12\x13\n\x0f\x45RROR_GYM_EMPTY\x10\x05\x12\x1a\n\x16\x45RROR_INVALID_DEFENDER\x10\x06\x12)\n%ERROR_TRAINING_INVALID_ATTACKER_COUNT\x10\x07\x12\x1d\n\x19\x45RROR_ALL_POKEMON_FAINTED\x10\x08\x12\x1a\n\x16\x45RROR_TOO_MANY_BATTLES\x10\t\x12\x1a\n\x16\x45RROR_TOO_MANY_PLAYERS\x10\n\x12\x1c\n\x18\x45RROR_GYM_BATTLE_LOCKOUT\x10\x0b\x12$\n ERROR_PLAYER_BELOW_MINIMUM_LEVEL\x10\x0c\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\r\x1ao\n\x11\x41ttackGymOutProto\"Z\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12 \n\x1c\x45RROR_INVALID_ATTACK_ACTIONS\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\x1a\xbf\x01\n\x11\x42\x61ttleActionProto\"\xa9\x01\n\nActionType\x12\t\n\x05UNSET\x10\x00\x12\n\n\x06\x41TTACK\x10\x01\x12\t\n\x05\x44ODGE\x10\x02\x12\x12\n\x0eSPECIAL_ATTACK\x10\x03\x12\x10\n\x0cSWAP_POKEMON\x10\x04\x12\t\n\x05\x46\x41INT\x10\x05\x12\x0f\n\x0bPLAYER_JOIN\x10\x06\x12\x0f\n\x0bPLAYER_QUIT\x10\x07\x12\x0b\n\x07VICTORY\x10\x08\x12\n\n\x06\x44\x45\x46\x45\x41T\x10\t\x12\r\n\tTIMED_OUT\x10\n\x1a\x9f\x01\n\x0e\x42\x61ttleLogProto\"=\n\nBattleType\x12\x15\n\x11\x42\x41TTLE_TYPE_UNSET\x10\x00\x12\n\n\x06NORMAL\x10\x01\x12\x0c\n\x08TRAINING\x10\x02\"N\n\x05State\x12\x0f\n\x0bSTATE_UNSET\x10\x00\x12\n\n\x06\x41\x43TIVE\x10\x01\x12\x0b\n\x07VICTORY\x10\x02\x12\x0c\n\x08\x44\x45\x46\x45\x41TED\x10\x03\x12\r\n\tTIMED_OUT\x10\x04\"\xfd\x04\n\x0cPokemonProto\x12\n\n\x02Id\x18\x01 \x01(\x05\x12\x11\n\tPokemonId\x18\x02 \x01(\x05\x12\n\n\x02\x43p\x18\x03 \x01(\x05\x12\x0f\n\x07Stamina\x18\x04 \x01(\x05\x12\x12\n\nMaxStamina\x18\x05 \x01(\x05\x12\r\n\x05Move1\x18\x06 \x01(\x05\x12\r\n\x05Move2\x18\x07 \x01(\x05\x12\x16\n\x0e\x44\x65ployedFortId\x18\x08 \x01(\x05\x12\x11\n\tOwnerName\x18\t \x01(\t\x12\r\n\x05IsEgg\x18\n \x01(\x05\x12\x19\n\x11\x45ggKmWalkedTarget\x18\x0b \x01(\x05\x12\x18\n\x10\x45ggKmWalkedStart\x18\x0c \x01(\x05\x12\x0e\n\x06Origin\x18\x0e \x01(\x05\x12\x0f\n\x07HeightM\x18\x0f \x01(\x02\x12\x10\n\x08WeightKg\x18\x10 \x01(\x02\x12\x18\n\x10IndividualAttack\x18\x11 \x01(\x05\x12\x19\n\x11IndividualDefense\x18\x12 \x01(\x05\x12\x19\n\x11IndividualStamina\x18\x13 \x01(\x05\x12\x14\n\x0c\x43pMultiplier\x18\x14 \x01(\x05\x12\x10\n\x08Pokeball\x18\x15 \x01(\x05\x12\x18\n\x10\x43\x61pturedS2CellId\x18\x16 \x01(\x04\x12\x17\n\x0f\x42\x61ttlesAttacked\x18\x17 \x01(\x05\x12\x17\n\x0f\x42\x61ttlesDefended\x18\x18 \x01(\x05\x12\x16\n\x0e\x45ggIncubatorId\x18\x19 \x01(\x05\x12\x16\n\x0e\x43reationTimeMs\x18\x1a \x01(\x04\x12\x13\n\x0bNumUpgrades\x18\x1b \x01(\x05\x12\x1e\n\x16\x41\x64\x64itionalCpMultiplier\x18\x1c \x01(\x05\x12\x10\n\x08\x46\x61vorite\x18\x1d \x01(\x05\x12\x10\n\x08Nickname\x18\x1e \x01(\t\x12\x10\n\x08\x46romFort\x18\x1f \x01(\x05\"L\n\tItemProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\r\n\x05\x43ount\x18\x02 \x01(\x05\x12\x0e\n\x06Unseen\x18\x03 \x01(\x08\"\xd8\x06\n\x10PokemonFortProto\x12\x0e\n\x06\x46ortId\x18\x01 \x01(\t\x12\x16\n\x0eLastModifiedMs\x18\x02 \x01(\x03\x12\x10\n\x08Latitude\x18\x03 \x01(\x01\x12\x11\n\tLongitude\x18\x04 \x01(\x01\x12\x0f\n\x07\x45nabled\x18\x08 \x01(\x08\x12,\n\x04Team\x18\x05 \x01(\x0e\x32\x1e.Holoholo.Rpc.Custom_TeamColor\x12\x38\n\x0eGuardPokemonId\x18\x06 \x01(\x0e\x32 .Holoholo.Rpc.Custom_PokemonName\x12\x19\n\x11GuardPokemonLevel\x18\x07 \x01(\x05\x12\x11\n\tGymPoints\x18\n \x01(\x03\x12\x12\n\nIsInBattle\x18\x0b \x01(\x08\x12(\n\x08\x46ortType\x18\t \x01(\x0e\x32\x16.Holoholo.Rpc.FortType\x12\x1a\n\x12\x43ooldownCompleteMs\x18\x0e \x01(\x03\x12;\n\x07Sponsor\x18\x0f \x01(\x0e\x32*.Holoholo.Rpc.PokemonFortProto.FortSponsor\x12G\n\rRenderingType\x18\x10 \x01(\x0e\x32\x30.Holoholo.Rpc.PokemonFortProto.FortRenderingType\x12\x1a\n\x12\x41\x63tiveFortModifier\x18\x0c \x01(\x0c\x12M\n\x0c\x46ortLureInfo\x18\r \x01(\x0b\x32\x37.Holoholo.Rpc.PokemonFortProto.Custom_FortLureInfoProto\x1a\x8b\x01\n\x18\x43ustom_FortLureInfoProto\x12\x0e\n\x06\x46ortId\x18\x01 \x01(\t\x12\x10\n\x08NotSure2\x18\x02 \x01(\x01\x12\x37\n\rActivePokemon\x18\x03 \x01(\x0e\x32 .Holoholo.Rpc.Custom_PokemonName\x12\x14\n\x0cLureExpiryMs\x18\x04 \x01(\x03\"B\n\x0b\x46ortSponsor\x12\x11\n\rUNSET_SPONSOR\x10\x00\x12\r\n\tMCDONALDS\x10\x01\x12\x11\n\rPOKEMON_STORE\x10\x02\"3\n\x11\x46ortRenderingType\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x11\n\rINTERNAL_TEST\x10\x01\"h\n\x18PlayerPublicProfileProto\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\r\n\x05Level\x18\x02 \x01(\x05\x12/\n\x06\x41vatar\x18\x03 \x01(\x0b\x32\x1f.Holoholo.Rpc.PlayerAvatarProto\"\x99\x01\n\x11PlayerAvatarProto\x12\x0e\n\x06\x41vatar\x18\x08 \x01(\x05\x12\x0c\n\x04Skin\x18\x02 \x01(\x05\x12\x0c\n\x04Hair\x18\x03 \x01(\x05\x12\r\n\x05Shirt\x18\x04 \x01(\x05\x12\r\n\x05Pants\x18\x05 \x01(\x05\x12\x0b\n\x03Hat\x18\x06 \x01(\x05\x12\r\n\x05Shoes\x18\x07 \x01(\x05\x12\x0c\n\x04\x45yes\x18\t \x01(\x05\x12\x10\n\x08\x42\x61\x63kpack\x18\n \x01(\x05\"}\n\rGymStateProto\x12\x33\n\x0b\x46ortMapData\x18\x01 \x01(\x0b\x32\x1e.Holoholo.Rpc.PokemonFortProto\x12\x37\n\rGymMembership\x18\x02 \x03(\x0b\x32 .Holoholo.Rpc.GymMembershipProto\"\x87\x01\n\x12GymMembershipProto\x12+\n\x07Pokemon\x18\x01 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x44\n\x14TrainerPublicProfile\x18\x02 \x01(\x0b\x32&.Holoholo.Rpc.PlayerPublicProfileProto*>\n\x10\x43ustom_TeamColor\x12\x0b\n\x07NEUTRAL\x10\x00\x12\x08\n\x04\x42LUE\x10\x01\x12\x07\n\x03RED\x10\x02\x12\n\n\x06YELLOW\x10\x03*\x9c\x10\n\x12\x43ustom_PokemonName\x12\r\n\tMISSINGNO\x10\x00\x12\r\n\tBULBASAUR\x10\x01\x12\x0b\n\x07IVYSAUR\x10\x02\x12\x0c\n\x08VENUSAUR\x10\x03\x12\x0e\n\nCHARMENDER\x10\x04\x12\x0e\n\nCHARMELEON\x10\x05\x12\r\n\tCHARIZARD\x10\x06\x12\x0c\n\x08SQUIRTLE\x10\x07\x12\r\n\tWARTORTLE\x10\x08\x12\r\n\tBLASTOISE\x10\t\x12\x0c\n\x08\x43\x41TERPIE\x10\n\x12\x0b\n\x07METAPOD\x10\x0b\x12\x0e\n\nBUTTERFREE\x10\x0c\x12\n\n\x06WEEDLE\x10\r\x12\n\n\x06KAKUNA\x10\x0e\x12\x0c\n\x08\x42\x45\x45\x44RILL\x10\x0f\x12\n\n\x06PIDGEY\x10\x10\x12\r\n\tPIDGEOTTO\x10\x11\x12\x0b\n\x07PIDGEOT\x10\x12\x12\x0b\n\x07RATTATA\x10\x13\x12\x0c\n\x08RATICATE\x10\x14\x12\x0b\n\x07SPEAROW\x10\x15\x12\n\n\x06\x46\x45\x41ROW\x10\x16\x12\t\n\x05\x45KANS\x10\x17\x12\t\n\x05\x41RBOK\x10\x18\x12\x0b\n\x07PIKACHU\x10\x19\x12\n\n\x06RAICHU\x10\x1a\x12\r\n\tSANDSHREW\x10\x1b\x12\x0c\n\x08SANDLASH\x10\x1c\x12\x12\n\x0eNIDORAN_FEMALE\x10\x1d\x12\x0c\n\x08NIDORINA\x10\x1e\x12\r\n\tNIDOQUEEN\x10\x1f\x12\x10\n\x0cNIDORAN_MALE\x10 \x12\x0c\n\x08NIDORINO\x10!\x12\x0c\n\x08NIDOKING\x10\"\x12\x0b\n\x07\x43LEFARY\x10#\x12\x0c\n\x08\x43LEFABLE\x10$\x12\n\n\x06VULPIX\x10%\x12\r\n\tNINETALES\x10&\x12\x0e\n\nJIGGLYPUFF\x10\'\x12\x0e\n\nWIGGLYTUFF\x10(\x12\t\n\x05ZUBAT\x10)\x12\n\n\x06GOLBAT\x10*\x12\n\n\x06ODDISH\x10+\x12\t\n\x05GLOOM\x10,\x12\r\n\tVILEPLUME\x10-\x12\t\n\x05PARAS\x10.\x12\x0c\n\x08PARASECT\x10/\x12\x0b\n\x07VENONAT\x10\x30\x12\x0c\n\x08VENOMOTH\x10\x31\x12\x0b\n\x07\x44IGLETT\x10\x32\x12\x0b\n\x07\x44UGTRIO\x10\x33\x12\n\n\x06MEOWTH\x10\x34\x12\x0b\n\x07PERSIAN\x10\x35\x12\x0b\n\x07PSYDUCK\x10\x36\x12\x0b\n\x07GOLDUCK\x10\x37\x12\n\n\x06MANKEY\x10\x38\x12\x0c\n\x08PRIMEAPE\x10\x39\x12\r\n\tGROWLITHE\x10:\x12\x0c\n\x08\x41RCANINE\x10;\x12\x0b\n\x07POLIWAG\x10<\x12\r\n\tPOLIWHIRL\x10=\x12\r\n\tPOLIWRATH\x10>\x12\x08\n\x04\x41\x42RA\x10?\x12\x0b\n\x07KADABRA\x10@\x12\r\n\tALAKHAZAM\x10\x41\x12\n\n\x06MACHOP\x10\x42\x12\x0b\n\x07MACHOKE\x10\x43\x12\x0b\n\x07MACHAMP\x10\x44\x12\x0e\n\nBELLSPROUT\x10\x45\x12\x0e\n\nWEEPINBELL\x10\x46\x12\x0f\n\x0bVICTREEBELL\x10G\x12\r\n\tTENTACOOL\x10H\x12\x0e\n\nTENTACRUEL\x10I\x12\x0b\n\x07GEODUGE\x10J\x12\x0c\n\x08GRAVELER\x10K\x12\t\n\x05GOLEM\x10L\x12\n\n\x06PONYTA\x10M\x12\x0c\n\x08RAPIDASH\x10N\x12\x0c\n\x08SLOWPOKE\x10O\x12\x0b\n\x07SLOWBRO\x10P\x12\r\n\tMAGNEMITE\x10Q\x12\x0c\n\x08MAGNETON\x10R\x12\r\n\tFARFETCHD\x10S\x12\t\n\x05\x44ODUO\x10T\x12\n\n\x06\x44ODRIO\x10U\x12\x08\n\x04SEEL\x10V\x12\x0b\n\x07\x44\x45WGONG\x10W\x12\n\n\x06GRIMER\x10X\x12\x07\n\x03MUK\x10Y\x12\x0c\n\x08SHELLDER\x10Z\x12\x0c\n\x08\x43LOYSTER\x10[\x12\n\n\x06GASTLY\x10\\\x12\x0b\n\x07HAUNTER\x10]\x12\n\n\x06GENGAR\x10^\x12\x08\n\x04ONIX\x10_\x12\x0b\n\x07\x44ROWZEE\x10`\x12\t\n\x05HYPNO\x10\x61\x12\n\n\x06KRABBY\x10\x62\x12\x0b\n\x07KINGLER\x10\x63\x12\x0b\n\x07VOLTORB\x10\x64\x12\r\n\tELECTRODE\x10\x65\x12\r\n\tEXEGGCUTE\x10\x66\x12\r\n\tEXEGGUTOR\x10g\x12\n\n\x06\x43UBONE\x10h\x12\x0b\n\x07MAROWAK\x10i\x12\r\n\tHITMONLEE\x10j\x12\x0e\n\nHITMONCHAN\x10k\x12\r\n\tLICKITUNG\x10l\x12\x0b\n\x07KOFFING\x10m\x12\x0b\n\x07WEEZING\x10n\x12\x0b\n\x07RHYHORN\x10o\x12\n\n\x06RHYDON\x10p\x12\x0b\n\x07\x43HANSEY\x10q\x12\x0b\n\x07TANGELA\x10r\x12\x0e\n\nKANGASKHAN\x10s\x12\n\n\x06HORSEA\x10t\x12\n\n\x06SEADRA\x10u\x12\x0b\n\x07GOLDEEN\x10v\x12\x0b\n\x07SEAKING\x10w\x12\n\n\x06STARYU\x10x\x12\x0b\n\x07STARMIE\x10y\x12\x0b\n\x07MR_MIME\x10z\x12\x0b\n\x07SCYTHER\x10{\x12\x08\n\x04JYNX\x10|\x12\x0e\n\nELECTABUZZ\x10}\x12\n\n\x06MAGMAR\x10~\x12\n\n\x06PINSIR\x10\x7f\x12\x0b\n\x06TAUROS\x10\x80\x01\x12\r\n\x08MAGIKARP\x10\x81\x01\x12\r\n\x08GYARADOS\x10\x82\x01\x12\x0b\n\x06LAPRAS\x10\x83\x01\x12\n\n\x05\x44ITTO\x10\x84\x01\x12\n\n\x05\x45\x45VEE\x10\x85\x01\x12\r\n\x08VAPOREON\x10\x86\x01\x12\x0c\n\x07JOLTEON\x10\x87\x01\x12\x0c\n\x07\x46LAREON\x10\x88\x01\x12\x0c\n\x07PORYGON\x10\x89\x01\x12\x0c\n\x07OMANYTE\x10\x8a\x01\x12\x0c\n\x07OMASTAR\x10\x8b\x01\x12\x0b\n\x06KABUTO\x10\x8c\x01\x12\r\n\x08KABUTOPS\x10\x8d\x01\x12\x0f\n\nAERODACTYL\x10\x8e\x01\x12\x0c\n\x07SNORLAX\x10\x8f\x01\x12\r\n\x08\x41RTICUNO\x10\x90\x01\x12\x0b\n\x06ZAPDOS\x10\x91\x01\x12\x0c\n\x07MOLTRES\x10\x92\x01\x12\x0c\n\x07\x44RATINI\x10\x93\x01\x12\x0e\n\tDRAGONAIR\x10\x94\x01\x12\x0e\n\tDRAGONITE\x10\x95\x01\x12\x0b\n\x06MEWTWO\x10\x96\x01\x12\x08\n\x03MEW\x10\x97\x01*\xbc\x0c\n\x06Method\x12\x10\n\x0cMETHOD_UNSET\x10\x00\x12\x11\n\rPLAYER_UPDATE\x10\x01\x12\x0e\n\nGET_PLAYER\x10\x02\x12\x11\n\rGET_INVENTORY\x10\x04\x12\x15\n\x11\x44OWNLOAD_SETTINGS\x10\x05\x12\x1b\n\x17\x44OWNLOAD_ITEM_TEMPLATES\x10\x06\x12\"\n\x1e\x44OWNLOAD_REMOTE_CONFIG_VERSION\x10\x07\x12\x0f\n\x0b\x46ORT_SEARCH\x10\x65\x12\r\n\tENCOUNTER\x10\x66\x12\x11\n\rCATCH_POKEMON\x10g\x12\x10\n\x0c\x46ORT_DETAILS\x10h\x12\x0c\n\x08ITEM_USE\x10i\x12\x13\n\x0fGET_MAP_OBJECTS\x10j\x12\x17\n\x13\x46ORT_DEPLOY_POKEMON\x10n\x12\x17\n\x13\x46ORT_RECALL_POKEMON\x10o\x12\x13\n\x0fRELEASE_POKEMON\x10p\x12\x13\n\x0fUSE_ITEM_POTION\x10q\x12\x14\n\x10USE_ITEM_CAPTURE\x10r\x12\x11\n\rUSE_ITEM_FLEE\x10s\x12\x13\n\x0fUSE_ITEM_REVIVE\x10t\x12\x10\n\x0cTRADE_SEARCH\x10u\x12\x0f\n\x0bTRADE_OFFER\x10v\x12\x12\n\x0eTRADE_RESPONSE\x10w\x12\x10\n\x0cTRADE_RESULT\x10x\x12\x16\n\x12GET_PLAYER_PROFILE\x10y\x12\x11\n\rGET_ITEM_PACK\x10z\x12\x11\n\rBUY_ITEM_PACK\x10{\x12\x10\n\x0c\x42UY_GEM_PACK\x10|\x12\x12\n\x0e\x45VOLVE_POKEMON\x10}\x12\x14\n\x10GET_HATCHED_EGGS\x10~\x12\x1f\n\x1b\x45NCOUNTER_TUTORIAL_COMPLETE\x10\x7f\x12\x15\n\x10LEVEL_UP_REWARDS\x10\x80\x01\x12\x19\n\x14\x43HECK_AWARDED_BADGES\x10\x81\x01\x12\x11\n\x0cUSE_ITEM_GYM\x10\x85\x01\x12\x14\n\x0fGET_GYM_DETAILS\x10\x86\x01\x12\x15\n\x10START_GYM_BATTLE\x10\x87\x01\x12\x0f\n\nATTACK_GYM\x10\x88\x01\x12\x1b\n\x16RECYCLE_INVENTORY_ITEM\x10\x89\x01\x12\x18\n\x13\x43OLLECT_DAILY_BONUS\x10\x8a\x01\x12\x16\n\x11USE_ITEM_XP_BOOST\x10\x8b\x01\x12\x1b\n\x16USE_ITEM_EGG_INCUBATOR\x10\x8c\x01\x12\x10\n\x0bUSE_INCENSE\x10\x8d\x01\x12\x18\n\x13GET_INCENSE_POKEMON\x10\x8e\x01\x12\x16\n\x11INCENSE_ENCOUNTER\x10\x8f\x01\x12\x16\n\x11\x41\x44\x44_FORT_MODIFIER\x10\x90\x01\x12\x13\n\x0e\x44ISK_ENCOUNTER\x10\x91\x01\x12!\n\x1c\x43OLLECT_DAILY_DEFENDER_BONUS\x10\x92\x01\x12\x14\n\x0fUPGRADE_POKEMON\x10\x93\x01\x12\x19\n\x14SET_FAVORITE_POKEMON\x10\x94\x01\x12\x15\n\x10NICKNAME_POKEMON\x10\x95\x01\x12\x10\n\x0b\x45QUIP_BADGE\x10\x96\x01\x12\x19\n\x14SET_CONTACT_SETTINGS\x10\x97\x01\x12\x15\n\x10GET_ASSET_DIGEST\x10\xac\x02\x12\x16\n\x11GET_DOWNLOAD_URLS\x10\xad\x02\x12\x1c\n\x17GET_SUGGESTED_CODENAMES\x10\x91\x03\x12\x1d\n\x18\x43HECK_CODENAME_AVAILABLE\x10\x92\x03\x12\x13\n\x0e\x43LAIM_CODENAME\x10\x93\x03\x12\x0f\n\nSET_AVATAR\x10\x94\x03\x12\x14\n\x0fSET_PLAYER_TEAM\x10\x95\x03\x12\x1b\n\x16MARK_TUTORIAL_COMPLETE\x10\x96\x03\x12\x16\n\x11LOAD_SPAWN_POINTS\x10\xf4\x03\x12\t\n\x04\x45\x43HO\x10\x9a\x05\x12\x1b\n\x16\x44\x45\x42UG_UPDATE_INVENTORY\x10\xbc\x05\x12\x18\n\x13\x44\x45\x42UG_DELETE_PLAYER\x10\xbd\x05\x12\x17\n\x12SFIDA_REGISTRATION\x10\xa0\x06\x12\x15\n\x10SFIDA_ACTION_LOG\x10\xa1\x06\x12\x18\n\x13SFIDA_CERTIFICATION\x10\xa2\x06\x12\x11\n\x0cSFIDA_UPDATE\x10\xa3\x06\x12\x11\n\x0cSFIDA_ACTION\x10\xa4\x06\x12\x11\n\x0cSFIDA_DOWSER\x10\xa5\x06\x12\x12\n\rSFIDA_CAPTURE\x10\xa6\x06*#\n\x08\x46ortType\x12\x07\n\x03GYM\x10\x00\x12\x0e\n\nCHECKPOINT\x10\x01*\xc5\x05\n\x04Item\x12\x10\n\x0cITEM_UNKNOWN\x10\x00\x12\x12\n\x0eITEM_POKE_BALL\x10\x01\x12\x13\n\x0fITEM_GREAT_BALL\x10\x02\x12\x13\n\x0fITEM_ULTRA_BALL\x10\x03\x12\x14\n\x10ITEM_MASTER_BALL\x10\x04\x12\x0f\n\x0bITEM_POTION\x10\x65\x12\x15\n\x11ITEM_SUPER_POTION\x10\x66\x12\x15\n\x11ITEM_HYPER_POTION\x10g\x12\x13\n\x0fITEM_MAX_POTION\x10h\x12\x10\n\x0bITEM_REVIVE\x10\xc9\x01\x12\x14\n\x0fITEM_MAX_REVIVE\x10\xca\x01\x12\x13\n\x0eITEM_LUCKY_EGG\x10\xad\x02\x12\x1a\n\x15ITEM_INCENSE_ORDINARY\x10\x91\x03\x12\x17\n\x12ITEM_INCENSE_SPICY\x10\x92\x03\x12\x16\n\x11ITEM_INCENSE_COOL\x10\x93\x03\x12\x18\n\x13ITEM_INCENSE_FLORAL\x10\x94\x03\x12\x13\n\x0eITEM_TROY_DISK\x10\xf5\x03\x12\x12\n\rITEM_X_ATTACK\x10\xda\x04\x12\x13\n\x0eITEM_X_DEFENSE\x10\xdb\x04\x12\x13\n\x0eITEM_X_MIRACLE\x10\xdc\x04\x12\x14\n\x0fITEM_RAZZ_BERRY\x10\xbd\x05\x12\x14\n\x0fITEM_BLUK_BERRY\x10\xbe\x05\x12\x15\n\x10ITEM_NANAB_BERRY\x10\xbf\x05\x12\x15\n\x10ITEM_WEPAR_BERRY\x10\xc0\x05\x12\x15\n\x10ITEM_PINAP_BERRY\x10\xc1\x05\x12\x18\n\x13ITEM_SPECIAL_CAMERA\x10\xa1\x06\x12#\n\x1eITEM_INCUBATOR_BASIC_UNLIMITED\x10\x85\x07\x12\x19\n\x14ITEM_INCUBATOR_BASIC\x10\x86\x07\x12!\n\x1cITEM_POKEMON_STORAGE_UPGRADE\x10\xe9\x07\x12\x1e\n\x19ITEM_ITEM_STORAGE_UPGRADE\x10\xea\x07\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _CUSTOM_TEAMCOLOR = _descriptor.EnumDescriptor(
   name='Custom_TeamColor',
-  full_name='Holoholo.Custom_TeamColor',
+  full_name='Holoholo.Rpc.Custom_TeamColor',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -49,15 +49,15 @@ _CUSTOM_TEAMCOLOR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5462,
-  serialized_end=5524,
+  serialized_start=3155,
+  serialized_end=3217,
 )
 _sym_db.RegisterEnumDescriptor(_CUSTOM_TEAMCOLOR)
 
 Custom_TeamColor = enum_type_wrapper.EnumTypeWrapper(_CUSTOM_TEAMCOLOR)
 _CUSTOM_POKEMONNAME = _descriptor.EnumDescriptor(
   name='Custom_PokemonName',
-  full_name='Holoholo.Custom_PokemonName',
+  full_name='Holoholo.Rpc.Custom_PokemonName',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -672,423 +672,13 @@ _CUSTOM_POKEMONNAME = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=5527,
-  serialized_end=7603,
+  serialized_start=3220,
+  serialized_end=5296,
 )
 _sym_db.RegisterEnumDescriptor(_CUSTOM_POKEMONNAME)
 
 Custom_PokemonName = enum_type_wrapper.EnumTypeWrapper(_CUSTOM_POKEMONNAME)
-NEUTRAL = 0
-BLUE = 1
-RED = 2
-YELLOW = 3
-MISSINGNO = 0
-BULBASAUR = 1
-IVYSAUR = 2
-VENUSAUR = 3
-CHARMENDER = 4
-CHARMELEON = 5
-CHARIZARD = 6
-SQUIRTLE = 7
-WARTORTLE = 8
-BLASTOISE = 9
-CATERPIE = 10
-METAPOD = 11
-BUTTERFREE = 12
-WEEDLE = 13
-KAKUNA = 14
-BEEDRILL = 15
-PIDGEY = 16
-PIDGEOTTO = 17
-PIDGEOT = 18
-RATTATA = 19
-RATICATE = 20
-SPEAROW = 21
-FEAROW = 22
-EKANS = 23
-ARBOK = 24
-PIKACHU = 25
-RAICHU = 26
-SANDSHREW = 27
-SANDLASH = 28
-NIDORAN_FEMALE = 29
-NIDORINA = 30
-NIDOQUEEN = 31
-NIDORAN_MALE = 32
-NIDORINO = 33
-NIDOKING = 34
-CLEFARY = 35
-CLEFABLE = 36
-VULPIX = 37
-NINETALES = 38
-JIGGLYPUFF = 39
-WIGGLYTUFF = 40
-ZUBAT = 41
-GOLBAT = 42
-ODDISH = 43
-GLOOM = 44
-VILEPLUME = 45
-PARAS = 46
-PARASECT = 47
-VENONAT = 48
-VENOMOTH = 49
-DIGLETT = 50
-DUGTRIO = 51
-MEOWTH = 52
-PERSIAN = 53
-PSYDUCK = 54
-GOLDUCK = 55
-MANKEY = 56
-PRIMEAPE = 57
-GROWLITHE = 58
-ARCANINE = 59
-POLIWAG = 60
-POLIWHIRL = 61
-POLIWRATH = 62
-ABRA = 63
-KADABRA = 64
-ALAKHAZAM = 65
-MACHOP = 66
-MACHOKE = 67
-MACHAMP = 68
-BELLSPROUT = 69
-WEEPINBELL = 70
-VICTREEBELL = 71
-TENTACOOL = 72
-TENTACRUEL = 73
-GEODUGE = 74
-GRAVELER = 75
-GOLEM = 76
-PONYTA = 77
-RAPIDASH = 78
-SLOWPOKE = 79
-SLOWBRO = 80
-MAGNEMITE = 81
-MAGNETON = 82
-FARFETCHD = 83
-DODUO = 84
-DODRIO = 85
-SEEL = 86
-DEWGONG = 87
-GRIMER = 88
-MUK = 89
-SHELLDER = 90
-CLOYSTER = 91
-GASTLY = 92
-HAUNTER = 93
-GENGAR = 94
-ONIX = 95
-DROWZEE = 96
-HYPNO = 97
-KRABBY = 98
-KINGLER = 99
-VOLTORB = 100
-ELECTRODE = 101
-EXEGGCUTE = 102
-EXEGGUTOR = 103
-CUBONE = 104
-MAROWAK = 105
-HITMONLEE = 106
-HITMONCHAN = 107
-LICKITUNG = 108
-KOFFING = 109
-WEEZING = 110
-RHYHORN = 111
-RHYDON = 112
-CHANSEY = 113
-TANGELA = 114
-KANGASKHAN = 115
-HORSEA = 116
-SEADRA = 117
-GOLDEEN = 118
-SEAKING = 119
-STARYU = 120
-STARMIE = 121
-MR_MIME = 122
-SCYTHER = 123
-JYNX = 124
-ELECTABUZZ = 125
-MAGMAR = 126
-PINSIR = 127
-TAUROS = 128
-MAGIKARP = 129
-GYARADOS = 130
-LAPRAS = 131
-DITTO = 132
-EEVEE = 133
-VAPOREON = 134
-JOLTEON = 135
-FLAREON = 136
-PORYGON = 137
-OMANYTE = 138
-OMASTAR = 139
-KABUTO = 140
-KABUTOPS = 141
-AERODACTYL = 142
-SNORLAX = 143
-ARTICUNO = 144
-ZAPDOS = 145
-MOLTRES = 146
-DRATINI = 147
-DRAGONAIR = 148
-DRAGONITE = 149
-MEWTWO = 150
-MEW = 151
-
-
-_RPC_TYPES_FORTSEARCHOUTPROTO_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='Holoholo.Rpc.Types.FortSearchOutProto.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='NO_RESULT_SET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='OUT_OF_RANGE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='IN_COOLDOWN_PERIOD', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='INVENTORY_FULL', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=75,
-  serialized_end=177,
-)
-_sym_db.RegisterEnumDescriptor(_RPC_TYPES_FORTSEARCHOUTPROTO_RESULT)
-
-_RPC_TYPES_STARTGYMBATTLEOUTPROTO_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='Holoholo.Rpc.Types.StartGymBattleOutProto.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_GYM_NOT_FOUND', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_GYM_NEUTRAL', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_GYM_WRONG_TEAM', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_GYM_EMPTY', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_INVALID_DEFENDER', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_TRAINING_INVALID_ATTACKER_COUNT', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_ALL_POKEMON_FAINTED', index=8, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_TOO_MANY_BATTLES', index=9, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_TOO_MANY_PLAYERS', index=10, number=10,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_GYM_BATTLE_LOCKOUT', index=11, number=11,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_PLAYER_BELOW_MINIMUM_LEVEL', index=12, number=12,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NOT_IN_RANGE', index=13, number=13,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=207,
-  serialized_end=584,
-)
-_sym_db.RegisterEnumDescriptor(_RPC_TYPES_STARTGYMBATTLEOUTPROTO_RESULT)
-
-_RPC_TYPES_ATTACKGYMOUTPROTO_RESULT = _descriptor.EnumDescriptor(
-  name='Result',
-  full_name='Holoholo.Rpc.Types.AttackGymOutProto.Result',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SUCCESS', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_INVALID_ATTACK_ACTIONS', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ERROR_NOT_IN_RANGE', index=3, number=3,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=607,
-  serialized_end=697,
-)
-_sym_db.RegisterEnumDescriptor(_RPC_TYPES_ATTACKGYMOUTPROTO_RESULT)
-
-_RPC_TYPES_BATTLEACTIONPROTO_ACTIONTYPE = _descriptor.EnumDescriptor(
-  name='ActionType',
-  full_name='Holoholo.Rpc.Types.BattleActionProto.ActionType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ATTACK', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DODGE', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SPECIAL_ATTACK', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SWAP_POKEMON', index=4, number=4,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='FAINT', index=5, number=5,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PLAYER_JOIN', index=6, number=6,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='PLAYER_QUIT', index=7, number=7,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='VICTORY', index=8, number=8,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DEFEAT', index=9, number=9,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TIMED_OUT', index=10, number=10,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=722,
-  serialized_end=891,
-)
-_sym_db.RegisterEnumDescriptor(_RPC_TYPES_BATTLEACTIONPROTO_ACTIONTYPE)
-
-_RPC_TYPES_BATTLELOGPROTO_BATTLETYPE = _descriptor.EnumDescriptor(
-  name='BattleType',
-  full_name='Holoholo.Rpc.Types.BattleLogProto.BattleType',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='BATTLE_TYPE_UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='NORMAL', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TRAINING', index=2, number=2,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=912,
-  serialized_end=973,
-)
-_sym_db.RegisterEnumDescriptor(_RPC_TYPES_BATTLELOGPROTO_BATTLETYPE)
-
-_RPC_TYPES_BATTLELOGPROTO_STATE = _descriptor.EnumDescriptor(
-  name='State',
-  full_name='Holoholo.Rpc.Types.BattleLogProto.State',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='STATE_UNSET', index=0, number=0,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='ACTIVE', index=1, number=1,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='VICTORY', index=2, number=2,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DEFEATED', index=3, number=3,
-      options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='TIMED_OUT', index=4, number=4,
-      options=None,
-      type=None),
-  ],
-  containing_type=None,
-  options=None,
-  serialized_start=975,
-  serialized_end=1053,
-)
-_sym_db.RegisterEnumDescriptor(_RPC_TYPES_BATTLELOGPROTO_STATE)
-
-_RPC_METHOD = _descriptor.EnumDescriptor(
+_METHOD = _descriptor.EnumDescriptor(
   name='Method',
   full_name='Holoholo.Rpc.Method',
   filename=None,
@@ -1381,12 +971,13 @@ _RPC_METHOD = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1056,
-  serialized_end=2652,
+  serialized_start=5299,
+  serialized_end=6895,
 )
-_sym_db.RegisterEnumDescriptor(_RPC_METHOD)
+_sym_db.RegisterEnumDescriptor(_METHOD)
 
-_RPC_FORTTYPE = _descriptor.EnumDescriptor(
+Method = enum_type_wrapper.EnumTypeWrapper(_METHOD)
+_FORTTYPE = _descriptor.EnumDescriptor(
   name='FortType',
   full_name='Holoholo.Rpc.FortType',
   filename=None,
@@ -1403,12 +994,13 @@ _RPC_FORTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2654,
-  serialized_end=2689,
+  serialized_start=6897,
+  serialized_end=6932,
 )
-_sym_db.RegisterEnumDescriptor(_RPC_FORTTYPE)
+_sym_db.RegisterEnumDescriptor(_FORTTYPE)
 
-_RPC_ITEM = _descriptor.EnumDescriptor(
+FortType = enum_type_wrapper.EnumTypeWrapper(_FORTTYPE)
+_ITEM = _descriptor.EnumDescriptor(
   name='Item',
   full_name='Holoholo.Rpc.Item',
   filename=None,
@@ -1537,14 +1129,528 @@ _RPC_ITEM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=2692,
-  serialized_end=3401,
+  serialized_start=6935,
+  serialized_end=7644,
 )
-_sym_db.RegisterEnumDescriptor(_RPC_ITEM)
+_sym_db.RegisterEnumDescriptor(_ITEM)
+
+Item = enum_type_wrapper.EnumTypeWrapper(_ITEM)
+NEUTRAL = 0
+BLUE = 1
+RED = 2
+YELLOW = 3
+MISSINGNO = 0
+BULBASAUR = 1
+IVYSAUR = 2
+VENUSAUR = 3
+CHARMENDER = 4
+CHARMELEON = 5
+CHARIZARD = 6
+SQUIRTLE = 7
+WARTORTLE = 8
+BLASTOISE = 9
+CATERPIE = 10
+METAPOD = 11
+BUTTERFREE = 12
+WEEDLE = 13
+KAKUNA = 14
+BEEDRILL = 15
+PIDGEY = 16
+PIDGEOTTO = 17
+PIDGEOT = 18
+RATTATA = 19
+RATICATE = 20
+SPEAROW = 21
+FEAROW = 22
+EKANS = 23
+ARBOK = 24
+PIKACHU = 25
+RAICHU = 26
+SANDSHREW = 27
+SANDLASH = 28
+NIDORAN_FEMALE = 29
+NIDORINA = 30
+NIDOQUEEN = 31
+NIDORAN_MALE = 32
+NIDORINO = 33
+NIDOKING = 34
+CLEFARY = 35
+CLEFABLE = 36
+VULPIX = 37
+NINETALES = 38
+JIGGLYPUFF = 39
+WIGGLYTUFF = 40
+ZUBAT = 41
+GOLBAT = 42
+ODDISH = 43
+GLOOM = 44
+VILEPLUME = 45
+PARAS = 46
+PARASECT = 47
+VENONAT = 48
+VENOMOTH = 49
+DIGLETT = 50
+DUGTRIO = 51
+MEOWTH = 52
+PERSIAN = 53
+PSYDUCK = 54
+GOLDUCK = 55
+MANKEY = 56
+PRIMEAPE = 57
+GROWLITHE = 58
+ARCANINE = 59
+POLIWAG = 60
+POLIWHIRL = 61
+POLIWRATH = 62
+ABRA = 63
+KADABRA = 64
+ALAKHAZAM = 65
+MACHOP = 66
+MACHOKE = 67
+MACHAMP = 68
+BELLSPROUT = 69
+WEEPINBELL = 70
+VICTREEBELL = 71
+TENTACOOL = 72
+TENTACRUEL = 73
+GEODUGE = 74
+GRAVELER = 75
+GOLEM = 76
+PONYTA = 77
+RAPIDASH = 78
+SLOWPOKE = 79
+SLOWBRO = 80
+MAGNEMITE = 81
+MAGNETON = 82
+FARFETCHD = 83
+DODUO = 84
+DODRIO = 85
+SEEL = 86
+DEWGONG = 87
+GRIMER = 88
+MUK = 89
+SHELLDER = 90
+CLOYSTER = 91
+GASTLY = 92
+HAUNTER = 93
+GENGAR = 94
+ONIX = 95
+DROWZEE = 96
+HYPNO = 97
+KRABBY = 98
+KINGLER = 99
+VOLTORB = 100
+ELECTRODE = 101
+EXEGGCUTE = 102
+EXEGGUTOR = 103
+CUBONE = 104
+MAROWAK = 105
+HITMONLEE = 106
+HITMONCHAN = 107
+LICKITUNG = 108
+KOFFING = 109
+WEEZING = 110
+RHYHORN = 111
+RHYDON = 112
+CHANSEY = 113
+TANGELA = 114
+KANGASKHAN = 115
+HORSEA = 116
+SEADRA = 117
+GOLDEEN = 118
+SEAKING = 119
+STARYU = 120
+STARMIE = 121
+MR_MIME = 122
+SCYTHER = 123
+JYNX = 124
+ELECTABUZZ = 125
+MAGMAR = 126
+PINSIR = 127
+TAUROS = 128
+MAGIKARP = 129
+GYARADOS = 130
+LAPRAS = 131
+DITTO = 132
+EEVEE = 133
+VAPOREON = 134
+JOLTEON = 135
+FLAREON = 136
+PORYGON = 137
+OMANYTE = 138
+OMASTAR = 139
+KABUTO = 140
+KABUTOPS = 141
+AERODACTYL = 142
+SNORLAX = 143
+ARTICUNO = 144
+ZAPDOS = 145
+MOLTRES = 146
+DRATINI = 147
+DRAGONAIR = 148
+DRAGONITE = 149
+MEWTWO = 150
+MEW = 151
+METHOD_UNSET = 0
+PLAYER_UPDATE = 1
+GET_PLAYER = 2
+GET_INVENTORY = 4
+DOWNLOAD_SETTINGS = 5
+DOWNLOAD_ITEM_TEMPLATES = 6
+DOWNLOAD_REMOTE_CONFIG_VERSION = 7
+FORT_SEARCH = 101
+ENCOUNTER = 102
+CATCH_POKEMON = 103
+FORT_DETAILS = 104
+ITEM_USE = 105
+GET_MAP_OBJECTS = 106
+FORT_DEPLOY_POKEMON = 110
+FORT_RECALL_POKEMON = 111
+RELEASE_POKEMON = 112
+USE_ITEM_POTION = 113
+USE_ITEM_CAPTURE = 114
+USE_ITEM_FLEE = 115
+USE_ITEM_REVIVE = 116
+TRADE_SEARCH = 117
+TRADE_OFFER = 118
+TRADE_RESPONSE = 119
+TRADE_RESULT = 120
+GET_PLAYER_PROFILE = 121
+GET_ITEM_PACK = 122
+BUY_ITEM_PACK = 123
+BUY_GEM_PACK = 124
+EVOLVE_POKEMON = 125
+GET_HATCHED_EGGS = 126
+ENCOUNTER_TUTORIAL_COMPLETE = 127
+LEVEL_UP_REWARDS = 128
+CHECK_AWARDED_BADGES = 129
+USE_ITEM_GYM = 133
+GET_GYM_DETAILS = 134
+START_GYM_BATTLE = 135
+ATTACK_GYM = 136
+RECYCLE_INVENTORY_ITEM = 137
+COLLECT_DAILY_BONUS = 138
+USE_ITEM_XP_BOOST = 139
+USE_ITEM_EGG_INCUBATOR = 140
+USE_INCENSE = 141
+GET_INCENSE_POKEMON = 142
+INCENSE_ENCOUNTER = 143
+ADD_FORT_MODIFIER = 144
+DISK_ENCOUNTER = 145
+COLLECT_DAILY_DEFENDER_BONUS = 146
+UPGRADE_POKEMON = 147
+SET_FAVORITE_POKEMON = 148
+NICKNAME_POKEMON = 149
+EQUIP_BADGE = 150
+SET_CONTACT_SETTINGS = 151
+GET_ASSET_DIGEST = 300
+GET_DOWNLOAD_URLS = 301
+GET_SUGGESTED_CODENAMES = 401
+CHECK_CODENAME_AVAILABLE = 402
+CLAIM_CODENAME = 403
+SET_AVATAR = 404
+SET_PLAYER_TEAM = 405
+MARK_TUTORIAL_COMPLETE = 406
+LOAD_SPAWN_POINTS = 500
+ECHO = 666
+DEBUG_UPDATE_INVENTORY = 700
+DEBUG_DELETE_PLAYER = 701
+SFIDA_REGISTRATION = 800
+SFIDA_ACTION_LOG = 801
+SFIDA_CERTIFICATION = 802
+SFIDA_UPDATE = 803
+SFIDA_ACTION = 804
+SFIDA_DOWSER = 805
+SFIDA_CAPTURE = 806
+GYM = 0
+CHECKPOINT = 1
+ITEM_UNKNOWN = 0
+ITEM_POKE_BALL = 1
+ITEM_GREAT_BALL = 2
+ITEM_ULTRA_BALL = 3
+ITEM_MASTER_BALL = 4
+ITEM_POTION = 101
+ITEM_SUPER_POTION = 102
+ITEM_HYPER_POTION = 103
+ITEM_MAX_POTION = 104
+ITEM_REVIVE = 201
+ITEM_MAX_REVIVE = 202
+ITEM_LUCKY_EGG = 301
+ITEM_INCENSE_ORDINARY = 401
+ITEM_INCENSE_SPICY = 402
+ITEM_INCENSE_COOL = 403
+ITEM_INCENSE_FLORAL = 404
+ITEM_TROY_DISK = 501
+ITEM_X_ATTACK = 602
+ITEM_X_DEFENSE = 603
+ITEM_X_MIRACLE = 604
+ITEM_RAZZ_BERRY = 701
+ITEM_BLUK_BERRY = 702
+ITEM_NANAB_BERRY = 703
+ITEM_WEPAR_BERRY = 704
+ITEM_PINAP_BERRY = 705
+ITEM_SPECIAL_CAMERA = 801
+ITEM_INCUBATOR_BASIC_UNLIMITED = 901
+ITEM_INCUBATOR_BASIC = 902
+ITEM_POKEMON_STORAGE_UPGRADE = 1001
+ITEM_ITEM_STORAGE_UPGRADE = 1002
+
+
+_TYPES_FORTSEARCHOUTPROTO_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='Holoholo.Rpc.Types.FortSearchOutProto.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NO_RESULT_SET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='OUT_OF_RANGE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IN_COOLDOWN_PERIOD', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVENTORY_FULL', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=71,
+  serialized_end=173,
+)
+_sym_db.RegisterEnumDescriptor(_TYPES_FORTSEARCHOUTPROTO_RESULT)
+
+_TYPES_STARTGYMBATTLEOUTPROTO_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='Holoholo.Rpc.Types.StartGymBattleOutProto.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_GYM_NOT_FOUND', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_GYM_NEUTRAL', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_GYM_WRONG_TEAM', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_GYM_EMPTY', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_INVALID_DEFENDER', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_TRAINING_INVALID_ATTACKER_COUNT', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_ALL_POKEMON_FAINTED', index=8, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_TOO_MANY_BATTLES', index=9, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_TOO_MANY_PLAYERS', index=10, number=10,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_GYM_BATTLE_LOCKOUT', index=11, number=11,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_PLAYER_BELOW_MINIMUM_LEVEL', index=12, number=12,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NOT_IN_RANGE', index=13, number=13,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=203,
+  serialized_end=580,
+)
+_sym_db.RegisterEnumDescriptor(_TYPES_STARTGYMBATTLEOUTPROTO_RESULT)
+
+_TYPES_ATTACKGYMOUTPROTO_RESULT = _descriptor.EnumDescriptor(
+  name='Result',
+  full_name='Holoholo.Rpc.Types.AttackGymOutProto.Result',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_INVALID_ATTACK_ACTIONS', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_NOT_IN_RANGE', index=3, number=3,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=603,
+  serialized_end=693,
+)
+_sym_db.RegisterEnumDescriptor(_TYPES_ATTACKGYMOUTPROTO_RESULT)
+
+_TYPES_BATTLEACTIONPROTO_ACTIONTYPE = _descriptor.EnumDescriptor(
+  name='ActionType',
+  full_name='Holoholo.Rpc.Types.BattleActionProto.ActionType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ATTACK', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DODGE', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SPECIAL_ATTACK', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SWAP_POKEMON', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAINT', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PLAYER_JOIN', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PLAYER_QUIT', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='VICTORY', index=8, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DEFEAT', index=9, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TIMED_OUT', index=10, number=10,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=718,
+  serialized_end=887,
+)
+_sym_db.RegisterEnumDescriptor(_TYPES_BATTLEACTIONPROTO_ACTIONTYPE)
+
+_TYPES_BATTLELOGPROTO_BATTLETYPE = _descriptor.EnumDescriptor(
+  name='BattleType',
+  full_name='Holoholo.Rpc.Types.BattleLogProto.BattleType',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='BATTLE_TYPE_UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NORMAL', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TRAINING', index=2, number=2,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=908,
+  serialized_end=969,
+)
+_sym_db.RegisterEnumDescriptor(_TYPES_BATTLELOGPROTO_BATTLETYPE)
+
+_TYPES_BATTLELOGPROTO_STATE = _descriptor.EnumDescriptor(
+  name='State',
+  full_name='Holoholo.Rpc.Types.BattleLogProto.State',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='STATE_UNSET', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ACTIVE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='VICTORY', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DEFEATED', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='TIMED_OUT', index=4, number=4,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=971,
+  serialized_end=1049,
+)
+_sym_db.RegisterEnumDescriptor(_TYPES_BATTLELOGPROTO_STATE)
 
 _POKEMONFORTPROTO_FORTSPONSOR = _descriptor.EnumDescriptor(
   name='FortSponsor',
-  full_name='Holoholo.PokemonFortProto.FortSponsor',
+  full_name='Holoholo.Rpc.PokemonFortProto.FortSponsor',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1563,14 +1669,14 @@ _POKEMONFORTPROTO_FORTSPONSOR = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4835,
-  serialized_end=4901,
+  serialized_start=2507,
+  serialized_end=2573,
 )
 _sym_db.RegisterEnumDescriptor(_POKEMONFORTPROTO_FORTSPONSOR)
 
 _POKEMONFORTPROTO_FORTRENDERINGTYPE = _descriptor.EnumDescriptor(
   name='FortRenderingType',
-  full_name='Holoholo.PokemonFortProto.FortRenderingType',
+  full_name='Holoholo.Rpc.PokemonFortProto.FortRenderingType',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -1585,13 +1691,13 @@ _POKEMONFORTPROTO_FORTRENDERINGTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=4903,
-  serialized_end=4954,
+  serialized_start=2575,
+  serialized_end=2626,
 )
 _sym_db.RegisterEnumDescriptor(_POKEMONFORTPROTO_FORTRENDERINGTYPE)
 
 
-_RPC_TYPES_FORTSEARCHOUTPROTO = _descriptor.Descriptor(
+_TYPES_FORTSEARCHOUTPROTO = _descriptor.Descriptor(
   name='FortSearchOutProto',
   full_name='Holoholo.Rpc.Types.FortSearchOutProto',
   filename=None,
@@ -1603,7 +1709,7 @@ _RPC_TYPES_FORTSEARCHOUTPROTO = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _RPC_TYPES_FORTSEARCHOUTPROTO_RESULT,
+    _TYPES_FORTSEARCHOUTPROTO_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -1611,11 +1717,11 @@ _RPC_TYPES_FORTSEARCHOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=53,
-  serialized_end=177,
+  serialized_start=49,
+  serialized_end=173,
 )
 
-_RPC_TYPES_STARTGYMBATTLEOUTPROTO = _descriptor.Descriptor(
+_TYPES_STARTGYMBATTLEOUTPROTO = _descriptor.Descriptor(
   name='StartGymBattleOutProto',
   full_name='Holoholo.Rpc.Types.StartGymBattleOutProto',
   filename=None,
@@ -1627,7 +1733,7 @@ _RPC_TYPES_STARTGYMBATTLEOUTPROTO = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _RPC_TYPES_STARTGYMBATTLEOUTPROTO_RESULT,
+    _TYPES_STARTGYMBATTLEOUTPROTO_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -1635,11 +1741,11 @@ _RPC_TYPES_STARTGYMBATTLEOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=180,
-  serialized_end=584,
+  serialized_start=176,
+  serialized_end=580,
 )
 
-_RPC_TYPES_ATTACKGYMOUTPROTO = _descriptor.Descriptor(
+_TYPES_ATTACKGYMOUTPROTO = _descriptor.Descriptor(
   name='AttackGymOutProto',
   full_name='Holoholo.Rpc.Types.AttackGymOutProto',
   filename=None,
@@ -1651,7 +1757,7 @@ _RPC_TYPES_ATTACKGYMOUTPROTO = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _RPC_TYPES_ATTACKGYMOUTPROTO_RESULT,
+    _TYPES_ATTACKGYMOUTPROTO_RESULT,
   ],
   options=None,
   is_extendable=False,
@@ -1659,11 +1765,11 @@ _RPC_TYPES_ATTACKGYMOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=586,
-  serialized_end=697,
+  serialized_start=582,
+  serialized_end=693,
 )
 
-_RPC_TYPES_BATTLEACTIONPROTO = _descriptor.Descriptor(
+_TYPES_BATTLEACTIONPROTO = _descriptor.Descriptor(
   name='BattleActionProto',
   full_name='Holoholo.Rpc.Types.BattleActionProto',
   filename=None,
@@ -1675,7 +1781,7 @@ _RPC_TYPES_BATTLEACTIONPROTO = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _RPC_TYPES_BATTLEACTIONPROTO_ACTIONTYPE,
+    _TYPES_BATTLEACTIONPROTO_ACTIONTYPE,
   ],
   options=None,
   is_extendable=False,
@@ -1683,11 +1789,11 @@ _RPC_TYPES_BATTLEACTIONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=700,
-  serialized_end=891,
+  serialized_start=696,
+  serialized_end=887,
 )
 
-_RPC_TYPES_BATTLELOGPROTO = _descriptor.Descriptor(
+_TYPES_BATTLELOGPROTO = _descriptor.Descriptor(
   name='BattleLogProto',
   full_name='Holoholo.Rpc.Types.BattleLogProto',
   filename=None,
@@ -1699,8 +1805,8 @@ _RPC_TYPES_BATTLELOGPROTO = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _RPC_TYPES_BATTLELOGPROTO_BATTLETYPE,
-    _RPC_TYPES_BATTLELOGPROTO_STATE,
+    _TYPES_BATTLELOGPROTO_BATTLETYPE,
+    _TYPES_BATTLELOGPROTO_STATE,
   ],
   options=None,
   is_extendable=False,
@@ -1708,11 +1814,11 @@ _RPC_TYPES_BATTLELOGPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=894,
-  serialized_end=1053,
+  serialized_start=890,
+  serialized_end=1049,
 )
 
-_RPC_TYPES = _descriptor.Descriptor(
+_TYPES = _descriptor.Descriptor(
   name='Types',
   full_name='Holoholo.Rpc.Types',
   filename=None,
@@ -1722,7 +1828,7 @@ _RPC_TYPES = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_RPC_TYPES_FORTSEARCHOUTPROTO, _RPC_TYPES_STARTGYMBATTLEOUTPROTO, _RPC_TYPES_ATTACKGYMOUTPROTO, _RPC_TYPES_BATTLEACTIONPROTO, _RPC_TYPES_BATTLELOGPROTO, ],
+  nested_types=[_TYPES_FORTSEARCHOUTPROTO, _TYPES_STARTGYMBATTLEOUTPROTO, _TYPES_ATTACKGYMOUTPROTO, _TYPES_BATTLEACTIONPROTO, _TYPES_BATTLELOGPROTO, ],
   enum_types=[
   ],
   options=None,
@@ -1731,249 +1837,223 @@ _RPC_TYPES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=44,
-  serialized_end=1053,
-)
-
-_RPC = _descriptor.Descriptor(
-  name='Rpc',
-  full_name='Holoholo.Rpc',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-  ],
-  extensions=[
-  ],
-  nested_types=[_RPC_TYPES, ],
-  enum_types=[
-    _RPC_METHOD,
-    _RPC_FORTTYPE,
-    _RPC_ITEM,
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=36,
-  serialized_end=3401,
+  serialized_start=40,
+  serialized_end=1049,
 )
 
 
 _POKEMONPROTO = _descriptor.Descriptor(
   name='PokemonProto',
-  full_name='Holoholo.PokemonProto',
+  full_name='Holoholo.Rpc.PokemonProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Id', full_name='Holoholo.PokemonProto.Id', index=0,
+      name='Id', full_name='Holoholo.Rpc.PokemonProto.Id', index=0,
       number=1, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PokemonId', full_name='Holoholo.PokemonProto.PokemonId', index=1,
+      name='PokemonId', full_name='Holoholo.Rpc.PokemonProto.PokemonId', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Cp', full_name='Holoholo.PokemonProto.Cp', index=2,
+      name='Cp', full_name='Holoholo.Rpc.PokemonProto.Cp', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Stamina', full_name='Holoholo.PokemonProto.Stamina', index=3,
+      name='Stamina', full_name='Holoholo.Rpc.PokemonProto.Stamina', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='MaxStamina', full_name='Holoholo.PokemonProto.MaxStamina', index=4,
+      name='MaxStamina', full_name='Holoholo.Rpc.PokemonProto.MaxStamina', index=4,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Move1', full_name='Holoholo.PokemonProto.Move1', index=5,
+      name='Move1', full_name='Holoholo.Rpc.PokemonProto.Move1', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Move2', full_name='Holoholo.PokemonProto.Move2', index=6,
+      name='Move2', full_name='Holoholo.Rpc.PokemonProto.Move2', index=6,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='DeployedFortId', full_name='Holoholo.PokemonProto.DeployedFortId', index=7,
+      name='DeployedFortId', full_name='Holoholo.Rpc.PokemonProto.DeployedFortId', index=7,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='OwnerName', full_name='Holoholo.PokemonProto.OwnerName', index=8,
+      name='OwnerName', full_name='Holoholo.Rpc.PokemonProto.OwnerName', index=8,
       number=9, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='IsEgg', full_name='Holoholo.PokemonProto.IsEgg', index=9,
+      name='IsEgg', full_name='Holoholo.Rpc.PokemonProto.IsEgg', index=9,
       number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='EggKmWalkedTarget', full_name='Holoholo.PokemonProto.EggKmWalkedTarget', index=10,
+      name='EggKmWalkedTarget', full_name='Holoholo.Rpc.PokemonProto.EggKmWalkedTarget', index=10,
       number=11, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='EggKmWalkedStart', full_name='Holoholo.PokemonProto.EggKmWalkedStart', index=11,
+      name='EggKmWalkedStart', full_name='Holoholo.Rpc.PokemonProto.EggKmWalkedStart', index=11,
       number=12, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Origin', full_name='Holoholo.PokemonProto.Origin', index=12,
+      name='Origin', full_name='Holoholo.Rpc.PokemonProto.Origin', index=12,
       number=14, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='HeightM', full_name='Holoholo.PokemonProto.HeightM', index=13,
+      name='HeightM', full_name='Holoholo.Rpc.PokemonProto.HeightM', index=13,
       number=15, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='WeightKg', full_name='Holoholo.PokemonProto.WeightKg', index=14,
+      name='WeightKg', full_name='Holoholo.Rpc.PokemonProto.WeightKg', index=14,
       number=16, type=2, cpp_type=6, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='IndividualAttack', full_name='Holoholo.PokemonProto.IndividualAttack', index=15,
+      name='IndividualAttack', full_name='Holoholo.Rpc.PokemonProto.IndividualAttack', index=15,
       number=17, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='IndividualDefense', full_name='Holoholo.PokemonProto.IndividualDefense', index=16,
+      name='IndividualDefense', full_name='Holoholo.Rpc.PokemonProto.IndividualDefense', index=16,
       number=18, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='IndividualStamina', full_name='Holoholo.PokemonProto.IndividualStamina', index=17,
+      name='IndividualStamina', full_name='Holoholo.Rpc.PokemonProto.IndividualStamina', index=17,
       number=19, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='CpMultiplier', full_name='Holoholo.PokemonProto.CpMultiplier', index=18,
+      name='CpMultiplier', full_name='Holoholo.Rpc.PokemonProto.CpMultiplier', index=18,
       number=20, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Pokeball', full_name='Holoholo.PokemonProto.Pokeball', index=19,
+      name='Pokeball', full_name='Holoholo.Rpc.PokemonProto.Pokeball', index=19,
       number=21, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='CapturedS2CellId', full_name='Holoholo.PokemonProto.CapturedS2CellId', index=20,
+      name='CapturedS2CellId', full_name='Holoholo.Rpc.PokemonProto.CapturedS2CellId', index=20,
       number=22, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='BattlesAttacked', full_name='Holoholo.PokemonProto.BattlesAttacked', index=21,
+      name='BattlesAttacked', full_name='Holoholo.Rpc.PokemonProto.BattlesAttacked', index=21,
       number=23, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='BattlesDefended', full_name='Holoholo.PokemonProto.BattlesDefended', index=22,
+      name='BattlesDefended', full_name='Holoholo.Rpc.PokemonProto.BattlesDefended', index=22,
       number=24, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='EggIncubatorId', full_name='Holoholo.PokemonProto.EggIncubatorId', index=23,
+      name='EggIncubatorId', full_name='Holoholo.Rpc.PokemonProto.EggIncubatorId', index=23,
       number=25, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='CreationTimeMs', full_name='Holoholo.PokemonProto.CreationTimeMs', index=24,
+      name='CreationTimeMs', full_name='Holoholo.Rpc.PokemonProto.CreationTimeMs', index=24,
       number=26, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='NumUpgrades', full_name='Holoholo.PokemonProto.NumUpgrades', index=25,
+      name='NumUpgrades', full_name='Holoholo.Rpc.PokemonProto.NumUpgrades', index=25,
       number=27, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='AdditionalCpMultiplier', full_name='Holoholo.PokemonProto.AdditionalCpMultiplier', index=26,
+      name='AdditionalCpMultiplier', full_name='Holoholo.Rpc.PokemonProto.AdditionalCpMultiplier', index=26,
       number=28, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Favorite', full_name='Holoholo.PokemonProto.Favorite', index=27,
+      name='Favorite', full_name='Holoholo.Rpc.PokemonProto.Favorite', index=27,
       number=29, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Nickname', full_name='Holoholo.PokemonProto.Nickname', index=28,
+      name='Nickname', full_name='Holoholo.Rpc.PokemonProto.Nickname', index=28,
       number=30, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='FromFort', full_name='Holoholo.PokemonProto.FromFort', index=29,
+      name='FromFort', full_name='Holoholo.Rpc.PokemonProto.FromFort', index=29,
       number=31, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -1991,34 +2071,34 @@ _POKEMONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3404,
-  serialized_end=4041,
+  serialized_start=1052,
+  serialized_end=1689,
 )
 
 
 _ITEMPROTO = _descriptor.Descriptor(
   name='ItemProto',
-  full_name='Holoholo.ItemProto',
+  full_name='Holoholo.Rpc.ItemProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Item', full_name='Holoholo.ItemProto.Item', index=0,
+      name='Item', full_name='Holoholo.Rpc.ItemProto.Item', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Count', full_name='Holoholo.ItemProto.Count', index=1,
+      name='Count', full_name='Holoholo.Rpc.ItemProto.Count', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Unseen', full_name='Holoholo.ItemProto.Unseen', index=2,
+      name='Unseen', full_name='Holoholo.Rpc.ItemProto.Unseen', index=2,
       number=3, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -2036,41 +2116,41 @@ _ITEMPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4043,
-  serialized_end=4119,
+  serialized_start=1691,
+  serialized_end=1767,
 )
 
 
 _POKEMONFORTPROTO_CUSTOM_FORTLUREINFOPROTO = _descriptor.Descriptor(
   name='Custom_FortLureInfoProto',
-  full_name='Holoholo.PokemonFortProto.Custom_FortLureInfoProto',
+  full_name='Holoholo.Rpc.PokemonFortProto.Custom_FortLureInfoProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='FortId', full_name='Holoholo.PokemonFortProto.Custom_FortLureInfoProto.FortId', index=0,
+      name='FortId', full_name='Holoholo.Rpc.PokemonFortProto.Custom_FortLureInfoProto.FortId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='NotSure2', full_name='Holoholo.PokemonFortProto.Custom_FortLureInfoProto.NotSure2', index=1,
+      name='NotSure2', full_name='Holoholo.Rpc.PokemonFortProto.Custom_FortLureInfoProto.NotSure2', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ActivePokemon', full_name='Holoholo.PokemonFortProto.Custom_FortLureInfoProto.ActivePokemon', index=2,
+      name='ActivePokemon', full_name='Holoholo.Rpc.PokemonFortProto.Custom_FortLureInfoProto.ActivePokemon', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='LureExpiryMs', full_name='Holoholo.PokemonFortProto.Custom_FortLureInfoProto.LureExpiryMs', index=3,
+      name='LureExpiryMs', full_name='Holoholo.Rpc.PokemonFortProto.Custom_FortLureInfoProto.LureExpiryMs', index=3,
       number=4, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2088,124 +2168,124 @@ _POKEMONFORTPROTO_CUSTOM_FORTLUREINFOPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4698,
-  serialized_end=4833,
+  serialized_start=2366,
+  serialized_end=2505,
 )
 
 _POKEMONFORTPROTO = _descriptor.Descriptor(
   name='PokemonFortProto',
-  full_name='Holoholo.PokemonFortProto',
+  full_name='Holoholo.Rpc.PokemonFortProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='FortId', full_name='Holoholo.PokemonFortProto.FortId', index=0,
+      name='FortId', full_name='Holoholo.Rpc.PokemonFortProto.FortId', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='LastModifiedMs', full_name='Holoholo.PokemonFortProto.LastModifiedMs', index=1,
+      name='LastModifiedMs', full_name='Holoholo.Rpc.PokemonFortProto.LastModifiedMs', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Latitude', full_name='Holoholo.PokemonFortProto.Latitude', index=2,
+      name='Latitude', full_name='Holoholo.Rpc.PokemonFortProto.Latitude', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Longitude', full_name='Holoholo.PokemonFortProto.Longitude', index=3,
+      name='Longitude', full_name='Holoholo.Rpc.PokemonFortProto.Longitude', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Enabled', full_name='Holoholo.PokemonFortProto.Enabled', index=4,
+      name='Enabled', full_name='Holoholo.Rpc.PokemonFortProto.Enabled', index=4,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Team', full_name='Holoholo.PokemonFortProto.Team', index=5,
+      name='Team', full_name='Holoholo.Rpc.PokemonFortProto.Team', index=5,
       number=5, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='GuardPokemonId', full_name='Holoholo.PokemonFortProto.GuardPokemonId', index=6,
+      name='GuardPokemonId', full_name='Holoholo.Rpc.PokemonFortProto.GuardPokemonId', index=6,
       number=6, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='GuardPokemonLevel', full_name='Holoholo.PokemonFortProto.GuardPokemonLevel', index=7,
+      name='GuardPokemonLevel', full_name='Holoholo.Rpc.PokemonFortProto.GuardPokemonLevel', index=7,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='GymPoints', full_name='Holoholo.PokemonFortProto.GymPoints', index=8,
+      name='GymPoints', full_name='Holoholo.Rpc.PokemonFortProto.GymPoints', index=8,
       number=10, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='IsInBattle', full_name='Holoholo.PokemonFortProto.IsInBattle', index=9,
+      name='IsInBattle', full_name='Holoholo.Rpc.PokemonFortProto.IsInBattle', index=9,
       number=11, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='FortType', full_name='Holoholo.PokemonFortProto.FortType', index=10,
+      name='FortType', full_name='Holoholo.Rpc.PokemonFortProto.FortType', index=10,
       number=9, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='CooldownCompleteMs', full_name='Holoholo.PokemonFortProto.CooldownCompleteMs', index=11,
+      name='CooldownCompleteMs', full_name='Holoholo.Rpc.PokemonFortProto.CooldownCompleteMs', index=11,
       number=14, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Sponsor', full_name='Holoholo.PokemonFortProto.Sponsor', index=12,
+      name='Sponsor', full_name='Holoholo.Rpc.PokemonFortProto.Sponsor', index=12,
       number=15, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='RenderingType', full_name='Holoholo.PokemonFortProto.RenderingType', index=13,
+      name='RenderingType', full_name='Holoholo.Rpc.PokemonFortProto.RenderingType', index=13,
       number=16, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ActiveFortModifier', full_name='Holoholo.PokemonFortProto.ActiveFortModifier', index=14,
+      name='ActiveFortModifier', full_name='Holoholo.Rpc.PokemonFortProto.ActiveFortModifier', index=14,
       number=12, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='FortLureInfo', full_name='Holoholo.PokemonFortProto.FortLureInfo', index=15,
+      name='FortLureInfo', full_name='Holoholo.Rpc.PokemonFortProto.FortLureInfo', index=15,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -2225,34 +2305,34 @@ _POKEMONFORTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4122,
-  serialized_end=4954,
+  serialized_start=1770,
+  serialized_end=2626,
 )
 
 
 _PLAYERPUBLICPROFILEPROTO = _descriptor.Descriptor(
   name='PlayerPublicProfileProto',
-  full_name='Holoholo.PlayerPublicProfileProto',
+  full_name='Holoholo.Rpc.PlayerPublicProfileProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Name', full_name='Holoholo.PlayerPublicProfileProto.Name', index=0,
+      name='Name', full_name='Holoholo.Rpc.PlayerPublicProfileProto.Name', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Level', full_name='Holoholo.PlayerPublicProfileProto.Level', index=1,
+      name='Level', full_name='Holoholo.Rpc.PlayerPublicProfileProto.Level', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Avatar', full_name='Holoholo.PlayerPublicProfileProto.Avatar', index=2,
+      name='Avatar', full_name='Holoholo.Rpc.PlayerPublicProfileProto.Avatar', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -2270,76 +2350,76 @@ _PLAYERPUBLICPROFILEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4956,
-  serialized_end=5056,
+  serialized_start=2628,
+  serialized_end=2732,
 )
 
 
 _PLAYERAVATARPROTO = _descriptor.Descriptor(
   name='PlayerAvatarProto',
-  full_name='Holoholo.PlayerAvatarProto',
+  full_name='Holoholo.Rpc.PlayerAvatarProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Avatar', full_name='Holoholo.PlayerAvatarProto.Avatar', index=0,
+      name='Avatar', full_name='Holoholo.Rpc.PlayerAvatarProto.Avatar', index=0,
       number=8, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Skin', full_name='Holoholo.PlayerAvatarProto.Skin', index=1,
+      name='Skin', full_name='Holoholo.Rpc.PlayerAvatarProto.Skin', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Hair', full_name='Holoholo.PlayerAvatarProto.Hair', index=2,
+      name='Hair', full_name='Holoholo.Rpc.PlayerAvatarProto.Hair', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Shirt', full_name='Holoholo.PlayerAvatarProto.Shirt', index=3,
+      name='Shirt', full_name='Holoholo.Rpc.PlayerAvatarProto.Shirt', index=3,
       number=4, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Pants', full_name='Holoholo.PlayerAvatarProto.Pants', index=4,
+      name='Pants', full_name='Holoholo.Rpc.PlayerAvatarProto.Pants', index=4,
       number=5, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Hat', full_name='Holoholo.PlayerAvatarProto.Hat', index=5,
+      name='Hat', full_name='Holoholo.Rpc.PlayerAvatarProto.Hat', index=5,
       number=6, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Shoes', full_name='Holoholo.PlayerAvatarProto.Shoes', index=6,
+      name='Shoes', full_name='Holoholo.Rpc.PlayerAvatarProto.Shoes', index=6,
       number=7, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Eyes', full_name='Holoholo.PlayerAvatarProto.Eyes', index=7,
+      name='Eyes', full_name='Holoholo.Rpc.PlayerAvatarProto.Eyes', index=7,
       number=9, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Backpack', full_name='Holoholo.PlayerAvatarProto.Backpack', index=8,
+      name='Backpack', full_name='Holoholo.Rpc.PlayerAvatarProto.Backpack', index=8,
       number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -2357,27 +2437,27 @@ _PLAYERAVATARPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5059,
-  serialized_end=5212,
+  serialized_start=2735,
+  serialized_end=2888,
 )
 
 
 _GYMSTATEPROTO = _descriptor.Descriptor(
   name='GymStateProto',
-  full_name='Holoholo.GymStateProto',
+  full_name='Holoholo.Rpc.GymStateProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='FortMapData', full_name='Holoholo.GymStateProto.FortMapData', index=0,
+      name='FortMapData', full_name='Holoholo.Rpc.GymStateProto.FortMapData', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='GymMembership', full_name='Holoholo.GymStateProto.GymMembership', index=1,
+      name='GymMembership', full_name='Holoholo.Rpc.GymStateProto.GymMembership', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -2395,27 +2475,27 @@ _GYMSTATEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5214,
-  serialized_end=5331,
+  serialized_start=2890,
+  serialized_end=3015,
 )
 
 
 _GYMMEMBERSHIPPROTO = _descriptor.Descriptor(
   name='GymMembershipProto',
-  full_name='Holoholo.GymMembershipProto',
+  full_name='Holoholo.Rpc.GymMembershipProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Pokemon', full_name='Holoholo.GymMembershipProto.Pokemon', index=0,
+      name='Pokemon', full_name='Holoholo.Rpc.GymMembershipProto.Pokemon', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='TrainerPublicProfile', full_name='Holoholo.GymMembershipProto.TrainerPublicProfile', index=1,
+      name='TrainerPublicProfile', full_name='Holoholo.Rpc.GymMembershipProto.TrainerPublicProfile', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -2433,31 +2513,27 @@ _GYMMEMBERSHIPPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5333,
-  serialized_end=5460,
+  serialized_start=3018,
+  serialized_end=3153,
 )
 
-_RPC_TYPES_FORTSEARCHOUTPROTO.containing_type = _RPC_TYPES
-_RPC_TYPES_FORTSEARCHOUTPROTO_RESULT.containing_type = _RPC_TYPES_FORTSEARCHOUTPROTO
-_RPC_TYPES_STARTGYMBATTLEOUTPROTO.containing_type = _RPC_TYPES
-_RPC_TYPES_STARTGYMBATTLEOUTPROTO_RESULT.containing_type = _RPC_TYPES_STARTGYMBATTLEOUTPROTO
-_RPC_TYPES_ATTACKGYMOUTPROTO.containing_type = _RPC_TYPES
-_RPC_TYPES_ATTACKGYMOUTPROTO_RESULT.containing_type = _RPC_TYPES_ATTACKGYMOUTPROTO
-_RPC_TYPES_BATTLEACTIONPROTO.containing_type = _RPC_TYPES
-_RPC_TYPES_BATTLEACTIONPROTO_ACTIONTYPE.containing_type = _RPC_TYPES_BATTLEACTIONPROTO
-_RPC_TYPES_BATTLELOGPROTO.containing_type = _RPC_TYPES
-_RPC_TYPES_BATTLELOGPROTO_BATTLETYPE.containing_type = _RPC_TYPES_BATTLELOGPROTO
-_RPC_TYPES_BATTLELOGPROTO_STATE.containing_type = _RPC_TYPES_BATTLELOGPROTO
-_RPC_TYPES.containing_type = _RPC
-_RPC_METHOD.containing_type = _RPC
-_RPC_FORTTYPE.containing_type = _RPC
-_RPC_ITEM.containing_type = _RPC
-_ITEMPROTO.fields_by_name['Item'].enum_type = _RPC_ITEM
+_TYPES_FORTSEARCHOUTPROTO.containing_type = _TYPES
+_TYPES_FORTSEARCHOUTPROTO_RESULT.containing_type = _TYPES_FORTSEARCHOUTPROTO
+_TYPES_STARTGYMBATTLEOUTPROTO.containing_type = _TYPES
+_TYPES_STARTGYMBATTLEOUTPROTO_RESULT.containing_type = _TYPES_STARTGYMBATTLEOUTPROTO
+_TYPES_ATTACKGYMOUTPROTO.containing_type = _TYPES
+_TYPES_ATTACKGYMOUTPROTO_RESULT.containing_type = _TYPES_ATTACKGYMOUTPROTO
+_TYPES_BATTLEACTIONPROTO.containing_type = _TYPES
+_TYPES_BATTLEACTIONPROTO_ACTIONTYPE.containing_type = _TYPES_BATTLEACTIONPROTO
+_TYPES_BATTLELOGPROTO.containing_type = _TYPES
+_TYPES_BATTLELOGPROTO_BATTLETYPE.containing_type = _TYPES_BATTLELOGPROTO
+_TYPES_BATTLELOGPROTO_STATE.containing_type = _TYPES_BATTLELOGPROTO
+_ITEMPROTO.fields_by_name['Item'].enum_type = _ITEM
 _POKEMONFORTPROTO_CUSTOM_FORTLUREINFOPROTO.fields_by_name['ActivePokemon'].enum_type = _CUSTOM_POKEMONNAME
 _POKEMONFORTPROTO_CUSTOM_FORTLUREINFOPROTO.containing_type = _POKEMONFORTPROTO
 _POKEMONFORTPROTO.fields_by_name['Team'].enum_type = _CUSTOM_TEAMCOLOR
 _POKEMONFORTPROTO.fields_by_name['GuardPokemonId'].enum_type = _CUSTOM_POKEMONNAME
-_POKEMONFORTPROTO.fields_by_name['FortType'].enum_type = _RPC_FORTTYPE
+_POKEMONFORTPROTO.fields_by_name['FortType'].enum_type = _FORTTYPE
 _POKEMONFORTPROTO.fields_by_name['Sponsor'].enum_type = _POKEMONFORTPROTO_FORTSPONSOR
 _POKEMONFORTPROTO.fields_by_name['RenderingType'].enum_type = _POKEMONFORTPROTO_FORTRENDERINGTYPE
 _POKEMONFORTPROTO.fields_by_name['FortLureInfo'].message_type = _POKEMONFORTPROTO_CUSTOM_FORTLUREINFOPROTO
@@ -2468,7 +2544,7 @@ _GYMSTATEPROTO.fields_by_name['FortMapData'].message_type = _POKEMONFORTPROTO
 _GYMSTATEPROTO.fields_by_name['GymMembership'].message_type = _GYMMEMBERSHIPPROTO
 _GYMMEMBERSHIPPROTO.fields_by_name['Pokemon'].message_type = _POKEMONPROTO
 _GYMMEMBERSHIPPROTO.fields_by_name['TrainerPublicProfile'].message_type = _PLAYERPUBLICPROFILEPROTO
-DESCRIPTOR.message_types_by_name['Rpc'] = _RPC
+DESCRIPTOR.message_types_by_name['Types'] = _TYPES
 DESCRIPTOR.message_types_by_name['PokemonProto'] = _POKEMONPROTO
 DESCRIPTOR.message_types_by_name['ItemProto'] = _ITEMPROTO
 DESCRIPTOR.message_types_by_name['PokemonFortProto'] = _POKEMONFORTPROTO
@@ -2478,73 +2554,68 @@ DESCRIPTOR.message_types_by_name['GymStateProto'] = _GYMSTATEPROTO
 DESCRIPTOR.message_types_by_name['GymMembershipProto'] = _GYMMEMBERSHIPPROTO
 DESCRIPTOR.enum_types_by_name['Custom_TeamColor'] = _CUSTOM_TEAMCOLOR
 DESCRIPTOR.enum_types_by_name['Custom_PokemonName'] = _CUSTOM_POKEMONNAME
+DESCRIPTOR.enum_types_by_name['Method'] = _METHOD
+DESCRIPTOR.enum_types_by_name['FortType'] = _FORTTYPE
+DESCRIPTOR.enum_types_by_name['Item'] = _ITEM
 
-Rpc = _reflection.GeneratedProtocolMessageType('Rpc', (_message.Message,), dict(
+Types = _reflection.GeneratedProtocolMessageType('Types', (_message.Message,), dict(
 
-  Types = _reflection.GeneratedProtocolMessageType('Types', (_message.Message,), dict(
-
-    FortSearchOutProto = _reflection.GeneratedProtocolMessageType('FortSearchOutProto', (_message.Message,), dict(
-      DESCRIPTOR = _RPC_TYPES_FORTSEARCHOUTPROTO,
-      __module__ = 'holoholo_shared_pb2'
-      # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.FortSearchOutProto)
-      ))
-    ,
-
-    StartGymBattleOutProto = _reflection.GeneratedProtocolMessageType('StartGymBattleOutProto', (_message.Message,), dict(
-      DESCRIPTOR = _RPC_TYPES_STARTGYMBATTLEOUTPROTO,
-      __module__ = 'holoholo_shared_pb2'
-      # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.StartGymBattleOutProto)
-      ))
-    ,
-
-    AttackGymOutProto = _reflection.GeneratedProtocolMessageType('AttackGymOutProto', (_message.Message,), dict(
-      DESCRIPTOR = _RPC_TYPES_ATTACKGYMOUTPROTO,
-      __module__ = 'holoholo_shared_pb2'
-      # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.AttackGymOutProto)
-      ))
-    ,
-
-    BattleActionProto = _reflection.GeneratedProtocolMessageType('BattleActionProto', (_message.Message,), dict(
-      DESCRIPTOR = _RPC_TYPES_BATTLEACTIONPROTO,
-      __module__ = 'holoholo_shared_pb2'
-      # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.BattleActionProto)
-      ))
-    ,
-
-    BattleLogProto = _reflection.GeneratedProtocolMessageType('BattleLogProto', (_message.Message,), dict(
-      DESCRIPTOR = _RPC_TYPES_BATTLELOGPROTO,
-      __module__ = 'holoholo_shared_pb2'
-      # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.BattleLogProto)
-      ))
-    ,
-    DESCRIPTOR = _RPC_TYPES,
+  FortSearchOutProto = _reflection.GeneratedProtocolMessageType('FortSearchOutProto', (_message.Message,), dict(
+    DESCRIPTOR = _TYPES_FORTSEARCHOUTPROTO,
     __module__ = 'holoholo_shared_pb2'
-    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types)
+    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.FortSearchOutProto)
     ))
   ,
-  DESCRIPTOR = _RPC,
+
+  StartGymBattleOutProto = _reflection.GeneratedProtocolMessageType('StartGymBattleOutProto', (_message.Message,), dict(
+    DESCRIPTOR = _TYPES_STARTGYMBATTLEOUTPROTO,
+    __module__ = 'holoholo_shared_pb2'
+    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.StartGymBattleOutProto)
+    ))
+  ,
+
+  AttackGymOutProto = _reflection.GeneratedProtocolMessageType('AttackGymOutProto', (_message.Message,), dict(
+    DESCRIPTOR = _TYPES_ATTACKGYMOUTPROTO,
+    __module__ = 'holoholo_shared_pb2'
+    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.AttackGymOutProto)
+    ))
+  ,
+
+  BattleActionProto = _reflection.GeneratedProtocolMessageType('BattleActionProto', (_message.Message,), dict(
+    DESCRIPTOR = _TYPES_BATTLEACTIONPROTO,
+    __module__ = 'holoholo_shared_pb2'
+    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.BattleActionProto)
+    ))
+  ,
+
+  BattleLogProto = _reflection.GeneratedProtocolMessageType('BattleLogProto', (_message.Message,), dict(
+    DESCRIPTOR = _TYPES_BATTLELOGPROTO,
+    __module__ = 'holoholo_shared_pb2'
+    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types.BattleLogProto)
+    ))
+  ,
+  DESCRIPTOR = _TYPES,
   __module__ = 'holoholo_shared_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.Rpc)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Types)
   ))
-_sym_db.RegisterMessage(Rpc)
-_sym_db.RegisterMessage(Rpc.Types)
-_sym_db.RegisterMessage(Rpc.Types.FortSearchOutProto)
-_sym_db.RegisterMessage(Rpc.Types.StartGymBattleOutProto)
-_sym_db.RegisterMessage(Rpc.Types.AttackGymOutProto)
-_sym_db.RegisterMessage(Rpc.Types.BattleActionProto)
-_sym_db.RegisterMessage(Rpc.Types.BattleLogProto)
+_sym_db.RegisterMessage(Types)
+_sym_db.RegisterMessage(Types.FortSearchOutProto)
+_sym_db.RegisterMessage(Types.StartGymBattleOutProto)
+_sym_db.RegisterMessage(Types.AttackGymOutProto)
+_sym_db.RegisterMessage(Types.BattleActionProto)
+_sym_db.RegisterMessage(Types.BattleLogProto)
 
 PokemonProto = _reflection.GeneratedProtocolMessageType('PokemonProto', (_message.Message,), dict(
   DESCRIPTOR = _POKEMONPROTO,
   __module__ = 'holoholo_shared_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.PokemonProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.PokemonProto)
   ))
 _sym_db.RegisterMessage(PokemonProto)
 
 ItemProto = _reflection.GeneratedProtocolMessageType('ItemProto', (_message.Message,), dict(
   DESCRIPTOR = _ITEMPROTO,
   __module__ = 'holoholo_shared_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.ItemProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.ItemProto)
   ))
 _sym_db.RegisterMessage(ItemProto)
 
@@ -2553,12 +2624,12 @@ PokemonFortProto = _reflection.GeneratedProtocolMessageType('PokemonFortProto', 
   Custom_FortLureInfoProto = _reflection.GeneratedProtocolMessageType('Custom_FortLureInfoProto', (_message.Message,), dict(
     DESCRIPTOR = _POKEMONFORTPROTO_CUSTOM_FORTLUREINFOPROTO,
     __module__ = 'holoholo_shared_pb2'
-    # @@protoc_insertion_point(class_scope:Holoholo.PokemonFortProto.Custom_FortLureInfoProto)
+    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.PokemonFortProto.Custom_FortLureInfoProto)
     ))
   ,
   DESCRIPTOR = _POKEMONFORTPROTO,
   __module__ = 'holoholo_shared_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.PokemonFortProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.PokemonFortProto)
   ))
 _sym_db.RegisterMessage(PokemonFortProto)
 _sym_db.RegisterMessage(PokemonFortProto.Custom_FortLureInfoProto)
@@ -2566,28 +2637,28 @@ _sym_db.RegisterMessage(PokemonFortProto.Custom_FortLureInfoProto)
 PlayerPublicProfileProto = _reflection.GeneratedProtocolMessageType('PlayerPublicProfileProto', (_message.Message,), dict(
   DESCRIPTOR = _PLAYERPUBLICPROFILEPROTO,
   __module__ = 'holoholo_shared_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.PlayerPublicProfileProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.PlayerPublicProfileProto)
   ))
 _sym_db.RegisterMessage(PlayerPublicProfileProto)
 
 PlayerAvatarProto = _reflection.GeneratedProtocolMessageType('PlayerAvatarProto', (_message.Message,), dict(
   DESCRIPTOR = _PLAYERAVATARPROTO,
   __module__ = 'holoholo_shared_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.PlayerAvatarProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.PlayerAvatarProto)
   ))
 _sym_db.RegisterMessage(PlayerAvatarProto)
 
 GymStateProto = _reflection.GeneratedProtocolMessageType('GymStateProto', (_message.Message,), dict(
   DESCRIPTOR = _GYMSTATEPROTO,
   __module__ = 'holoholo_shared_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.GymStateProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.GymStateProto)
   ))
 _sym_db.RegisterMessage(GymStateProto)
 
 GymMembershipProto = _reflection.GeneratedProtocolMessageType('GymMembershipProto', (_message.Message,), dict(
   DESCRIPTOR = _GYMMEMBERSHIPPROTO,
   __module__ = 'holoholo_shared_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.GymMembershipProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.GymMembershipProto)
   ))
 _sym_db.RegisterMessage(GymMembershipProto)
 
