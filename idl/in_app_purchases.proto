@@ -1,2 +1,20 @@
 syntax = "proto3";
 package Holoholo;
+import public "holoholo_shared.proto";
+
+enum HoloIapItemCategory {
+	IAP_CATEGORY_NONE = 0;
+	IAP_CATEGORY_BUNDLE = 1;
+	IAP_CATEGORY_ITEMS = 2;
+	IAP_CATEGORY_UPGRADES = 3;
+	IAP_CATEGORY_POKECOINS = 4;
+}
+
+message IapItemDisplayProto {
+  string Sku = 1;
+  HoloIapItemCategory Category = 2;
+  int32 SortOrder = 3;
+  repeated Rpc.Item Items = 4;
+  repeated int32 Counts = 5;
+}
+
