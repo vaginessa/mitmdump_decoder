@@ -8,7 +8,7 @@ It also parses the GetMapObjects responses into a geojson format file that can b
 
 ## Dependencies
 Python 2.7
-Requires mitmproxy, protobuf, geojson, numpy
+Requires mitmproxy, protobuf>=3.0.0a3, geojson, numpy
 
 
 ## Running
