@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='fortdetails.proto',
   package='PGo',
   syntax='proto3',
-  serialized_pb=_b('\n\x11\x66ortdetails.proto\x12\x03PGo\x1a\x15holoholo_shared.proto\"\xd9\x02\n\x13\x46ortDetailsOutProto\x12\n\n\x02Id\x18\x01 \x01(\t\x12#\n\x04Team\x18\x02 \x01(\x0e\x32\x15.PGo.Custom_TeamColor\x12(\n\x07Pokemon\x18\x03 \x01(\x0e\x32\x17.PGo.Custom_PokemonName\x12\x0c\n\x04Name\x18\x04 \x01(\t\x12\x10\n\x08ImageUrl\x18\x05 \x01(\t\x12\n\n\x02\x46p\x18\x06 \x01(\x05\x12\x0f\n\x07Stamina\x18\x07 \x01(\x05\x12\x12\n\nMaxStamina\x18\x08 \x01(\x05\x12,\n\x08\x46ortType\x18\t \x01(\x0e\x32\x1a.PGo.Holoholo.Rpc.FortType\x12\x10\n\x08Latitude\x18\n \x01(\x01\x12\x11\n\tLongitude\x18\x0b \x01(\x01\x12\x13\n\x0b\x44\x65scription\x18\x0c \x01(\t\x12.\n\x08Modifier\x18\r \x01(\x0b\x32\x1c.PGo.ClientFortModifierProto\"j\n\x17\x43lientFortModifierProto\x12\x14\n\x0cModifierType\x18\x01 \x01(\x05\x12\x18\n\x10\x45xpirationTimeMs\x18\x02 \x01(\x05\x12\x1f\n\x17\x44\x65ployingPlayerCodename\x18\x03 \x01(\x05\"C\n\x10\x46ortDetailsProto\x12\n\n\x02Id\x18\x01 \x01(\t\x12\x10\n\x08Latitude\x18\x02 \x01(\x01\x12\x11\n\tLongitude\x18\x03 \x01(\x01\"\x81\x01\n\x0f\x46ortSearchProto\x12\n\n\x02Id\x18\x01 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x02 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x03 \x01(\x01\x12\x16\n\x0e\x46ortLatDegrees\x18\x04 \x01(\x01\x12\x16\n\x0e\x46ortLngDegrees\x18\x05 \x01(\x01\"\xba\x01\n\x12\x46ortSearchOutProto\x12\x0e\n\x06Result\x18\x01 \x01(\x05\x12\x1d\n\x05Items\x18\x02 \x03(\x0b\x32\x0e.PGo.ItemProto\x12\x13\n\x0bGemsAwarded\x18\x03 \x01(\x05\x12\x12\n\nEggPokemon\x18\x04 \x01(\x05\x12\x11\n\tXpAwarded\x18\x05 \x01(\x05\x12\x18\n\x10\x43ooldownComplete\x18\x06 \x01(\x04\x12\x1f\n\x17\x43hainHackSequenceNumber\x18\x07 \x01(\x05\"P\n\tItemProto\x12$\n\x04Item\x18\x01 \x01(\x0e\x32\x16.PGo.Holoholo.Rpc.Item\x12\r\n\x05\x43ount\x18\x02 \x01(\x05\x12\x0e\n\x06Unseen\x18\x03 \x01(\x08\"\xb1\x03\n\x03Gym\x12!\n\x07\x64\x65tails\x18\x01 \x01(\x0b\x32\x10.PGo.Gym.Details\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x11\n\timage_url\x18\x03 \x01(\t\x12\x0c\n\x04team\x18\x04 \x01(\x04\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x1a\xc2\x02\n\x07\x44\x65tails\x12-\n\x07\x64\x65tails\x18\x01 \x01(\x0b\x32\x1c.PGo.Gym.Details.MoreDetails\x12&\n\x06levels\x18\x02 \x03(\x0b\x32\x16.PGo.Gym.Details.Level\x1aY\n\x0bMoreDetails\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x04\x12\x0b\n\x03lat\x18\x03 \x01(\x01\x12\x0c\n\x04long\x18\x04 \x01(\x01\x12\x10\n\x08prestige\x18\n \x01(\x04\x1a\x84\x01\n\x05Level\x12\"\n\x07pokemon\x18\x01 \x01(\x0b\x32\x11.PGo.PokemonProto\x12/\n\x07trainer\x18\x02 \x01(\x0b\x32\x1e.PGo.Gym.Details.Level.Trainer\x1a&\n\x07Trainer\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05level\x18\x02 \x01(\x04\"\x85\x01\n\x12GetGymDetailsProto\x12\r\n\x05GymId\x18\x01 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x02 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x03 \x01(\x01\x12\x15\n\rGymLatDegrees\x18\x04 \x01(\x01\x12\x15\n\rGymLngDegrees\x18\x05 \x01(\x01\"\xe2\x01\n\x15GetGymDetailsOutProto\x12$\n\x08GymState\x18\x01 \x01(\x0b\x32\x12.PGo.GymStateProto\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x0b\n\x03Url\x18\x03 \x01(\t\x12\x35\n\x06Result\x18\x04 \x01(\x0e\x32%.PGo.GetGymDetailsOutProto.ResultEnum\x12\x13\n\x0b\x44\x65scription\x18\x05 \x01(\t\"<\n\nResultEnum\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x02\";\n\rGymStateProto\x12*\n\x0b\x46ortMapData\x18\x01 \x01(\x0b\x32\x15.PGo.PokemonFortProtoP\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x11\x66ortdetails.proto\x12\x03PGo\x1a\x15holoholo_shared.proto\"\xd3\x02\n\x13\x46ortDetailsOutProto\x12\n\n\x02Id\x18\x01 \x01(\t\x12#\n\x04Team\x18\x02 \x01(\x0e\x32\x15.PGo.Custom_TeamColor\x12\"\n\x07Pokemon\x18\x03 \x01(\x0b\x32\x11.PGo.PokemonProto\x12\x0c\n\x04Name\x18\x04 \x01(\t\x12\x10\n\x08ImageUrl\x18\x05 \x03(\t\x12\n\n\x02\x46p\x18\x06 \x01(\x05\x12\x0f\n\x07Stamina\x18\x07 \x01(\x05\x12\x12\n\nMaxStamina\x18\x08 \x01(\x05\x12,\n\x08\x46ortType\x18\t \x01(\x0e\x32\x1a.PGo.Holoholo.Rpc.FortType\x12\x10\n\x08Latitude\x18\n \x01(\x01\x12\x11\n\tLongitude\x18\x0b \x01(\x01\x12\x13\n\x0b\x44\x65scription\x18\x0c \x01(\t\x12.\n\x08Modifier\x18\r \x03(\x0b\x32\x1c.PGo.ClientFortModifierProto\"\x82\x01\n\x17\x43lientFortModifierProto\x12,\n\x0cModifierType\x18\x01 \x01(\x0e\x32\x16.PGo.Holoholo.Rpc.Item\x12\x18\n\x10\x45xpirationTimeMs\x18\x02 \x01(\x03\x12\x1f\n\x17\x44\x65ployingPlayerCodename\x18\x03 \x01(\t\"C\n\x10\x46ortDetailsProto\x12\n\n\x02Id\x18\x01 \x01(\t\x12\x10\n\x08Latitude\x18\x02 \x01(\x01\x12\x11\n\tLongitude\x18\x03 \x01(\x01\"\x81\x01\n\x0f\x46ortSearchProto\x12\n\n\x02Id\x18\x01 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x02 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x03 \x01(\x01\x12\x16\n\x0e\x46ortLatDegrees\x18\x04 \x01(\x01\x12\x16\n\x0e\x46ortLngDegrees\x18\x05 \x01(\x01\"I\n\x0e\x41wardItemProto\x12$\n\x04Item\x18\x01 \x01(\x0e\x32\x16.PGo.Holoholo.Rpc.Item\x12\x11\n\tItemCount\x18\x02 \x01(\x05\"\x85\x02\n\x12\x46ortSearchOutProto\x12\x41\n\x06Result\x18\x01 \x01(\x0e\x32\x31.PGo.Holoholo.Rpc.Types.FortSearchOutProto.Result\x12\"\n\x05Items\x18\x02 \x03(\x0b\x32\x13.PGo.AwardItemProto\x12\x13\n\x0bGemsAwarded\x18\x03 \x01(\x05\x12%\n\nEggPokemon\x18\x04 \x01(\x0b\x32\x11.PGo.PokemonProto\x12\x11\n\tXpAwarded\x18\x05 \x01(\x05\x12\x18\n\x10\x43ooldownComplete\x18\x06 \x01(\x03\x12\x1f\n\x17\x43hainHackSequenceNumber\x18\x07 \x01(\x05\"\x85\x01\n\x12GetGymDetailsProto\x12\r\n\x05GymId\x18\x01 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x02 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x03 \x01(\x01\x12\x15\n\rGymLatDegrees\x18\x04 \x01(\x01\x12\x15\n\rGymLngDegrees\x18\x05 \x01(\x01\"\xe2\x01\n\x15GetGymDetailsOutProto\x12$\n\x08GymState\x18\x01 \x01(\x0b\x32\x12.PGo.GymStateProto\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x0b\n\x03Url\x18\x03 \x03(\t\x12\x35\n\x06Result\x18\x04 \x01(\x0e\x32%.PGo.GetGymDetailsOutProto.ResultEnum\x12\x13\n\x0b\x44\x65scription\x18\x05 \x01(\t\"<\n\nResultEnum\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x02\"k\n\rGymStateProto\x12*\n\x0b\x46ortMapData\x18\x01 \x01(\x0b\x32\x15.PGo.PokemonFortProto\x12.\n\rGymMembership\x18\x02 \x03(\x0b\x32\x17.PGo.GymMembershipProto\"u\n\x12GymMembershipProto\x12\"\n\x07Pokemon\x18\x01 \x01(\x0b\x32\x11.PGo.PokemonProto\x12;\n\x14TrainerPublicProfile\x18\x02 \x01(\x0b\x32\x1d.PGo.PlayerPublicProfileProto\"_\n\x18PlayerPublicProfileProto\x12\x0c\n\x04Name\x18\x01 \x01(\t\x12\r\n\x05Level\x18\x02 \x01(\x05\x12&\n\x06\x41vatar\x18\x03 \x01(\x0b\x32\x16.PGo.PlayerAvatarProto\"\x99\x01\n\x11PlayerAvatarProto\x12\x0e\n\x06\x41vatar\x18\x08 \x01(\x05\x12\x0c\n\x04Skin\x18\x02 \x01(\x05\x12\x0c\n\x04Hair\x18\x03 \x01(\x05\x12\r\n\x05Shirt\x18\x04 \x01(\x05\x12\r\n\x05Pants\x18\x05 \x01(\x05\x12\x0b\n\x03Hat\x18\x06 \x01(\x05\x12\r\n\x05Shoes\x18\x07 \x01(\x05\x12\x0c\n\x04\x45yes\x18\t \x01(\x05\x12\x10\n\x08\x42\x61\x63kpack\x18\n \x01(\x05P\x00\x62\x06proto3')
   ,
   dependencies=[holoholo__shared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -49,8 +49,8 @@ _GETGYMDETAILSOUTPROTO_RESULTENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1716,
-  serialized_end=1776,
+  serialized_start=1367,
+  serialized_end=1427,
 )
 _sym_db.RegisterEnumDescriptor(_GETGYMDETAILSOUTPROTO_RESULTENUM)
 
@@ -78,8 +78,8 @@ _FORTDETAILSOUTPROTO = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='Pokemon', full_name='PGo.FortDetailsOutProto.Pokemon', index=2,
-      number=3, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -92,8 +92,8 @@ _FORTDETAILSOUTPROTO = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='ImageUrl', full_name='PGo.FortDetailsOutProto.ImageUrl', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=5, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -148,8 +148,8 @@ _FORTDETAILSOUTPROTO = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='Modifier', full_name='PGo.FortDetailsOutProto.Modifier', index=12,
-      number=13, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      number=13, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -166,7 +166,7 @@ _FORTDETAILSOUTPROTO = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=50,
-  serialized_end=395,
+  serialized_end=389,
 )
 
 
@@ -179,22 +179,22 @@ _CLIENTFORTMODIFIERPROTO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='ModifierType', full_name='PGo.ClientFortModifierProto.ModifierType', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='ExpirationTimeMs', full_name='PGo.ClientFortModifierProto.ExpirationTimeMs', index=1,
-      number=2, type=5, cpp_type=1, label=1,
+      number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
       name='DeployingPlayerCodename', full_name='PGo.ClientFortModifierProto.DeployingPlayerCodename', index=2,
-      number=3, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      number=3, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -210,8 +210,8 @@ _CLIENTFORTMODIFIERPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=397,
-  serialized_end=503,
+  serialized_start=392,
+  serialized_end=522,
 )
 
 
@@ -255,8 +255,8 @@ _FORTDETAILSPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=505,
-  serialized_end=572,
+  serialized_start=524,
+  serialized_end=591,
 )
 
 
@@ -314,8 +314,46 @@ _FORTSEARCHPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=575,
-  serialized_end=704,
+  serialized_start=594,
+  serialized_end=723,
+)
+
+
+_AWARDITEMPROTO = _descriptor.Descriptor(
+  name='AwardItemProto',
+  full_name='PGo.AwardItemProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Item', full_name='PGo.AwardItemProto.Item', index=0,
+      number=1, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='ItemCount', full_name='PGo.AwardItemProto.ItemCount', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=725,
+  serialized_end=798,
 )
 
 
@@ -328,7 +366,7 @@ _FORTSEARCHOUTPROTO = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='Result', full_name='PGo.FortSearchOutProto.Result', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -349,8 +387,8 @@ _FORTSEARCHOUTPROTO = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='EggPokemon', full_name='PGo.FortSearchOutProto.EggPokemon', index=3,
-      number=4, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
+      number=4, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -363,7 +401,7 @@ _FORTSEARCHOUTPROTO = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='CooldownComplete', full_name='PGo.FortSearchOutProto.CooldownComplete', index=5,
-      number=6, type=4, cpp_type=4, label=1,
+      number=6, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -387,281 +425,8 @@ _FORTSEARCHOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=707,
-  serialized_end=893,
-)
-
-
-_ITEMPROTO = _descriptor.Descriptor(
-  name='ItemProto',
-  full_name='PGo.ItemProto',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Item', full_name='PGo.ItemProto.Item', index=0,
-      number=1, type=14, cpp_type=8, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='Count', full_name='PGo.ItemProto.Count', index=1,
-      number=2, type=5, cpp_type=1, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='Unseen', full_name='PGo.ItemProto.Unseen', index=2,
-      number=3, type=8, cpp_type=7, label=1,
-      has_default_value=False, default_value=False,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=895,
-  serialized_end=975,
-)
-
-
-_GYM_DETAILS_MOREDETAILS = _descriptor.Descriptor(
-  name='MoreDetails',
-  full_name='PGo.Gym.Details.MoreDetails',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='id', full_name='PGo.Gym.Details.MoreDetails.id', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='timestamp', full_name='PGo.Gym.Details.MoreDetails.timestamp', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='lat', full_name='PGo.Gym.Details.MoreDetails.lat', index=2,
-      number=3, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='long', full_name='PGo.Gym.Details.MoreDetails.long', index=3,
-      number=4, type=1, cpp_type=5, label=1,
-      has_default_value=False, default_value=float(0),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='prestige', full_name='PGo.Gym.Details.MoreDetails.prestige', index=4,
-      number=10, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1187,
-  serialized_end=1276,
-)
-
-_GYM_DETAILS_LEVEL_TRAINER = _descriptor.Descriptor(
-  name='Trainer',
-  full_name='PGo.Gym.Details.Level.Trainer',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='name', full_name='PGo.Gym.Details.Level.Trainer.name', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='level', full_name='PGo.Gym.Details.Level.Trainer.level', index=1,
-      number=2, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1373,
-  serialized_end=1411,
-)
-
-_GYM_DETAILS_LEVEL = _descriptor.Descriptor(
-  name='Level',
-  full_name='PGo.Gym.Details.Level',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='pokemon', full_name='PGo.Gym.Details.Level.pokemon', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='trainer', full_name='PGo.Gym.Details.Level.trainer', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_GYM_DETAILS_LEVEL_TRAINER, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1279,
-  serialized_end=1411,
-)
-
-_GYM_DETAILS = _descriptor.Descriptor(
-  name='Details',
-  full_name='PGo.Gym.Details',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='details', full_name='PGo.Gym.Details.details', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='levels', full_name='PGo.Gym.Details.levels', index=1,
-      number=2, type=11, cpp_type=10, label=3,
-      has_default_value=False, default_value=[],
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_GYM_DETAILS_MOREDETAILS, _GYM_DETAILS_LEVEL, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1089,
-  serialized_end=1411,
-)
-
-_GYM = _descriptor.Descriptor(
-  name='Gym',
-  full_name='PGo.Gym',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='details', full_name='PGo.Gym.details', index=0,
-      number=1, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='name', full_name='PGo.Gym.name', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='image_url', full_name='PGo.Gym.image_url', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='team', full_name='PGo.Gym.team', index=3,
-      number=4, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='description', full_name='PGo.Gym.description', index=4,
-      number=5, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[_GYM_DETAILS, ],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=978,
-  serialized_end=1411,
+  serialized_start=801,
+  serialized_end=1062,
 )
 
 
@@ -719,8 +484,8 @@ _GETGYMDETAILSPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1414,
-  serialized_end=1547,
+  serialized_start=1065,
+  serialized_end=1198,
 )
 
 
@@ -747,8 +512,8 @@ _GETGYMDETAILSOUTPROTO = _descriptor.Descriptor(
       options=None),
     _descriptor.FieldDescriptor(
       name='Url', full_name='PGo.GetGymDetailsOutProto.Url', index=2,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
+      number=3, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
@@ -779,8 +544,8 @@ _GETGYMDETAILSOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1550,
-  serialized_end=1776,
+  serialized_start=1201,
+  serialized_end=1427,
 )
 
 
@@ -798,6 +563,13 @@ _GYMSTATEPROTO = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
+    _descriptor.FieldDescriptor(
+      name='GymMembership', full_name='PGo.GymStateProto.GymMembership', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
   ],
   extensions=[
   ],
@@ -810,39 +582,209 @@ _GYMSTATEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1778,
-  serialized_end=1837,
+  serialized_start=1429,
+  serialized_end=1536,
+)
+
+
+_GYMMEMBERSHIPPROTO = _descriptor.Descriptor(
+  name='GymMembershipProto',
+  full_name='PGo.GymMembershipProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Pokemon', full_name='PGo.GymMembershipProto.Pokemon', index=0,
+      number=1, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='TrainerPublicProfile', full_name='PGo.GymMembershipProto.TrainerPublicProfile', index=1,
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1538,
+  serialized_end=1655,
+)
+
+
+_PLAYERPUBLICPROFILEPROTO = _descriptor.Descriptor(
+  name='PlayerPublicProfileProto',
+  full_name='PGo.PlayerPublicProfileProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Name', full_name='PGo.PlayerPublicProfileProto.Name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Level', full_name='PGo.PlayerPublicProfileProto.Level', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Avatar', full_name='PGo.PlayerPublicProfileProto.Avatar', index=2,
+      number=3, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1657,
+  serialized_end=1752,
+)
+
+
+_PLAYERAVATARPROTO = _descriptor.Descriptor(
+  name='PlayerAvatarProto',
+  full_name='PGo.PlayerAvatarProto',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Avatar', full_name='PGo.PlayerAvatarProto.Avatar', index=0,
+      number=8, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Skin', full_name='PGo.PlayerAvatarProto.Skin', index=1,
+      number=2, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Hair', full_name='PGo.PlayerAvatarProto.Hair', index=2,
+      number=3, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Shirt', full_name='PGo.PlayerAvatarProto.Shirt', index=3,
+      number=4, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Pants', full_name='PGo.PlayerAvatarProto.Pants', index=4,
+      number=5, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Hat', full_name='PGo.PlayerAvatarProto.Hat', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Shoes', full_name='PGo.PlayerAvatarProto.Shoes', index=6,
+      number=7, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Eyes', full_name='PGo.PlayerAvatarProto.Eyes', index=7,
+      number=9, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+    _descriptor.FieldDescriptor(
+      name='Backpack', full_name='PGo.PlayerAvatarProto.Backpack', index=8,
+      number=10, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=1755,
+  serialized_end=1908,
 )
 
 _FORTDETAILSOUTPROTO.fields_by_name['Team'].enum_type = holoholo__shared__pb2._CUSTOM_TEAMCOLOR
-_FORTDETAILSOUTPROTO.fields_by_name['Pokemon'].enum_type = holoholo__shared__pb2._CUSTOM_POKEMONNAME
+_FORTDETAILSOUTPROTO.fields_by_name['Pokemon'].message_type = holoholo__shared__pb2._POKEMONPROTO
 _FORTDETAILSOUTPROTO.fields_by_name['FortType'].enum_type = holoholo__shared__pb2._HOLOHOLO_RPC_FORTTYPE
 _FORTDETAILSOUTPROTO.fields_by_name['Modifier'].message_type = _CLIENTFORTMODIFIERPROTO
-_FORTSEARCHOUTPROTO.fields_by_name['Items'].message_type = _ITEMPROTO
-_ITEMPROTO.fields_by_name['Item'].enum_type = holoholo__shared__pb2._HOLOHOLO_RPC_ITEM
-_GYM_DETAILS_MOREDETAILS.containing_type = _GYM_DETAILS
-_GYM_DETAILS_LEVEL_TRAINER.containing_type = _GYM_DETAILS_LEVEL
-_GYM_DETAILS_LEVEL.fields_by_name['pokemon'].message_type = holoholo__shared__pb2._POKEMONPROTO
-_GYM_DETAILS_LEVEL.fields_by_name['trainer'].message_type = _GYM_DETAILS_LEVEL_TRAINER
-_GYM_DETAILS_LEVEL.containing_type = _GYM_DETAILS
-_GYM_DETAILS.fields_by_name['details'].message_type = _GYM_DETAILS_MOREDETAILS
-_GYM_DETAILS.fields_by_name['levels'].message_type = _GYM_DETAILS_LEVEL
-_GYM_DETAILS.containing_type = _GYM
-_GYM.fields_by_name['details'].message_type = _GYM_DETAILS
+_CLIENTFORTMODIFIERPROTO.fields_by_name['ModifierType'].enum_type = holoholo__shared__pb2._HOLOHOLO_RPC_ITEM
+_AWARDITEMPROTO.fields_by_name['Item'].enum_type = holoholo__shared__pb2._HOLOHOLO_RPC_ITEM
+_FORTSEARCHOUTPROTO.fields_by_name['Result'].enum_type = holoholo__shared__pb2._HOLOHOLO_RPC_TYPES_FORTSEARCHOUTPROTO_RESULT
+_FORTSEARCHOUTPROTO.fields_by_name['Items'].message_type = _AWARDITEMPROTO
+_FORTSEARCHOUTPROTO.fields_by_name['EggPokemon'].message_type = holoholo__shared__pb2._POKEMONPROTO
 _GETGYMDETAILSOUTPROTO.fields_by_name['GymState'].message_type = _GYMSTATEPROTO
 _GETGYMDETAILSOUTPROTO.fields_by_name['Result'].enum_type = _GETGYMDETAILSOUTPROTO_RESULTENUM
 _GETGYMDETAILSOUTPROTO_RESULTENUM.containing_type = _GETGYMDETAILSOUTPROTO
 _GYMSTATEPROTO.fields_by_name['FortMapData'].message_type = holoholo__shared__pb2._POKEMONFORTPROTO
+_GYMSTATEPROTO.fields_by_name['GymMembership'].message_type = _GYMMEMBERSHIPPROTO
+_GYMMEMBERSHIPPROTO.fields_by_name['Pokemon'].message_type = holoholo__shared__pb2._POKEMONPROTO
+_GYMMEMBERSHIPPROTO.fields_by_name['TrainerPublicProfile'].message_type = _PLAYERPUBLICPROFILEPROTO
+_PLAYERPUBLICPROFILEPROTO.fields_by_name['Avatar'].message_type = _PLAYERAVATARPROTO
 DESCRIPTOR.message_types_by_name['FortDetailsOutProto'] = _FORTDETAILSOUTPROTO
 DESCRIPTOR.message_types_by_name['ClientFortModifierProto'] = _CLIENTFORTMODIFIERPROTO
 DESCRIPTOR.message_types_by_name['FortDetailsProto'] = _FORTDETAILSPROTO
 DESCRIPTOR.message_types_by_name['FortSearchProto'] = _FORTSEARCHPROTO
+DESCRIPTOR.message_types_by_name['AwardItemProto'] = _AWARDITEMPROTO
 DESCRIPTOR.message_types_by_name['FortSearchOutProto'] = _FORTSEARCHOUTPROTO
-DESCRIPTOR.message_types_by_name['ItemProto'] = _ITEMPROTO
-DESCRIPTOR.message_types_by_name['Gym'] = _GYM
 DESCRIPTOR.message_types_by_name['GetGymDetailsProto'] = _GETGYMDETAILSPROTO
 DESCRIPTOR.message_types_by_name['GetGymDetailsOutProto'] = _GETGYMDETAILSOUTPROTO
 DESCRIPTOR.message_types_by_name['GymStateProto'] = _GYMSTATEPROTO
+DESCRIPTOR.message_types_by_name['GymMembershipProto'] = _GYMMEMBERSHIPPROTO
+DESCRIPTOR.message_types_by_name['PlayerPublicProfileProto'] = _PLAYERPUBLICPROFILEPROTO
+DESCRIPTOR.message_types_by_name['PlayerAvatarProto'] = _PLAYERAVATARPROTO
 
 FortDetailsOutProto = _reflection.GeneratedProtocolMessageType('FortDetailsOutProto', (_message.Message,), dict(
   DESCRIPTOR = _FORTDETAILSOUTPROTO,
@@ -872,58 +814,19 @@ FortSearchProto = _reflection.GeneratedProtocolMessageType('FortSearchProto', (_
   ))
 _sym_db.RegisterMessage(FortSearchProto)
 
+AwardItemProto = _reflection.GeneratedProtocolMessageType('AwardItemProto', (_message.Message,), dict(
+  DESCRIPTOR = _AWARDITEMPROTO,
+  __module__ = 'fortdetails_pb2'
+  # @@protoc_insertion_point(class_scope:PGo.AwardItemProto)
+  ))
+_sym_db.RegisterMessage(AwardItemProto)
+
 FortSearchOutProto = _reflection.GeneratedProtocolMessageType('FortSearchOutProto', (_message.Message,), dict(
   DESCRIPTOR = _FORTSEARCHOUTPROTO,
   __module__ = 'fortdetails_pb2'
   # @@protoc_insertion_point(class_scope:PGo.FortSearchOutProto)
   ))
 _sym_db.RegisterMessage(FortSearchOutProto)
-
-ItemProto = _reflection.GeneratedProtocolMessageType('ItemProto', (_message.Message,), dict(
-  DESCRIPTOR = _ITEMPROTO,
-  __module__ = 'fortdetails_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.ItemProto)
-  ))
-_sym_db.RegisterMessage(ItemProto)
-
-Gym = _reflection.GeneratedProtocolMessageType('Gym', (_message.Message,), dict(
-
-  Details = _reflection.GeneratedProtocolMessageType('Details', (_message.Message,), dict(
-
-    MoreDetails = _reflection.GeneratedProtocolMessageType('MoreDetails', (_message.Message,), dict(
-      DESCRIPTOR = _GYM_DETAILS_MOREDETAILS,
-      __module__ = 'fortdetails_pb2'
-      # @@protoc_insertion_point(class_scope:PGo.Gym.Details.MoreDetails)
-      ))
-    ,
-
-    Level = _reflection.GeneratedProtocolMessageType('Level', (_message.Message,), dict(
-
-      Trainer = _reflection.GeneratedProtocolMessageType('Trainer', (_message.Message,), dict(
-        DESCRIPTOR = _GYM_DETAILS_LEVEL_TRAINER,
-        __module__ = 'fortdetails_pb2'
-        # @@protoc_insertion_point(class_scope:PGo.Gym.Details.Level.Trainer)
-        ))
-      ,
-      DESCRIPTOR = _GYM_DETAILS_LEVEL,
-      __module__ = 'fortdetails_pb2'
-      # @@protoc_insertion_point(class_scope:PGo.Gym.Details.Level)
-      ))
-    ,
-    DESCRIPTOR = _GYM_DETAILS,
-    __module__ = 'fortdetails_pb2'
-    # @@protoc_insertion_point(class_scope:PGo.Gym.Details)
-    ))
-  ,
-  DESCRIPTOR = _GYM,
-  __module__ = 'fortdetails_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.Gym)
-  ))
-_sym_db.RegisterMessage(Gym)
-_sym_db.RegisterMessage(Gym.Details)
-_sym_db.RegisterMessage(Gym.Details.MoreDetails)
-_sym_db.RegisterMessage(Gym.Details.Level)
-_sym_db.RegisterMessage(Gym.Details.Level.Trainer)
 
 GetGymDetailsProto = _reflection.GeneratedProtocolMessageType('GetGymDetailsProto', (_message.Message,), dict(
   DESCRIPTOR = _GETGYMDETAILSPROTO,
@@ -945,6 +848,27 @@ GymStateProto = _reflection.GeneratedProtocolMessageType('GymStateProto', (_mess
   # @@protoc_insertion_point(class_scope:PGo.GymStateProto)
   ))
 _sym_db.RegisterMessage(GymStateProto)
+
+GymMembershipProto = _reflection.GeneratedProtocolMessageType('GymMembershipProto', (_message.Message,), dict(
+  DESCRIPTOR = _GYMMEMBERSHIPPROTO,
+  __module__ = 'fortdetails_pb2'
+  # @@protoc_insertion_point(class_scope:PGo.GymMembershipProto)
+  ))
+_sym_db.RegisterMessage(GymMembershipProto)
+
+PlayerPublicProfileProto = _reflection.GeneratedProtocolMessageType('PlayerPublicProfileProto', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYERPUBLICPROFILEPROTO,
+  __module__ = 'fortdetails_pb2'
+  # @@protoc_insertion_point(class_scope:PGo.PlayerPublicProfileProto)
+  ))
+_sym_db.RegisterMessage(PlayerPublicProfileProto)
+
+PlayerAvatarProto = _reflection.GeneratedProtocolMessageType('PlayerAvatarProto', (_message.Message,), dict(
+  DESCRIPTOR = _PLAYERAVATARPROTO,
+  __module__ = 'fortdetails_pb2'
+  # @@protoc_insertion_point(class_scope:PGo.PlayerAvatarProto)
+  ))
+_sym_db.RegisterMessage(PlayerAvatarProto)
 
 
 # @@protoc_insertion_point(module_scope)

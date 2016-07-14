@@ -275,6 +275,17 @@ message Holoholo {
       ITEM_POKEMON_STORAGE_UPGRADE = 1001;
       ITEM_ITEM_STORAGE_UPGRADE = 1002;
     }
+    message Types {
+      message FortSearchOutProto {
+        enum Result {
+          NO_RESULT_SET = 0;
+          SUCCESS = 1;
+          OUT_OF_RANGE = 2;
+          IN_COOLDOWN_PERIOD = 3;
+          INVENTORY_FULL = 4;
+        }
+      }
+    }
   }
 }
 
@@ -309,6 +320,12 @@ message PokemonProto {
 	int32 Favorite = 29;
 	string Nickname = 30;
 	int32 FromFort = 31;
+}
+
+message ItemProto {
+  Holoholo.Rpc.Item Item = 1;
+  int32 Count = 2;
+  bool Unseen = 3;
 }
 
 // A "fort" is the internal name for a gym or pokestop point of interest

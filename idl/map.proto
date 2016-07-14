@@ -12,8 +12,8 @@ enum GetMapObjectsOutProtoStatus {
 
 // The get map objects request object
 message GetMapObjectsProto {
-  int32 CellId = 1;
-  int64 SinceTimeMs = 2;
+  repeated uint64 CellId = 1;
+  repeated int64 SinceTimeMs = 2;
   double PlayerLat = 3;
   double PlayerLng = 4;
 }
@@ -35,7 +35,7 @@ message ClientMapCellProto {
 
   repeated PokemonFortProto Fort = 3;
   repeated ClientSpawnPointProto SpawnPoint = 4;
-  bool DeletedObject = 6;
+  repeated string DeletedObject = 6;
   bool IsTruncatedList = 7;
   repeated PokemonSummaryFortProto FortSummary = 8;
   repeated ClientSpawnPointProto DecimatedSpawnPoint = 9;

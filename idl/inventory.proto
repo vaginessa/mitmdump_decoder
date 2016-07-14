@@ -20,8 +20,8 @@ message InventoryDeltaProto {
 
 message InventoryItemProto {
   int64 ModifiedTimestamp = 1;
-  string DeletedItemKey = 2;
-  string Item = 3;
+  bytes DeletedItemKey = 2;
+  bytes Item = 3;
 }
 
 message RecycleItemProto {
@@ -41,3 +41,28 @@ message RecycleItemOutProto {
   int32 NewCount = 2;
 }
 
+message DebugUpdateInventoryProto {
+  repeated PokemonProto Pokemon = 1;
+  repeated ItemProto Item = 2;
+}
+
+message DebugUpdateInventoryOutProto {
+  bool Success = 1;
+}
+
+message HoloInventoryKeyProto {
+  uint64 PokemonId = 1;
+  Holoholo.Rpc.Item Item = 2;
+  int32 PokedexEntryId = 3;
+  bool PlayerStats = 4;
+  bool PlayerCurrency = 5;
+  bool PlayerCamera = 6;
+  bool InventoryUpgrades = 7;
+  bool AppliedItems = 8;
+  bool EggIncubators = 9;
+  int32 PokemonFamilyId = 10;
+}
+
+message InventoryProto {
+  repeated InventoryItemProto InventoryItem = 1;
+}
