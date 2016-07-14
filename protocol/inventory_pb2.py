@@ -19,9 +19,9 @@ from holoholo_shared_pb2 import *
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='inventory.proto',
-  package='PGo',
+  package='Holoholo',
   syntax='proto3',
-  serialized_pb=_b('\n\x0finventory.proto\x12\x03PGo\x1a\x15holoholo_shared.proto\"Z\n\x11GetInventoryProto\x12\x17\n\x0fTimestampMillis\x18\x01 \x01(\x03\x12,\n\x0cItemBeenSeen\x18\x02 \x03(\x0e\x32\x16.PGo.Holoholo.Rpc.Item\"Y\n\x14GetInventoryOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12\x30\n\x0eInventoryDelta\x18\x02 \x01(\x0b\x32\x18.PGo.InventoryDeltaProto\"v\n\x13InventoryDeltaProto\x12\x19\n\x11OriginalTimestamp\x18\x01 \x01(\x03\x12\x14\n\x0cNewTimestamp\x18\x02 \x01(\x03\x12.\n\rInventoryItem\x18\x03 \x03(\x0b\x32\x17.PGo.InventoryItemProto\"U\n\x12InventoryItemProto\x12\x19\n\x11ModifiedTimestamp\x18\x01 \x01(\x03\x12\x16\n\x0e\x44\x65letedItemKey\x18\x02 \x01(\x0c\x12\x0c\n\x04Item\x18\x03 \x01(\x0c\"G\n\x10RecycleItemProto\x12$\n\x04Item\x18\x01 \x01(\x0e\x32\x16.PGo.Holoholo.Rpc.Item\x12\r\n\x05\x43ount\x18\x02 \x01(\x05\"\xc4\x01\n\x13RecycleItemOutProto\x12\x33\n\x06Result\x18\x01 \x01(\x0e\x32#.PGo.RecycleItemOutProto.ResultEnum\x12\x10\n\x08NewCount\x18\x02 \x01(\x05\"f\n\nResultEnum\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_NOT_ENOUGH_COPIES\x10\x02\x12#\n\x1f\x45RROR_CANNOT_RECYCLE_INCUBATORS\x10\x03\"]\n\x19\x44\x65\x62ugUpdateInventoryProto\x12\"\n\x07Pokemon\x18\x01 \x03(\x0b\x32\x11.PGo.PokemonProto\x12\x1c\n\x04Item\x18\x02 \x03(\x0b\x32\x0e.PGo.ItemProto\"/\n\x1c\x44\x65\x62ugUpdateInventoryOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\"\x8c\x02\n\x15HoloInventoryKeyProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\x12$\n\x04Item\x18\x02 \x01(\x0e\x32\x16.PGo.Holoholo.Rpc.Item\x12\x16\n\x0ePokedexEntryId\x18\x03 \x01(\x05\x12\x13\n\x0bPlayerStats\x18\x04 \x01(\x08\x12\x16\n\x0ePlayerCurrency\x18\x05 \x01(\x08\x12\x14\n\x0cPlayerCamera\x18\x06 \x01(\x08\x12\x19\n\x11InventoryUpgrades\x18\x07 \x01(\x08\x12\x14\n\x0c\x41ppliedItems\x18\x08 \x01(\x08\x12\x15\n\rEggIncubators\x18\t \x01(\x08\x12\x17\n\x0fPokemonFamilyId\x18\n \x01(\x05\"@\n\x0eInventoryProto\x12.\n\rInventoryItem\x18\x01 \x03(\x0b\x32\x17.PGo.InventoryItemProtoP\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0finventory.proto\x12\x08Holoholo\x1a\x15holoholo_shared.proto\"V\n\x11GetInventoryProto\x12\x17\n\x0fTimestampMillis\x18\x01 \x01(\x03\x12(\n\x0cItemBeenSeen\x18\x02 \x03(\x0e\x32\x12.Holoholo.Rpc.Item\"^\n\x14GetInventoryOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12\x35\n\x0eInventoryDelta\x18\x02 \x01(\x0b\x32\x1d.Holoholo.InventoryDeltaProto\"{\n\x13InventoryDeltaProto\x12\x19\n\x11OriginalTimestamp\x18\x01 \x01(\x03\x12\x14\n\x0cNewTimestamp\x18\x02 \x01(\x03\x12\x33\n\rInventoryItem\x18\x03 \x03(\x0b\x32\x1c.Holoholo.InventoryItemProto\"U\n\x12InventoryItemProto\x12\x19\n\x11ModifiedTimestamp\x18\x01 \x01(\x03\x12\x16\n\x0e\x44\x65letedItemKey\x18\x02 \x01(\x0c\x12\x0c\n\x04Item\x18\x03 \x01(\x0c\"C\n\x10RecycleItemProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\r\n\x05\x43ount\x18\x02 \x01(\x05\"\xc9\x01\n\x13RecycleItemOutProto\x12\x38\n\x06Result\x18\x01 \x01(\x0e\x32(.Holoholo.RecycleItemOutProto.ResultEnum\x12\x10\n\x08NewCount\x18\x02 \x01(\x05\"f\n\nResultEnum\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x1b\n\x17\x45RROR_NOT_ENOUGH_COPIES\x10\x02\x12#\n\x1f\x45RROR_CANNOT_RECYCLE_INCUBATORS\x10\x03\"g\n\x19\x44\x65\x62ugUpdateInventoryProto\x12\'\n\x07Pokemon\x18\x01 \x03(\x0b\x32\x16.Holoholo.PokemonProto\x12!\n\x04Item\x18\x02 \x03(\x0b\x32\x13.Holoholo.ItemProto\"/\n\x1c\x44\x65\x62ugUpdateInventoryOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\"\x88\x02\n\x15HoloInventoryKeyProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\x12 \n\x04Item\x18\x02 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x16\n\x0ePokedexEntryId\x18\x03 \x01(\x05\x12\x13\n\x0bPlayerStats\x18\x04 \x01(\x08\x12\x16\n\x0ePlayerCurrency\x18\x05 \x01(\x08\x12\x14\n\x0cPlayerCamera\x18\x06 \x01(\x08\x12\x19\n\x11InventoryUpgrades\x18\x07 \x01(\x08\x12\x14\n\x0c\x41ppliedItems\x18\x08 \x01(\x08\x12\x15\n\rEggIncubators\x18\t \x01(\x08\x12\x17\n\x0fPokemonFamilyId\x18\n \x01(\x05\"E\n\x0eInventoryProto\x12\x33\n\rInventoryItem\x18\x01 \x03(\x0b\x32\x1c.Holoholo.InventoryItemProtoP\x00\x62\x06proto3')
   ,
   dependencies=[holoholo__shared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -30,7 +30,7 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 _RECYCLEITEMOUTPROTO_RESULTENUM = _descriptor.EnumDescriptor(
   name='ResultEnum',
-  full_name='PGo.RecycleItemOutProto.ResultEnum',
+  full_name='Holoholo.RecycleItemOutProto.ResultEnum',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -53,28 +53,28 @@ _RECYCLEITEMOUTPROTO_RESULTENUM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=605,
-  serialized_end=707,
+  serialized_start=617,
+  serialized_end=719,
 )
 _sym_db.RegisterEnumDescriptor(_RECYCLEITEMOUTPROTO_RESULTENUM)
 
 
 _GETINVENTORYPROTO = _descriptor.Descriptor(
   name='GetInventoryProto',
-  full_name='PGo.GetInventoryProto',
+  full_name='Holoholo.GetInventoryProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='TimestampMillis', full_name='PGo.GetInventoryProto.TimestampMillis', index=0,
+      name='TimestampMillis', full_name='Holoholo.GetInventoryProto.TimestampMillis', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='ItemBeenSeen', full_name='PGo.GetInventoryProto.ItemBeenSeen', index=1,
+      name='ItemBeenSeen', full_name='Holoholo.GetInventoryProto.ItemBeenSeen', index=1,
       number=2, type=14, cpp_type=8, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -92,27 +92,27 @@ _GETINVENTORYPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=47,
-  serialized_end=137,
+  serialized_start=52,
+  serialized_end=138,
 )
 
 
 _GETINVENTORYOUTPROTO = _descriptor.Descriptor(
   name='GetInventoryOutProto',
-  full_name='PGo.GetInventoryOutProto',
+  full_name='Holoholo.GetInventoryOutProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Success', full_name='PGo.GetInventoryOutProto.Success', index=0,
+      name='Success', full_name='Holoholo.GetInventoryOutProto.Success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='InventoryDelta', full_name='PGo.GetInventoryOutProto.InventoryDelta', index=1,
+      name='InventoryDelta', full_name='Holoholo.GetInventoryOutProto.InventoryDelta', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -130,34 +130,34 @@ _GETINVENTORYOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=139,
-  serialized_end=228,
+  serialized_start=140,
+  serialized_end=234,
 )
 
 
 _INVENTORYDELTAPROTO = _descriptor.Descriptor(
   name='InventoryDeltaProto',
-  full_name='PGo.InventoryDeltaProto',
+  full_name='Holoholo.InventoryDeltaProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='OriginalTimestamp', full_name='PGo.InventoryDeltaProto.OriginalTimestamp', index=0,
+      name='OriginalTimestamp', full_name='Holoholo.InventoryDeltaProto.OriginalTimestamp', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='NewTimestamp', full_name='PGo.InventoryDeltaProto.NewTimestamp', index=1,
+      name='NewTimestamp', full_name='Holoholo.InventoryDeltaProto.NewTimestamp', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='InventoryItem', full_name='PGo.InventoryDeltaProto.InventoryItem', index=2,
+      name='InventoryItem', full_name='Holoholo.InventoryDeltaProto.InventoryItem', index=2,
       number=3, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -175,34 +175,34 @@ _INVENTORYDELTAPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=230,
-  serialized_end=348,
+  serialized_start=236,
+  serialized_end=359,
 )
 
 
 _INVENTORYITEMPROTO = _descriptor.Descriptor(
   name='InventoryItemProto',
-  full_name='PGo.InventoryItemProto',
+  full_name='Holoholo.InventoryItemProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='ModifiedTimestamp', full_name='PGo.InventoryItemProto.ModifiedTimestamp', index=0,
+      name='ModifiedTimestamp', full_name='Holoholo.InventoryItemProto.ModifiedTimestamp', index=0,
       number=1, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='DeletedItemKey', full_name='PGo.InventoryItemProto.DeletedItemKey', index=1,
+      name='DeletedItemKey', full_name='Holoholo.InventoryItemProto.DeletedItemKey', index=1,
       number=2, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Item', full_name='PGo.InventoryItemProto.Item', index=2,
+      name='Item', full_name='Holoholo.InventoryItemProto.Item', index=2,
       number=3, type=12, cpp_type=9, label=1,
       has_default_value=False, default_value=_b(""),
       message_type=None, enum_type=None, containing_type=None,
@@ -220,27 +220,27 @@ _INVENTORYITEMPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=350,
-  serialized_end=435,
+  serialized_start=361,
+  serialized_end=446,
 )
 
 
 _RECYCLEITEMPROTO = _descriptor.Descriptor(
   name='RecycleItemProto',
-  full_name='PGo.RecycleItemProto',
+  full_name='Holoholo.RecycleItemProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Item', full_name='PGo.RecycleItemProto.Item', index=0,
+      name='Item', full_name='Holoholo.RecycleItemProto.Item', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Count', full_name='PGo.RecycleItemProto.Count', index=1,
+      name='Count', full_name='Holoholo.RecycleItemProto.Count', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -258,27 +258,27 @@ _RECYCLEITEMPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=437,
-  serialized_end=508,
+  serialized_start=448,
+  serialized_end=515,
 )
 
 
 _RECYCLEITEMOUTPROTO = _descriptor.Descriptor(
   name='RecycleItemOutProto',
-  full_name='PGo.RecycleItemOutProto',
+  full_name='Holoholo.RecycleItemOutProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Result', full_name='PGo.RecycleItemOutProto.Result', index=0,
+      name='Result', full_name='Holoholo.RecycleItemOutProto.Result', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='NewCount', full_name='PGo.RecycleItemOutProto.NewCount', index=1,
+      name='NewCount', full_name='Holoholo.RecycleItemOutProto.NewCount', index=1,
       number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -297,27 +297,27 @@ _RECYCLEITEMOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=511,
-  serialized_end=707,
+  serialized_start=518,
+  serialized_end=719,
 )
 
 
 _DEBUGUPDATEINVENTORYPROTO = _descriptor.Descriptor(
   name='DebugUpdateInventoryProto',
-  full_name='PGo.DebugUpdateInventoryProto',
+  full_name='Holoholo.DebugUpdateInventoryProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Pokemon', full_name='PGo.DebugUpdateInventoryProto.Pokemon', index=0,
+      name='Pokemon', full_name='Holoholo.DebugUpdateInventoryProto.Pokemon', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Item', full_name='PGo.DebugUpdateInventoryProto.Item', index=1,
+      name='Item', full_name='Holoholo.DebugUpdateInventoryProto.Item', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -335,20 +335,20 @@ _DEBUGUPDATEINVENTORYPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=709,
-  serialized_end=802,
+  serialized_start=721,
+  serialized_end=824,
 )
 
 
 _DEBUGUPDATEINVENTORYOUTPROTO = _descriptor.Descriptor(
   name='DebugUpdateInventoryOutProto',
-  full_name='PGo.DebugUpdateInventoryOutProto',
+  full_name='Holoholo.DebugUpdateInventoryOutProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='Success', full_name='PGo.DebugUpdateInventoryOutProto.Success', index=0,
+      name='Success', full_name='Holoholo.DebugUpdateInventoryOutProto.Success', index=0,
       number=1, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
@@ -366,83 +366,83 @@ _DEBUGUPDATEINVENTORYOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=804,
-  serialized_end=851,
+  serialized_start=826,
+  serialized_end=873,
 )
 
 
 _HOLOINVENTORYKEYPROTO = _descriptor.Descriptor(
   name='HoloInventoryKeyProto',
-  full_name='PGo.HoloInventoryKeyProto',
+  full_name='Holoholo.HoloInventoryKeyProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='PokemonId', full_name='PGo.HoloInventoryKeyProto.PokemonId', index=0,
+      name='PokemonId', full_name='Holoholo.HoloInventoryKeyProto.PokemonId', index=0,
       number=1, type=4, cpp_type=4, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='Item', full_name='PGo.HoloInventoryKeyProto.Item', index=1,
+      name='Item', full_name='Holoholo.HoloInventoryKeyProto.Item', index=1,
       number=2, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PokedexEntryId', full_name='PGo.HoloInventoryKeyProto.PokedexEntryId', index=2,
+      name='PokedexEntryId', full_name='Holoholo.HoloInventoryKeyProto.PokedexEntryId', index=2,
       number=3, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PlayerStats', full_name='PGo.HoloInventoryKeyProto.PlayerStats', index=3,
+      name='PlayerStats', full_name='Holoholo.HoloInventoryKeyProto.PlayerStats', index=3,
       number=4, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PlayerCurrency', full_name='PGo.HoloInventoryKeyProto.PlayerCurrency', index=4,
+      name='PlayerCurrency', full_name='Holoholo.HoloInventoryKeyProto.PlayerCurrency', index=4,
       number=5, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PlayerCamera', full_name='PGo.HoloInventoryKeyProto.PlayerCamera', index=5,
+      name='PlayerCamera', full_name='Holoholo.HoloInventoryKeyProto.PlayerCamera', index=5,
       number=6, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='InventoryUpgrades', full_name='PGo.HoloInventoryKeyProto.InventoryUpgrades', index=6,
+      name='InventoryUpgrades', full_name='Holoholo.HoloInventoryKeyProto.InventoryUpgrades', index=6,
       number=7, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='AppliedItems', full_name='PGo.HoloInventoryKeyProto.AppliedItems', index=7,
+      name='AppliedItems', full_name='Holoholo.HoloInventoryKeyProto.AppliedItems', index=7,
       number=8, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='EggIncubators', full_name='PGo.HoloInventoryKeyProto.EggIncubators', index=8,
+      name='EggIncubators', full_name='Holoholo.HoloInventoryKeyProto.EggIncubators', index=8,
       number=9, type=8, cpp_type=7, label=1,
       has_default_value=False, default_value=False,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None),
     _descriptor.FieldDescriptor(
-      name='PokemonFamilyId', full_name='PGo.HoloInventoryKeyProto.PokemonFamilyId', index=9,
+      name='PokemonFamilyId', full_name='Holoholo.HoloInventoryKeyProto.PokemonFamilyId', index=9,
       number=10, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -460,20 +460,20 @@ _HOLOINVENTORYKEYPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=854,
-  serialized_end=1122,
+  serialized_start=876,
+  serialized_end=1140,
 )
 
 
 _INVENTORYPROTO = _descriptor.Descriptor(
   name='InventoryProto',
-  full_name='PGo.InventoryProto',
+  full_name='Holoholo.InventoryProto',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='InventoryItem', full_name='PGo.InventoryProto.InventoryItem', index=0,
+      name='InventoryItem', full_name='Holoholo.InventoryProto.InventoryItem', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -491,19 +491,19 @@ _INVENTORYPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1124,
-  serialized_end=1188,
+  serialized_start=1142,
+  serialized_end=1211,
 )
 
-_GETINVENTORYPROTO.fields_by_name['ItemBeenSeen'].enum_type = holoholo__shared__pb2._HOLOHOLO_RPC_ITEM
+_GETINVENTORYPROTO.fields_by_name['ItemBeenSeen'].enum_type = holoholo__shared__pb2._RPC_ITEM
 _GETINVENTORYOUTPROTO.fields_by_name['InventoryDelta'].message_type = _INVENTORYDELTAPROTO
 _INVENTORYDELTAPROTO.fields_by_name['InventoryItem'].message_type = _INVENTORYITEMPROTO
-_RECYCLEITEMPROTO.fields_by_name['Item'].enum_type = holoholo__shared__pb2._HOLOHOLO_RPC_ITEM
+_RECYCLEITEMPROTO.fields_by_name['Item'].enum_type = holoholo__shared__pb2._RPC_ITEM
 _RECYCLEITEMOUTPROTO.fields_by_name['Result'].enum_type = _RECYCLEITEMOUTPROTO_RESULTENUM
 _RECYCLEITEMOUTPROTO_RESULTENUM.containing_type = _RECYCLEITEMOUTPROTO
 _DEBUGUPDATEINVENTORYPROTO.fields_by_name['Pokemon'].message_type = holoholo__shared__pb2._POKEMONPROTO
 _DEBUGUPDATEINVENTORYPROTO.fields_by_name['Item'].message_type = holoholo__shared__pb2._ITEMPROTO
-_HOLOINVENTORYKEYPROTO.fields_by_name['Item'].enum_type = holoholo__shared__pb2._HOLOHOLO_RPC_ITEM
+_HOLOINVENTORYKEYPROTO.fields_by_name['Item'].enum_type = holoholo__shared__pb2._RPC_ITEM
 _INVENTORYPROTO.fields_by_name['InventoryItem'].message_type = _INVENTORYITEMPROTO
 DESCRIPTOR.message_types_by_name['GetInventoryProto'] = _GETINVENTORYPROTO
 DESCRIPTOR.message_types_by_name['GetInventoryOutProto'] = _GETINVENTORYOUTPROTO
@@ -519,70 +519,70 @@ DESCRIPTOR.message_types_by_name['InventoryProto'] = _INVENTORYPROTO
 GetInventoryProto = _reflection.GeneratedProtocolMessageType('GetInventoryProto', (_message.Message,), dict(
   DESCRIPTOR = _GETINVENTORYPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.GetInventoryProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.GetInventoryProto)
   ))
 _sym_db.RegisterMessage(GetInventoryProto)
 
 GetInventoryOutProto = _reflection.GeneratedProtocolMessageType('GetInventoryOutProto', (_message.Message,), dict(
   DESCRIPTOR = _GETINVENTORYOUTPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.GetInventoryOutProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.GetInventoryOutProto)
   ))
 _sym_db.RegisterMessage(GetInventoryOutProto)
 
 InventoryDeltaProto = _reflection.GeneratedProtocolMessageType('InventoryDeltaProto', (_message.Message,), dict(
   DESCRIPTOR = _INVENTORYDELTAPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.InventoryDeltaProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.InventoryDeltaProto)
   ))
 _sym_db.RegisterMessage(InventoryDeltaProto)
 
 InventoryItemProto = _reflection.GeneratedProtocolMessageType('InventoryItemProto', (_message.Message,), dict(
   DESCRIPTOR = _INVENTORYITEMPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.InventoryItemProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.InventoryItemProto)
   ))
 _sym_db.RegisterMessage(InventoryItemProto)
 
 RecycleItemProto = _reflection.GeneratedProtocolMessageType('RecycleItemProto', (_message.Message,), dict(
   DESCRIPTOR = _RECYCLEITEMPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.RecycleItemProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.RecycleItemProto)
   ))
 _sym_db.RegisterMessage(RecycleItemProto)
 
 RecycleItemOutProto = _reflection.GeneratedProtocolMessageType('RecycleItemOutProto', (_message.Message,), dict(
   DESCRIPTOR = _RECYCLEITEMOUTPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.RecycleItemOutProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.RecycleItemOutProto)
   ))
 _sym_db.RegisterMessage(RecycleItemOutProto)
 
 DebugUpdateInventoryProto = _reflection.GeneratedProtocolMessageType('DebugUpdateInventoryProto', (_message.Message,), dict(
   DESCRIPTOR = _DEBUGUPDATEINVENTORYPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.DebugUpdateInventoryProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.DebugUpdateInventoryProto)
   ))
 _sym_db.RegisterMessage(DebugUpdateInventoryProto)
 
 DebugUpdateInventoryOutProto = _reflection.GeneratedProtocolMessageType('DebugUpdateInventoryOutProto', (_message.Message,), dict(
   DESCRIPTOR = _DEBUGUPDATEINVENTORYOUTPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.DebugUpdateInventoryOutProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.DebugUpdateInventoryOutProto)
   ))
 _sym_db.RegisterMessage(DebugUpdateInventoryOutProto)
 
 HoloInventoryKeyProto = _reflection.GeneratedProtocolMessageType('HoloInventoryKeyProto', (_message.Message,), dict(
   DESCRIPTOR = _HOLOINVENTORYKEYPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.HoloInventoryKeyProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.HoloInventoryKeyProto)
   ))
 _sym_db.RegisterMessage(HoloInventoryKeyProto)
 
 InventoryProto = _reflection.GeneratedProtocolMessageType('InventoryProto', (_message.Message,), dict(
   DESCRIPTOR = _INVENTORYPROTO,
   __module__ = 'inventory_pb2'
-  # @@protoc_insertion_point(class_scope:PGo.InventoryProto)
+  # @@protoc_insertion_point(class_scope:Holoholo.InventoryProto)
   ))
 _sym_db.RegisterMessage(InventoryProto)
 

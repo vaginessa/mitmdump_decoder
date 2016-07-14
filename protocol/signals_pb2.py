@@ -17,9 +17,9 @@ _sym_db = _symbol_database.Default()
 
 DESCRIPTOR = _descriptor.FileDescriptor(
   name='signals.proto',
-  package='',
+  package='Holoholo',
   syntax='proto3',
-  serialized_pb=_b('\n\rsignals.protob\x06proto3')
+  serialized_pb=_b('\n\rsignals.proto\x12\x08Holoholob\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
