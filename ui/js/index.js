@@ -13,7 +13,7 @@ filters.onclick = function() {
 var autoloadOptions = {
   interval: 10 * 1000,
   style: function(feature) { return feature.properties; },
-  pointToLayer: simplestyle,
+  pointToLayer: customStyle,
 
   filter: checkboxFilter,
   onEachFeature: function (feature, layer) {
@@ -61,25 +61,37 @@ function simplestyle(f, latlon) {
           ((window.devicePixelRatio === 2) ? '@2x' : '') +
           '.png';
 
-    var icon;
-    if (fp.type == 'pokestop') {
-      icon= pokestopIcon;
-    } else if (fp.type == 'wild' || fp.type == 'catchable') {
-      icon= pokemonIcon;
-    } else if (fp.type == 'gym') {
-      icon = gymIcon;
-    } else {
-      icon= new L.icon({
+    var icon = new L.icon({
         iconUrl: url,
         iconSize: sizes[size],
         iconAnchor: [sizes[size][0] / 2, sizes[size][1] / 2],
         popupAnchor: [sizes[size][0] / 2, 0]
       });
-    }
 
     return new L.Marker(latlon, {
       icon: icon
     });
+}
+
+function customStyle(f, latlon) {
+    var icon = simplestyle(f, latlon);
+    var properties = f.properties;
+
+    if (properties.type == 'pokestop' && properties.lure) {
+      f.properties['marker-color'] = '800080';
+      icon = simplestyle(f, latlon);
+    }
+
+    /*
+    if (properties.type == 'pokestop') {
+      icon = pokestopIcon;
+    } else if (properties.type == 'wild' || properties.type == 'catchable') {
+      icon = pokemonIcon;
+    } else if (properties.type == 'gym') {
+      icon = gymIcon;
+    }
+    */
+    return icon;
 }
 
 var pokestopIcon = L.icon({
