@@ -53,15 +53,6 @@ var player = L.realtime({url: 'player.json', type: 'json'}, {
   }
 }).addTo(map);
 
-var playerLoaded = false;
-player.on('update', function(updateEvent) {
-  if(!playerLoaded){ // && updateEvent.features.length > 0) {
-    playerLoaded = true;
-    //Set the view after the first load
-    map.fitBounds(player.getBounds(), {maxZoom: 16});
-  }
-});
-
 
 //https://gist.github.com/tmcw/3861338
 function simplestyle(f, latlon) {
