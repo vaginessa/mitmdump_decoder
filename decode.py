@@ -6,7 +6,11 @@ import numpy
 import math
 import requests
 ##Make a secrets.py with bearer= and endpoint=
-from secrets import bearer, endpoint
+try:
+  from secrets import bearer, endpoint
+except:
+  bearer = ""
+  endpoint = ""
 from mitmproxy.script import concurrent
 from mitmproxy.models import decoded
 
