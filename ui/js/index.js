@@ -6,53 +6,41 @@ L.tileLayer.provider('OpenStreetMap.Mapnik', {retina: true}).addTo(map);
 
 var filters = document.getElementById('filters');
 filters.onclick = function() {
-  realtime.update();
+  gmo.update();
   player.update();
 };
-var realtime = L.realtime({url: 'get_map_objects.json', type: 'json'}, {
+
+var autoloadOptions = {
   interval: 10 * 1000,
   style: function(feature) { return feature.properties; },
   pointToLayer: simplestyle,
 
-  filter: function(feature) {
-    if (!loaded) {
-      return true;
-    }
-    var box = document.getElementById(feature.properties.type);
-    return box == null || box.checked;
-  },
+  filter: checkboxFilter,
   onEachFeature: function (feature, layer) {
     layer.bindPopup(feature.properties.title);
   }
-}).addTo(map);
+}
+
+var player = L.realtime({url: 'player.json', type: 'json'}, autoloadOptions).addTo(map);
+var gmo = L.realtime({url: 'get_map_objects.json', type: 'json'}, autoloadOptions).addTo(map);
 
 var loaded = false;
-realtime.on('update', function(updateEvent) {
+gmo.on('update', function(updateEvent) {
   if(!loaded){ // && updateEvent.features.length > 0) {
     loaded = true;
     //Set the view after the first load
-    map.fitBounds(realtime.getBounds(), {maxZoom: 16});
+    map.fitBounds(gmo.getBounds(), {maxZoom: 16});
   }
 });
 
 
-var player = L.realtime({url: 'player.json', type: 'json'}, {
-  interval: 10 * 1000,
-  style: function(feature) { return feature.properties; },
-  pointToLayer: simplestyle,
-
-  filter: function(feature) {
-    if (!loaded) {
-      return true;
-    }
-    var box = document.getElementById(feature.properties.type);
-    return box == null || box.checked;
-  },
-  onEachFeature: function (feature, layer) {
-    layer.bindPopup(feature.properties.title);
+function checkboxFilter(feature) {
+  if (!loaded) {
+    return true;
   }
-}).addTo(map);
-
+  var box = document.getElementById(feature.properties.type);
+  return box == null || box.checked;
+}
 
 //https://gist.github.com/tmcw/3861338
 function simplestyle(f, latlon) {
