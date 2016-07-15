@@ -207,6 +207,7 @@ def response(context, flow):
               props["marker-symbol"] = "circle"
               props["title"] = "PokéStop"
               props["type"] = "pokestop"
+              props["lure"] = fort.HasField('FortLureInfo')
             else:
               props["marker-symbol"] = "town-hall"
               props["marker-size"] = "large"
