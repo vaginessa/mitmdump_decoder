@@ -113,6 +113,9 @@ def request(context, flow):
   if flow.match("~d pgorelease.nianticlabs.com"):
     env = RpcRequestEnvelopeProto()
     env.ParseFromString(flow.request.content)
+    if ( len(env.parameter) == 0 ):
+      print 'Failed - empty request parameters'
+      return
     key = env.parameter[0].key
     value = env.parameter[0].value
 
