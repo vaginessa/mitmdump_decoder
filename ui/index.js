@@ -1,6 +1,6 @@
 var map = L.map('map');
 
-L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
+L.tileLayer.provider('OpenStreetMap.Mapnik', {retina: true}).addTo(map);
 //Add UI controls to toggle later
 //L.tileLayer.provider('Watercolor').addTo(map);
 

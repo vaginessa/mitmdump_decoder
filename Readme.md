@@ -1,5 +1,5 @@
 
-# mitmdump deocder
+# mitmdump decoder
 
 ## Description
 
