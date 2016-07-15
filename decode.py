@@ -47,30 +47,20 @@ mismatched_apis = {
 request_api = {} #Match responses to their requests
 pokeLocation = {}
 request_location = {}
-def dumpToMap(dataa):
-  headers = {"Authorization" : "Bearer " + bearer}
-  print("Dumping")
-  r = requests.post(endpoint + "/api/push/mapobject/bulk", json = dataa, headers = headers)
-  print r.content
-def createItem(t,uid,point, meta):
+
+def dumpToMap(data):
+  if bearer == "":
+    return
+  headers = {"Authorization" : "Bearer %s" % bearer}
+  r = requests.post("%s/api/push/mapobject/bulk" % endpoint, json = data, headers = headers)
+
+def createItem(t, uid, point, meta):
   data = {"type" : t,
           "uid" : uid,
           "location" : point,
           "meta" : meta
   }
   return data
-  
-def sendToMap(t,uid,point, meta):
-  if bearer == "":
-    return
-  headers = {"Authorization" : "Bearer " + bearer}
-  data = {"type" : t,
-          "uid" : uid,
-          "location" : point,
-          "meta" : meta
-  }
-  r = requests.post(endpoint + "/api/push/mapobject", json = data, headers = headers)
-  print r.content
 
 def triangulate((LatA, LonA, DistA), (LatB, LonB, DistB), (LatC, LonC, DistC)):
   #grabbed from http://gis.stackexchange.com/questions/66/trilateration-using-3-latitude-and-longitude-points-and-3-distances
@@ -185,7 +175,7 @@ def response(context, flow):
 
       if (key == GET_MAP_OBJECTS):
         features = []
-        dumpa = []
+        bulk = []
 
         for cell in mor.MapCell:
           for fort in cell.Fort:
@@ -219,7 +209,7 @@ def response(context, flow):
             p = Point((fort.Longitude, fort.Latitude))
             f = Feature(geometry=p, id=fort.FortId, properties=props)
             features.append(f)
-            dumpa.append(createItem("gym", fort.FortId, p, f.properties))
+            bulk.append(createItem("gym", fort.FortId, p, f.properties))
 
           for spawn in cell.SpawnPoint:
             p = Point((spawn.Longitude, spawn.Latitude))
@@ -232,7 +222,7 @@ def response(context, flow):
               "marker-size": "small",
               })
             features.append(f)
-            dumpa.append(createItem("spawnpoint", 0, p, f.properties))
+            bulk.append(createItem("spawnpoint", 0, p, f.properties))
 
           for spawn in cell.DecimatedSpawnPoint:
             p = Point((spawn.Longitude, spawn.Latitude))
@@ -256,7 +246,7 @@ def response(context, flow):
               "marker-symbol": "suitcase"
               })
             features.append(f)
-            dumpa.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
+            bulk.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
 
           for pokemon in cell.CatchablePokemon:
             p = Point((pokemon.Longitude, pokemon.Latitude))
@@ -269,15 +259,15 @@ def response(context, flow):
               "marker-symbol": "circle"
               })
             features.append(f)
-            dumpa.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
+            bulk.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
 
           for poke in cell.NearbyPokemon:
             gps = request_location[env.response_id]
             if poke.EncounterId in pokeLocation:
-              add=True
+              add = True
               for loc in pokeLocation[poke.EncounterId]:
                 if gps[0] == loc[0] and gps[1] == loc[1]:
-                  add=False
+                  add = False
               if add:
                 pokeLocation[poke.EncounterId].append((gps[0], gps[1], poke.DistanceMeters/1000))
             else:
@@ -293,13 +283,13 @@ def response(context, flow):
                   "marker-color": "FFFFFF",
                   "marker-symbol": "dog-park"
                   })
-                dumpa.append(createItem("pokemon", poke.EncounterId, p, f.properties))
+                bulk.append(createItem("pokemon", poke.EncounterId, p, f.properties))
                 features.append(f)
 
 
         fc = FeatureCollection(features)
         dump = geojson.dumps(fc, sort_keys=True)
-        dumpToMap(dumpa)
+        dumpToMap(bulk)
         f = open('ui/get_map_objects.json', 'w')
         f.write(dump)
 
