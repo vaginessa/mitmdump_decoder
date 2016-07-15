@@ -24,7 +24,16 @@
 </head>
 <body>
 
-<nav id='filters' class='filter-ui'></nav>
+  <nav id='filters' class='filter-ui'>
+  <div><input type=checkbox id='pokestop' checked=true/><label for='pokestop'>PokeStop</label></div>
+  <div><input type=checkbox id='gym' checked=true/><label for='gym'>Gym</label></div>
+  <div><input type=checkbox id='spawn' checked=true/><label for='spawn'>Spawn</label></div>
+  <div><input type=checkbox id='decimatedspawn' checked=true/><label for='decimatedspawn'>Decimated Spawn</label></div>
+  <div><input type=checkbox id='wild' checked=true/><label for='wild'>Wild Pokemon</label></div>
+  <div><input type=checkbox id='catchable' checked=true/><label for='catchable'>Catchable Pokemon</label></div>
+  <div><input type=checkbox id='nearby' checked=true/><label for='nearby'>Nearby Pokemon</label></div>
+
+  </nav>
 <div id='map'></div>
 <script src="leaflet.js"></script>
 <script src='leaflet-realtime.min.js'></script>
