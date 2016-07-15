@@ -4,7 +4,9 @@ import time
 import sys
 import numpy
 import math
-
+import requests
+##Make a secrets.py with bearer= and endpoint=
+from secrets import bearer, endpoint
 from mitmproxy.script import concurrent
 from mitmproxy.models import decoded
 
@@ -39,8 +41,21 @@ mismatched_apis = {
 request_api = {} #Match responses to their requests
 pokeLocation = {}
 request_location = {}
+def sendToMap(t,uid,point, meta):
+  if bearer == "":
+    return
+  headers = {"Authorization" : "Bearer " + bearer}
+  data = {"type" : t,
+          "uid" : uid,
+          "location" : point.coordinates,
+          "meta" : meta
+  }
+  print data
+  r = requests.post(endpoint + "/api/push/mapobject", json = data, headers = headers)
+  print r.content
 
 def triangulate((LatA, LonA, DistA), (LatB, LonB, DistB), (LatC, LonC, DistC)):
+  #grabbed from http://gis.stackexchange.com/questions/66/trilateration-using-3-latitude-and-longitude-points-and-3-distances
   #using authalic sphere
   #if using an ellipsoid this step is slightly different
   #Convert geodetic Lat/Long to ECEF xyz
@@ -159,6 +174,8 @@ def response(context, flow):
             if fort.FortType == CHECKPOINT:
               f = Feature(geometry=p, id=len(features), properties={"id": fort.FortId, "title": "Pokestop", "marker-color": "00007F", "marker-symbol": "town-hall"})
               features.append(f)
+              print f.properties
+              sendToMap("pokestop", fort.FortId, p, f.properties)
             else:
               f = None
               if fort.Team == BLUE:
@@ -170,11 +187,13 @@ def response(context, flow):
               else:
                 f = Feature(geometry=p, id=len(features), properties={"id": fort.FortId, "title": "Neutral Gym", "marker-color": "808080", "marker-symbol": "town-hall", "marker-size": "large"})
               features.append(f)
+              sendToMap("gym", fort.FortId, p, f.properties)
 
           for spawn in cell.SpawnPoint:
             p = Point((spawn.Longitude, spawn.Latitude))
             f = Feature(geometry=p, id=len(features), properties={"id": len(features), "title": "spawn", "marker-color": "00FF00", "marker-symbol": "garden"})
             features.append(f)
+            sendToMap("spawnpoint", 0, p, f.properties)
 
           for spawn in cell.DecimatedSpawnPoint:
             p = Point((spawn.Longitude, spawn.Latitude))
@@ -185,11 +204,13 @@ def response(context, flow):
             p = Point((pokemon.Longitude, pokemon.Latitude))
             f = Feature(geometry=p, id=len(features), properties={"id": len(features), "TimeTillHiddenMs": pokemon.TimeTillHiddenMs, "title": "Wild %s" % Custom_PokemonName.Name(pokemon.Pokemon.PokemonId), "marker-color": "FF0000", "marker-symbol": "suitcase"})
             features.append(f)
+            sendToMap("pokemon", pokemon.EncounterId, p, f.properties)
 
           for pokemon in cell.CatchablePokemon:
             p = Point((pokemon.Longitude, pokemon.Latitude))
             f = Feature(geometry=p, id=len(features), properties={"id": len(features), "ExpirationTimeMs": pokemon.ExpirationTimeMs, "title": "Catchable %s" % Custom_PokemonName.Name(pokemon.PokedexTypeId), "marker-color": "000000", "marker-symbol": "circle"})
             features.append(f)
+            sendToMap("pokemon", pokemon.EncounterId, p, f.properties)
 
           for poke in cell.NearbyPokemon:
             gps = request_location[env.response_id]
@@ -207,6 +228,7 @@ def response(context, flow):
               if not math.isnan(lat) and not math.isnan(lon) :
                 p = Point((lon, lat))
                 f = Feature(geometry=p, id=len(features), properties={"id": len(features), "title": "Nearby %s" % Custom_PokemonName.Name(poke.PokedexNumber), "marker-color": "FFFFFF", "marker-symbol": "dog-park"})
+                sendToMap("pokemon", poke.EncounterId, p, f.properties)
                 features.append(f)
 
 

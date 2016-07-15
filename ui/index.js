@@ -84,3 +84,4 @@ function simplestyle(f, latlon) {
         })
     });
 }
+$("input").click(function(){realtime.update()})
