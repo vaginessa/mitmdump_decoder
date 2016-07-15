@@ -54,7 +54,6 @@ def sendToMap(t,uid,point, meta):
           "location" : point.coordinates,
           "meta" : meta
   }
-  print data
   r = requests.post(endpoint + "/api/push/mapobject", json = data, headers = headers)
   print r.content
 
