@@ -1,11 +1,13 @@
 var map = L.map('map');
 
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+L.tileLayer.provider('OpenStreetMap.Mapnik', {retina: true}).addTo(map);
+//Add UI controls to toggle later
+//L.tileLayer.provider('Watercolor').addTo(map);
 
 var filters = document.getElementById('filters');
-
+filters.onclick = function() {
+  realtime.update();
+};
 var realtime = L.realtime({url: 'get_map_objects.json', type: 'json'}, {
   interval: 10 * 1000,
   style: function(feature) { return feature.properties; },
@@ -15,49 +17,24 @@ var realtime = L.realtime({url: 'get_map_objects.json', type: 'json'}, {
     if (!loaded) {
       return true;
     }
-
-    var enabled = {};
-    for (var i = 0; i < checkboxes.length; i++) {
-      if (checkboxes[i].checked) {
-        enabled[checkboxes[i].id] = true;
-      }
-    }
-    return (feature.properties['marker-symbol'] in enabled);
+    var box = document.getElementById(feature.properties.type);
+    return box == null || box.checked;
   },
   onEachFeature: function (feature, layer) {
     layer.bindPopup(feature.properties.title);
   }
 }).addTo(map);
 
-var checkboxes = [];
 var loaded = false;
 realtime.on('update', function(updateEvent) {
-  if(!loaded) {
+  if(!loaded){ // && updateEvent.features.length > 0) {
     loaded = true;
     //Set the view after the first load
     map.fitBounds(realtime.getBounds(), {maxZoom: 16});
-
-    var typesObj = {}, types = [];
-    var features = updateEvent.features
-    for (prop in features) {
-      typesObj[features[prop].properties['marker-symbol']] = true;
-    }
-    for (var k in typesObj) types.push(k);
-
-    for (var i = 0; i < types.length; i++) {
-      var item = filters.appendChild(document.createElement('div'));
-      var checkbox = item.appendChild(document.createElement('input'));
-      var label = item.appendChild(document.createElement('label'));
-      checkbox.type = 'checkbox';
-      checkbox.id = types[i];
-      checkbox.checked = true;
-      label.innerHTML = types[i];
-      label.setAttribute('for', types[i]);
-      checkboxes.push(checkbox);
-    }
   }
 });
 
+//https://gist.github.com/tmcw/3861338
 function simplestyle(f, latlon) {
     var sizes = {
       small: [20, 50],
