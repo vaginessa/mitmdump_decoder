@@ -72,12 +72,25 @@ function simplestyle(f, latlon) {
           size.charAt(0) + symbol + '+' + color +
           ((window.devicePixelRatio === 2) ? '@2x' : '') +
           '.png';
-    return new L.Marker(latlon, {
-        icon: new L.icon({
-            iconUrl: url,
-            iconSize: sizes[size],
-            iconAnchor: [sizes[size][0] / 2, sizes[size][1] / 2],
-            popupAnchor: [sizes[size][0] / 2, 0]
-        })
-    });
+    if (fp.type == 'pokestop') {
+      return new L.Marker(latlon, {
+          icon: pokestopIcon
+      })
+    } else {
+      return new L.Marker(latlon, {
+          icon: new L.icon({
+              iconUrl: url,
+              iconSize: sizes[size],
+              iconAnchor: [sizes[size][0] / 2, sizes[size][1] / 2],
+              popupAnchor: [sizes[size][0] / 2, 0]
+          })
+      });
+    }
 }
+
+var pokestopIcon = L.icon({
+    iconUrl: 'img/pokestop.png',
+    iconSize:     [32, 48], // size of the icon
+    iconAnchor:   [16, 48], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -58] // point from which the popup should open relative to the iconAnchor
+});
