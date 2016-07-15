@@ -137,13 +137,12 @@ def request(context, flow):
     if (key == GET_MAP_OBJECTS):
       features = []
       props = {
-          "id": "player"
+          "id": "player",
+          "marker-symbol": "pitch",
+          "title": "You",
+          "marker-size": "large",
+          "marker-color": "663399"
       }
-      props["marker-symbol"] = "pitch"
-      props["title"] = "You"
-      props["type"] = "player"
-      props["marker-size"] = "large"
-      props["marker-color"] = "663399"
       p = Point((mor.PlayerLng, mor.PlayerLat))
       f = Feature(geometry=p, id="player", properties=props)
       features.append(f)
@@ -282,7 +281,5 @@ def response(context, flow):
         dump = geojson.dumps(fc, sort_keys=True)
         f = open('ui/get_map_objects.json', 'w')
         f.write(dump)
-#      elif (key == GET_PLAYER_PROFILE):
-#        print(mor)
 
 # vim: set tabstop=2 shiftwidth=2 expandtab : #
