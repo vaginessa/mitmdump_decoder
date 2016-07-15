@@ -16,23 +16,24 @@ site.addsitedir("/usr/local/Cellar/protobuf/3.0.0-beta-3/libexec/lib/python2.7/s
 sys.path.append("/usr/local/lib/python2.7/site-packages")
 sys.path.append("/usr/local/Cellar/protobuf/3.0.0-beta-3/libexec/lib/python2.7/site-packages")
 
-from protocol.holoholo_shared_pb2 import *
-from protocol.map_pb2 import *
-from protocol.rpc_pb2 import *
-from protocol.fortdetails_pb2 import *
 from protocol.bridge_pb2 import *
 from protocol.clientrpc_pb2 import *
 from protocol.gymbattlev2_pb2 import *
-from protocol.in_app_purchases_pb2 import *
-from protocol.inventory_pb2 import *
+from protocol.holoholo_shared_pb2 import *
 from protocol.platform_actions_pb2 import *
+from protocol.remaining_pb2 import *
+from protocol.rpc_pb2 import *
+from protocol.settings_pb2 import *
 from protocol.sfida_pb2 import *
 from protocol.signals_pb2 import *
 
 
 #We can often look up the right deserialization structure based on the method, but there are some deviations
 mismatched_apis = {
-  'RECYCLE_INVENTORY_ITEM': 'RECYCLE_ITEM'
+  'RECYCLE_INVENTORY_ITEM': 'RECYCLE_ITEM',
+  'USE_INCENSE': 'USE_INCENSE_ACTION',
+  'GET_PLAYER_PROFILE': 'PLAYER_PROFILE',
+  #'SFIDA_ACTION_LOG': This one is mismatches, but so bad that it had to be fixed in the protobuf
 }
 
 request_api = {} #Match responses to their requests

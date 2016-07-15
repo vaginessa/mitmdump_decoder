@@ -35,27 +35,3 @@ message RegisterSfidaRequest {
 message RegisterSfidaResponse {
   bytes AccessToken = 1;
 }
-
-message Niantic {
-  message Holoholo {
-    message Sfida {
-      message SfidaService {
-        enum State {
-          NO_CONNECTION = 0;
-          IDLE = 1;
-          FINDING_NOTIFY_POKESTOP = 2;
-          NOTIFYING_POKESTOP = 3;
-          SEARCH_RESULT = 4;
-          FINDING_NOTIFY_POKEMON = 5;
-          NOTIFYING_POKEMON = 6;
-          ENCOUNTER = 7;
-          CATCH = 8;
-          CATCH_RESULT = 9;
-          DOWSER = 10;
-          ERROR = 11;
-        }
-      }
-    }
-  }
-}
-
