@@ -23,8 +23,7 @@ pip install numpy geojson protobuf>=3.0.0a3 mitmproxy
 
 ## Running
 
-`mitmdump -p 8888 -s decode.py "~d pgorelease.nianticlabs.com"`
-
+`mitmdump -p 8888 -s decode.py --ignore '^(?!pgorelease\.nianticlabs\.com)'`
 
 ## Rebuild python classes
 
