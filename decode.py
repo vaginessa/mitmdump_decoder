@@ -141,7 +141,8 @@ def request(context, flow):
           "marker-symbol": "pitch",
           "title": "You",
           "marker-size": "large",
-          "marker-color": "663399"
+          "marker-color": "663399",
+          "type": "player"
       }
       p = Point((mor.PlayerLng, mor.PlayerLat))
       f = Feature(geometry=p, id="player", properties=props)
