@@ -64,8 +64,8 @@ function simplestyle(f, latlon) {
     var icon = new L.icon({
         iconUrl: url,
         iconSize: sizes[size],
-        iconAnchor: [sizes[size][0] / 2, sizes[size][1] / 2],
-        popupAnchor: [sizes[size][0] / 2, 0]
+        iconAnchor: [sizes[size][0] / 2, sizes[size][1]/2],
+        popupAnchor: [-3, -sizes[size][1]/2]
       });
 
     return new L.Marker(latlon, {
