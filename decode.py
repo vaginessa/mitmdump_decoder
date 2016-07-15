@@ -119,7 +119,7 @@ def request(context, flow):
     request_api[env.request_id] = key
     request_location[env.request_id] = (env.lat,env.long)
 
-    name = Holoholo.Rpc.Method.Name(key)
+    name = Method.Name(key)
     name = mismatched_apis.get(name, name) #return class name when not the same as method
     klass = underscore_to_camelcase(name) + "Proto"
     try:
@@ -136,7 +136,7 @@ def response(context, flow):
       key = request_api[env.response_id]
       value = env.returns[0]
 
-      name = Holoholo.Rpc.Method.Name(key)
+      name = Method.Name(key)
       name = mismatched_apis.get(name, name) #return class name when not the same as method
       klass = underscore_to_camelcase(name) + "OutProto"
       try:
@@ -146,13 +146,13 @@ def response(context, flow):
         print("Missing Response API: %s" % name)
 
 
-      if (key == Holoholo.Rpc.GET_MAP_OBJECTS):
+      if (key == GET_MAP_OBJECTS):
         features = []
 
         for cell in mor.MapCell:
           for fort in cell.Fort:
             p = Point((fort.Longitude, fort.Latitude))
-            if fort.FortType == Holoholo.Rpc.CHECKPOINT:
+            if fort.FortType == CHECKPOINT:
               f = Feature(geometry=p, id=len(features), properties={"id": fort.FortId, "title": "Pokestop", "marker-color": "00007F", "marker-symbol": "town-hall"})
               features.append(f)
             else:
