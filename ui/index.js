@@ -7,6 +7,7 @@ L.tileLayer.provider('OpenStreetMap.Mapnik', {retina: true}).addTo(map);
 var filters = document.getElementById('filters');
 filters.onclick = function() {
   realtime.update();
+  player.update();
 };
 var realtime = L.realtime({url: 'get_map_objects.json', type: 'json'}, {
   interval: 10 * 1000,
@@ -33,6 +34,25 @@ realtime.on('update', function(updateEvent) {
     map.fitBounds(realtime.getBounds(), {maxZoom: 16});
   }
 });
+
+
+var player = L.realtime({url: 'player.json', type: 'json'}, {
+  interval: 10 * 1000,
+  style: function(feature) { return feature.properties; },
+  pointToLayer: simplestyle,
+
+  filter: function(feature) {
+    if (!loaded) {
+      return true;
+    }
+    var box = document.getElementById(feature.properties.type);
+    return box == null || box.checked;
+  },
+  onEachFeature: function (feature, layer) {
+    layer.bindPopup(feature.properties.title);
+  }
+}).addTo(map);
+
 
 //https://gist.github.com/tmcw/3861338
 function simplestyle(f, latlon) {

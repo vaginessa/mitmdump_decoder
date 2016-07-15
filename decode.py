@@ -155,6 +155,24 @@ def request(context, flow):
     except:
       print("Missing Request API: %s" % name)
 
+    if (key == GET_MAP_OBJECTS):
+      features = []
+      props = {
+          "id": "player",
+          "marker-symbol": "pitch",
+          "title": "You",
+          "marker-size": "large",
+          "marker-color": "663399",
+          "type": "player"
+      }
+      p = Point((mor.PlayerLng, mor.PlayerLat))
+      f = Feature(geometry=p, id="player", properties=props)
+      features.append(f)
+      fc = FeatureCollection(features)
+      dump = geojson.dumps(fc, sort_keys=True)
+      f = open('ui/player.json', 'w')
+      f.write(dump)
+
 def response(context, flow):
   with decoded(flow.response):
     if flow.match("~d pgorelease.nianticlabs.com"):
