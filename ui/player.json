@@ -1,0 +1,1 @@
+{"features": [{"geometry": {"coordinates": [9.676348686218262, 45.69357681274414], "type": "Point"}, "id": "player", "properties": {"id": "player", "marker-color": "663399", "marker-size": "large", "marker-symbol": "pitch", "title": "You", "type": "player"}, "type": "Feature"}], "type": "FeatureCollection"}

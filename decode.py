@@ -134,6 +134,24 @@ def request(context, flow):
     except:
       print("Missing Request API: %s" % name)
 
+    if (key == GET_MAP_OBJECTS):
+      features = []
+      props = {
+          "id": "player"
+      }
+      props["marker-symbol"] = "pitch"
+      props["title"] = "You"
+      props["type"] = "player"
+      props["marker-size"] = "large"
+      props["marker-color"] = "663399"
+      p = Point((mor.PlayerLng, mor.PlayerLat))
+      f = Feature(geometry=p, id="player", properties=props)
+      features.append(f)
+      fc = FeatureCollection(features)
+      dump = geojson.dumps(fc, sort_keys=True)
+      f = open('ui/player.json', 'w')
+      f.write(dump)
+
 def response(context, flow):
   with decoded(flow.response):
     if flow.match("~d pgorelease.nianticlabs.com"):
@@ -264,5 +282,7 @@ def response(context, flow):
         dump = geojson.dumps(fc, sort_keys=True)
         f = open('ui/get_map_objects.json', 'w')
         f.write(dump)
+#      elif (key == GET_PLAYER_PROFILE):
+#        print(mor)
 
 # vim: set tabstop=2 shiftwidth=2 expandtab : #
