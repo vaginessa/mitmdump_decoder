@@ -1,2 +1,61 @@
 syntax = "proto3";
 package Holoholo.Rpc;
+
+message PokemonGoPlus {
+  enum CentralState {
+    UNKNOWN = 0;
+    RESETTING = 1;
+    UNSUPPORTED = 2;
+    UNAUTHORIZED = 3;
+    POWERED_OFF = 4;
+    POWERED_ON = 5;
+  }
+  enum SfidaConnectState {
+    DISCONNECTED = 0;
+    CONNECTED = 1;
+    DISCOVERED = 2;
+    CERTIFIED = 3;
+    SOFTWARE_UPDATE = 4;
+    FAILED = 5;
+  }
+  message PgpEntryPoints {
+    enum ApiError {
+      SUCCESS = 0;
+      PLUGIN_NOT_READY = 1;
+      NOT_SUPPORTED = 2;
+      NOT_IMPLEMENTED_YET = 3;
+      INTERNAL_ERROR = 4;
+      INVALID_PARAMETERS = 5;
+    }
+  }
+}
+message RegisterSfidaRequest {
+  string SfidaId = 1;
+}
+message RegisterSfidaResponse {
+  bytes AccessToken = 1;
+}
+
+message Niantic {
+  message Holoholo {
+    message Sfida {
+      message SfidaService {
+        enum State {
+          NO_CONNECTION = 0;
+          IDLE = 1;
+          FINDING_NOTIFY_POKESTOP = 2;
+          NOTIFYING_POKESTOP = 3;
+          SEARCH_RESULT = 4;
+          FINDING_NOTIFY_POKEMON = 5;
+          NOTIFYING_POKEMON = 6;
+          ENCOUNTER = 7;
+          CATCH = 8;
+          CATCH_RESULT = 9;
+          DOWSER = 10;
+          ERROR = 11;
+        }
+      }
+    }
+  }
+}
+

@@ -19,12 +19,466 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='sfida.proto',
   package='Holoholo.Rpc',
   syntax='proto3',
-  serialized_pb=_b('\n\x0bsfida.proto\x12\x0cHoloholo.Rpcb\x06proto3')
+  serialized_pb=_b('\n\x0bsfida.proto\x12\x0cHoloholo.Rpc\"\x90\x03\n\rPokemonGoPlus\x1a\x98\x01\n\x0ePgpEntryPoints\"\x85\x01\n\x08\x41piError\x12\x0b\n\x07SUCCESS\x10\x00\x12\x14\n\x10PLUGIN_NOT_READY\x10\x01\x12\x11\n\rNOT_SUPPORTED\x10\x02\x12\x17\n\x13NOT_IMPLEMENTED_YET\x10\x03\x12\x12\n\x0eINTERNAL_ERROR\x10\x04\x12\x16\n\x12INVALID_PARAMETERS\x10\x05\"n\n\x0c\x43\x65ntralState\x12\x0b\n\x07UNKNOWN\x10\x00\x12\r\n\tRESETTING\x10\x01\x12\x0f\n\x0bUNSUPPORTED\x10\x02\x12\x10\n\x0cUNAUTHORIZED\x10\x03\x12\x0f\n\x0bPOWERED_OFF\x10\x04\x12\x0e\n\nPOWERED_ON\x10\x05\"t\n\x11SfidaConnectState\x12\x10\n\x0c\x44ISCONNECTED\x10\x00\x12\r\n\tCONNECTED\x10\x01\x12\x0e\n\nDISCOVERED\x10\x02\x12\r\n\tCERTIFIED\x10\x03\x12\x13\n\x0fSOFTWARE_UPDATE\x10\x04\x12\n\n\x06\x46\x41ILED\x10\x05\"\'\n\x14RegisterSfidaRequest\x12\x0f\n\x07SfidaId\x18\x01 \x01(\t\",\n\x15RegisterSfidaResponse\x12\x13\n\x0b\x41\x63\x63\x65ssToken\x18\x01 \x01(\x0c\"\x96\x02\n\x07Niantic\x1a\x8a\x02\n\x08Holoholo\x1a\xfd\x01\n\x05Sfida\x1a\xf3\x01\n\x0cSfidaService\"\xe2\x01\n\x05State\x12\x11\n\rNO_CONNECTION\x10\x00\x12\x08\n\x04IDLE\x10\x01\x12\x1b\n\x17\x46INDING_NOTIFY_POKESTOP\x10\x02\x12\x16\n\x12NOTIFYING_POKESTOP\x10\x03\x12\x11\n\rSEARCH_RESULT\x10\x04\x12\x1a\n\x16\x46INDING_NOTIFY_POKEMON\x10\x05\x12\x15\n\x11NOTIFYING_POKEMON\x10\x06\x12\r\n\tENCOUNTER\x10\x07\x12\t\n\x05\x43\x41TCH\x10\x08\x12\x10\n\x0c\x43\x41TCH_RESULT\x10\t\x12\n\n\x06\x44OWSER\x10\n\x12\t\n\x05\x45RROR\x10\x0b\x62\x06proto3')
 )
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 
+_POKEMONGOPLUS_PGPENTRYPOINTS_APIERROR = _descriptor.EnumDescriptor(
+  name='ApiError',
+  full_name='Holoholo.Rpc.PokemonGoPlus.PgpEntryPoints.ApiError',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='SUCCESS', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='PLUGIN_NOT_READY', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NOT_SUPPORTED', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NOT_IMPLEMENTED_YET', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INTERNAL_ERROR', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='INVALID_PARAMETERS', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=67,
+  serialized_end=200,
+)
+_sym_db.RegisterEnumDescriptor(_POKEMONGOPLUS_PGPENTRYPOINTS_APIERROR)
+
+_POKEMONGOPLUS_CENTRALSTATE = _descriptor.EnumDescriptor(
+  name='CentralState',
+  full_name='Holoholo.Rpc.PokemonGoPlus.CentralState',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='UNKNOWN', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RESETTING', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UNSUPPORTED', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UNAUTHORIZED', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POWERED_OFF', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='POWERED_ON', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=202,
+  serialized_end=312,
+)
+_sym_db.RegisterEnumDescriptor(_POKEMONGOPLUS_CENTRALSTATE)
+
+_POKEMONGOPLUS_SFIDACONNECTSTATE = _descriptor.EnumDescriptor(
+  name='SfidaConnectState',
+  full_name='Holoholo.Rpc.PokemonGoPlus.SfidaConnectState',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='DISCONNECTED', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CONNECTED', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DISCOVERED', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CERTIFIED', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SOFTWARE_UPDATE', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FAILED', index=5, number=5,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=314,
+  serialized_end=430,
+)
+_sym_db.RegisterEnumDescriptor(_POKEMONGOPLUS_SFIDACONNECTSTATE)
+
+_NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE_STATE = _descriptor.EnumDescriptor(
+  name='State',
+  full_name='Holoholo.Rpc.Niantic.Holoholo.Sfida.SfidaService.State',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='NO_CONNECTION', index=0, number=0,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='IDLE', index=1, number=1,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FINDING_NOTIFY_POKESTOP', index=2, number=2,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NOTIFYING_POKESTOP', index=3, number=3,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SEARCH_RESULT', index=4, number=4,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FINDING_NOTIFY_POKEMON', index=5, number=5,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='NOTIFYING_POKEMON', index=6, number=6,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ENCOUNTER', index=7, number=7,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CATCH', index=8, number=8,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CATCH_RESULT', index=9, number=9,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DOWSER', index=10, number=10,
+      options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR', index=11, number=11,
+      options=None,
+      type=None),
+  ],
+  containing_type=None,
+  options=None,
+  serialized_start=572,
+  serialized_end=798,
+)
+_sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE_STATE)
+
+
+_POKEMONGOPLUS_PGPENTRYPOINTS = _descriptor.Descriptor(
+  name='PgpEntryPoints',
+  full_name='Holoholo.Rpc.PokemonGoPlus.PgpEntryPoints',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _POKEMONGOPLUS_PGPENTRYPOINTS_APIERROR,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=48,
+  serialized_end=200,
+)
+
+_POKEMONGOPLUS = _descriptor.Descriptor(
+  name='PokemonGoPlus',
+  full_name='Holoholo.Rpc.PokemonGoPlus',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_POKEMONGOPLUS_PGPENTRYPOINTS, ],
+  enum_types=[
+    _POKEMONGOPLUS_CENTRALSTATE,
+    _POKEMONGOPLUS_SFIDACONNECTSTATE,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=30,
+  serialized_end=430,
+)
+
+
+_REGISTERSFIDAREQUEST = _descriptor.Descriptor(
+  name='RegisterSfidaRequest',
+  full_name='Holoholo.Rpc.RegisterSfidaRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='SfidaId', full_name='Holoholo.Rpc.RegisterSfidaRequest.SfidaId', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=432,
+  serialized_end=471,
+)
+
+
+_REGISTERSFIDARESPONSE = _descriptor.Descriptor(
+  name='RegisterSfidaResponse',
+  full_name='Holoholo.Rpc.RegisterSfidaResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='AccessToken', full_name='Holoholo.Rpc.RegisterSfidaResponse.AccessToken', index=0,
+      number=1, type=12, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b(""),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      options=None),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=473,
+  serialized_end=517,
+)
+
+
+_NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE = _descriptor.Descriptor(
+  name='SfidaService',
+  full_name='Holoholo.Rpc.Niantic.Holoholo.Sfida.SfidaService',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+    _NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE_STATE,
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=555,
+  serialized_end=798,
+)
+
+_NIANTIC_HOLOHOLO_SFIDA = _descriptor.Descriptor(
+  name='Sfida',
+  full_name='Holoholo.Rpc.Niantic.Holoholo.Sfida',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=545,
+  serialized_end=798,
+)
+
+_NIANTIC_HOLOHOLO = _descriptor.Descriptor(
+  name='Holoholo',
+  full_name='Holoholo.Rpc.Niantic.Holoholo',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_NIANTIC_HOLOHOLO_SFIDA, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=532,
+  serialized_end=798,
+)
+
+_NIANTIC = _descriptor.Descriptor(
+  name='Niantic',
+  full_name='Holoholo.Rpc.Niantic',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[_NIANTIC_HOLOHOLO, ],
+  enum_types=[
+  ],
+  options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=520,
+  serialized_end=798,
+)
+
+_POKEMONGOPLUS_PGPENTRYPOINTS.containing_type = _POKEMONGOPLUS
+_POKEMONGOPLUS_PGPENTRYPOINTS_APIERROR.containing_type = _POKEMONGOPLUS_PGPENTRYPOINTS
+_POKEMONGOPLUS_CENTRALSTATE.containing_type = _POKEMONGOPLUS
+_POKEMONGOPLUS_SFIDACONNECTSTATE.containing_type = _POKEMONGOPLUS
+_NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE.containing_type = _NIANTIC_HOLOHOLO_SFIDA
+_NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE_STATE.containing_type = _NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE
+_NIANTIC_HOLOHOLO_SFIDA.containing_type = _NIANTIC_HOLOHOLO
+_NIANTIC_HOLOHOLO.containing_type = _NIANTIC
+DESCRIPTOR.message_types_by_name['PokemonGoPlus'] = _POKEMONGOPLUS
+DESCRIPTOR.message_types_by_name['RegisterSfidaRequest'] = _REGISTERSFIDAREQUEST
+DESCRIPTOR.message_types_by_name['RegisterSfidaResponse'] = _REGISTERSFIDARESPONSE
+DESCRIPTOR.message_types_by_name['Niantic'] = _NIANTIC
+
+PokemonGoPlus = _reflection.GeneratedProtocolMessageType('PokemonGoPlus', (_message.Message,), dict(
+
+  PgpEntryPoints = _reflection.GeneratedProtocolMessageType('PgpEntryPoints', (_message.Message,), dict(
+    DESCRIPTOR = _POKEMONGOPLUS_PGPENTRYPOINTS,
+    __module__ = 'sfida_pb2'
+    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.PokemonGoPlus.PgpEntryPoints)
+    ))
+  ,
+  DESCRIPTOR = _POKEMONGOPLUS,
+  __module__ = 'sfida_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.PokemonGoPlus)
+  ))
+_sym_db.RegisterMessage(PokemonGoPlus)
+_sym_db.RegisterMessage(PokemonGoPlus.PgpEntryPoints)
+
+RegisterSfidaRequest = _reflection.GeneratedProtocolMessageType('RegisterSfidaRequest', (_message.Message,), dict(
+  DESCRIPTOR = _REGISTERSFIDAREQUEST,
+  __module__ = 'sfida_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.RegisterSfidaRequest)
+  ))
+_sym_db.RegisterMessage(RegisterSfidaRequest)
+
+RegisterSfidaResponse = _reflection.GeneratedProtocolMessageType('RegisterSfidaResponse', (_message.Message,), dict(
+  DESCRIPTOR = _REGISTERSFIDARESPONSE,
+  __module__ = 'sfida_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.RegisterSfidaResponse)
+  ))
+_sym_db.RegisterMessage(RegisterSfidaResponse)
+
+Niantic = _reflection.GeneratedProtocolMessageType('Niantic', (_message.Message,), dict(
+
+  Holoholo = _reflection.GeneratedProtocolMessageType('Holoholo', (_message.Message,), dict(
+
+    Sfida = _reflection.GeneratedProtocolMessageType('Sfida', (_message.Message,), dict(
+
+      SfidaService = _reflection.GeneratedProtocolMessageType('SfidaService', (_message.Message,), dict(
+        DESCRIPTOR = _NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE,
+        __module__ = 'sfida_pb2'
+        # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Niantic.Holoholo.Sfida.SfidaService)
+        ))
+      ,
+      DESCRIPTOR = _NIANTIC_HOLOHOLO_SFIDA,
+      __module__ = 'sfida_pb2'
+      # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Niantic.Holoholo.Sfida)
+      ))
+    ,
+    DESCRIPTOR = _NIANTIC_HOLOHOLO,
+    __module__ = 'sfida_pb2'
+    # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Niantic.Holoholo)
+    ))
+  ,
+  DESCRIPTOR = _NIANTIC,
+  __module__ = 'sfida_pb2'
+  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.Niantic)
+  ))
+_sym_db.RegisterMessage(Niantic)
+_sym_db.RegisterMessage(Niantic.Holoholo)
+_sym_db.RegisterMessage(Niantic.Holoholo.Sfida)
+_sym_db.RegisterMessage(Niantic.Holoholo.Sfida.SfidaService)
 
 
 # @@protoc_insertion_point(module_scope)
