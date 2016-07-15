@@ -45,6 +45,19 @@ mismatched_apis = {
 request_api = {} #Match responses to their requests
 pokeLocation = {}
 request_location = {}
+def dumpToMap(dataa):
+  headers = {"Authorization" : "Bearer " + bearer}
+  print("Dumping")
+  r = requests.post(endpoint + "/api/push/mapobject/bulk", json = dataa, headers = headers)
+  print r.content
+def createItem(t,uid,point, meta):
+  data = {"type" : t,
+          "uid" : uid,
+          "location" : point.coordinates,
+          "meta" : meta
+  }
+  return data
+  
 def sendToMap(t,uid,point, meta):
   if bearer == "":
     return
@@ -170,6 +183,7 @@ def response(context, flow):
 
       if (key == GET_MAP_OBJECTS):
         features = []
+        dumpa = []
 
         for cell in mor.MapCell:
           for fort in cell.Fort:
@@ -178,7 +192,7 @@ def response(context, flow):
               f = Feature(geometry=p, id=len(features), properties={"id": fort.FortId, "title": "Pokestop", "marker-color": "00007F", "marker-symbol": "town-hall"})
               features.append(f)
               print f.properties
-              sendToMap("pokestop", fort.FortId, p, f.properties)
+              dumpa.append(createItem("pokestop", fort.FortId, p, f.properties))
             else:
               f = None
               if fort.Team == BLUE:
@@ -190,13 +204,13 @@ def response(context, flow):
               else:
                 f = Feature(geometry=p, id=len(features), properties={"id": fort.FortId, "title": "Neutral Gym", "marker-color": "808080", "marker-symbol": "town-hall", "marker-size": "large"})
               features.append(f)
-              sendToMap("gym", fort.FortId, p, f.properties)
+              dumpa.append(createItem("gym", fort.FortId, p, f.properties))
 
           for spawn in cell.SpawnPoint:
             p = Point((spawn.Longitude, spawn.Latitude))
             f = Feature(geometry=p, id=len(features), properties={"id": len(features), "title": "spawn", "marker-color": "00FF00", "marker-symbol": "garden"})
             features.append(f)
-            sendToMap("spawnpoint", 0, p, f.properties)
+            dumpa.append(createItem("spawnpoint", 0, p, f.properties))
 
           for spawn in cell.DecimatedSpawnPoint:
             p = Point((spawn.Longitude, spawn.Latitude))
@@ -207,13 +221,13 @@ def response(context, flow):
             p = Point((pokemon.Longitude, pokemon.Latitude))
             f = Feature(geometry=p, id=len(features), properties={"id": len(features), "TimeTillHiddenMs": pokemon.TimeTillHiddenMs, "title": "Wild %s" % Custom_PokemonName.Name(pokemon.Pokemon.PokemonId), "marker-color": "FF0000", "marker-symbol": "suitcase"})
             features.append(f)
-            sendToMap("pokemon", pokemon.EncounterId, p, f.properties)
+            dumpa.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
 
           for pokemon in cell.CatchablePokemon:
             p = Point((pokemon.Longitude, pokemon.Latitude))
             f = Feature(geometry=p, id=len(features), properties={"id": len(features), "ExpirationTimeMs": pokemon.ExpirationTimeMs, "title": "Catchable %s" % Custom_PokemonName.Name(pokemon.PokedexTypeId), "marker-color": "000000", "marker-symbol": "circle"})
             features.append(f)
-            sendToMap("pokemon", pokemon.EncounterId, p, f.properties)
+            dumpa.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
 
           for poke in cell.NearbyPokemon:
             gps = request_location[env.response_id]
@@ -231,12 +245,13 @@ def response(context, flow):
               if not math.isnan(lat) and not math.isnan(lon) :
                 p = Point((lon, lat))
                 f = Feature(geometry=p, id=len(features), properties={"id": len(features), "title": "Nearby %s" % Custom_PokemonName.Name(poke.PokedexNumber), "marker-color": "FFFFFF", "marker-symbol": "dog-park"})
-                sendToMap("pokemon", poke.EncounterId, p, f.properties)
+                dumpa.append(createItem("pokemon", poke.EncounterId, p, f.properties))
                 features.append(f)
 
 
         fc = FeatureCollection(features)
         dump = geojson.dumps(fc, sort_keys=True)
+        dumpToMap(dumpa)
         f = open('ui/get_map_objects.json', 'w')
         f.write(dump)
 
