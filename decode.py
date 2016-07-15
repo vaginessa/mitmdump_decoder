@@ -55,7 +55,7 @@ def dumpToMap(dataa):
 def createItem(t,uid,point, meta):
   data = {"type" : t,
           "uid" : uid,
-          "location" : point.coordinates,
+          "location" : point,
           "meta" : meta
   }
   return data
@@ -66,7 +66,7 @@ def sendToMap(t,uid,point, meta):
   headers = {"Authorization" : "Bearer " + bearer}
   data = {"type" : t,
           "uid" : uid,
-          "location" : point.coordinates,
+          "location" : point,
           "meta" : meta
   }
   r = requests.post(endpoint + "/api/push/mapobject", json = data, headers = headers)
