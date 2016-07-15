@@ -4,13 +4,6 @@ import time
 import sys
 import numpy
 import math
-import requests
-##Make a secrets.py with bearer= and endpoint=
-try:
-  from secrets import bearer, endpoint
-except:
-  bearer = ""
-  endpoint = ""
 from mitmproxy.script import concurrent
 from mitmproxy.models import decoded
 
@@ -33,6 +26,15 @@ from protocol.settings_pb2 import *
 from protocol.sfida_pb2 import *
 from protocol.signals_pb2 import *
 
+# Make pokedex requests async
+from requests_futures.sessions import FuturesSession
+requests = FuturesSession()
+##Make a secrets.py with bearer= and endpoint=
+try:
+  from secrets import bearer, endpoint
+except:
+  bearer = ""
+  endpoint = ""
 
 #We can often look up the right deserialization structure based on the method, but there are some deviations
 mismatched_apis = {
