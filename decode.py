@@ -61,6 +61,8 @@ getMapObjects = GetMapObjectsHandler()
 
 @concurrent
 def request(context, flow):
+  if not flow.match("~u plfe"):
+    return
   try:
     env = RpcRequestEnvelopeProto()
     env.ParseFromString(flow.request.content)
@@ -88,6 +90,8 @@ def request(context, flow):
       getMapObjects.request(mor, env)
 
 def response(context, flow):
+  if not flow.match("~u plfe"):
+    return
   with decoded(flow.response):
     try:
       env = RpcResponseEnvelopeProto()
