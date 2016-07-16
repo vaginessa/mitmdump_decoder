@@ -137,19 +137,18 @@ class GetMapObjectsHandler:
         features.append(f)
 
       for poke in cell.NearbyPokemon:
-        gps = self.request_location[env.response_id]
-        if poke.EncounterId in self.pokeLocation:
-          add = True
-          for loc in self.pokeLocation[poke.EncounterId]:
-            if gps[0] == loc[0] and gps[1] == loc[1]:
-              add = False
-          if add:
-            self.pokeLocation[poke.EncounterId].append((gps[0], gps[1], poke.DistanceMeters/1000))
-        else:
-          self.pokeLocation[poke.EncounterId] = [(gps[0], gps[1], poke.DistanceMeters/1000)]
+        gps = self.request_location.pop(env.response_id)
+        if poke.EncounterId not in self.pokeLocation.keys():
+          self.pokeLocation[poke.EncounterId] = []
+
+        new_loc = (gps[0], gps[1], poke.DistanceMeters/1000)
+        if new_loc not in self.pokeLocation[poke.EncounterId]:
+          self.pokeLocation[poke.EncounterId].append(new_loc)
+
         if len(self.pokeLocation[poke.EncounterId]) >= 3:
-          lat, lon = self.triangulate(self.pokeLocation[poke.EncounterId][0],self.pokeLocation[poke.EncounterId][1],self.pokeLocation[poke.EncounterId][2])
-          if not math.isnan(lat) and not math.isnan(lon) :
+          locations = self.pokeLocation.pop(poke.EncounterId)
+          try:
+            lat, lon = self.triangulate(locations[0], locations[1], locations[2])
             p = Point((lon, lat))
             f = Feature(geometry=p, id="nearby%s" % poke.EncounterId, properties={
               "id": "nearby%s" % poke.EncounterId,
@@ -158,13 +157,15 @@ class GetMapObjectsHandler:
               "marker-color": "FFFFFF",
               "marker-symbol": "dog-park"
               })
-            bulk.append(self.createItem("pokemon", poke.EncounterId, p, f.properties))
+            data = self.createItem("pokemon", poke.EncounterId, p, f.properties)
+            bulk.append(data)
             features.append(f)
+          except Exception, e:
+            print("Error with nearby: %s" % e)
 
-
+    self.dumpToMap(bulk)
     fc = FeatureCollection(features)
     dump = geojson.dumps(fc, sort_keys=True)
-    self.dumpToMap(bulk)
     f = open('ui/get_map_objects.json', 'w')
     f.write(dump)
 
