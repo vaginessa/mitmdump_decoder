@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='remaining.proto',
   package='Holoholo.Rpc',
   syntax='proto3',
-  serialized_pb=_b('\n\x0fremaining.proto\x12\x0cHoloholo.Rpc\x1a\x15holoholo_shared.proto\"\x17\n\x15GoogleAuthEventParams\"\x18\n\x16\x43hannelAuthEventParams\"\x1b\n\x19LocationUpdateEventParams\"\x18\n\x16RpcResponseEventParams\"\r\n\x0bGoogleToken\"\x98\x01\n\x17\x41ssetDigestRequestProto\x12(\n\x08Platform\x18\x01 \x01(\x0e\x32\x16.Holoholo.Rpc.Platform\x12\x1a\n\x12\x44\x65viceManufacturer\x18\x02 \x01(\t\x12\x13\n\x0b\x44\x65viceModel\x18\x03 \x01(\t\x12\x0e\n\x06Locale\x18\x04 \x01(\t\x12\x12\n\nAppVersion\x18\x05 \x01(\r\"z\n\x15\x41ssetDigestEntryProto\x12\x0f\n\x07\x41ssetId\x18\x01 \x01(\t\x12\x12\n\nBundleName\x18\x02 \x01(\t\x12\x0f\n\x07Version\x18\x03 \x01(\x03\x12\x10\n\x08\x43hecksum\x18\x04 \x01(\r\x12\x0c\n\x04Size\x18\x05 \x01(\x05\x12\x0b\n\x03Key\x18\x06 \x01(\x0c\"]\n\x13\x41ssetDigestOutProto\x12\x33\n\x06\x44igest\x18\x01 \x03(\x0b\x32#.Holoholo.Rpc.AssetDigestEntryProto\x12\x11\n\tTimestamp\x18\x02 \x01(\x04\"*\n\x17\x44ownloadUrlRequestProto\x12\x0f\n\x07\x41ssetId\x18\x01 \x03(\t\"U\n\x15\x44ownloadUrlEntryProto\x12\x0f\n\x07\x41ssetId\x18\x01 \x01(\t\x12\x0b\n\x03Url\x18\x02 \x01(\t\x12\x0c\n\x04Size\x18\x03 \x01(\x05\x12\x10\n\x08\x43hecksum\x18\x04 \x01(\r\"P\n\x13\x44ownloadUrlOutProto\x12\x39\n\x0c\x44ownloadUrls\x18\x01 \x03(\x0b\x32#.Holoholo.Rpc.DownloadUrlEntryProto\"\x18\n\x16\x43ollectDailyBonusProto\"a\n\x19\x43ollectDailyBonusOutProto\x12\x44\n\x06Result\x18\x01 \x01(\x0e\x32\x34.Holoholo.Rpc.Types.CollectDailyBonusOutProto.Result\" \n\x1e\x43ollectDailyDefenderBonusProto\"\xb6\x01\n!CollectDailyDefenderBonusOutProto\x12L\n\x06Result\x18\x01 \x01(\x0e\x32<.Holoholo.Rpc.Types.CollectDailyDefenderBonusOutProto.Result\x12\x14\n\x0c\x43urrencyType\x18\x02 \x03(\t\x12\x17\n\x0f\x43urrencyAwarded\x18\x03 \x03(\x05\x12\x14\n\x0cNumDefenders\x18\x04 \x01(\x05\"\x0b\n\tEchoProto\"\x1f\n\x0c\x45\x63hoOutProto\x12\x0f\n\x07\x43ontext\x18\x01 \x01(\t\"\x15\n\x13GetHatchedEggsProto\"\x7f\n\x16GetHatchedEggsOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12\x11\n\tPokemonId\x18\x02 \x03(\x04\x12\x12\n\nExpAwarded\x18\x03 \x03(\x05\x12\x14\n\x0c\x43\x61ndyAwarded\x18\x04 \x03(\x05\x12\x17\n\x0fStardustAwarded\x18\x05 \x03(\x05\"o\n\x0e\x45ncounterProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x04\x12\x14\n\x0cSpawnpointId\x18\x02 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\x8b\x02\n\x11\x45ncounterOutProto\x12/\n\x07Pokemon\x18\x01 \x01(\x0b\x32\x1e.Holoholo.Rpc.WildPokemonProto\x12\x44\n\nBackground\x18\x02 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.EncounterOutProto.Background\x12<\n\x06Status\x18\x03 \x01(\x0e\x32,.Holoholo.Rpc.Types.EncounterOutProto.Status\x12\x41\n\x12\x43\x61ptureProbability\x18\x04 \x01(\x0b\x32%.Holoholo.Rpc.CaptureProbabilityProto\"\xba\x01\n\x11\x43\x61tchPokemonProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x04\x12\x10\n\x08Pokeball\x18\x02 \x01(\x05\x12\x1d\n\x15NormalizedReticleSize\x18\x03 \x01(\x01\x12\x16\n\x0eSpawnPointGuid\x18\x04 \x01(\t\x12\x12\n\nHitPokemon\x18\x05 \x01(\x08\x12\x14\n\x0cSpinModifier\x18\x06 \x01(\x01\x12\x1d\n\x15NormalizedHitPosition\x18\x07 \x01(\x01\"\xb8\x01\n\x14\x43\x61tchPokemonOutProto\x12?\n\x06Status\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.CatchPokemonOutProto.Status\x12\x13\n\x0bMissPercent\x18\x02 \x01(\x01\x12\x19\n\x11\x43\x61pturedPokemonId\x18\x03 \x01(\x04\x12/\n\x06Scores\x18\x04 \x01(\x0b\x32\x1f.Holoholo.Rpc.CaptureScoreProto\"d\n\x13UseItemCaptureProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x13\n\x0b\x45ncounterId\x18\x02 \x01(\x04\x12\x16\n\x0eSpawnPointGuid\x18\x03 \x01(\t\"\xa9\x01\n\x16UseItemCaptureOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12\x17\n\x0fItemCaptureMult\x18\x02 \x01(\x01\x12\x14\n\x0cItemFleeMult\x18\x03 \x01(\x01\x12\x14\n\x0cStopMovement\x18\x04 \x01(\x08\x12\x12\n\nStopAttack\x18\x05 \x01(\x08\x12\x11\n\tTargetMax\x18\x06 \x01(\x08\x12\x12\n\nTargetSlow\x18\x07 \x01(\x08\"3\n\x1e\x45ncounterTutorialCompleteProto\x12\x11\n\tPokedexId\x18\x01 \x01(\x05\"\xcf\x01\n!EncounterTutorialCompleteOutProto\x12L\n\x06Result\x18\x01 \x01(\x0e\x32<.Holoholo.Rpc.Types.EncounterTutorialCompleteOutProto.Result\x12+\n\x07Pokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12/\n\x06Scores\x18\x03 \x01(\x0b\x32\x1f.Holoholo.Rpc.CaptureScoreProto\"\x7f\n\x17\x43\x61ptureProbabilityProto\x12(\n\x0cPokeballType\x18\x01 \x03(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x1a\n\x12\x43\x61ptureProbability\x18\x02 \x03(\x02\x12\x1e\n\x16ReticleDifficultyScale\x18\x0c \x01(\x01\"w\n\x11\x43\x61ptureScoreProto\x12\x34\n\x0c\x41\x63tivityType\x18\x01 \x03(\x0e\x32\x1e.Holoholo.Rpc.HoloActivityType\x12\x0b\n\x03\x45xp\x18\x02 \x03(\x05\x12\r\n\x05\x43\x61ndy\x18\x03 \x03(\x05\x12\x10\n\x08Stardust\x18\x04 \x03(\x05\"@\n\x15UseIncenseActionProto\x12\'\n\x0bIncenseType\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\"\x97\x01\n\x18UseIncenseActionOutProto\x12\x43\n\x06Result\x18\x01 \x01(\x0e\x32\x33.Holoholo.Rpc.Types.UseIncenseActionOutProto.Result\x12\x36\n\x0e\x41ppliedIncense\x18\x02 \x01(\x0b\x32\x1e.Holoholo.Rpc.AppliedItemProto\"L\n\x16GetIncensePokemonProto\x12\x18\n\x10PlayerLatDegrees\x18\x01 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x02 \x01(\x01\"\xdb\x01\n\x19GetIncensePokemonOutProto\x12\x44\n\x06Result\x18\x01 \x01(\x0e\x32\x34.Holoholo.Rpc.Types.GetIncensePokemonOutProto.Result\x12\x15\n\rPokemonTypeId\x18\x02 \x01(\x05\x12\x0b\n\x03Lat\x18\x03 \x01(\x01\x12\x0b\n\x03Lng\x18\x04 \x01(\x01\x12\x19\n\x11\x45ncounterLocation\x18\x05 \x01(\t\x12\x13\n\x0b\x45ncounterId\x18\x06 \x01(\x04\x12\x17\n\x0f\x44isappearTimeMs\x18\x07 \x01(\x03\"G\n\x15IncenseEncounterProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x03\x12\x19\n\x11\x45ncounterLocation\x18\x02 \x01(\t\"\xcf\x01\n\x18IncenseEncounterOutProto\x12\x43\n\x06Result\x18\x01 \x01(\x0e\x32\x33.Holoholo.Rpc.Types.IncenseEncounterOutProto.Result\x12+\n\x07Pokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x41\n\x12\x43\x61ptureProbability\x18\x03 \x01(\x0b\x32%.Holoholo.Rpc.CaptureProbabilityProto\"m\n\x12\x44iskEncounterProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x03\x12\x0e\n\x06\x46ortId\x18\x02 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\xc9\x01\n\x15\x44iskEncounterOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.DiskEncounterOutProto.Result\x12+\n\x07Pokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x41\n\x12\x43\x61ptureProbability\x18\x03 \x01(\x0b\x32%.Holoholo.Rpc.CaptureProbabilityProto\"\'\n\x12\x45volvePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\"\xb7\x01\n\x15\x45volvePokemonOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.EvolvePokemonOutProto.Result\x12\x32\n\x0e\x45volvedPokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x12\n\nExpAwarded\x18\x03 \x01(\x05\x12\x14\n\x0c\x43\x61ndyAwarded\x18\x04 \x01(\x05\"h\n\x0f\x46ortDeployProto\x12\x0e\n\x06\x46ortId\x18\x01 \x01(\t\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\xf7\x01\n\x12\x46ortDeployOutProto\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.FortDeployOutProto.Result\x12>\n\x13\x46ortDetailsOutProto\x18\x02 \x01(\x0b\x32!.Holoholo.Rpc.FortDetailsOutProto\x12.\n\nEggPokemon\x18\x03 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x32\n\rGymStateProto\x18\x04 \x01(\x0b\x32\x1b.Holoholo.Rpc.GymStateProto\"h\n\x0f\x46ortRecallProto\x12\x0e\n\x06\x46ortId\x18\x01 \x01(\t\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\x93\x01\n\x12\x46ortRecallOutProto\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.FortRecallOutProto.Result\x12>\n\x13\x46ortDetailsOutProto\x18\x02 \x01(\x0b\x32!.Holoholo.Rpc.FortDetailsOutProto\"\x84\x01\n\x14\x41\x64\x64\x46ortModifierProto\x12(\n\x0cModifierType\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x0e\n\x06\x46ortId\x18\x02 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\x9d\x01\n\x17\x41\x64\x64\x46ortModifierOutProto\x12\x42\n\x06Result\x18\x01 \x01(\x0e\x32\x32.Holoholo.Rpc.Types.AddFortModifierOutProto.Result\x12>\n\x13\x46ortDetailsOutProto\x18\x02 \x01(\x0b\x32!.Holoholo.Rpc.FortDetailsOutProto\"\x8a\x01\n\x1cPokemonCameraAttributesProto\x12\x13\n\x0b\x44iskRadiusM\x18\x01 \x01(\x02\x12\x12\n\nCylRadiusM\x18\x02 \x01(\x02\x12\x12\n\nCylHeightM\x18\x03 \x01(\x02\x12\x12\n\nCylGroundM\x18\x04 \x01(\x02\x12\x19\n\x11ShoulderModeScale\x18\x05 \x01(\x02\"\xa0\x02\n\x1fPokemonEncounterAttributesProto\x12\x17\n\x0f\x42\x61seCaptureRate\x18\x01 \x01(\x02\x12\x14\n\x0c\x42\x61seFleeRate\x18\x02 \x01(\x02\x12\x18\n\x10\x43ollisionRadiusM\x18\x03 \x01(\x02\x12\x18\n\x10\x43ollisionHeightM\x18\x04 \x01(\x02\x12\x1c\n\x14\x43ollisionHeadRadiusM\x18\x05 \x01(\x02\x12;\n\x0cMovementType\x18\x06 \x01(\x0e\x32%.Holoholo.Rpc.HoloPokemonMovementType\x12\x16\n\x0eMovementTimerS\x18\x07 \x01(\x02\x12\x11\n\tJumpTimeS\x18\x08 \x01(\x02\x12\x14\n\x0c\x41ttackTimerS\x18\t \x01(\x02\"u\n\x1bPokemonStatsAttributesProto\x12\x13\n\x0b\x42\x61seStamina\x18\x01 \x01(\x05\x12\x12\n\nBaseAttack\x18\x02 \x01(\x05\x12\x13\n\x0b\x42\x61seDefense\x18\x03 \x01(\x05\x12\x18\n\x10\x44odgeEnergyDelta\x18\x08 \x01(\x05\"\xd9\x06\n\x14PokemonSettingsProto\x12-\n\x08UniqueId\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloPokemonId\x12\x12\n\nModelScale\x18\x03 \x01(\x02\x12,\n\x05Type1\x18\x04 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12,\n\x05Type2\x18\x05 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12:\n\x06\x43\x61mera\x18\x06 \x01(\x0b\x32*.Holoholo.Rpc.PokemonCameraAttributesProto\x12@\n\tEncounter\x18\x07 \x01(\x0b\x32-.Holoholo.Rpc.PokemonEncounterAttributesProto\x12\x38\n\x05Stats\x18\x08 \x01(\x0b\x32).Holoholo.Rpc.PokemonStatsAttributesProto\x12\x31\n\nQuickMoves\x18\t \x03(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonMove\x12\x35\n\x0e\x43inematicMoves\x18\n \x03(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonMove\x12\x10\n\x08\x41nimTime\x18\x0b \x03(\x02\x12.\n\tEvolution\x18\x0c \x03(\x0e\x32\x1b.Holoholo.Rpc.HoloPokemonId\x12\x15\n\rEvolutionPips\x18\r \x01(\x05\x12\x34\n\x0cPokemonClass\x18\x0e \x01(\x0e\x32\x1e.Holoholo.Rpc.HoloPokemonClass\x12\x16\n\x0ePokedexHeightM\x18\x0f \x01(\x02\x12\x17\n\x0fPokedexWeightKg\x18\x10 \x01(\x02\x12-\n\x08ParentId\x18\x11 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloPokemonId\x12\x14\n\x0cHeightStdDev\x18\x12 \x01(\x02\x12\x14\n\x0cWeightStdDev\x18\x13 \x01(\x02\x12\x19\n\x11KmDistanceToHatch\x18\x14 \x01(\x02\x12\x33\n\x08\x46\x61milyId\x18\x15 \x01(\x0e\x32!.Holoholo.Rpc.HoloPokemonFamilyId\x12\x15\n\rCandyToEvolve\x18\x16 \x01(\x05\"\x94\x01\n\x17PokeBallAttributesProto\x12\x30\n\nItemEffect\x18\x01 \x01(\x0e\x32\x1c.Holoholo.Rpc.HoloItemEffect\x12\x14\n\x0c\x43\x61ptureMulti\x18\x02 \x01(\x02\x12\x1a\n\x12\x43\x61ptureMultiEffect\x18\x03 \x01(\x02\x12\x15\n\rItemEffectMod\x18\x04 \x01(\x02\">\n\x15PotionAttributesProto\x12\x12\n\nStaPercent\x18\x01 \x01(\x02\x12\x11\n\tStaAmount\x18\x02 \x01(\x05\"+\n\x15ReviveAttributesProto\x12\x12\n\nStaPercent\x18\x01 \x01(\x02\"f\n\x15\x42\x61ttleAttributesProto\x12\x12\n\nStaPercent\x18\x01 \x01(\x02\x12\x12\n\nAtkPercent\x18\x02 \x01(\x02\x12\x12\n\nDefPercent\x18\x03 \x01(\x02\x12\x11\n\tDurationS\x18\x04 \x01(\x02\"y\n\x13\x46oodAttributesProto\x12\x30\n\nItemEffect\x18\x01 \x03(\x0e\x32\x1c.Holoholo.Rpc.HoloItemEffect\x12\x19\n\x11ItemEffectPercent\x18\x02 \x03(\x02\x12\x15\n\rGrowthPercent\x18\x03 \x01(\x02\"u\n\x1fInventoryUpgradeAttributesProto\x12\x19\n\x11\x41\x64\x64itionalStorage\x18\x01 \x01(\x05\x12\x37\n\x0bUpgradeType\x18\x02 \x01(\x0e\x32\".Holoholo.Rpc.InventoryUpgradeType\"O\n\x1e\x45xperienceBoostAttributesProto\x12\x14\n\x0cXpMultiplier\x18\x01 \x01(\x02\x12\x17\n\x0f\x42oostDurationMs\x18\x02 \x01(\x05\"~\n\x1b\x45ggIncubatorAttributesProto\x12\x35\n\rIncubatorType\x18\x01 \x01(\x0e\x32\x1e.Holoholo.Rpc.EggIncubatorType\x12\x0c\n\x04Uses\x18\x02 \x01(\x05\x12\x1a\n\x12\x44istanceMultiplier\x18\x03 \x01(\x02\"\xb9\x02\n\x16IncenseAttributesProto\x12\x1e\n\x16IncenseLifetimeSeconds\x18\x01 \x01(\x05\x12\x32\n\x0bPokemonType\x18\x02 \x03(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12%\n\x1dPokemonIncenseTypeProbability\x18\x03 \x01(\x02\x12(\n StandingTimeBetweenEncountersSec\x18\x04 \x01(\x05\x12%\n\x1dMovingTimeBetweenEncounterSec\x18\x05 \x01(\x05\x12\x30\n(DistanceRequiredForShorterIntervalMeters\x18\x06 \x01(\x05\x12!\n\x19PokemonAttractedLengthSec\x18\x07 \x01(\x05\"a\n\x1b\x46ortModifierAttributesProto\x12\x1f\n\x17ModifierLifetimeSeconds\x18\x01 \x01(\x05\x12!\n\x19TroyDiskNumPokemonSpawned\x18\x02 \x01(\x05\"\x8f\x06\n\x11ItemSettingsProto\x12$\n\x08UniqueId\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12,\n\x08ItemType\x18\x02 \x01(\x0e\x32\x1a.Holoholo.Rpc.HoloItemType\x12\x30\n\x08\x43\x61tegory\x18\x03 \x01(\x0e\x32\x1e.Holoholo.Rpc.HoloItemCategory\x12\x10\n\x08\x44ropFreq\x18\x04 \x01(\x02\x12\x18\n\x10\x44ropTrainerLevel\x18\x05 \x01(\x05\x12\x37\n\x08Pokeball\x18\x06 \x01(\x0b\x32%.Holoholo.Rpc.PokeBallAttributesProto\x12\x33\n\x06Potion\x18\x07 \x01(\x0b\x32#.Holoholo.Rpc.PotionAttributesProto\x12\x33\n\x06Revive\x18\x08 \x01(\x0b\x32#.Holoholo.Rpc.ReviveAttributesProto\x12\x33\n\x06\x42\x61ttle\x18\t \x01(\x0b\x32#.Holoholo.Rpc.BattleAttributesProto\x12/\n\x04\x46ood\x18\n \x01(\x0b\x32!.Holoholo.Rpc.FoodAttributesProto\x12G\n\x10InventoryUpgrade\x18\x0b \x01(\x0b\x32-.Holoholo.Rpc.InventoryUpgradeAttributesProto\x12=\n\x07XpBoost\x18\x0c \x01(\x0b\x32,.Holoholo.Rpc.ExperienceBoostAttributesProto\x12\x35\n\x07Incense\x18\r \x01(\x0b\x32$.Holoholo.Rpc.IncenseAttributesProto\x12?\n\x0c\x45ggIncubator\x18\x0e \x01(\x0b\x32).Holoholo.Rpc.EggIncubatorAttributesProto\x12?\n\x0c\x46ortModifier\x18\x0f \x01(\x0b\x32).Holoholo.Rpc.FortModifierAttributesProto\"\x98\x03\n\x11MoveSettingsProto\x12/\n\x08UniqueId\x18\x01 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonMove\x12\x13\n\x0b\x41nimationId\x18\x02 \x01(\x05\x12+\n\x04Type\x18\x03 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12\r\n\x05Power\x18\x04 \x01(\x02\x12\x16\n\x0e\x41\x63\x63uracyChance\x18\x05 \x01(\x02\x12\x16\n\x0e\x43riticalChance\x18\x06 \x01(\x02\x12\x12\n\nHealScalar\x18\x07 \x01(\x02\x12\x19\n\x11StaminaLossScalar\x18\x08 \x01(\x02\x12\x17\n\x0fTrainerLevelMin\x18\t \x01(\x05\x12\x17\n\x0fTrainerLevelMax\x18\n \x01(\x05\x12\x0f\n\x07VfxName\x18\x0b \x01(\t\x12\x12\n\nDurationMs\x18\x0c \x01(\x05\x12\x1b\n\x13\x44\x61mageWindowStartMs\x18\r \x01(\x05\x12\x19\n\x11\x44\x61mageWindowEndMs\x18\x0e \x01(\x05\x12\x13\n\x0b\x45nergyDelta\x18\x0f \x01(\x05\"-\n\x19MoveSequenceSettingsProto\x12\x10\n\x08Sequence\x18\x01 \x03(\t\"e\n\x1aTypeEffectiveSettingsProto\x12\x31\n\nAttackType\x18\x02 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12\x14\n\x0c\x41ttackScalar\x18\x01 \x03(\x02\"i\n\x12\x42\x61\x64geSettingsProto\x12.\n\tBadgeType\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\x12\x12\n\nBadgeRanks\x18\x02 \x01(\x05\x12\x0f\n\x07Targets\x18\x03 \x03(\x05\"\x9a\x03\n\x13\x43\x61meraSettingsProto\x12\x12\n\nNextCamera\x18\x01 \x01(\t\x12\x38\n\rInterpolation\x18\x02 \x03(\x0e\x32!.Holoholo.Rpc.CameraInterpolation\x12.\n\nTargetType\x18\x03 \x03(\x0e\x32\x1a.Holoholo.Rpc.CameraTarget\x12\x13\n\x0b\x45\x61seInSpeed\x18\x04 \x03(\x02\x12\x14\n\x0c\x45\x61seOutSpeed\x18\x05 \x03(\x02\x12\x11\n\tDurationS\x18\x06 \x03(\x02\x12\r\n\x05WaitS\x18\x07 \x03(\x02\x12\x13\n\x0bTransitionS\x18\x08 \x03(\x02\x12\x10\n\x08\x41ngleDeg\x18\t \x03(\x02\x12\x16\n\x0e\x41ngleOffsetDeg\x18\n \x03(\x02\x12\x10\n\x08PitchDeg\x18\x0b \x03(\x02\x12\x16\n\x0ePitchOffsetDeg\x18\x0c \x03(\x02\x12\x0f\n\x07RollDeg\x18\r \x03(\x02\x12\x11\n\tDistanceM\x18\x0e \x03(\x02\x12\x15\n\rHeightPercent\x18\x0f \x03(\x02\x12\x14\n\x0cVertCtrRatio\x18\x10 \x03(\x02\"\x92\x01\n\x18PlayerLevelSettingsProto\x12\x0f\n\x07RankNum\x18\x01 \x03(\x05\x12\x13\n\x0bRequiredExp\x18\x02 \x03(\x05\x12\x14\n\x0c\x43pMultiplier\x18\x03 \x03(\x02\x12\x19\n\x11MaxEggPlayerLevel\x18\x04 \x01(\x05\x12\x1f\n\x17MaxEncounterPlayerLevel\x18\x05 \x01(\x05\"p\n\x15GymLevelSettingsProto\x12\x13\n\x0bRequiredExp\x18\x01 \x03(\x05\x12\x13\n\x0bLeaderSlots\x18\x02 \x03(\x05\x12\x14\n\x0cTrainerSlots\x18\x03 \x03(\x05\x12\x17\n\x0fSearchRollBonus\x18\x04 \x03(\x05\"\xaa\x03\n\x16GymBattleSettingsProto\x12\x14\n\x0c\x45nergyPerSec\x18\x01 \x01(\x02\x12\x17\n\x0f\x44odgeEnergyCost\x18\x02 \x01(\x02\x12\x17\n\x0fRetargetSeconds\x18\x03 \x01(\x02\x12\x1b\n\x13\x45nemyAttackInterval\x18\x04 \x01(\x02\x12\x1c\n\x14\x41ttackServerInterval\x18\x05 \x01(\x02\x12\x1c\n\x14RoundDurationSeconds\x18\x06 \x01(\x02\x12\x1f\n\x17\x42onusTimePerAllySeconds\x18\x07 \x01(\x02\x12!\n\x19MaximumAttackersPerBattle\x18\x08 \x01(\x05\x12%\n\x1dSameTypeAttackBonusMultiplier\x18\t \x01(\x02\x12\x15\n\rMaximumEnergy\x18\n \x01(\x05\x12 \n\x18\x45nergyDeltaPerHealthLost\x18\x0b \x01(\x02\x12\x17\n\x0f\x44odgeDurationMs\x18\x0c \x01(\x05\x12\x1a\n\x12MinimumPlayerLevel\x18\r \x01(\x05\x12\x16\n\x0eSwapDurationMs\x18\x0e \x01(\x05\"\xaa\x01\n\x16\x45ncounterSettingsProto\x12\x1a\n\x12SpinBonusThreshold\x18\x01 \x01(\x02\x12\x1f\n\x17\x45xcellentThrowThreshold\x18\x02 \x01(\x02\x12\x1b\n\x13GreatThrowThreshold\x18\x03 \x01(\x02\x12\x1a\n\x12NiceThrowThreshold\x18\x04 \x01(\x02\x12\x1a\n\x12MilestoneThreshold\x18\x05 \x01(\x05\"\x82\x01\n\x1bPokemonUpgradeSettingsProto\x12\x18\n\x10UpgradesPerLevel\x18\x01 \x01(\x05\x12 \n\x18\x41llowedLevelsAbovePlayer\x18\x02 \x01(\x05\x12\x11\n\tCandyCost\x18\x03 \x03(\x05\x12\x14\n\x0cStardustCost\x18\x04 \x03(\x05\"w\n\x1a\x45quippedBadgeSettingsProto\x12\x1c\n\x14\x45quipBadgeCooldownMs\x18\x01 \x01(\x03\x12\x1d\n\x15\x43\x61tchProbabilityBonus\x18\x02 \x03(\x02\x12\x1c\n\x14\x46leeProbabilityBonus\x18\x03 \x03(\x02\"\x93\x07\n\x1dGameMasterClientTemplateProto\x12\x12\n\nTemplateId\x18\x01 \x01(\t\x12\x33\n\x07Pokemon\x18\x02 \x01(\x0b\x32\".Holoholo.Rpc.PokemonSettingsProto\x12-\n\x04Item\x18\x03 \x01(\x0b\x32\x1f.Holoholo.Rpc.ItemSettingsProto\x12-\n\x04Move\x18\x04 \x01(\x0b\x32\x1f.Holoholo.Rpc.MoveSettingsProto\x12=\n\x0cMoveSequence\x18\x05 \x01(\x0b\x32\'.Holoholo.Rpc.MoveSequenceSettingsProto\x12?\n\rTypeEffective\x18\x08 \x01(\x0b\x32(.Holoholo.Rpc.TypeEffectiveSettingsProto\x12/\n\x05\x42\x61\x64ge\x18\n \x01(\x0b\x32 .Holoholo.Rpc.BadgeSettingsProto\x12\x31\n\x06\x43\x61mera\x18\x0b \x01(\x0b\x32!.Holoholo.Rpc.CameraSettingsProto\x12;\n\x0bPlayerLevel\x18\x0c \x01(\x0b\x32&.Holoholo.Rpc.PlayerLevelSettingsProto\x12\x35\n\x08GymLevel\x18\r \x01(\x0b\x32#.Holoholo.Rpc.GymLevelSettingsProto\x12<\n\x0e\x42\x61ttleSettings\x18\x0e \x01(\x0b\x32$.Holoholo.Rpc.GymBattleSettingsProto\x12?\n\x11\x45ncounterSettings\x18\x0f \x01(\x0b\x32$.Holoholo.Rpc.EncounterSettingsProto\x12\x39\n\x0eIapItemDisplay\x18\x10 \x01(\x0b\x32!.Holoholo.Rpc.IapItemDisplayProto\x12\x33\n\x0bIapSettings\x18\x11 \x01(\x0b\x32\x1e.Holoholo.Rpc.IapSettingsProto\x12\x42\n\x0fPokemonUpgrades\x18\x12 \x01(\x0b\x32).Holoholo.Rpc.PokemonUpgradeSettingsProto\x12@\n\x0e\x45quippedBadges\x18\x13 \x01(\x0b\x32(.Holoholo.Rpc.EquippedBadgeSettingsProto\"#\n!GetGameMasterClientTemplatesProto\"\xc6\x01\n$GetGameMasterClientTemplatesOutProto\x12O\n\x06Result\x18\x01 \x01(\x0e\x32?.Holoholo.Rpc.Types.GetGameMasterClientTemplatesOutProto.Result\x12:\n\x05Items\x18\x02 \x03(\x0b\x32+.Holoholo.Rpc.GameMasterClientTemplateProto\x12\x11\n\tTimestamp\x18\x03 \x01(\x04\"\x9d\x01\n\x1cGetRemoteConfigVersionsProto\x12(\n\x08Platform\x18\x01 \x01(\x0e\x32\x16.Holoholo.Rpc.Platform\x12\x1a\n\x12\x44\x65viceManufacturer\x18\x02 \x01(\t\x12\x13\n\x0b\x44\x65viceModel\x18\x03 \x01(\t\x12\x0e\n\x06Locale\x18\x04 \x01(\t\x12\x12\n\nAppVersion\x18\x05 \x01(\r\"\xa8\x01\n\x1fGetRemoteConfigVersionsOutProto\x12J\n\x06Result\x18\x01 \x01(\x0e\x32:.Holoholo.Rpc.Types.GetRemoteConfigVersionsOutProto.Result\x12\x1b\n\x13GameMasterTimestamp\x18\x02 \x01(\x04\x12\x1c\n\x14\x41ssetDigestTimestamp\x18\x03 \x01(\x04\"\xb2\x01\n\x0e\x41\x63tionLogEntry\x12\x13\n\x0bTimestampMs\x18\x01 \x01(\x03\x12\r\n\x05Sfida\x18\x02 \x01(\x08\x12:\n\x0c\x43\x61tchPokemon\x18\x03 \x01(\x0b\x32\".Holoholo.Rpc.CatchPokemonLogEntryH\x00\x12\x36\n\nFortSearch\x18\x04 \x01(\x0b\x32 .Holoholo.Rpc.FortSearchLogEntryH\x00\x42\x08\n\x06\x41\x63tion\"\x97\x01\n\x14\x43\x61tchPokemonLogEntry\x12?\n\x06Result\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.CatchPokemonLogEntry.Result\x12\x15\n\rPokedexNumber\x18\x02 \x01(\x05\x12\x14\n\x0c\x43ombatPoints\x18\x03 \x01(\x05\x12\x11\n\tPokemonId\x18\x04 \x01(\x04\"\x99\x01\n\x12\x46ortSearchLogEntry\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.FortSearchLogEntry.Result\x12\x0e\n\x06\x46ortId\x18\x02 \x01(\t\x12&\n\x05Items\x18\x03 \x03(\x0b\x32\x17.Holoholo.Rpc.ItemProto\x12\x0c\n\x04\x45ggs\x18\x04 \x01(\x05\"\x8c\x01\n\x10PlayerBadgeProto\x12.\n\tBadgeType\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\x12\x0c\n\x04Rank\x18\x02 \x01(\x05\x12\x12\n\nStartValue\x18\x03 \x01(\x05\x12\x10\n\x08\x45ndValue\x18\x04 \x01(\x05\x12\x14\n\x0c\x43urrentValue\x18\x05 \x01(\x01\"(\n\x12PlayerProfileProto\x12\x12\n\nPlayerName\x18\x01 \x01(\t\"\x9c\x01\n\x15PlayerProfileOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.PlayerProfileOutProto.Result\x12\x11\n\tStartTime\x18\x02 \x01(\x03\x12.\n\x06\x42\x61\x64ges\x18\x03 \x03(\x0b\x32\x1e.Holoholo.Rpc.PlayerBadgeProto\"$\n\x13LevelUpRewardsProto\x12\r\n\x05Level\x18\x01 \x01(\x05\"\xb3\x01\n\x16LevelUpRewardsOutProto\x12\x41\n\x06Result\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.LevelUpRewardsOutProto.Result\x12+\n\x05Items\x18\x02 \x03(\x0b\x32\x1c.Holoholo.Rpc.AwardItemProto\x12)\n\rItemsUnlocked\x18\x04 \x03(\x0e\x32\x12.Holoholo.Rpc.Item\"\xe8\x03\n\x11\x43lientPlayerProto\x12\x16\n\x0e\x43reationTimeMs\x18\x01 \x01(\x03\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x0c\n\x04Team\x18\x05 \x01(\x05\x12:\n\x10TutorialComplete\x18\x07 \x03(\x0e\x32 .Holoholo.Rpc.TutorialCompletion\x12:\n\x11PlayerAvatarProto\x18\x08 \x01(\x0b\x32\x1f.Holoholo.Rpc.PlayerAvatarProto\x12\x19\n\x11MaxPokemonStorage\x18\t \x01(\x05\x12\x16\n\x0eMaxItemStorage\x18\n \x01(\x05\x12\x36\n\x0f\x44\x61ilyBonusProto\x18\x0b \x01(\x0b\x32\x1d.Holoholo.Rpc.DailyBonusProto\x12<\n\x12\x45quippedBadgeProto\x18\x0c \x01(\x0b\x32 .Holoholo.Rpc.EquippedBadgeProto\x12@\n\x14\x43ontactSettingsProto\x18\r \x01(\x0b\x32\".Holoholo.Rpc.ContactSettingsProto\x12<\n\x0f\x43urrencyBalance\x18\x0e \x03(\x0b\x32#.Holoholo.Rpc.CurrencyQuantityProto\"?\n\x15\x43urrencyQuantityProto\x12\x14\n\x0c\x43urrencyType\x18\x01 \x01(\t\x12\x10\n\x08Quantity\x18\x02 \x01(\x05\"R\n\x14\x43ontactSettingsProto\x12\x1b\n\x13SendMarketingEmails\x18\x01 \x01(\x08\x12\x1d\n\x15SendPushNotifications\x18\x02 \x01(\x08\"^\n\x0f\x44\x61ilyBonusProto\x12\x1e\n\x16NextCollectTimestampMs\x18\x01 \x01(\x03\x12+\n#NextDefenderBonusCollectTimestampMs\x18\x02 \x01(\x03\"\x82\x01\n\x12\x45quippedBadgeProto\x12\x32\n\rEquippedBadge\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\x12\r\n\x05Level\x18\x02 \x01(\x05\x12)\n!NextEquipChangeAllowedTimestampMs\x18\x03 \x01(\x03\"\x10\n\x0eGetPlayerProto\"U\n\x11GetPlayerOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"-\n\x11PlayerUpdateProto\x12\x0b\n\x03Lat\x18\x01 \x01(\x01\x12\x0b\n\x03Lng\x18\x02 \x01(\x01\"\x8e\x01\n\x14PlayerUpdateOutProto\x12\x33\n\x0bWildPokemon\x18\x01 \x03(\x0b\x32\x1e.Holoholo.Rpc.WildPokemonProto\x12,\n\x04\x46ort\x18\x02 \x03(\x0b\x32\x1e.Holoholo.Rpc.PokemonFortProto\x12\x13\n\x0b\x46ortsNearby\x18\x03 \x01(\x05\"@\n\x17SetFavoritePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x03\x12\x12\n\nIsFavorite\x18\x02 \x01(\x08\"c\n\x1aSetFavoritePokemonOutProto\x12\x45\n\x06Result\x18\x01 \x01(\x0e\x32\x35.Holoholo.Rpc.Types.SetFavoritePokemonOutProto.Result\"<\n\x13ReleasePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\x12\x12\n\nPokemonIds\x18\x02 \x03(\x04\"q\n\x16ReleasePokemonOutProto\x12\x41\n\x06Status\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.ReleasePokemonOutProto.Status\x12\x14\n\x0c\x43\x61ndyAwarded\x18\x02 \x01(\x05\"\x18\n\x16\x44\x65\x62ugDeletePlayerProto\",\n\x19\x44\x65\x62ugDeletePlayerOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\"#\n!GetSuggestedCodenamesRequestProto\"G\n\"GetSuggestedCodenamesResponseProto\x12\x10\n\x08\x43odename\x18\x01 \x03(\t\x12\x0f\n\x07Success\x18\x02 \x01(\x08\"6\n\"CheckCodenameAvailableRequestProto\x12\x10\n\x08\x43odename\x18\x01 \x01(\t\"-\n\x19\x43laimCodenameRequestProto\x12\x10\n\x08\x43odename\x18\x01 \x01(\t\"\x92\x01\n\x13\x43odenameResultProto\x12\x10\n\x08\x43odename\x18\x01 \x01(\t\x12\x13\n\x0bUserMessage\x18\x02 \x01(\t\x12\x14\n\x0cIsAssignable\x18\x03 \x01(\x08\x12>\n\x06Status\x18\x04 \x01(\x0e\x32..Holoholo.Rpc.Types.CodenameResultProto.Status\"L\n\x0eSetAvatarProto\x12:\n\x11PlayerAvatarProto\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.PlayerAvatarProto\"\x82\x01\n\x11SetAvatarOutProto\x12<\n\x06Status\x18\x01 \x01(\x0e\x32,.Holoholo.Rpc.Types.SetAvatarOutProto.Status\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"[\n\x17SetContactSettingsProto\x12@\n\x14\x43ontactSettingsProto\x18\x01 \x01(\x0b\x32\".Holoholo.Rpc.ContactSettingsProto\"\x94\x01\n\x1aSetContactSettingsOutProto\x12\x45\n\x06Status\x18\x01 \x01(\x0e\x32\x35.Holoholo.Rpc.Types.SetContactSettingsOutProto.Status\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"6\n\x12SetPlayerTeamProto\x12 \n\x04Team\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Team\"\x8a\x01\n\x15SetPlayerTeamOutProto\x12@\n\x06Status\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.SetPlayerTeamOutProto.Status\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"\x93\x01\n\x19MarkTutorialCompleteProto\x12:\n\x10TutorialComplete\x18\x01 \x03(\x0e\x32 .Holoholo.Rpc.TutorialCompletion\x12\x1b\n\x13SendMarketingEmails\x18\x02 \x01(\x08\x12\x1d\n\x15SendPushNotifications\x18\x03 \x01(\x08\"`\n\x1cMarkTutorialCompleteOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"\x19\n\x17\x43heckAwardedBadgesProto\"}\n\x1a\x43heckAwardedBadgesOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12\x32\n\rAwardedBadges\x18\x02 \x03(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\x12\x1a\n\x12\x41wardedBadgeLevels\x18\x03 \x03(\x05\"-\n\x08PtcToken\x12\r\n\x05Token\x18\x01 \x01(\t\x12\x12\n\nExpiration\x18\x02 \x01(\x05\"=\n\x0f\x45quipBadgeProto\x12*\n\x05\x42\x61\x64ge\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\"\x87\x01\n\x12\x45quipBadgeOutProto\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.EquipBadgeOutProto.Result\x12\x32\n\x08\x45quipped\x18\x02 \x01(\x0b\x32 .Holoholo.Rpc.EquippedBadgeProto\"\x15\n\x13GetActionLogRequest\"\x82\x01\n\x14GetActionLogResponse\x12?\n\x06Result\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.GetActionLogResponse.Result\x12)\n\x03Log\x18\x02 \x03(\x0b\x32\x1c.Holoholo.Rpc.ActionLogEntry\"\x15\n\x13SfidaActionLogProto\"\x84\x01\n\x16SfidaActionLogOutProto\x12?\n\x06Result\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.GetActionLogResponse.Result\x12)\n\x03Log\x18\x02 \x03(\x0b\x32\x1c.Holoholo.Rpc.ActionLogEntry\"%\n\x15\x44ownloadSettingsProto\x12\x0c\n\x04Sha1\x18\x01 \x01(\t\"G\n\x18\x44ownloadSettingsOutProto\x12\r\n\x05\x45rror\x18\x01 \x01(\t\x12\x0c\n\x04Sha1\x18\x02 \x01(\t\x12\x0e\n\x06Values\x18\x03 \x01(\x0c\"+\n\x1b\x44ownloadSettingsActionProto\x12\x0c\n\x04Sha1\x18\x01 \x01(\t\"L\n\x1d\x44ownloadSettingsResponseProto\x12\r\n\x05\x45rror\x18\x01 \x01(\t\x12\x0c\n\x04Sha1\x18\x02 \x01(\t\x12\x0e\n\x06Values\x18\x03 \x01(\x0c\".\n\x12TradingSearchProto\x12\x0b\n\x03Lat\x18\x01 \x01(\x01\x12\x0b\n\x03Lng\x18\x02 \x01(\x01\"n\n\x15TradingSearchOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.TradingSearchOutProto.Result\x12\x13\n\x0bPlayerNames\x18\x02 \x03(\t\"=\n\x11TradingOfferProto\x12\x15\n\rTradingPlayer\x18\x01 \x01(\t\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\"h\n\x14TradingOfferOutProto\x12?\n\x06Result\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.TradingOfferOutProto.Result\x12\x0f\n\x07TradeId\x18\x02 \x01(\x04\"V\n\x19PollForTradeResponseProto\x12\x0f\n\x07TradeId\x18\x01 \x01(\x04\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\x12\x15\n\rRequestCancel\x18\x03 \x01(\x08\"\x9a\x01\n\x1cPollForTradeResponseOutProto\x12G\n\x06Result\x18\x01 \x01(\x0e\x32\x37.Holoholo.Rpc.Types.PollForTradeResponseOutProto.Result\x12\x31\n\rReturnPokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\";\n\x12TradingResultProto\x12\x0f\n\x07TradeId\x18\x01 \x01(\x04\x12\x14\n\x0cPlayerAccept\x18\x02 \x01(\x08\"Y\n\x15TradingResultOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.TradingResultOutProto.Result\"(\n\x13UpgradePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\"\x90\x01\n\x16UpgradePokemonOutProto\x12\x41\n\x06Result\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.UpgradePokemonOutProto.Result\x12\x33\n\x0fUpgradedPokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\"I\n\x12UseItemPotionProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\"j\n\x15UseItemPotionOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.UseItemPotionOutProto.Result\x12\x0f\n\x07Stamina\x18\x02 \x01(\x05\"I\n\x12UseItemReviveProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\"j\n\x15UseItemReviveOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.UseItemReviveOutProto.Result\x12\x0f\n\x07Stamina\x18\x02 \x01(\x05\"v\n\x0fUseItemGymProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\r\n\x05GymId\x18\x02 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"f\n\x12UseItemGymOutProto\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.UseItemGymOutProto.Result\x12\x11\n\tUpdatedGp\x18\x02 \x01(\x03\"7\n\x13UseItemXpBoostProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\"\x92\x01\n\x16UseItemXpBoostOutProto\x12\x41\n\x06Result\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.UseItemXpBoostOutProto.Result\x12\x35\n\x0c\x41ppliedItems\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.AppliedItemsProto\">\n\x18UseItemEggIncubatorProto\x12\x0e\n\x06ItemId\x18\x01 \x01(\t\x12\x12\n\nPokemondId\x18\x02 \x01(\x03\"\x9c\x01\n\x1bUseItemEggIncubatorOutProto\x12\x46\n\x06Result\x18\x01 \x01(\x0e\x32\x36.Holoholo.Rpc.Types.UseItemEggIncubatorOutProto.Result\x12\x35\n\x0c\x45ggIncubator\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.EggIncubatorProto\"\xf5\x08\n\x07Niantic\x1a\xe9\x08\n\x08Holoholo\x1a]\n\tEncounter\"P\n\x0f\x45ncounterResult\x12\x13\n\x0f\x43\x61pturedPokemon\x10\x00\x12\x0c\n\x08UserFled\x10\x01\x12\x0f\n\x0bPokemonFled\x10\x02\x12\t\n\x05\x45rror\x10\x03\x1a\xd8\x01\n\x03Gym\x1a<\n\rGymMinimapDot\"+\n\x08\x44otState\x12\t\n\x05\x45MPTY\x10\x00\x12\x08\n\x04\x46ULL\x10\x01\x12\n\n\x06LEADER\x10\x02\x1a\x42\n\x0e\x41ttackAffector\"0\n\nFxPriority\x12\x0b\n\x07Neutral\x10\x00\x12\x07\n\x03Tap\x10\x01\x12\x0c\n\x08Sequence\x10\x02\"O\n\x0c\x41pproachMode\x12\x0f\n\x0b\x42\x41TTLE_PREP\x10\x00\x12\n\n\x06\x44\x45PLOY\x10\x01\x12\x13\n\x0f\x46RIENDLY_CHOICE\x10\x02\x12\r\n\tPICK_TEAM\x10\x03\x1a\xf5\x01\n\x03Map\x1a\x34\n\rMapSpawnPoint\"#\n\x0eVisibilityType\x12\x07\n\x03Low\x10\x00\x12\x08\n\x04High\x10\x01\x1a\x61\n\x11MapGestureHandler\"L\n\x0ePanGestureType\x12\x0b\n\x07Unknown\x10\x00\x12\x07\n\x03Pan\x10\x01\x12\x0c\n\x08\x44ragZoom\x10\x02\x12\x08\n\x04Tilt\x10\x03\x12\x0c\n\x08Rotation\x10\x04\"4\n\x18PokemonEncounterResponse\x12\x0b\n\x07Success\x10\x00\x12\x0b\n\x07\x46\x61ilure\x10\x01\"\x1f\n\tDayPeriod\x12\x07\n\x03\x44\x61y\x10\x00\x12\t\n\x05Night\x10\x01\x1ag\n\x05Items\",\n\x10IncubationResult\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0b\n\x07\x46\x41ILURE\x10\x01\"0\n\x12\x42uffSelectionState\x12\x0c\n\x08\x43\x61nceled\x10\x00\x12\x0c\n\x08Selected\x10\x01\x1a<\n\tUserTasks\"/\n\x14TaskCompletionResult\x12\x0b\n\x07Success\x10\x00\x12\n\n\x06\x46\x61iled\x10\x01\x1a:\n\x0e\x44\x65\x66\x65rredInvoke\"(\n\tDeferMode\x12\x0b\n\x07Seconds\x10\x00\x12\x0e\n\nEndOfFrame\x10\x01\x1aH\n\x06\x41ssets\">\n\x14\x41ssetRequestPriority\x12\x0b\n\x07Preload\x10\x00\x12\n\n\x06Normal\x10\x01\x12\r\n\tImmediate\x10\x02\x1a\xfd\x01\n\x05Sfida\x1a\xf3\x01\n\x0cSfidaService\"\xe2\x01\n\x05State\x12\x11\n\rNO_CONNECTION\x10\x00\x12\x08\n\x04IDLE\x10\x01\x12\x1b\n\x17\x46INDING_NOTIFY_POKESTOP\x10\x02\x12\x16\n\x12NOTIFYING_POKESTOP\x10\x03\x12\x11\n\rSEARCH_RESULT\x10\x04\x12\x1a\n\x16\x46INDING_NOTIFY_POKEMON\x10\x05\x12\x15\n\x11NOTIFYING_POKEMON\x10\x06\x12\r\n\tENCOUNTER\x10\x07\x12\t\n\x05\x43\x41TCH\x10\x08\x12\x10\n\x0c\x43\x41TCH_RESULT\x10\t\x12\n\n\x06\x44OWSER\x10\n\x12\t\n\x05\x45RROR\x10\x0b*\x89\x01\n\nUpdateType\x12\x07\n\x03\x41\x44\x44\x10\x00\x12\n\n\x06MODIFY\x10\x01\x12\n\n\x06REMOVE\x10\x02\x12\x14\n\x10PREDICTED_MODIFY\x10\x03\x12\x14\n\x10PREDICTED_REMOVE\x10\x04\x12\x16\n\x12ROLLED_BACK_MODIFY\x10\x05\x12\x16\n\x12ROLLED_BACK_REMOVE\x10\x06*2\n\rEnumScaleMode\x12\x07\n\x03\x42RB\x10\x00\x12\x08\n\x04Maya\x10\x01\x12\x0e\n\nMayaWCurve\x10\x02*?\n\x07\x46ovSide\x12\x06\n\x02UP\x10\x00\x12\x08\n\x04\x44OWN\x10\x01\x12\x08\n\x04LEFT\x10\x02\x12\t\n\x05RIGHT\x10\x03\x12\r\n\tNUM_SIDES\x10\x04*<\n\x17RemoteConfigurationType\x12\x10\n\x0c\x41SSET_DIGEST\x10\x00\x12\x0f\n\x0bGAME_MASTER\x10\x01*\xa8\x02\n\x07\x43ommand\x12\x07\n\x03VFX\x10\x00\x12\n\n\x06\x46\x32\x46VFX\x10\x01\x12\x07\n\x03SFX\x10\x02\x12\x07\n\x03\x43\x41M\x10\x03\x12\x08\n\x04\x41NIM\x10\x04\x12\x08\n\x04WAIT\x10\x05\x12\x07\n\x03SYS\x10\x06\x12\t\n\x05SHAKE\x10\x07\x12\t\n\x05SCALE\x10\x08\x12\x08\n\x04SINK\x10\t\x12\t\n\x05\x45VENT\x10\n\x12\x08\n\x04MODE\x10\x0b\x12\x08\n\x04HIDE\x10\x0c\x12\n\n\x06UNHIDE\x10\r\x12\x08\n\x04SPIN\x10\x0e\x12\n\n\x06SQUISH\x10\x0f\x12\x0e\n\nBACKGROUND\x10\x10\x12\x14\n\x10RESET_BACKGROUND\x10\x11\x12\x0e\n\nSILHOUETTE\x10\x12\x12\x14\n\x10RESET_SILHOUETTE\x10\x13\x12\x0e\n\nHIDE_OTHER\x10\x14\x12\x10\n\x0cUNHIDE_OTHER\x10\x15\x12\n\n\x06\x44SCVFX\x10\x16*3\n\nTargetType\x12\x0f\n\x0bMAIN_CAMERA\x10\x00\x12\x14\n\x10SPECIFIED_OBJECT\x10\x01*T\n\x06\x45\x66\x66\x65\x63t\x12\r\n\tNO_DAMAGE\x10\x00\x12\x12\n\x0eREDUCED_DAMAGE\x10\x01\x12\x11\n\rNORMAL_DAMAGE\x10\x02\x12\x14\n\x10INCREASED_DAMAGE\x10\x03*b\n\x14PokemonCreateContext\x12\x17\n\x13\x43REATE_CONTEXT_WILD\x10\x00\x12\x16\n\x12\x43REATE_CONTEXT_EGG\x10\x01\x12\x19\n\x15\x43REATE_CONTEXT_EVOLVE\x10\x02*]\n\x10PlayerAvatarType\x12\x17\n\x13PLAYER_AVATAR_UNSET\x10\x00\x12\x16\n\x12PLAYER_AVATAR_MALE\x10\x01\x12\x18\n\x14PLAYER_AVATAR_FEMALE\x10\x02*?\n\x04Team\x12\t\n\x05UNSET\x10\x00\x12\r\n\tTEAM_BLUE\x10\x01\x12\x0c\n\x08TEAM_RED\x10\x02\x12\x0f\n\x0bTEAM_YELLOW\x10\x03*\xde\x03\n\x0fHoloPokemonType\x12\x15\n\x11POKEMON_TYPE_NONE\x10\x00\x12\x17\n\x13POKEMON_TYPE_NORMAL\x10\x01\x12\x19\n\x15POKEMON_TYPE_FIGHTING\x10\x02\x12\x17\n\x13POKEMON_TYPE_FLYING\x10\x03\x12\x17\n\x13POKEMON_TYPE_POISON\x10\x04\x12\x17\n\x13POKEMON_TYPE_GROUND\x10\x05\x12\x15\n\x11POKEMON_TYPE_ROCK\x10\x06\x12\x14\n\x10POKEMON_TYPE_BUG\x10\x07\x12\x16\n\x12POKEMON_TYPE_GHOST\x10\x08\x12\x16\n\x12POKEMON_TYPE_STEEL\x10\t\x12\x15\n\x11POKEMON_TYPE_FIRE\x10\n\x12\x16\n\x12POKEMON_TYPE_WATER\x10\x0b\x12\x16\n\x12POKEMON_TYPE_GRASS\x10\x0c\x12\x19\n\x15POKEMON_TYPE_ELECTRIC\x10\r\x12\x18\n\x14POKEMON_TYPE_PSYCHIC\x10\x0e\x12\x14\n\x10POKEMON_TYPE_ICE\x10\x0f\x12\x17\n\x13POKEMON_TYPE_DRAGON\x10\x10\x12\x15\n\x11POKEMON_TYPE_DARK\x10\x11\x12\x16\n\x12POKEMON_TYPE_FAIRY\x10\x12*c\n\x10HoloPokemonClass\x12\x18\n\x14POKEMON_CLASS_NORMAL\x10\x00\x12\x1b\n\x17POKEMON_CLASS_LEGENDARY\x10\x01\x12\x18\n\x14POKEMON_CLASS_MYTHIC\x10\x02*\x96\x02\n\x11HoloPokemonNature\x12\x12\n\x0eNATURE_UNKNOWN\x10\x00\x12\x1e\n\x1aV0001_POKEMON_NATURE_STOIC\x10\x01\x12!\n\x1dV0002_POKEMON_NATURE_ASSASSIN\x10\x02\x12!\n\x1dV0003_POKEMON_NATURE_GUARDIAN\x10\x03\x12\x1f\n\x1bV0004_POKEMON_NATURE_RAIDER\x10\x04\x12\"\n\x1eV0005_POKEMON_NATURE_PROTECTOR\x10\x05\x12\x1f\n\x1bV0006_POKEMON_NATURE_SENTRY\x10\x06\x12!\n\x1dV0007_POKEMON_NATURE_CHAMPION\x10\x07*\x85\x02\n\x17HoloPokemonMovementType\x12\x1f\n\x1bPOKEMON_ENC_MOVEMENT_STATIC\x10\x00\x12\x1d\n\x19POKEMON_ENC_MOVEMENT_JUMP\x10\x01\x12!\n\x1dPOKEMON_ENC_MOVEMENT_VERTICAL\x10\x02\x12 \n\x1cPOKEMON_ENC_MOVEMENT_PSYCHIC\x10\x03\x12!\n\x1dPOKEMON_ENC_MOVEMENT_ELECTRIC\x10\x04\x12\x1f\n\x1bPOKEMON_ENC_MOVEMENT_FLYING\x10\x05\x12!\n\x1dPOKEMON_ENC_MOVEMENT_HOVERING\x10\x06*\xda\x02\n\x10HoloItemCategory\x12\x16\n\x12ITEM_CATEGORY_NONE\x10\x00\x12\x1a\n\x16ITEM_CATEGORY_POKEBALL\x10\x01\x12\x16\n\x12ITEM_CATEGORY_FOOD\x10\x02\x12\x1a\n\x16ITEM_CATEGORY_MEDICINE\x10\x03\x12\x17\n\x13ITEM_CATEGORY_BOOST\x10\x04\x12\x1a\n\x16ITEM_CATEGORY_UTILITES\x10\x05\x12\x18\n\x14ITEM_CATEGORY_CAMERA\x10\x06\x12\x16\n\x12ITEM_CATEGORY_DISK\x10\x07\x12\x1b\n\x17ITEM_CATEGORY_INCUBATOR\x10\x08\x12\x19\n\x15ITEM_CATEGORY_INCENSE\x10\t\x12\x1a\n\x16ITEM_CATEGORY_XP_BOOST\x10\n\x12#\n\x1fITEM_CATEGORY_INVENTORY_UPGRADE\x10\x0b*\x9c\x04\n\x0eHoloItemEffect\x12\x14\n\x10ITEM_EFFECT_NONE\x10\x00\x12\x1c\n\x17ITEM_EFFECT_CAP_NO_FLEE\x10\xe8\x07\x12 \n\x1bITEM_EFFECT_CAP_NO_MOVEMENT\x10\xea\x07\x12\x1e\n\x19ITEM_EFFECT_CAP_NO_THREAT\x10\xeb\x07\x12\x1f\n\x1aITEM_EFFECT_CAP_TARGET_MAX\x10\xec\x07\x12 \n\x1bITEM_EFFECT_CAP_TARGET_SLOW\x10\xed\x07\x12!\n\x1cITEM_EFFECT_CAP_CHANCE_NIGHT\x10\xee\x07\x12#\n\x1eITEM_EFFECT_CAP_CHANCE_TRAINER\x10\xef\x07\x12\'\n\"ITEM_EFFECT_CAP_CHANCE_FIRST_THROW\x10\xf0\x07\x12\"\n\x1dITEM_EFFECT_CAP_CHANCE_LEGEND\x10\xf1\x07\x12!\n\x1cITEM_EFFECT_CAP_CHANCE_HEAVY\x10\xf2\x07\x12\"\n\x1dITEM_EFFECT_CAP_CHANCE_REPEAT\x10\xf3\x07\x12\'\n\"ITEM_EFFECT_CAP_CHANCE_MULTI_THROW\x10\xf4\x07\x12\"\n\x1dITEM_EFFECT_CAP_CHANCE_ALWAYS\x10\xf5\x07\x12(\n#ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW\x10\xf6\x07*\xf0\x05\n\x10HoloActivityType\x12\x14\n\x10\x41\x43TIVITY_UNKNOWN\x10\x00\x12\x1a\n\x16\x41\x43TIVITY_CATCH_POKEMON\x10\x01\x12!\n\x1d\x41\x43TIVITY_CATCH_LEGEND_POKEMON\x10\x02\x12\x19\n\x15\x41\x43TIVITY_FLEE_POKEMON\x10\x03\x12\x18\n\x14\x41\x43TIVITY_DEFEAT_FORT\x10\x04\x12\x1b\n\x17\x41\x43TIVITY_EVOLVE_POKEMON\x10\x05\x12\x16\n\x12\x41\x43TIVITY_HATCH_EGG\x10\x06\x12\x14\n\x10\x41\x43TIVITY_WALK_KM\x10\x07\x12\x1e\n\x1a\x41\x43TIVITY_POKEDEX_ENTRY_NEW\x10\x08\x12\x1e\n\x1a\x41\x43TIVITY_CATCH_FIRST_THROW\x10\t\x12\x1d\n\x19\x41\x43TIVITY_CATCH_NICE_THROW\x10\n\x12\x1e\n\x1a\x41\x43TIVITY_CATCH_GREAT_THROW\x10\x0b\x12\"\n\x1e\x41\x43TIVITY_CATCH_EXCELLENT_THROW\x10\x0c\x12\x1c\n\x18\x41\x43TIVITY_CATCH_CURVEBALL\x10\r\x12%\n!ACTIVITY_CATCH_FIRST_CATCH_OF_DAY\x10\x0e\x12\x1c\n\x18\x41\x43TIVITY_CATCH_MILESTONE\x10\x0f\x12\x1a\n\x16\x41\x43TIVITY_TRAIN_POKEMON\x10\x10\x12\x18\n\x14\x41\x43TIVITY_SEARCH_FORT\x10\x11\x12\x1c\n\x18\x41\x43TIVITY_RELEASE_POKEMON\x10\x12\x12\"\n\x1e\x41\x43TIVITY_HATCH_EGG_SMALL_BONUS\x10\x13\x12#\n\x1f\x41\x43TIVITY_HATCH_EGG_MEDIUM_BONUS\x10\x14\x12\"\n\x1e\x41\x43TIVITY_HATCH_EGG_LARGE_BONUS\x10\x15\x12 \n\x1c\x41\x43TIVITY_DEFEAT_GYM_DEFENDER\x10\x16\x12\x1e\n\x1a\x41\x43TIVITY_DEFEAT_GYM_LEADER\x10\x17*\xa5\x07\n\rHoloBadgeType\x12\x0f\n\x0b\x42\x41\x44GE_UNSET\x10\x00\x12\x13\n\x0f\x42\x41\x44GE_TRAVEL_KM\x10\x01\x12\x19\n\x15\x42\x41\x44GE_POKEDEX_ENTRIES\x10\x02\x12\x17\n\x13\x42\x41\x44GE_CAPTURE_TOTAL\x10\x03\x12\x17\n\x13\x42\x41\x44GE_DEFEATED_FORT\x10\x04\x12\x17\n\x13\x42\x41\x44GE_EVOLVED_TOTAL\x10\x05\x12\x17\n\x13\x42\x41\x44GE_HATCHED_TOTAL\x10\x06\x12\x1b\n\x17\x42\x41\x44GE_ENCOUNTERED_TOTAL\x10\x07\x12\x1b\n\x17\x42\x41\x44GE_POKESTOPS_VISITED\x10\x08\x12\x1a\n\x16\x42\x41\x44GE_UNIQUE_POKESTOPS\x10\t\x12\x19\n\x15\x42\x41\x44GE_POKEBALL_THROWN\x10\n\x12\x16\n\x12\x42\x41\x44GE_BIG_MAGIKARP\x10\x0b\x12\x18\n\x14\x42\x41\x44GE_DEPLOYED_TOTAL\x10\x0c\x12\x1b\n\x17\x42\x41\x44GE_BATTLE_ATTACK_WON\x10\r\x12\x1d\n\x19\x42\x41\x44GE_BATTLE_TRAINING_WON\x10\x0e\x12\x1b\n\x17\x42\x41\x44GE_BATTLE_DEFEND_WON\x10\x0f\x12\x19\n\x15\x42\x41\x44GE_PRESTIGE_RAISED\x10\x10\x12\x1a\n\x16\x42\x41\x44GE_PRESTIGE_DROPPED\x10\x11\x12\x15\n\x11\x42\x41\x44GE_TYPE_NORMAL\x10\x12\x12\x17\n\x13\x42\x41\x44GE_TYPE_FIGHTING\x10\x13\x12\x15\n\x11\x42\x41\x44GE_TYPE_FLYING\x10\x14\x12\x15\n\x11\x42\x41\x44GE_TYPE_POISON\x10\x15\x12\x15\n\x11\x42\x41\x44GE_TYPE_GROUND\x10\x16\x12\x13\n\x0f\x42\x41\x44GE_TYPE_ROCK\x10\x17\x12\x12\n\x0e\x42\x41\x44GE_TYPE_BUG\x10\x18\x12\x14\n\x10\x42\x41\x44GE_TYPE_GHOST\x10\x19\x12\x14\n\x10\x42\x41\x44GE_TYPE_STEEL\x10\x1a\x12\x13\n\x0f\x42\x41\x44GE_TYPE_FIRE\x10\x1b\x12\x14\n\x10\x42\x41\x44GE_TYPE_WATER\x10\x1c\x12\x14\n\x10\x42\x41\x44GE_TYPE_GRASS\x10\x1d\x12\x17\n\x13\x42\x41\x44GE_TYPE_ELECTRIC\x10\x1e\x12\x16\n\x12\x42\x41\x44GE_TYPE_PSYCHIC\x10\x1f\x12\x12\n\x0e\x42\x41\x44GE_TYPE_ICE\x10 \x12\x15\n\x11\x42\x41\x44GE_TYPE_DRAGON\x10!\x12\x13\n\x0f\x42\x41\x44GE_TYPE_DARK\x10\"\x12\x14\n\x10\x42\x41\x44GE_TYPE_FAIRY\x10#\x12\x17\n\x13\x42\x41\x44GE_SMALL_RATTATA\x10$\x12\x11\n\rBADGE_PIKACHU\x10%*\x96\x01\n\x13\x43\x61meraInterpolation\x12\x12\n\x0e\x43\x41M_INTERP_CUT\x10\x00\x12\x15\n\x11\x43\x41M_INTERP_LINEAR\x10\x01\x12\x15\n\x11\x43\x41M_INTERP_SMOOTH\x10\x02\x12%\n!CAM_INTERP_SMOOTH_ROT_LINEAR_MOVE\x10\x03\x12\x16\n\x12\x43\x41M_INTERP_DEPENDS\x10\x04*\xfc\x03\n\x0c\x43\x61meraTarget\x12\x17\n\x13\x43\x41M_TARGET_ATTACKER\x10\x00\x12\x1c\n\x18\x43\x41M_TARGET_ATTACKER_EDGE\x10\x01\x12\x1e\n\x1a\x43\x41M_TARGET_ATTACKER_GROUND\x10\x02\x12\x17\n\x13\x43\x41M_TARGET_DEFENDER\x10\x03\x12\x1c\n\x18\x43\x41M_TARGET_DEFENDER_EDGE\x10\x04\x12\x1e\n\x1a\x43\x41M_TARGET_DEFENDER_GROUND\x10\x05\x12 \n\x1c\x43\x41M_TARGET_ATTACKER_DEFENDER\x10\x06\x12%\n!CAM_TARGET_ATTACKER_DEFENDER_EDGE\x10\x07\x12 \n\x1c\x43\x41M_TARGET_DEFENDER_ATTACKER\x10\x08\x12%\n!CAM_TARGET_DEFENDER_ATTACKER_EDGE\x10\t\x12\'\n#CAM_TARGET_ATTACKER_DEFENDER_MIRROR\x10\x0b\x12)\n%CAM_TARGET_SHOULDER_ATTACKER_DEFENDER\x10\x0c\x12\x30\n,CAM_TARGET_SHOULDER_ATTACKER_DEFENDER_MIRROR\x10\r\x12&\n\"CAM_TARGET_ATTACKER_DEFENDER_WORLD\x10\x0e*\x83\'\n\x0fHoloPokemonMove\x12\x0e\n\nMOVE_UNSET\x10\x00\x12\x1c\n\x18V0001_MOVE_THUNDER_SHOCK\x10\x01\x12\x1b\n\x17V0002_MOVE_QUICK_ATTACK\x10\x02\x12\x16\n\x12V0003_MOVE_SCRATCH\x10\x03\x12\x14\n\x10V0004_MOVE_EMBER\x10\x04\x12\x18\n\x14V0005_MOVE_VINE_WHIP\x10\x05\x12\x15\n\x11V0006_MOVE_TACKLE\x10\x06\x12\x19\n\x15V0007_MOVE_RAZOR_LEAF\x10\x07\x12\x18\n\x14V0008_MOVE_TAKE_DOWN\x10\x08\x12\x18\n\x14V0009_MOVE_WATER_GUN\x10\t\x12\x13\n\x0fV0010_MOVE_BITE\x10\n\x12\x14\n\x10V0011_MOVE_POUND\x10\x0b\x12\x1a\n\x16V0012_MOVE_DOUBLE_SLAP\x10\x0c\x12\x13\n\x0fV0013_MOVE_WRAP\x10\r\x12\x19\n\x15V0014_MOVE_HYPER_BEAM\x10\x0e\x12\x13\n\x0fV0015_MOVE_LICK\x10\x0f\x12\x19\n\x15V0016_MOVE_DARK_PULSE\x10\x10\x12\x13\n\x0fV0017_MOVE_SMOG\x10\x11\x12\x15\n\x11V0018_MOVE_SLUDGE\x10\x12\x12\x19\n\x15V0019_MOVE_METAL_CLAW\x10\x13\x12\x18\n\x14V0020_MOVE_VICE_GRIP\x10\x14\x12\x1a\n\x16V0021_MOVE_FLAME_WHEEL\x10\x15\x12\x17\n\x13V0022_MOVE_MEGAHORN\x10\x16\x12\x1a\n\x16V0023_MOVE_WING_ATTACK\x10\x17\x12\x1b\n\x17V0024_MOVE_FLAMETHROWER\x10\x18\x12\x1b\n\x17V0025_MOVE_SUCKER_PUNCH\x10\x19\x12\x12\n\x0eV0026_MOVE_DIG\x10\x1a\x12\x17\n\x13V0027_MOVE_LOW_KICK\x10\x1b\x12\x19\n\x15V0028_MOVE_CROSS_CHOP\x10\x1c\x12\x19\n\x15V0029_MOVE_PSYCHO_CUT\x10\x1d\x12\x16\n\x12V0030_MOVE_PSYBEAM\x10\x1e\x12\x19\n\x15V0031_MOVE_EARTHQUAKE\x10\x1f\x12\x19\n\x15V0032_MOVE_STONE_EDGE\x10 \x12\x18\n\x14V0033_MOVE_ICE_PUNCH\x10!\x12\x1a\n\x16V0034_MOVE_HEART_STAMP\x10\"\x12\x18\n\x14V0035_MOVE_DISCHARGE\x10#\x12\x1b\n\x17V0036_MOVE_FLASH_CANNON\x10$\x12\x13\n\x0fV0037_MOVE_PECK\x10%\x12\x19\n\x15V0038_MOVE_DRILL_PECK\x10&\x12\x17\n\x13V0039_MOVE_ICE_BEAM\x10\'\x12\x17\n\x13V0040_MOVE_BLIZZARD\x10(\x12\x18\n\x14V0041_MOVE_AIR_SLASH\x10)\x12\x18\n\x14V0042_MOVE_HEAT_WAVE\x10*\x12\x18\n\x14V0043_MOVE_TWINEEDLE\x10+\x12\x19\n\x15V0044_MOVE_POISON_JAB\x10,\x12\x19\n\x15V0045_MOVE_AERIAL_ACE\x10-\x12\x18\n\x14V0046_MOVE_DRILL_RUN\x10.\x12\x1d\n\x19V0047_MOVE_PETAL_BLIZZARD\x10/\x12\x19\n\x15V0048_MOVE_MEGA_DRAIN\x10\x30\x12\x17\n\x13V0049_MOVE_BUG_BUZZ\x10\x31\x12\x1a\n\x16V0050_MOVE_POISON_FANG\x10\x32\x12\x1a\n\x16V0051_MOVE_NIGHT_SLASH\x10\x33\x12\x14\n\x10V0052_MOVE_SLASH\x10\x34\x12\x1a\n\x16V0053_MOVE_BUBBLE_BEAM\x10\x35\x12\x19\n\x15V0054_MOVE_SUBMISSION\x10\x36\x12\x1a\n\x16V0055_MOVE_KARATE_CHOP\x10\x37\x12\x18\n\x14V0056_MOVE_LOW_SWEEP\x10\x38\x12\x17\n\x13V0057_MOVE_AQUA_JET\x10\x39\x12\x18\n\x14V0058_MOVE_AQUA_TAIL\x10:\x12\x18\n\x14V0059_MOVE_SEED_BOMB\x10;\x12\x17\n\x13V0060_MOVE_PSYSHOCK\x10<\x12\x19\n\x15V0061_MOVE_ROCK_THROW\x10=\x12\x1c\n\x18V0062_MOVE_ANCIENT_POWER\x10>\x12\x18\n\x14V0063_MOVE_ROCK_TOMB\x10?\x12\x19\n\x15V0064_MOVE_ROCK_SLIDE\x10@\x12\x18\n\x14V0065_MOVE_POWER_GEM\x10\x41\x12\x1b\n\x17V0066_MOVE_SHADOW_SNEAK\x10\x42\x12\x1b\n\x17V0067_MOVE_SHADOW_PUNCH\x10\x43\x12\x1a\n\x16V0068_MOVE_SHADOW_CLAW\x10\x44\x12\x1b\n\x17V0069_MOVE_OMINOUS_WIND\x10\x45\x12\x1a\n\x16V0070_MOVE_SHADOW_BALL\x10\x46\x12\x1b\n\x17V0071_MOVE_BULLET_PUNCH\x10G\x12\x1a\n\x16V0072_MOVE_MAGNET_BOMB\x10H\x12\x19\n\x15V0073_MOVE_STEEL_WING\x10I\x12\x18\n\x14V0074_MOVE_IRON_HEAD\x10J\x12\x1f\n\x1bV0075_MOVE_PARABOLIC_CHARGE\x10K\x12\x14\n\x10V0076_MOVE_SPARK\x10L\x12\x1c\n\x18V0077_MOVE_THUNDER_PUNCH\x10M\x12\x16\n\x12V0078_MOVE_THUNDER\x10N\x12\x1a\n\x16V0079_MOVE_THUNDERBOLT\x10O\x12\x16\n\x12V0080_MOVE_TWISTER\x10P\x12\x1c\n\x18V0081_MOVE_DRAGON_BREATH\x10Q\x12\x1b\n\x17V0082_MOVE_DRAGON_PULSE\x10R\x12\x1a\n\x16V0083_MOVE_DRAGON_CLAW\x10S\x12\x1e\n\x1aV0084_MOVE_DISARMING_VOICE\x10T\x12\x1c\n\x18V0085_MOVE_DRAINING_KISS\x10U\x12\x1d\n\x19V0086_MOVE_DAZZLING_GLEAM\x10V\x12\x18\n\x14V0087_MOVE_MOONBLAST\x10W\x12\x19\n\x15V0088_MOVE_PLAY_ROUGH\x10X\x12\x1b\n\x17V0089_MOVE_CROSS_POISON\x10Y\x12\x1a\n\x16V0090_MOVE_SLUDGE_BOMB\x10Z\x12\x1a\n\x16V0091_MOVE_SLUDGE_WAVE\x10[\x12\x18\n\x14V0092_MOVE_GUNK_SHOT\x10\\\x12\x17\n\x13V0093_MOVE_MUD_SHOT\x10]\x12\x18\n\x14V0094_MOVE_BONE_CLUB\x10^\x12\x17\n\x13V0095_MOVE_BULLDOZE\x10_\x12\x17\n\x13V0096_MOVE_MUD_BOMB\x10`\x12\x1a\n\x16V0097_MOVE_FURY_CUTTER\x10\x61\x12\x17\n\x13V0098_MOVE_BUG_BITE\x10\x62\x12\x1a\n\x16V0099_MOVE_SIGNAL_BEAM\x10\x63\x12\x18\n\x14V0100_MOVE_X_SCISSOR\x10\x64\x12\x1b\n\x17V0101_MOVE_FLAME_CHARGE\x10\x65\x12\x1a\n\x16V0102_MOVE_FLAME_BURST\x10\x66\x12\x19\n\x15V0103_MOVE_FIRE_BLAST\x10g\x12\x14\n\x10V0104_MOVE_BRINE\x10h\x12\x1a\n\x16V0105_MOVE_WATER_PULSE\x10i\x12\x14\n\x10V0106_MOVE_SCALD\x10j\x12\x19\n\x15V0107_MOVE_HYDRO_PUMP\x10k\x12\x16\n\x12V0108_MOVE_PSYCHIC\x10l\x12\x18\n\x14V0109_MOVE_PSYSTRIKE\x10m\x12\x18\n\x14V0110_MOVE_ICE_SHARD\x10n\x12\x17\n\x13V0111_MOVE_ICY_WIND\x10o\x12\x1b\n\x17V0112_MOVE_FROST_BREATH\x10p\x12\x15\n\x11V0113_MOVE_ABSORB\x10q\x12\x19\n\x15V0114_MOVE_GIGA_DRAIN\x10r\x12\x19\n\x15V0115_MOVE_FIRE_PUNCH\x10s\x12\x19\n\x15V0116_MOVE_SOLAR_BEAM\x10t\x12\x19\n\x15V0117_MOVE_LEAF_BLADE\x10u\x12\x19\n\x15V0118_MOVE_POWER_WHIP\x10v\x12\x15\n\x11V0119_MOVE_SPLASH\x10w\x12\x13\n\x0fV0120_MOVE_ACID\x10x\x12\x19\n\x15V0121_MOVE_AIR_CUTTER\x10y\x12\x18\n\x14V0122_MOVE_HURRICANE\x10z\x12\x1a\n\x16V0123_MOVE_BRICK_BREAK\x10{\x12\x12\n\x0eV0124_MOVE_CUT\x10|\x12\x14\n\x10V0125_MOVE_SWIFT\x10}\x12\x1a\n\x16V0126_MOVE_HORN_ATTACK\x10~\x12\x14\n\x10V0127_MOVE_STOMP\x10\x7f\x12\x18\n\x13V0128_MOVE_HEADBUTT\x10\x80\x01\x12\x1a\n\x15V0129_MOVE_HYPER_FANG\x10\x81\x01\x12\x14\n\x0fV0130_MOVE_SLAM\x10\x82\x01\x12\x19\n\x14V0131_MOVE_BODY_SLAM\x10\x83\x01\x12\x14\n\x0fV0132_MOVE_REST\x10\x84\x01\x12\x18\n\x13V0133_MOVE_STRUGGLE\x10\x85\x01\x12\x1f\n\x1aV0134_MOVE_SCALD_BLASTOISE\x10\x86\x01\x12$\n\x1fV0135_MOVE_HYDRO_PUMP_BLASTOISE\x10\x87\x01\x12\x1a\n\x15V0136_MOVE_WRAP_GREEN\x10\x88\x01\x12\x19\n\x14V0137_MOVE_WRAP_PINK\x10\x89\x01\x12 \n\x1bV0200_MOVE_FURY_CUTTER_FAST\x10\xc8\x01\x12\x1d\n\x18V0201_MOVE_BUG_BITE_FAST\x10\xc9\x01\x12\x19\n\x14V0202_MOVE_BITE_FAST\x10\xca\x01\x12!\n\x1cV0203_MOVE_SUCKER_PUNCH_FAST\x10\xcb\x01\x12\"\n\x1dV0204_MOVE_DRAGON_BREATH_FAST\x10\xcc\x01\x12\"\n\x1dV0205_MOVE_THUNDER_SHOCK_FAST\x10\xcd\x01\x12\x1a\n\x15V0206_MOVE_SPARK_FAST\x10\xce\x01\x12\x1d\n\x18V0207_MOVE_LOW_KICK_FAST\x10\xcf\x01\x12 \n\x1bV0208_MOVE_KARATE_CHOP_FAST\x10\xd0\x01\x12\x1a\n\x15V0209_MOVE_EMBER_FAST\x10\xd1\x01\x12 \n\x1bV0210_MOVE_WING_ATTACK_FAST\x10\xd2\x01\x12\x19\n\x14V0211_MOVE_PECK_FAST\x10\xd3\x01\x12\x19\n\x14V0212_MOVE_LICK_FAST\x10\xd4\x01\x12 \n\x1bV0213_MOVE_SHADOW_CLAW_FAST\x10\xd5\x01\x12\x1e\n\x19V0214_MOVE_VINE_WHIP_FAST\x10\xd6\x01\x12\x1f\n\x1aV0215_MOVE_RAZOR_LEAF_FAST\x10\xd7\x01\x12\x1d\n\x18V0216_MOVE_MUD_SHOT_FAST\x10\xd8\x01\x12\x1e\n\x19V0217_MOVE_ICE_SHARD_FAST\x10\xd9\x01\x12!\n\x1cV0218_MOVE_FROST_BREATH_FAST\x10\xda\x01\x12!\n\x1cV0219_MOVE_QUICK_ATTACK_FAST\x10\xdb\x01\x12\x1c\n\x17V0220_MOVE_SCRATCH_FAST\x10\xdc\x01\x12\x1b\n\x16V0221_MOVE_TACKLE_FAST\x10\xdd\x01\x12\x1a\n\x15V0222_MOVE_POUND_FAST\x10\xde\x01\x12\x18\n\x13V0223_MOVE_CUT_FAST\x10\xdf\x01\x12\x1f\n\x1aV0224_MOVE_POISON_JAB_FAST\x10\xe0\x01\x12\x19\n\x14V0225_MOVE_ACID_FAST\x10\xe1\x01\x12\x1f\n\x1aV0226_MOVE_PSYCHO_CUT_FAST\x10\xe2\x01\x12\x1f\n\x1aV0227_MOVE_ROCK_THROW_FAST\x10\xe3\x01\x12\x1f\n\x1aV0228_MOVE_METAL_CLAW_FAST\x10\xe4\x01\x12!\n\x1cV0229_MOVE_BULLET_PUNCH_FAST\x10\xe5\x01\x12\x1e\n\x19V0230_MOVE_WATER_GUN_FAST\x10\xe6\x01\x12\x1b\n\x16V0231_MOVE_SPLASH_FAST\x10\xe7\x01\x12(\n#V0232_MOVE_WATER_GUN_FAST_BLASTOISE\x10\xe8\x01\x12\x1d\n\x18V0233_MOVE_MUD_SLAP_FAST\x10\xe9\x01\x12!\n\x1cV0234_MOVE_ZEN_HEADBUTT_FAST\x10\xea\x01\x12\x1e\n\x19V0235_MOVE_CONFUSION_FAST\x10\xeb\x01\x12!\n\x1cV0236_MOVE_POISON_STING_FAST\x10\xec\x01\x12\x1b\n\x16V0237_MOVE_BUBBLE_FAST\x10\xed\x01\x12!\n\x1cV0238_MOVE_FEINT_ATTACK_FAST\x10\xee\x01\x12\x1f\n\x1aV0239_MOVE_STEEL_WING_FAST\x10\xef\x01\x12\x1e\n\x19V0240_MOVE_FIRE_FANG_FAST\x10\xf0\x01\x12\x1f\n\x1aV0241_MOVE_ROCK_SMASH_FAST\x10\xf1\x01*\xd1 \n\rHoloPokemonId\x12\x11\n\rPOKEMON_UNSET\x10\x00\x12\x1b\n\x17V0001_POKEMON_BULBASAUR\x10\x01\x12\x19\n\x15V0002_POKEMON_IVYSAUR\x10\x02\x12\x1a\n\x16V0003_POKEMON_VENUSAUR\x10\x03\x12\x1c\n\x18V0004_POKEMON_CHARMANDER\x10\x04\x12\x1c\n\x18V0005_POKEMON_CHARMELEON\x10\x05\x12\x1b\n\x17V0006_POKEMON_CHARIZARD\x10\x06\x12\x1a\n\x16V0007_POKEMON_SQUIRTLE\x10\x07\x12\x1b\n\x17V0008_POKEMON_WARTORTLE\x10\x08\x12\x1b\n\x17V0009_POKEMON_BLASTOISE\x10\t\x12\x1a\n\x16V0010_POKEMON_CATERPIE\x10\n\x12\x19\n\x15V0011_POKEMON_METAPOD\x10\x0b\x12\x1c\n\x18V0012_POKEMON_BUTTERFREE\x10\x0c\x12\x18\n\x14V0013_POKEMON_WEEDLE\x10\r\x12\x18\n\x14V0014_POKEMON_KAKUNA\x10\x0e\x12\x1a\n\x16V0015_POKEMON_BEEDRILL\x10\x0f\x12\x18\n\x14V0016_POKEMON_PIDGEY\x10\x10\x12\x1b\n\x17V0017_POKEMON_PIDGEOTTO\x10\x11\x12\x19\n\x15V0018_POKEMON_PIDGEOT\x10\x12\x12\x19\n\x15V0019_POKEMON_RATTATA\x10\x13\x12\x1a\n\x16V0020_POKEMON_RATICATE\x10\x14\x12\x19\n\x15V0021_POKEMON_SPEAROW\x10\x15\x12\x18\n\x14V0022_POKEMON_FEAROW\x10\x16\x12\x17\n\x13V0023_POKEMON_EKANS\x10\x17\x12\x17\n\x13V0024_POKEMON_ARBOK\x10\x18\x12\x19\n\x15V0025_POKEMON_PIKACHU\x10\x19\x12\x18\n\x14V0026_POKEMON_RAICHU\x10\x1a\x12\x1b\n\x17V0027_POKEMON_SANDSHREW\x10\x1b\x12\x1b\n\x17V0028_POKEMON_SANDSLASH\x10\x1c\x12\x19\n\x15V0029_POKEMON_NIDORAN\x10\x1d\x12\x1a\n\x16V0030_POKEMON_NIDORINA\x10\x1e\x12\x1b\n\x17V0031_POKEMON_NIDOQUEEN\x10\x1f\x12\x19\n\x15V0032_POKEMON_NIDORAN\x10 \x12\x1a\n\x16V0033_POKEMON_NIDORINO\x10!\x12\x1a\n\x16V0034_POKEMON_NIDOKING\x10\"\x12\x1a\n\x16V0035_POKEMON_CLEFAIRY\x10#\x12\x1a\n\x16V0036_POKEMON_CLEFABLE\x10$\x12\x18\n\x14V0037_POKEMON_VULPIX\x10%\x12\x1b\n\x17V0038_POKEMON_NINETALES\x10&\x12\x1c\n\x18V0039_POKEMON_JIGGLYPUFF\x10\'\x12\x1c\n\x18V0040_POKEMON_WIGGLYTUFF\x10(\x12\x17\n\x13V0041_POKEMON_ZUBAT\x10)\x12\x18\n\x14V0042_POKEMON_GOLBAT\x10*\x12\x18\n\x14V0043_POKEMON_ODDISH\x10+\x12\x17\n\x13V0044_POKEMON_GLOOM\x10,\x12\x1b\n\x17V0045_POKEMON_VILEPLUME\x10-\x12\x17\n\x13V0046_POKEMON_PARAS\x10.\x12\x1a\n\x16V0047_POKEMON_PARASECT\x10/\x12\x19\n\x15V0048_POKEMON_VENONAT\x10\x30\x12\x1a\n\x16V0049_POKEMON_VENOMOTH\x10\x31\x12\x19\n\x15V0050_POKEMON_DIGLETT\x10\x32\x12\x19\n\x15V0051_POKEMON_DUGTRIO\x10\x33\x12\x18\n\x14V0052_POKEMON_MEOWTH\x10\x34\x12\x19\n\x15V0053_POKEMON_PERSIAN\x10\x35\x12\x19\n\x15V0054_POKEMON_PSYDUCK\x10\x36\x12\x19\n\x15V0055_POKEMON_GOLDUCK\x10\x37\x12\x18\n\x14V0056_POKEMON_MANKEY\x10\x38\x12\x1a\n\x16V0057_POKEMON_PRIMEAPE\x10\x39\x12\x1b\n\x17V0058_POKEMON_GROWLITHE\x10:\x12\x1a\n\x16V0059_POKEMON_ARCANINE\x10;\x12\x19\n\x15V0060_POKEMON_POLIWAG\x10<\x12\x1b\n\x17V0061_POKEMON_POLIWHIRL\x10=\x12\x1b\n\x17V0062_POKEMON_POLIWRATH\x10>\x12\x16\n\x12V0063_POKEMON_ABRA\x10?\x12\x19\n\x15V0064_POKEMON_KADABRA\x10@\x12\x1a\n\x16V0065_POKEMON_ALAKAZAM\x10\x41\x12\x18\n\x14V0066_POKEMON_MACHOP\x10\x42\x12\x19\n\x15V0067_POKEMON_MACHOKE\x10\x43\x12\x19\n\x15V0068_POKEMON_MACHAMP\x10\x44\x12\x1c\n\x18V0069_POKEMON_BELLSPROUT\x10\x45\x12\x1c\n\x18V0070_POKEMON_WEEPINBELL\x10\x46\x12\x1c\n\x18V0071_POKEMON_VICTREEBEL\x10G\x12\x1b\n\x17V0072_POKEMON_TENTACOOL\x10H\x12\x1c\n\x18V0073_POKEMON_TENTACRUEL\x10I\x12\x19\n\x15V0074_POKEMON_GEODUDE\x10J\x12\x1a\n\x16V0075_POKEMON_GRAVELER\x10K\x12\x17\n\x13V0076_POKEMON_GOLEM\x10L\x12\x18\n\x14V0077_POKEMON_PONYTA\x10M\x12\x1a\n\x16V0078_POKEMON_RAPIDASH\x10N\x12\x1a\n\x16V0079_POKEMON_SLOWPOKE\x10O\x12\x19\n\x15V0080_POKEMON_SLOWBRO\x10P\x12\x1b\n\x17V0081_POKEMON_MAGNEMITE\x10Q\x12\x1a\n\x16V0082_POKEMON_MAGNETON\x10R\x12\x1b\n\x17V0083_POKEMON_FARFETCHD\x10S\x12\x17\n\x13V0084_POKEMON_DODUO\x10T\x12\x18\n\x14V0085_POKEMON_DODRIO\x10U\x12\x16\n\x12V0086_POKEMON_SEEL\x10V\x12\x19\n\x15V0087_POKEMON_DEWGONG\x10W\x12\x18\n\x14V0088_POKEMON_GRIMER\x10X\x12\x15\n\x11V0089_POKEMON_MUK\x10Y\x12\x1a\n\x16V0090_POKEMON_SHELLDER\x10Z\x12\x1a\n\x16V0091_POKEMON_CLOYSTER\x10[\x12\x18\n\x14V0092_POKEMON_GASTLY\x10\\\x12\x19\n\x15V0093_POKEMON_HAUNTER\x10]\x12\x18\n\x14V0094_POKEMON_GENGAR\x10^\x12\x16\n\x12V0095_POKEMON_ONIX\x10_\x12\x19\n\x15V0096_POKEMON_DROWZEE\x10`\x12\x17\n\x13V0097_POKEMON_HYPNO\x10\x61\x12\x18\n\x14V0098_POKEMON_KRABBY\x10\x62\x12\x19\n\x15V0099_POKEMON_KINGLER\x10\x63\x12\x19\n\x15V0100_POKEMON_VOLTORB\x10\x64\x12\x1b\n\x17V0101_POKEMON_ELECTRODE\x10\x65\x12\x1b\n\x17V0102_POKEMON_EXEGGCUTE\x10\x66\x12\x1b\n\x17V0103_POKEMON_EXEGGUTOR\x10g\x12\x18\n\x14V0104_POKEMON_CUBONE\x10h\x12\x19\n\x15V0105_POKEMON_MAROWAK\x10i\x12\x1b\n\x17V0106_POKEMON_HITMONLEE\x10j\x12\x1c\n\x18V0107_POKEMON_HITMONCHAN\x10k\x12\x1b\n\x17V0108_POKEMON_LICKITUNG\x10l\x12\x19\n\x15V0109_POKEMON_KOFFING\x10m\x12\x19\n\x15V0110_POKEMON_WEEZING\x10n\x12\x19\n\x15V0111_POKEMON_RHYHORN\x10o\x12\x18\n\x14V0112_POKEMON_RHYDON\x10p\x12\x19\n\x15V0113_POKEMON_CHANSEY\x10q\x12\x19\n\x15V0114_POKEMON_TANGELA\x10r\x12\x1c\n\x18V0115_POKEMON_KANGASKHAN\x10s\x12\x18\n\x14V0116_POKEMON_HORSEA\x10t\x12\x18\n\x14V0117_POKEMON_SEADRA\x10u\x12\x19\n\x15V0118_POKEMON_GOLDEEN\x10v\x12\x19\n\x15V0119_POKEMON_SEAKING\x10w\x12\x18\n\x14V0120_POKEMON_STARYU\x10x\x12\x19\n\x15V0121_POKEMON_STARMIE\x10y\x12\x19\n\x15V0122_POKEMON_MR_MIME\x10z\x12\x19\n\x15V0123_POKEMON_SCYTHER\x10{\x12\x16\n\x12V0124_POKEMON_JYNX\x10|\x12\x1c\n\x18V0125_POKEMON_ELECTABUZZ\x10}\x12\x18\n\x14V0126_POKEMON_MAGMAR\x10~\x12\x18\n\x14V0127_POKEMON_PINSIR\x10\x7f\x12\x19\n\x14V0128_POKEMON_TAUROS\x10\x80\x01\x12\x1b\n\x16V0129_POKEMON_MAGIKARP\x10\x81\x01\x12\x1b\n\x16V0130_POKEMON_GYARADOS\x10\x82\x01\x12\x19\n\x14V0131_POKEMON_LAPRAS\x10\x83\x01\x12\x18\n\x13V0132_POKEMON_DITTO\x10\x84\x01\x12\x18\n\x13V0133_POKEMON_EEVEE\x10\x85\x01\x12\x1b\n\x16V0134_POKEMON_VAPOREON\x10\x86\x01\x12\x1a\n\x15V0135_POKEMON_JOLTEON\x10\x87\x01\x12\x1a\n\x15V0136_POKEMON_FLAREON\x10\x88\x01\x12\x1a\n\x15V0137_POKEMON_PORYGON\x10\x89\x01\x12\x1a\n\x15V0138_POKEMON_OMANYTE\x10\x8a\x01\x12\x1a\n\x15V0139_POKEMON_OMASTAR\x10\x8b\x01\x12\x19\n\x14V0140_POKEMON_KABUTO\x10\x8c\x01\x12\x1b\n\x16V0141_POKEMON_KABUTOPS\x10\x8d\x01\x12\x1d\n\x18V0142_POKEMON_AERODACTYL\x10\x8e\x01\x12\x1a\n\x15V0143_POKEMON_SNORLAX\x10\x8f\x01\x12\x1b\n\x16V0144_POKEMON_ARTICUNO\x10\x90\x01\x12\x19\n\x14V0145_POKEMON_ZAPDOS\x10\x91\x01\x12\x1a\n\x15V0146_POKEMON_MOLTRES\x10\x92\x01\x12\x1a\n\x15V0147_POKEMON_DRATINI\x10\x93\x01\x12\x1c\n\x17V0148_POKEMON_DRAGONAIR\x10\x94\x01\x12\x1c\n\x17V0149_POKEMON_DRAGONITE\x10\x95\x01\x12\x19\n\x14V0150_POKEMON_MEWTWO\x10\x96\x01\x12\x16\n\x11V0151_POKEMON_MEW\x10\x97\x01*n\n\x08Platform\x12\x12\n\x0ePLATFORM_UNSET\x10\x00\x12\x10\n\x0cPLATFORM_IOS\x10\x01\x12\x14\n\x10PLATFORM_ANDROID\x10\x02\x12\x10\n\x0cPLATFORM_OSX\x10\x03\x12\x14\n\x10PLATFORM_WINDOWS\x10\x04*\xe9\x01\n\x12TutorialCompletion\x12\x10\n\x0cLEGAL_SCREEN\x10\x00\x12\x14\n\x10\x41VATAR_SELECTION\x10\x01\x12\x14\n\x10\x41\x43\x43OUNT_CREATION\x10\x02\x12\x13\n\x0fPOKEMON_CAPTURE\x10\x03\x12\x12\n\x0eNAME_SELECTION\x10\x04\x12\x11\n\rPOKEMON_BERRY\x10\x05\x12\x0c\n\x08USE_ITEM\x10\x06\x12\"\n\x1e\x46IRST_TIME_EXPERIENCE_COMPLETE\x10\x07\x12\x15\n\x11POKESTOP_TUTORIAL\x10\x08\x12\x10\n\x0cGYM_TUTORIAL\x10\tP\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0fremaining.proto\x12\x0cHoloholo.Rpc\x1a\x15holoholo_shared.proto\"\x17\n\x15GoogleAuthEventParams\"\x18\n\x16\x43hannelAuthEventParams\"\x1b\n\x19LocationUpdateEventParams\"\x18\n\x16RpcResponseEventParams\"\r\n\x0bGoogleToken\"\x98\x01\n\x17\x41ssetDigestRequestProto\x12(\n\x08Platform\x18\x01 \x01(\x0e\x32\x16.Holoholo.Rpc.Platform\x12\x1a\n\x12\x44\x65viceManufacturer\x18\x02 \x01(\t\x12\x13\n\x0b\x44\x65viceModel\x18\x03 \x01(\t\x12\x0e\n\x06Locale\x18\x04 \x01(\t\x12\x12\n\nAppVersion\x18\x05 \x01(\r\"z\n\x15\x41ssetDigestEntryProto\x12\x0f\n\x07\x41ssetId\x18\x01 \x01(\t\x12\x12\n\nBundleName\x18\x02 \x01(\t\x12\x0f\n\x07Version\x18\x03 \x01(\x03\x12\x10\n\x08\x43hecksum\x18\x04 \x01(\r\x12\x0c\n\x04Size\x18\x05 \x01(\x05\x12\x0b\n\x03Key\x18\x06 \x01(\x0c\"]\n\x13\x41ssetDigestOutProto\x12\x33\n\x06\x44igest\x18\x01 \x03(\x0b\x32#.Holoholo.Rpc.AssetDigestEntryProto\x12\x11\n\tTimestamp\x18\x02 \x01(\x04\"*\n\x17\x44ownloadUrlRequestProto\x12\x0f\n\x07\x41ssetId\x18\x01 \x03(\t\"U\n\x15\x44ownloadUrlEntryProto\x12\x0f\n\x07\x41ssetId\x18\x01 \x01(\t\x12\x0b\n\x03Url\x18\x02 \x01(\t\x12\x0c\n\x04Size\x18\x03 \x01(\x05\x12\x10\n\x08\x43hecksum\x18\x04 \x01(\r\"P\n\x13\x44ownloadUrlOutProto\x12\x39\n\x0c\x44ownloadUrls\x18\x01 \x03(\x0b\x32#.Holoholo.Rpc.DownloadUrlEntryProto\"\x18\n\x16\x43ollectDailyBonusProto\"a\n\x19\x43ollectDailyBonusOutProto\x12\x44\n\x06Result\x18\x01 \x01(\x0e\x32\x34.Holoholo.Rpc.Types.CollectDailyBonusOutProto.Result\" \n\x1e\x43ollectDailyDefenderBonusProto\"\xb6\x01\n!CollectDailyDefenderBonusOutProto\x12L\n\x06Result\x18\x01 \x01(\x0e\x32<.Holoholo.Rpc.Types.CollectDailyDefenderBonusOutProto.Result\x12\x14\n\x0c\x43urrencyType\x18\x02 \x03(\t\x12\x17\n\x0f\x43urrencyAwarded\x18\x03 \x03(\x05\x12\x14\n\x0cNumDefenders\x18\x04 \x01(\x05\"\x0b\n\tEchoProto\"\x1f\n\x0c\x45\x63hoOutProto\x12\x0f\n\x07\x43ontext\x18\x01 \x01(\t\"\x15\n\x13GetHatchedEggsProto\"\x7f\n\x16GetHatchedEggsOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12\x11\n\tPokemonId\x18\x02 \x03(\x04\x12\x12\n\nExpAwarded\x18\x03 \x03(\x05\x12\x14\n\x0c\x43\x61ndyAwarded\x18\x04 \x03(\x05\x12\x17\n\x0fStardustAwarded\x18\x05 \x03(\x05\"o\n\x0e\x45ncounterProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x04\x12\x14\n\x0cSpawnpointId\x18\x02 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\x8b\x02\n\x11\x45ncounterOutProto\x12/\n\x07Pokemon\x18\x01 \x01(\x0b\x32\x1e.Holoholo.Rpc.WildPokemonProto\x12\x44\n\nBackground\x18\x02 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.EncounterOutProto.Background\x12<\n\x06Status\x18\x03 \x01(\x0e\x32,.Holoholo.Rpc.Types.EncounterOutProto.Status\x12\x41\n\x12\x43\x61ptureProbability\x18\x04 \x01(\x0b\x32%.Holoholo.Rpc.CaptureProbabilityProto\"\xba\x01\n\x11\x43\x61tchPokemonProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x04\x12\x10\n\x08Pokeball\x18\x02 \x01(\x05\x12\x1d\n\x15NormalizedReticleSize\x18\x03 \x01(\x01\x12\x16\n\x0eSpawnPointGuid\x18\x04 \x01(\t\x12\x12\n\nHitPokemon\x18\x05 \x01(\x08\x12\x14\n\x0cSpinModifier\x18\x06 \x01(\x01\x12\x1d\n\x15NormalizedHitPosition\x18\x07 \x01(\x01\"\xb8\x01\n\x14\x43\x61tchPokemonOutProto\x12?\n\x06Status\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.CatchPokemonOutProto.Status\x12\x13\n\x0bMissPercent\x18\x02 \x01(\x01\x12\x19\n\x11\x43\x61pturedPokemonId\x18\x03 \x01(\x04\x12/\n\x06Scores\x18\x04 \x01(\x0b\x32\x1f.Holoholo.Rpc.CaptureScoreProto\"d\n\x13UseItemCaptureProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x13\n\x0b\x45ncounterId\x18\x02 \x01(\x04\x12\x16\n\x0eSpawnPointGuid\x18\x03 \x01(\t\"\xa9\x01\n\x16UseItemCaptureOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12\x17\n\x0fItemCaptureMult\x18\x02 \x01(\x01\x12\x14\n\x0cItemFleeMult\x18\x03 \x01(\x01\x12\x14\n\x0cStopMovement\x18\x04 \x01(\x08\x12\x12\n\nStopAttack\x18\x05 \x01(\x08\x12\x11\n\tTargetMax\x18\x06 \x01(\x08\x12\x12\n\nTargetSlow\x18\x07 \x01(\x08\"3\n\x1e\x45ncounterTutorialCompleteProto\x12\x11\n\tPokedexId\x18\x01 \x01(\x05\"\xcf\x01\n!EncounterTutorialCompleteOutProto\x12L\n\x06Result\x18\x01 \x01(\x0e\x32<.Holoholo.Rpc.Types.EncounterTutorialCompleteOutProto.Result\x12+\n\x07Pokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12/\n\x06Scores\x18\x03 \x01(\x0b\x32\x1f.Holoholo.Rpc.CaptureScoreProto\"\x7f\n\x17\x43\x61ptureProbabilityProto\x12(\n\x0cPokeballType\x18\x01 \x03(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x1a\n\x12\x43\x61ptureProbability\x18\x02 \x03(\x02\x12\x1e\n\x16ReticleDifficultyScale\x18\x0c \x01(\x01\"w\n\x11\x43\x61ptureScoreProto\x12\x34\n\x0c\x41\x63tivityType\x18\x01 \x03(\x0e\x32\x1e.Holoholo.Rpc.HoloActivityType\x12\x0b\n\x03\x45xp\x18\x02 \x03(\x05\x12\r\n\x05\x43\x61ndy\x18\x03 \x03(\x05\x12\x10\n\x08Stardust\x18\x04 \x03(\x05\"@\n\x15UseIncenseActionProto\x12\'\n\x0bIncenseType\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\"\x97\x01\n\x18UseIncenseActionOutProto\x12\x43\n\x06Result\x18\x01 \x01(\x0e\x32\x33.Holoholo.Rpc.Types.UseIncenseActionOutProto.Result\x12\x36\n\x0e\x41ppliedIncense\x18\x02 \x01(\x0b\x32\x1e.Holoholo.Rpc.AppliedItemProto\"L\n\x16GetIncensePokemonProto\x12\x18\n\x10PlayerLatDegrees\x18\x01 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x02 \x01(\x01\"\xdb\x01\n\x19GetIncensePokemonOutProto\x12\x44\n\x06Result\x18\x01 \x01(\x0e\x32\x34.Holoholo.Rpc.Types.GetIncensePokemonOutProto.Result\x12\x15\n\rPokemonTypeId\x18\x02 \x01(\x05\x12\x0b\n\x03Lat\x18\x03 \x01(\x01\x12\x0b\n\x03Lng\x18\x04 \x01(\x01\x12\x19\n\x11\x45ncounterLocation\x18\x05 \x01(\t\x12\x13\n\x0b\x45ncounterId\x18\x06 \x01(\x04\x12\x17\n\x0f\x44isappearTimeMs\x18\x07 \x01(\x03\"G\n\x15IncenseEncounterProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x03\x12\x19\n\x11\x45ncounterLocation\x18\x02 \x01(\t\"\xcf\x01\n\x18IncenseEncounterOutProto\x12\x43\n\x06Result\x18\x01 \x01(\x0e\x32\x33.Holoholo.Rpc.Types.IncenseEncounterOutProto.Result\x12+\n\x07Pokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x41\n\x12\x43\x61ptureProbability\x18\x03 \x01(\x0b\x32%.Holoholo.Rpc.CaptureProbabilityProto\"m\n\x12\x44iskEncounterProto\x12\x13\n\x0b\x45ncounterId\x18\x01 \x01(\x03\x12\x0e\n\x06\x46ortId\x18\x02 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\xc9\x01\n\x15\x44iskEncounterOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.DiskEncounterOutProto.Result\x12+\n\x07Pokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x41\n\x12\x43\x61ptureProbability\x18\x03 \x01(\x0b\x32%.Holoholo.Rpc.CaptureProbabilityProto\"\'\n\x12\x45volvePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\"\xb7\x01\n\x15\x45volvePokemonOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.EvolvePokemonOutProto.Result\x12\x32\n\x0e\x45volvedPokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x12\n\nExpAwarded\x18\x03 \x01(\x05\x12\x14\n\x0c\x43\x61ndyAwarded\x18\x04 \x01(\x05\"h\n\x0f\x46ortDeployProto\x12\x0e\n\x06\x46ortId\x18\x01 \x01(\t\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\xf7\x01\n\x12\x46ortDeployOutProto\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.FortDeployOutProto.Result\x12>\n\x13\x46ortDetailsOutProto\x18\x02 \x01(\x0b\x32!.Holoholo.Rpc.FortDetailsOutProto\x12.\n\nEggPokemon\x18\x03 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\x12\x32\n\rGymStateProto\x18\x04 \x01(\x0b\x32\x1b.Holoholo.Rpc.GymStateProto\"h\n\x0f\x46ortRecallProto\x12\x0e\n\x06\x46ortId\x18\x01 \x01(\t\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\x93\x01\n\x12\x46ortRecallOutProto\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.FortRecallOutProto.Result\x12>\n\x13\x46ortDetailsOutProto\x18\x02 \x01(\x0b\x32!.Holoholo.Rpc.FortDetailsOutProto\"\x84\x01\n\x14\x41\x64\x64\x46ortModifierProto\x12(\n\x0cModifierType\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x0e\n\x06\x46ortId\x18\x02 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"\x9d\x01\n\x17\x41\x64\x64\x46ortModifierOutProto\x12\x42\n\x06Result\x18\x01 \x01(\x0e\x32\x32.Holoholo.Rpc.Types.AddFortModifierOutProto.Result\x12>\n\x13\x46ortDetailsOutProto\x18\x02 \x01(\x0b\x32!.Holoholo.Rpc.FortDetailsOutProto\"\x8a\x01\n\x1cPokemonCameraAttributesProto\x12\x13\n\x0b\x44iskRadiusM\x18\x01 \x01(\x02\x12\x12\n\nCylRadiusM\x18\x02 \x01(\x02\x12\x12\n\nCylHeightM\x18\x03 \x01(\x02\x12\x12\n\nCylGroundM\x18\x04 \x01(\x02\x12\x19\n\x11ShoulderModeScale\x18\x05 \x01(\x02\"\xa0\x02\n\x1fPokemonEncounterAttributesProto\x12\x17\n\x0f\x42\x61seCaptureRate\x18\x01 \x01(\x02\x12\x14\n\x0c\x42\x61seFleeRate\x18\x02 \x01(\x02\x12\x18\n\x10\x43ollisionRadiusM\x18\x03 \x01(\x02\x12\x18\n\x10\x43ollisionHeightM\x18\x04 \x01(\x02\x12\x1c\n\x14\x43ollisionHeadRadiusM\x18\x05 \x01(\x02\x12;\n\x0cMovementType\x18\x06 \x01(\x0e\x32%.Holoholo.Rpc.HoloPokemonMovementType\x12\x16\n\x0eMovementTimerS\x18\x07 \x01(\x02\x12\x11\n\tJumpTimeS\x18\x08 \x01(\x02\x12\x14\n\x0c\x41ttackTimerS\x18\t \x01(\x02\"u\n\x1bPokemonStatsAttributesProto\x12\x13\n\x0b\x42\x61seStamina\x18\x01 \x01(\x05\x12\x12\n\nBaseAttack\x18\x02 \x01(\x05\x12\x13\n\x0b\x42\x61seDefense\x18\x03 \x01(\x05\x12\x18\n\x10\x44odgeEnergyDelta\x18\x08 \x01(\x05\"\xd9\x06\n\x14PokemonSettingsProto\x12-\n\x08UniqueId\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloPokemonId\x12\x12\n\nModelScale\x18\x03 \x01(\x02\x12,\n\x05Type1\x18\x04 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12,\n\x05Type2\x18\x05 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12:\n\x06\x43\x61mera\x18\x06 \x01(\x0b\x32*.Holoholo.Rpc.PokemonCameraAttributesProto\x12@\n\tEncounter\x18\x07 \x01(\x0b\x32-.Holoholo.Rpc.PokemonEncounterAttributesProto\x12\x38\n\x05Stats\x18\x08 \x01(\x0b\x32).Holoholo.Rpc.PokemonStatsAttributesProto\x12\x31\n\nQuickMoves\x18\t \x03(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonMove\x12\x35\n\x0e\x43inematicMoves\x18\n \x03(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonMove\x12\x10\n\x08\x41nimTime\x18\x0b \x03(\x02\x12.\n\tEvolution\x18\x0c \x03(\x0e\x32\x1b.Holoholo.Rpc.HoloPokemonId\x12\x15\n\rEvolutionPips\x18\r \x01(\x05\x12\x34\n\x0cPokemonClass\x18\x0e \x01(\x0e\x32\x1e.Holoholo.Rpc.HoloPokemonClass\x12\x16\n\x0ePokedexHeightM\x18\x0f \x01(\x02\x12\x17\n\x0fPokedexWeightKg\x18\x10 \x01(\x02\x12-\n\x08ParentId\x18\x11 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloPokemonId\x12\x14\n\x0cHeightStdDev\x18\x12 \x01(\x02\x12\x14\n\x0cWeightStdDev\x18\x13 \x01(\x02\x12\x19\n\x11KmDistanceToHatch\x18\x14 \x01(\x02\x12\x33\n\x08\x46\x61milyId\x18\x15 \x01(\x0e\x32!.Holoholo.Rpc.HoloPokemonFamilyId\x12\x15\n\rCandyToEvolve\x18\x16 \x01(\x05\"\x94\x01\n\x17PokeBallAttributesProto\x12\x30\n\nItemEffect\x18\x01 \x01(\x0e\x32\x1c.Holoholo.Rpc.HoloItemEffect\x12\x14\n\x0c\x43\x61ptureMulti\x18\x02 \x01(\x02\x12\x1a\n\x12\x43\x61ptureMultiEffect\x18\x03 \x01(\x02\x12\x15\n\rItemEffectMod\x18\x04 \x01(\x02\">\n\x15PotionAttributesProto\x12\x12\n\nStaPercent\x18\x01 \x01(\x02\x12\x11\n\tStaAmount\x18\x02 \x01(\x05\"+\n\x15ReviveAttributesProto\x12\x12\n\nStaPercent\x18\x01 \x01(\x02\"f\n\x15\x42\x61ttleAttributesProto\x12\x12\n\nStaPercent\x18\x01 \x01(\x02\x12\x12\n\nAtkPercent\x18\x02 \x01(\x02\x12\x12\n\nDefPercent\x18\x03 \x01(\x02\x12\x11\n\tDurationS\x18\x04 \x01(\x02\"y\n\x13\x46oodAttributesProto\x12\x30\n\nItemEffect\x18\x01 \x03(\x0e\x32\x1c.Holoholo.Rpc.HoloItemEffect\x12\x19\n\x11ItemEffectPercent\x18\x02 \x03(\x02\x12\x15\n\rGrowthPercent\x18\x03 \x01(\x02\"u\n\x1fInventoryUpgradeAttributesProto\x12\x19\n\x11\x41\x64\x64itionalStorage\x18\x01 \x01(\x05\x12\x37\n\x0bUpgradeType\x18\x02 \x01(\x0e\x32\".Holoholo.Rpc.InventoryUpgradeType\"O\n\x1e\x45xperienceBoostAttributesProto\x12\x14\n\x0cXpMultiplier\x18\x01 \x01(\x02\x12\x17\n\x0f\x42oostDurationMs\x18\x02 \x01(\x05\"~\n\x1b\x45ggIncubatorAttributesProto\x12\x35\n\rIncubatorType\x18\x01 \x01(\x0e\x32\x1e.Holoholo.Rpc.EggIncubatorType\x12\x0c\n\x04Uses\x18\x02 \x01(\x05\x12\x1a\n\x12\x44istanceMultiplier\x18\x03 \x01(\x02\"\xb9\x02\n\x16IncenseAttributesProto\x12\x1e\n\x16IncenseLifetimeSeconds\x18\x01 \x01(\x05\x12\x32\n\x0bPokemonType\x18\x02 \x03(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12%\n\x1dPokemonIncenseTypeProbability\x18\x03 \x01(\x02\x12(\n StandingTimeBetweenEncountersSec\x18\x04 \x01(\x05\x12%\n\x1dMovingTimeBetweenEncounterSec\x18\x05 \x01(\x05\x12\x30\n(DistanceRequiredForShorterIntervalMeters\x18\x06 \x01(\x05\x12!\n\x19PokemonAttractedLengthSec\x18\x07 \x01(\x05\"a\n\x1b\x46ortModifierAttributesProto\x12\x1f\n\x17ModifierLifetimeSeconds\x18\x01 \x01(\x05\x12!\n\x19TroyDiskNumPokemonSpawned\x18\x02 \x01(\x05\"\x8f\x06\n\x11ItemSettingsProto\x12$\n\x08UniqueId\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12,\n\x08ItemType\x18\x02 \x01(\x0e\x32\x1a.Holoholo.Rpc.HoloItemType\x12\x30\n\x08\x43\x61tegory\x18\x03 \x01(\x0e\x32\x1e.Holoholo.Rpc.HoloItemCategory\x12\x10\n\x08\x44ropFreq\x18\x04 \x01(\x02\x12\x18\n\x10\x44ropTrainerLevel\x18\x05 \x01(\x05\x12\x37\n\x08Pokeball\x18\x06 \x01(\x0b\x32%.Holoholo.Rpc.PokeBallAttributesProto\x12\x33\n\x06Potion\x18\x07 \x01(\x0b\x32#.Holoholo.Rpc.PotionAttributesProto\x12\x33\n\x06Revive\x18\x08 \x01(\x0b\x32#.Holoholo.Rpc.ReviveAttributesProto\x12\x33\n\x06\x42\x61ttle\x18\t \x01(\x0b\x32#.Holoholo.Rpc.BattleAttributesProto\x12/\n\x04\x46ood\x18\n \x01(\x0b\x32!.Holoholo.Rpc.FoodAttributesProto\x12G\n\x10InventoryUpgrade\x18\x0b \x01(\x0b\x32-.Holoholo.Rpc.InventoryUpgradeAttributesProto\x12=\n\x07XpBoost\x18\x0c \x01(\x0b\x32,.Holoholo.Rpc.ExperienceBoostAttributesProto\x12\x35\n\x07Incense\x18\r \x01(\x0b\x32$.Holoholo.Rpc.IncenseAttributesProto\x12?\n\x0c\x45ggIncubator\x18\x0e \x01(\x0b\x32).Holoholo.Rpc.EggIncubatorAttributesProto\x12?\n\x0c\x46ortModifier\x18\x0f \x01(\x0b\x32).Holoholo.Rpc.FortModifierAttributesProto\"\x98\x03\n\x11MoveSettingsProto\x12/\n\x08UniqueId\x18\x01 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonMove\x12\x13\n\x0b\x41nimationId\x18\x02 \x01(\x05\x12+\n\x04Type\x18\x03 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12\r\n\x05Power\x18\x04 \x01(\x02\x12\x16\n\x0e\x41\x63\x63uracyChance\x18\x05 \x01(\x02\x12\x16\n\x0e\x43riticalChance\x18\x06 \x01(\x02\x12\x12\n\nHealScalar\x18\x07 \x01(\x02\x12\x19\n\x11StaminaLossScalar\x18\x08 \x01(\x02\x12\x17\n\x0fTrainerLevelMin\x18\t \x01(\x05\x12\x17\n\x0fTrainerLevelMax\x18\n \x01(\x05\x12\x0f\n\x07VfxName\x18\x0b \x01(\t\x12\x12\n\nDurationMs\x18\x0c \x01(\x05\x12\x1b\n\x13\x44\x61mageWindowStartMs\x18\r \x01(\x05\x12\x19\n\x11\x44\x61mageWindowEndMs\x18\x0e \x01(\x05\x12\x13\n\x0b\x45nergyDelta\x18\x0f \x01(\x05\"-\n\x19MoveSequenceSettingsProto\x12\x10\n\x08Sequence\x18\x01 \x03(\t\"e\n\x1aTypeEffectiveSettingsProto\x12\x31\n\nAttackType\x18\x02 \x01(\x0e\x32\x1d.Holoholo.Rpc.HoloPokemonType\x12\x14\n\x0c\x41ttackScalar\x18\x01 \x03(\x02\"i\n\x12\x42\x61\x64geSettingsProto\x12.\n\tBadgeType\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\x12\x12\n\nBadgeRanks\x18\x02 \x01(\x05\x12\x0f\n\x07Targets\x18\x03 \x03(\x05\"\x9a\x03\n\x13\x43\x61meraSettingsProto\x12\x12\n\nNextCamera\x18\x01 \x01(\t\x12\x38\n\rInterpolation\x18\x02 \x03(\x0e\x32!.Holoholo.Rpc.CameraInterpolation\x12.\n\nTargetType\x18\x03 \x03(\x0e\x32\x1a.Holoholo.Rpc.CameraTarget\x12\x13\n\x0b\x45\x61seInSpeed\x18\x04 \x03(\x02\x12\x14\n\x0c\x45\x61seOutSpeed\x18\x05 \x03(\x02\x12\x11\n\tDurationS\x18\x06 \x03(\x02\x12\r\n\x05WaitS\x18\x07 \x03(\x02\x12\x13\n\x0bTransitionS\x18\x08 \x03(\x02\x12\x10\n\x08\x41ngleDeg\x18\t \x03(\x02\x12\x16\n\x0e\x41ngleOffsetDeg\x18\n \x03(\x02\x12\x10\n\x08PitchDeg\x18\x0b \x03(\x02\x12\x16\n\x0ePitchOffsetDeg\x18\x0c \x03(\x02\x12\x0f\n\x07RollDeg\x18\r \x03(\x02\x12\x11\n\tDistanceM\x18\x0e \x03(\x02\x12\x15\n\rHeightPercent\x18\x0f \x03(\x02\x12\x14\n\x0cVertCtrRatio\x18\x10 \x03(\x02\"\x92\x01\n\x18PlayerLevelSettingsProto\x12\x0f\n\x07RankNum\x18\x01 \x03(\x05\x12\x13\n\x0bRequiredExp\x18\x02 \x03(\x05\x12\x14\n\x0c\x43pMultiplier\x18\x03 \x03(\x02\x12\x19\n\x11MaxEggPlayerLevel\x18\x04 \x01(\x05\x12\x1f\n\x17MaxEncounterPlayerLevel\x18\x05 \x01(\x05\"p\n\x15GymLevelSettingsProto\x12\x13\n\x0bRequiredExp\x18\x01 \x03(\x05\x12\x13\n\x0bLeaderSlots\x18\x02 \x03(\x05\x12\x14\n\x0cTrainerSlots\x18\x03 \x03(\x05\x12\x17\n\x0fSearchRollBonus\x18\x04 \x03(\x05\"\xaa\x03\n\x16GymBattleSettingsProto\x12\x14\n\x0c\x45nergyPerSec\x18\x01 \x01(\x02\x12\x17\n\x0f\x44odgeEnergyCost\x18\x02 \x01(\x02\x12\x17\n\x0fRetargetSeconds\x18\x03 \x01(\x02\x12\x1b\n\x13\x45nemyAttackInterval\x18\x04 \x01(\x02\x12\x1c\n\x14\x41ttackServerInterval\x18\x05 \x01(\x02\x12\x1c\n\x14RoundDurationSeconds\x18\x06 \x01(\x02\x12\x1f\n\x17\x42onusTimePerAllySeconds\x18\x07 \x01(\x02\x12!\n\x19MaximumAttackersPerBattle\x18\x08 \x01(\x05\x12%\n\x1dSameTypeAttackBonusMultiplier\x18\t \x01(\x02\x12\x15\n\rMaximumEnergy\x18\n \x01(\x05\x12 \n\x18\x45nergyDeltaPerHealthLost\x18\x0b \x01(\x02\x12\x17\n\x0f\x44odgeDurationMs\x18\x0c \x01(\x05\x12\x1a\n\x12MinimumPlayerLevel\x18\r \x01(\x05\x12\x16\n\x0eSwapDurationMs\x18\x0e \x01(\x05\"\xaa\x01\n\x16\x45ncounterSettingsProto\x12\x1a\n\x12SpinBonusThreshold\x18\x01 \x01(\x02\x12\x1f\n\x17\x45xcellentThrowThreshold\x18\x02 \x01(\x02\x12\x1b\n\x13GreatThrowThreshold\x18\x03 \x01(\x02\x12\x1a\n\x12NiceThrowThreshold\x18\x04 \x01(\x02\x12\x1a\n\x12MilestoneThreshold\x18\x05 \x01(\x05\"\x82\x01\n\x1bPokemonUpgradeSettingsProto\x12\x18\n\x10UpgradesPerLevel\x18\x01 \x01(\x05\x12 \n\x18\x41llowedLevelsAbovePlayer\x18\x02 \x01(\x05\x12\x11\n\tCandyCost\x18\x03 \x03(\x05\x12\x14\n\x0cStardustCost\x18\x04 \x03(\x05\"w\n\x1a\x45quippedBadgeSettingsProto\x12\x1c\n\x14\x45quipBadgeCooldownMs\x18\x01 \x01(\x03\x12\x1d\n\x15\x43\x61tchProbabilityBonus\x18\x02 \x03(\x02\x12\x1c\n\x14\x46leeProbabilityBonus\x18\x03 \x03(\x02\"\x93\x07\n\x1dGameMasterClientTemplateProto\x12\x12\n\nTemplateId\x18\x01 \x01(\t\x12\x33\n\x07Pokemon\x18\x02 \x01(\x0b\x32\".Holoholo.Rpc.PokemonSettingsProto\x12-\n\x04Item\x18\x03 \x01(\x0b\x32\x1f.Holoholo.Rpc.ItemSettingsProto\x12-\n\x04Move\x18\x04 \x01(\x0b\x32\x1f.Holoholo.Rpc.MoveSettingsProto\x12=\n\x0cMoveSequence\x18\x05 \x01(\x0b\x32\'.Holoholo.Rpc.MoveSequenceSettingsProto\x12?\n\rTypeEffective\x18\x08 \x01(\x0b\x32(.Holoholo.Rpc.TypeEffectiveSettingsProto\x12/\n\x05\x42\x61\x64ge\x18\n \x01(\x0b\x32 .Holoholo.Rpc.BadgeSettingsProto\x12\x31\n\x06\x43\x61mera\x18\x0b \x01(\x0b\x32!.Holoholo.Rpc.CameraSettingsProto\x12;\n\x0bPlayerLevel\x18\x0c \x01(\x0b\x32&.Holoholo.Rpc.PlayerLevelSettingsProto\x12\x35\n\x08GymLevel\x18\r \x01(\x0b\x32#.Holoholo.Rpc.GymLevelSettingsProto\x12<\n\x0e\x42\x61ttleSettings\x18\x0e \x01(\x0b\x32$.Holoholo.Rpc.GymBattleSettingsProto\x12?\n\x11\x45ncounterSettings\x18\x0f \x01(\x0b\x32$.Holoholo.Rpc.EncounterSettingsProto\x12\x39\n\x0eIapItemDisplay\x18\x10 \x01(\x0b\x32!.Holoholo.Rpc.IapItemDisplayProto\x12\x33\n\x0bIapSettings\x18\x11 \x01(\x0b\x32\x1e.Holoholo.Rpc.IapSettingsProto\x12\x42\n\x0fPokemonUpgrades\x18\x12 \x01(\x0b\x32).Holoholo.Rpc.PokemonUpgradeSettingsProto\x12@\n\x0e\x45quippedBadges\x18\x13 \x01(\x0b\x32(.Holoholo.Rpc.EquippedBadgeSettingsProto\"#\n!GetGameMasterClientTemplatesProto\"\xc6\x01\n$GetGameMasterClientTemplatesOutProto\x12O\n\x06Result\x18\x01 \x01(\x0e\x32?.Holoholo.Rpc.Types.GetGameMasterClientTemplatesOutProto.Result\x12:\n\x05Items\x18\x02 \x03(\x0b\x32+.Holoholo.Rpc.GameMasterClientTemplateProto\x12\x11\n\tTimestamp\x18\x03 \x01(\x04\"\x9d\x01\n\x1cGetRemoteConfigVersionsProto\x12(\n\x08Platform\x18\x01 \x01(\x0e\x32\x16.Holoholo.Rpc.Platform\x12\x1a\n\x12\x44\x65viceManufacturer\x18\x02 \x01(\t\x12\x13\n\x0b\x44\x65viceModel\x18\x03 \x01(\t\x12\x0e\n\x06Locale\x18\x04 \x01(\t\x12\x12\n\nAppVersion\x18\x05 \x01(\r\"\xa8\x01\n\x1fGetRemoteConfigVersionsOutProto\x12J\n\x06Result\x18\x01 \x01(\x0e\x32:.Holoholo.Rpc.Types.GetRemoteConfigVersionsOutProto.Result\x12\x1b\n\x13GameMasterTimestamp\x18\x02 \x01(\x04\x12\x1c\n\x14\x41ssetDigestTimestamp\x18\x03 \x01(\x04\"\xb2\x01\n\x0e\x41\x63tionLogEntry\x12\x13\n\x0bTimestampMs\x18\x01 \x01(\x03\x12\r\n\x05Sfida\x18\x02 \x01(\x08\x12:\n\x0c\x43\x61tchPokemon\x18\x03 \x01(\x0b\x32\".Holoholo.Rpc.CatchPokemonLogEntryH\x00\x12\x36\n\nFortSearch\x18\x04 \x01(\x0b\x32 .Holoholo.Rpc.FortSearchLogEntryH\x00\x42\x08\n\x06\x41\x63tion\"\x97\x01\n\x14\x43\x61tchPokemonLogEntry\x12?\n\x06Result\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.CatchPokemonLogEntry.Result\x12\x15\n\rPokedexNumber\x18\x02 \x01(\x05\x12\x14\n\x0c\x43ombatPoints\x18\x03 \x01(\x05\x12\x11\n\tPokemonId\x18\x04 \x01(\x04\"\x99\x01\n\x12\x46ortSearchLogEntry\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.FortSearchLogEntry.Result\x12\x0e\n\x06\x46ortId\x18\x02 \x01(\t\x12&\n\x05Items\x18\x03 \x03(\x0b\x32\x17.Holoholo.Rpc.ItemProto\x12\x0c\n\x04\x45ggs\x18\x04 \x01(\x05\"\x8c\x01\n\x10PlayerBadgeProto\x12.\n\tBadgeType\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\x12\x0c\n\x04Rank\x18\x02 \x01(\x05\x12\x12\n\nStartValue\x18\x03 \x01(\x05\x12\x10\n\x08\x45ndValue\x18\x04 \x01(\x05\x12\x14\n\x0c\x43urrentValue\x18\x05 \x01(\x01\"(\n\x12PlayerProfileProto\x12\x12\n\nPlayerName\x18\x01 \x01(\t\"\x9c\x01\n\x15PlayerProfileOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.PlayerProfileOutProto.Result\x12\x11\n\tStartTime\x18\x02 \x01(\x03\x12.\n\x06\x42\x61\x64ges\x18\x03 \x03(\x0b\x32\x1e.Holoholo.Rpc.PlayerBadgeProto\"$\n\x13LevelUpRewardsProto\x12\r\n\x05Level\x18\x01 \x01(\x05\"\xb3\x01\n\x16LevelUpRewardsOutProto\x12\x41\n\x06Result\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.LevelUpRewardsOutProto.Result\x12+\n\x05Items\x18\x02 \x03(\x0b\x32\x1c.Holoholo.Rpc.AwardItemProto\x12)\n\rItemsUnlocked\x18\x04 \x03(\x0e\x32\x12.Holoholo.Rpc.Item\"\xe8\x03\n\x11\x43lientPlayerProto\x12\x16\n\x0e\x43reationTimeMs\x18\x01 \x01(\x03\x12\x0c\n\x04Name\x18\x02 \x01(\t\x12\x0c\n\x04Team\x18\x05 \x01(\x05\x12:\n\x10TutorialComplete\x18\x07 \x03(\x0e\x32 .Holoholo.Rpc.TutorialCompletion\x12:\n\x11PlayerAvatarProto\x18\x08 \x01(\x0b\x32\x1f.Holoholo.Rpc.PlayerAvatarProto\x12\x19\n\x11MaxPokemonStorage\x18\t \x01(\x05\x12\x16\n\x0eMaxItemStorage\x18\n \x01(\x05\x12\x36\n\x0f\x44\x61ilyBonusProto\x18\x0b \x01(\x0b\x32\x1d.Holoholo.Rpc.DailyBonusProto\x12<\n\x12\x45quippedBadgeProto\x18\x0c \x01(\x0b\x32 .Holoholo.Rpc.EquippedBadgeProto\x12@\n\x14\x43ontactSettingsProto\x18\r \x01(\x0b\x32\".Holoholo.Rpc.ContactSettingsProto\x12<\n\x0f\x43urrencyBalance\x18\x0e \x03(\x0b\x32#.Holoholo.Rpc.CurrencyQuantityProto\"?\n\x15\x43urrencyQuantityProto\x12\x14\n\x0c\x43urrencyType\x18\x01 \x01(\t\x12\x10\n\x08Quantity\x18\x02 \x01(\x05\"R\n\x14\x43ontactSettingsProto\x12\x1b\n\x13SendMarketingEmails\x18\x01 \x01(\x08\x12\x1d\n\x15SendPushNotifications\x18\x02 \x01(\x08\"^\n\x0f\x44\x61ilyBonusProto\x12\x1e\n\x16NextCollectTimestampMs\x18\x01 \x01(\x03\x12+\n#NextDefenderBonusCollectTimestampMs\x18\x02 \x01(\x03\"\x82\x01\n\x12\x45quippedBadgeProto\x12\x32\n\rEquippedBadge\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\x12\r\n\x05Level\x18\x02 \x01(\x05\x12)\n!NextEquipChangeAllowedTimestampMs\x18\x03 \x01(\x03\"\x10\n\x0eGetPlayerProto\"U\n\x11GetPlayerOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"-\n\x11PlayerUpdateProto\x12\x0b\n\x03Lat\x18\x01 \x01(\x01\x12\x0b\n\x03Lng\x18\x02 \x01(\x01\"\x8e\x01\n\x14PlayerUpdateOutProto\x12\x33\n\x0bWildPokemon\x18\x01 \x03(\x0b\x32\x1e.Holoholo.Rpc.WildPokemonProto\x12,\n\x04\x46ort\x18\x02 \x03(\x0b\x32\x1e.Holoholo.Rpc.PokemonFortProto\x12\x13\n\x0b\x46ortsNearby\x18\x03 \x01(\x05\"@\n\x17SetFavoritePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x03\x12\x12\n\nIsFavorite\x18\x02 \x01(\x08\"c\n\x1aSetFavoritePokemonOutProto\x12\x45\n\x06Result\x18\x01 \x01(\x0e\x32\x35.Holoholo.Rpc.Types.SetFavoritePokemonOutProto.Result\"<\n\x13ReleasePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\x12\x12\n\nPokemonIds\x18\x02 \x03(\x04\"q\n\x16ReleasePokemonOutProto\x12\x41\n\x06Status\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.ReleasePokemonOutProto.Status\x12\x14\n\x0c\x43\x61ndyAwarded\x18\x02 \x01(\x05\"\x18\n\x16\x44\x65\x62ugDeletePlayerProto\",\n\x19\x44\x65\x62ugDeletePlayerOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\"#\n!GetSuggestedCodenamesRequestProto\"G\n\"GetSuggestedCodenamesResponseProto\x12\x10\n\x08\x43odename\x18\x01 \x03(\t\x12\x0f\n\x07Success\x18\x02 \x01(\x08\"6\n\"CheckCodenameAvailableRequestProto\x12\x10\n\x08\x43odename\x18\x01 \x01(\t\"-\n\x19\x43laimCodenameRequestProto\x12\x10\n\x08\x43odename\x18\x01 \x01(\t\"\x92\x01\n\x13\x43odenameResultProto\x12\x10\n\x08\x43odename\x18\x01 \x01(\t\x12\x13\n\x0bUserMessage\x18\x02 \x01(\t\x12\x14\n\x0cIsAssignable\x18\x03 \x01(\x08\x12>\n\x06Status\x18\x04 \x01(\x0e\x32..Holoholo.Rpc.Types.CodenameResultProto.Status\"L\n\x0eSetAvatarProto\x12:\n\x11PlayerAvatarProto\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.PlayerAvatarProto\"\x82\x01\n\x11SetAvatarOutProto\x12<\n\x06Status\x18\x01 \x01(\x0e\x32,.Holoholo.Rpc.Types.SetAvatarOutProto.Status\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"[\n\x17SetContactSettingsProto\x12@\n\x14\x43ontactSettingsProto\x18\x01 \x01(\x0b\x32\".Holoholo.Rpc.ContactSettingsProto\"\x94\x01\n\x1aSetContactSettingsOutProto\x12\x45\n\x06Status\x18\x01 \x01(\x0e\x32\x35.Holoholo.Rpc.Types.SetContactSettingsOutProto.Status\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"6\n\x12SetPlayerTeamProto\x12 \n\x04Team\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Team\"\x8a\x01\n\x15SetPlayerTeamOutProto\x12@\n\x06Status\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.SetPlayerTeamOutProto.Status\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"\x93\x01\n\x19MarkTutorialCompleteProto\x12:\n\x10TutorialComplete\x18\x01 \x03(\x0e\x32 .Holoholo.Rpc.TutorialCompletion\x12\x1b\n\x13SendMarketingEmails\x18\x02 \x01(\x08\x12\x1d\n\x15SendPushNotifications\x18\x03 \x01(\x08\"`\n\x1cMarkTutorialCompleteOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12/\n\x06Player\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.ClientPlayerProto\"\x19\n\x17\x43heckAwardedBadgesProto\"}\n\x1a\x43heckAwardedBadgesOutProto\x12\x0f\n\x07Success\x18\x01 \x01(\x08\x12\x32\n\rAwardedBadges\x18\x02 \x03(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\x12\x1a\n\x12\x41wardedBadgeLevels\x18\x03 \x03(\x05\"-\n\x08PtcToken\x12\r\n\x05Token\x18\x01 \x01(\t\x12\x12\n\nExpiration\x18\x02 \x01(\x05\"=\n\x0f\x45quipBadgeProto\x12*\n\x05\x42\x61\x64ge\x18\x01 \x01(\x0e\x32\x1b.Holoholo.Rpc.HoloBadgeType\"\x87\x01\n\x12\x45quipBadgeOutProto\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.EquipBadgeOutProto.Result\x12\x32\n\x08\x45quipped\x18\x02 \x01(\x0b\x32 .Holoholo.Rpc.EquippedBadgeProto\"\x15\n\x13GetActionLogRequest\"\x82\x01\n\x14GetActionLogResponse\x12?\n\x06Result\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.GetActionLogResponse.Result\x12)\n\x03Log\x18\x02 \x03(\x0b\x32\x1c.Holoholo.Rpc.ActionLogEntry\"\x15\n\x13SfidaActionLogProto\"\x84\x01\n\x16SfidaActionLogOutProto\x12?\n\x06Result\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.GetActionLogResponse.Result\x12)\n\x03Log\x18\x02 \x03(\x0b\x32\x1c.Holoholo.Rpc.ActionLogEntry\".\n\x12TradingSearchProto\x12\x0b\n\x03Lat\x18\x01 \x01(\x01\x12\x0b\n\x03Lng\x18\x02 \x01(\x01\"n\n\x15TradingSearchOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.TradingSearchOutProto.Result\x12\x13\n\x0bPlayerNames\x18\x02 \x03(\t\"=\n\x11TradingOfferProto\x12\x15\n\rTradingPlayer\x18\x01 \x01(\t\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\"h\n\x14TradingOfferOutProto\x12?\n\x06Result\x18\x01 \x01(\x0e\x32/.Holoholo.Rpc.Types.TradingOfferOutProto.Result\x12\x0f\n\x07TradeId\x18\x02 \x01(\x04\"V\n\x19PollForTradeResponseProto\x12\x0f\n\x07TradeId\x18\x01 \x01(\x04\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\x12\x15\n\rRequestCancel\x18\x03 \x01(\x08\"\x9a\x01\n\x1cPollForTradeResponseOutProto\x12G\n\x06Result\x18\x01 \x01(\x0e\x32\x37.Holoholo.Rpc.Types.PollForTradeResponseOutProto.Result\x12\x31\n\rReturnPokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\";\n\x12TradingResultProto\x12\x0f\n\x07TradeId\x18\x01 \x01(\x04\x12\x14\n\x0cPlayerAccept\x18\x02 \x01(\x08\"Y\n\x15TradingResultOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.TradingResultOutProto.Result\"(\n\x13UpgradePokemonProto\x12\x11\n\tPokemonId\x18\x01 \x01(\x04\"\x90\x01\n\x16UpgradePokemonOutProto\x12\x41\n\x06Result\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.UpgradePokemonOutProto.Result\x12\x33\n\x0fUpgradedPokemon\x18\x02 \x01(\x0b\x32\x1a.Holoholo.Rpc.PokemonProto\"I\n\x12UseItemPotionProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\"j\n\x15UseItemPotionOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.UseItemPotionOutProto.Result\x12\x0f\n\x07Stamina\x18\x02 \x01(\x05\"I\n\x12UseItemReviveProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\x11\n\tPokemonId\x18\x02 \x01(\x04\"j\n\x15UseItemReviveOutProto\x12@\n\x06Result\x18\x01 \x01(\x0e\x32\x30.Holoholo.Rpc.Types.UseItemReviveOutProto.Result\x12\x0f\n\x07Stamina\x18\x02 \x01(\x05\"v\n\x0fUseItemGymProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\x12\r\n\x05GymId\x18\x02 \x01(\t\x12\x18\n\x10PlayerLatDegrees\x18\x03 \x01(\x01\x12\x18\n\x10PlayerLngDegrees\x18\x04 \x01(\x01\"f\n\x12UseItemGymOutProto\x12=\n\x06Result\x18\x01 \x01(\x0e\x32-.Holoholo.Rpc.Types.UseItemGymOutProto.Result\x12\x11\n\tUpdatedGp\x18\x02 \x01(\x03\"7\n\x13UseItemXpBoostProto\x12 \n\x04Item\x18\x01 \x01(\x0e\x32\x12.Holoholo.Rpc.Item\"\x92\x01\n\x16UseItemXpBoostOutProto\x12\x41\n\x06Result\x18\x01 \x01(\x0e\x32\x31.Holoholo.Rpc.Types.UseItemXpBoostOutProto.Result\x12\x35\n\x0c\x41ppliedItems\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.AppliedItemsProto\">\n\x18UseItemEggIncubatorProto\x12\x0e\n\x06ItemId\x18\x01 \x01(\t\x12\x12\n\nPokemondId\x18\x02 \x01(\x03\"\x9c\x01\n\x1bUseItemEggIncubatorOutProto\x12\x46\n\x06Result\x18\x01 \x01(\x0e\x32\x36.Holoholo.Rpc.Types.UseItemEggIncubatorOutProto.Result\x12\x35\n\x0c\x45ggIncubator\x18\x02 \x01(\x0b\x32\x1f.Holoholo.Rpc.EggIncubatorProto\"\xf5\x08\n\x07Niantic\x1a\xe9\x08\n\x08Holoholo\x1a]\n\tEncounter\"P\n\x0f\x45ncounterResult\x12\x13\n\x0f\x43\x61pturedPokemon\x10\x00\x12\x0c\n\x08UserFled\x10\x01\x12\x0f\n\x0bPokemonFled\x10\x02\x12\t\n\x05\x45rror\x10\x03\x1a\xd8\x01\n\x03Gym\x1a<\n\rGymMinimapDot\"+\n\x08\x44otState\x12\t\n\x05\x45MPTY\x10\x00\x12\x08\n\x04\x46ULL\x10\x01\x12\n\n\x06LEADER\x10\x02\x1a\x42\n\x0e\x41ttackAffector\"0\n\nFxPriority\x12\x0b\n\x07Neutral\x10\x00\x12\x07\n\x03Tap\x10\x01\x12\x0c\n\x08Sequence\x10\x02\"O\n\x0c\x41pproachMode\x12\x0f\n\x0b\x42\x41TTLE_PREP\x10\x00\x12\n\n\x06\x44\x45PLOY\x10\x01\x12\x13\n\x0f\x46RIENDLY_CHOICE\x10\x02\x12\r\n\tPICK_TEAM\x10\x03\x1a\xf5\x01\n\x03Map\x1a\x34\n\rMapSpawnPoint\"#\n\x0eVisibilityType\x12\x07\n\x03Low\x10\x00\x12\x08\n\x04High\x10\x01\x1a\x61\n\x11MapGestureHandler\"L\n\x0ePanGestureType\x12\x0b\n\x07Unknown\x10\x00\x12\x07\n\x03Pan\x10\x01\x12\x0c\n\x08\x44ragZoom\x10\x02\x12\x08\n\x04Tilt\x10\x03\x12\x0c\n\x08Rotation\x10\x04\"4\n\x18PokemonEncounterResponse\x12\x0b\n\x07Success\x10\x00\x12\x0b\n\x07\x46\x61ilure\x10\x01\"\x1f\n\tDayPeriod\x12\x07\n\x03\x44\x61y\x10\x00\x12\t\n\x05Night\x10\x01\x1ag\n\x05Items\",\n\x10IncubationResult\x12\x0b\n\x07SUCCESS\x10\x00\x12\x0b\n\x07\x46\x41ILURE\x10\x01\"0\n\x12\x42uffSelectionState\x12\x0c\n\x08\x43\x61nceled\x10\x00\x12\x0c\n\x08Selected\x10\x01\x1a<\n\tUserTasks\"/\n\x14TaskCompletionResult\x12\x0b\n\x07Success\x10\x00\x12\n\n\x06\x46\x61iled\x10\x01\x1a:\n\x0e\x44\x65\x66\x65rredInvoke\"(\n\tDeferMode\x12\x0b\n\x07Seconds\x10\x00\x12\x0e\n\nEndOfFrame\x10\x01\x1aH\n\x06\x41ssets\">\n\x14\x41ssetRequestPriority\x12\x0b\n\x07Preload\x10\x00\x12\n\n\x06Normal\x10\x01\x12\r\n\tImmediate\x10\x02\x1a\xfd\x01\n\x05Sfida\x1a\xf3\x01\n\x0cSfidaService\"\xe2\x01\n\x05State\x12\x11\n\rNO_CONNECTION\x10\x00\x12\x08\n\x04IDLE\x10\x01\x12\x1b\n\x17\x46INDING_NOTIFY_POKESTOP\x10\x02\x12\x16\n\x12NOTIFYING_POKESTOP\x10\x03\x12\x11\n\rSEARCH_RESULT\x10\x04\x12\x1a\n\x16\x46INDING_NOTIFY_POKEMON\x10\x05\x12\x15\n\x11NOTIFYING_POKEMON\x10\x06\x12\r\n\tENCOUNTER\x10\x07\x12\t\n\x05\x43\x41TCH\x10\x08\x12\x10\n\x0c\x43\x41TCH_RESULT\x10\t\x12\n\n\x06\x44OWSER\x10\n\x12\t\n\x05\x45RROR\x10\x0b*\x89\x01\n\nUpdateType\x12\x07\n\x03\x41\x44\x44\x10\x00\x12\n\n\x06MODIFY\x10\x01\x12\n\n\x06REMOVE\x10\x02\x12\x14\n\x10PREDICTED_MODIFY\x10\x03\x12\x14\n\x10PREDICTED_REMOVE\x10\x04\x12\x16\n\x12ROLLED_BACK_MODIFY\x10\x05\x12\x16\n\x12ROLLED_BACK_REMOVE\x10\x06*2\n\rEnumScaleMode\x12\x07\n\x03\x42RB\x10\x00\x12\x08\n\x04Maya\x10\x01\x12\x0e\n\nMayaWCurve\x10\x02*?\n\x07\x46ovSide\x12\x06\n\x02UP\x10\x00\x12\x08\n\x04\x44OWN\x10\x01\x12\x08\n\x04LEFT\x10\x02\x12\t\n\x05RIGHT\x10\x03\x12\r\n\tNUM_SIDES\x10\x04*<\n\x17RemoteConfigurationType\x12\x10\n\x0c\x41SSET_DIGEST\x10\x00\x12\x0f\n\x0bGAME_MASTER\x10\x01*\xa8\x02\n\x07\x43ommand\x12\x07\n\x03VFX\x10\x00\x12\n\n\x06\x46\x32\x46VFX\x10\x01\x12\x07\n\x03SFX\x10\x02\x12\x07\n\x03\x43\x41M\x10\x03\x12\x08\n\x04\x41NIM\x10\x04\x12\x08\n\x04WAIT\x10\x05\x12\x07\n\x03SYS\x10\x06\x12\t\n\x05SHAKE\x10\x07\x12\t\n\x05SCALE\x10\x08\x12\x08\n\x04SINK\x10\t\x12\t\n\x05\x45VENT\x10\n\x12\x08\n\x04MODE\x10\x0b\x12\x08\n\x04HIDE\x10\x0c\x12\n\n\x06UNHIDE\x10\r\x12\x08\n\x04SPIN\x10\x0e\x12\n\n\x06SQUISH\x10\x0f\x12\x0e\n\nBACKGROUND\x10\x10\x12\x14\n\x10RESET_BACKGROUND\x10\x11\x12\x0e\n\nSILHOUETTE\x10\x12\x12\x14\n\x10RESET_SILHOUETTE\x10\x13\x12\x0e\n\nHIDE_OTHER\x10\x14\x12\x10\n\x0cUNHIDE_OTHER\x10\x15\x12\n\n\x06\x44SCVFX\x10\x16*3\n\nTargetType\x12\x0f\n\x0bMAIN_CAMERA\x10\x00\x12\x14\n\x10SPECIFIED_OBJECT\x10\x01*T\n\x06\x45\x66\x66\x65\x63t\x12\r\n\tNO_DAMAGE\x10\x00\x12\x12\n\x0eREDUCED_DAMAGE\x10\x01\x12\x11\n\rNORMAL_DAMAGE\x10\x02\x12\x14\n\x10INCREASED_DAMAGE\x10\x03*b\n\x14PokemonCreateContext\x12\x17\n\x13\x43REATE_CONTEXT_WILD\x10\x00\x12\x16\n\x12\x43REATE_CONTEXT_EGG\x10\x01\x12\x19\n\x15\x43REATE_CONTEXT_EVOLVE\x10\x02*]\n\x10PlayerAvatarType\x12\x17\n\x13PLAYER_AVATAR_UNSET\x10\x00\x12\x16\n\x12PLAYER_AVATAR_MALE\x10\x01\x12\x18\n\x14PLAYER_AVATAR_FEMALE\x10\x02*?\n\x04Team\x12\t\n\x05UNSET\x10\x00\x12\r\n\tTEAM_BLUE\x10\x01\x12\x0c\n\x08TEAM_RED\x10\x02\x12\x0f\n\x0bTEAM_YELLOW\x10\x03*\xde\x03\n\x0fHoloPokemonType\x12\x15\n\x11POKEMON_TYPE_NONE\x10\x00\x12\x17\n\x13POKEMON_TYPE_NORMAL\x10\x01\x12\x19\n\x15POKEMON_TYPE_FIGHTING\x10\x02\x12\x17\n\x13POKEMON_TYPE_FLYING\x10\x03\x12\x17\n\x13POKEMON_TYPE_POISON\x10\x04\x12\x17\n\x13POKEMON_TYPE_GROUND\x10\x05\x12\x15\n\x11POKEMON_TYPE_ROCK\x10\x06\x12\x14\n\x10POKEMON_TYPE_BUG\x10\x07\x12\x16\n\x12POKEMON_TYPE_GHOST\x10\x08\x12\x16\n\x12POKEMON_TYPE_STEEL\x10\t\x12\x15\n\x11POKEMON_TYPE_FIRE\x10\n\x12\x16\n\x12POKEMON_TYPE_WATER\x10\x0b\x12\x16\n\x12POKEMON_TYPE_GRASS\x10\x0c\x12\x19\n\x15POKEMON_TYPE_ELECTRIC\x10\r\x12\x18\n\x14POKEMON_TYPE_PSYCHIC\x10\x0e\x12\x14\n\x10POKEMON_TYPE_ICE\x10\x0f\x12\x17\n\x13POKEMON_TYPE_DRAGON\x10\x10\x12\x15\n\x11POKEMON_TYPE_DARK\x10\x11\x12\x16\n\x12POKEMON_TYPE_FAIRY\x10\x12*c\n\x10HoloPokemonClass\x12\x18\n\x14POKEMON_CLASS_NORMAL\x10\x00\x12\x1b\n\x17POKEMON_CLASS_LEGENDARY\x10\x01\x12\x18\n\x14POKEMON_CLASS_MYTHIC\x10\x02*\x96\x02\n\x11HoloPokemonNature\x12\x12\n\x0eNATURE_UNKNOWN\x10\x00\x12\x1e\n\x1aV0001_POKEMON_NATURE_STOIC\x10\x01\x12!\n\x1dV0002_POKEMON_NATURE_ASSASSIN\x10\x02\x12!\n\x1dV0003_POKEMON_NATURE_GUARDIAN\x10\x03\x12\x1f\n\x1bV0004_POKEMON_NATURE_RAIDER\x10\x04\x12\"\n\x1eV0005_POKEMON_NATURE_PROTECTOR\x10\x05\x12\x1f\n\x1bV0006_POKEMON_NATURE_SENTRY\x10\x06\x12!\n\x1dV0007_POKEMON_NATURE_CHAMPION\x10\x07*\x85\x02\n\x17HoloPokemonMovementType\x12\x1f\n\x1bPOKEMON_ENC_MOVEMENT_STATIC\x10\x00\x12\x1d\n\x19POKEMON_ENC_MOVEMENT_JUMP\x10\x01\x12!\n\x1dPOKEMON_ENC_MOVEMENT_VERTICAL\x10\x02\x12 \n\x1cPOKEMON_ENC_MOVEMENT_PSYCHIC\x10\x03\x12!\n\x1dPOKEMON_ENC_MOVEMENT_ELECTRIC\x10\x04\x12\x1f\n\x1bPOKEMON_ENC_MOVEMENT_FLYING\x10\x05\x12!\n\x1dPOKEMON_ENC_MOVEMENT_HOVERING\x10\x06*\xda\x02\n\x10HoloItemCategory\x12\x16\n\x12ITEM_CATEGORY_NONE\x10\x00\x12\x1a\n\x16ITEM_CATEGORY_POKEBALL\x10\x01\x12\x16\n\x12ITEM_CATEGORY_FOOD\x10\x02\x12\x1a\n\x16ITEM_CATEGORY_MEDICINE\x10\x03\x12\x17\n\x13ITEM_CATEGORY_BOOST\x10\x04\x12\x1a\n\x16ITEM_CATEGORY_UTILITES\x10\x05\x12\x18\n\x14ITEM_CATEGORY_CAMERA\x10\x06\x12\x16\n\x12ITEM_CATEGORY_DISK\x10\x07\x12\x1b\n\x17ITEM_CATEGORY_INCUBATOR\x10\x08\x12\x19\n\x15ITEM_CATEGORY_INCENSE\x10\t\x12\x1a\n\x16ITEM_CATEGORY_XP_BOOST\x10\n\x12#\n\x1fITEM_CATEGORY_INVENTORY_UPGRADE\x10\x0b*\x9c\x04\n\x0eHoloItemEffect\x12\x14\n\x10ITEM_EFFECT_NONE\x10\x00\x12\x1c\n\x17ITEM_EFFECT_CAP_NO_FLEE\x10\xe8\x07\x12 \n\x1bITEM_EFFECT_CAP_NO_MOVEMENT\x10\xea\x07\x12\x1e\n\x19ITEM_EFFECT_CAP_NO_THREAT\x10\xeb\x07\x12\x1f\n\x1aITEM_EFFECT_CAP_TARGET_MAX\x10\xec\x07\x12 \n\x1bITEM_EFFECT_CAP_TARGET_SLOW\x10\xed\x07\x12!\n\x1cITEM_EFFECT_CAP_CHANCE_NIGHT\x10\xee\x07\x12#\n\x1eITEM_EFFECT_CAP_CHANCE_TRAINER\x10\xef\x07\x12\'\n\"ITEM_EFFECT_CAP_CHANCE_FIRST_THROW\x10\xf0\x07\x12\"\n\x1dITEM_EFFECT_CAP_CHANCE_LEGEND\x10\xf1\x07\x12!\n\x1cITEM_EFFECT_CAP_CHANCE_HEAVY\x10\xf2\x07\x12\"\n\x1dITEM_EFFECT_CAP_CHANCE_REPEAT\x10\xf3\x07\x12\'\n\"ITEM_EFFECT_CAP_CHANCE_MULTI_THROW\x10\xf4\x07\x12\"\n\x1dITEM_EFFECT_CAP_CHANCE_ALWAYS\x10\xf5\x07\x12(\n#ITEM_EFFECT_CAP_CHANCE_SINGLE_THROW\x10\xf6\x07*\xf0\x05\n\x10HoloActivityType\x12\x14\n\x10\x41\x43TIVITY_UNKNOWN\x10\x00\x12\x1a\n\x16\x41\x43TIVITY_CATCH_POKEMON\x10\x01\x12!\n\x1d\x41\x43TIVITY_CATCH_LEGEND_POKEMON\x10\x02\x12\x19\n\x15\x41\x43TIVITY_FLEE_POKEMON\x10\x03\x12\x18\n\x14\x41\x43TIVITY_DEFEAT_FORT\x10\x04\x12\x1b\n\x17\x41\x43TIVITY_EVOLVE_POKEMON\x10\x05\x12\x16\n\x12\x41\x43TIVITY_HATCH_EGG\x10\x06\x12\x14\n\x10\x41\x43TIVITY_WALK_KM\x10\x07\x12\x1e\n\x1a\x41\x43TIVITY_POKEDEX_ENTRY_NEW\x10\x08\x12\x1e\n\x1a\x41\x43TIVITY_CATCH_FIRST_THROW\x10\t\x12\x1d\n\x19\x41\x43TIVITY_CATCH_NICE_THROW\x10\n\x12\x1e\n\x1a\x41\x43TIVITY_CATCH_GREAT_THROW\x10\x0b\x12\"\n\x1e\x41\x43TIVITY_CATCH_EXCELLENT_THROW\x10\x0c\x12\x1c\n\x18\x41\x43TIVITY_CATCH_CURVEBALL\x10\r\x12%\n!ACTIVITY_CATCH_FIRST_CATCH_OF_DAY\x10\x0e\x12\x1c\n\x18\x41\x43TIVITY_CATCH_MILESTONE\x10\x0f\x12\x1a\n\x16\x41\x43TIVITY_TRAIN_POKEMON\x10\x10\x12\x18\n\x14\x41\x43TIVITY_SEARCH_FORT\x10\x11\x12\x1c\n\x18\x41\x43TIVITY_RELEASE_POKEMON\x10\x12\x12\"\n\x1e\x41\x43TIVITY_HATCH_EGG_SMALL_BONUS\x10\x13\x12#\n\x1f\x41\x43TIVITY_HATCH_EGG_MEDIUM_BONUS\x10\x14\x12\"\n\x1e\x41\x43TIVITY_HATCH_EGG_LARGE_BONUS\x10\x15\x12 \n\x1c\x41\x43TIVITY_DEFEAT_GYM_DEFENDER\x10\x16\x12\x1e\n\x1a\x41\x43TIVITY_DEFEAT_GYM_LEADER\x10\x17*\xa5\x07\n\rHoloBadgeType\x12\x0f\n\x0b\x42\x41\x44GE_UNSET\x10\x00\x12\x13\n\x0f\x42\x41\x44GE_TRAVEL_KM\x10\x01\x12\x19\n\x15\x42\x41\x44GE_POKEDEX_ENTRIES\x10\x02\x12\x17\n\x13\x42\x41\x44GE_CAPTURE_TOTAL\x10\x03\x12\x17\n\x13\x42\x41\x44GE_DEFEATED_FORT\x10\x04\x12\x17\n\x13\x42\x41\x44GE_EVOLVED_TOTAL\x10\x05\x12\x17\n\x13\x42\x41\x44GE_HATCHED_TOTAL\x10\x06\x12\x1b\n\x17\x42\x41\x44GE_ENCOUNTERED_TOTAL\x10\x07\x12\x1b\n\x17\x42\x41\x44GE_POKESTOPS_VISITED\x10\x08\x12\x1a\n\x16\x42\x41\x44GE_UNIQUE_POKESTOPS\x10\t\x12\x19\n\x15\x42\x41\x44GE_POKEBALL_THROWN\x10\n\x12\x16\n\x12\x42\x41\x44GE_BIG_MAGIKARP\x10\x0b\x12\x18\n\x14\x42\x41\x44GE_DEPLOYED_TOTAL\x10\x0c\x12\x1b\n\x17\x42\x41\x44GE_BATTLE_ATTACK_WON\x10\r\x12\x1d\n\x19\x42\x41\x44GE_BATTLE_TRAINING_WON\x10\x0e\x12\x1b\n\x17\x42\x41\x44GE_BATTLE_DEFEND_WON\x10\x0f\x12\x19\n\x15\x42\x41\x44GE_PRESTIGE_RAISED\x10\x10\x12\x1a\n\x16\x42\x41\x44GE_PRESTIGE_DROPPED\x10\x11\x12\x15\n\x11\x42\x41\x44GE_TYPE_NORMAL\x10\x12\x12\x17\n\x13\x42\x41\x44GE_TYPE_FIGHTING\x10\x13\x12\x15\n\x11\x42\x41\x44GE_TYPE_FLYING\x10\x14\x12\x15\n\x11\x42\x41\x44GE_TYPE_POISON\x10\x15\x12\x15\n\x11\x42\x41\x44GE_TYPE_GROUND\x10\x16\x12\x13\n\x0f\x42\x41\x44GE_TYPE_ROCK\x10\x17\x12\x12\n\x0e\x42\x41\x44GE_TYPE_BUG\x10\x18\x12\x14\n\x10\x42\x41\x44GE_TYPE_GHOST\x10\x19\x12\x14\n\x10\x42\x41\x44GE_TYPE_STEEL\x10\x1a\x12\x13\n\x0f\x42\x41\x44GE_TYPE_FIRE\x10\x1b\x12\x14\n\x10\x42\x41\x44GE_TYPE_WATER\x10\x1c\x12\x14\n\x10\x42\x41\x44GE_TYPE_GRASS\x10\x1d\x12\x17\n\x13\x42\x41\x44GE_TYPE_ELECTRIC\x10\x1e\x12\x16\n\x12\x42\x41\x44GE_TYPE_PSYCHIC\x10\x1f\x12\x12\n\x0e\x42\x41\x44GE_TYPE_ICE\x10 \x12\x15\n\x11\x42\x41\x44GE_TYPE_DRAGON\x10!\x12\x13\n\x0f\x42\x41\x44GE_TYPE_DARK\x10\"\x12\x14\n\x10\x42\x41\x44GE_TYPE_FAIRY\x10#\x12\x17\n\x13\x42\x41\x44GE_SMALL_RATTATA\x10$\x12\x11\n\rBADGE_PIKACHU\x10%*\x96\x01\n\x13\x43\x61meraInterpolation\x12\x12\n\x0e\x43\x41M_INTERP_CUT\x10\x00\x12\x15\n\x11\x43\x41M_INTERP_LINEAR\x10\x01\x12\x15\n\x11\x43\x41M_INTERP_SMOOTH\x10\x02\x12%\n!CAM_INTERP_SMOOTH_ROT_LINEAR_MOVE\x10\x03\x12\x16\n\x12\x43\x41M_INTERP_DEPENDS\x10\x04*\xfc\x03\n\x0c\x43\x61meraTarget\x12\x17\n\x13\x43\x41M_TARGET_ATTACKER\x10\x00\x12\x1c\n\x18\x43\x41M_TARGET_ATTACKER_EDGE\x10\x01\x12\x1e\n\x1a\x43\x41M_TARGET_ATTACKER_GROUND\x10\x02\x12\x17\n\x13\x43\x41M_TARGET_DEFENDER\x10\x03\x12\x1c\n\x18\x43\x41M_TARGET_DEFENDER_EDGE\x10\x04\x12\x1e\n\x1a\x43\x41M_TARGET_DEFENDER_GROUND\x10\x05\x12 \n\x1c\x43\x41M_TARGET_ATTACKER_DEFENDER\x10\x06\x12%\n!CAM_TARGET_ATTACKER_DEFENDER_EDGE\x10\x07\x12 \n\x1c\x43\x41M_TARGET_DEFENDER_ATTACKER\x10\x08\x12%\n!CAM_TARGET_DEFENDER_ATTACKER_EDGE\x10\t\x12\'\n#CAM_TARGET_ATTACKER_DEFENDER_MIRROR\x10\x0b\x12)\n%CAM_TARGET_SHOULDER_ATTACKER_DEFENDER\x10\x0c\x12\x30\n,CAM_TARGET_SHOULDER_ATTACKER_DEFENDER_MIRROR\x10\r\x12&\n\"CAM_TARGET_ATTACKER_DEFENDER_WORLD\x10\x0e*\x83\'\n\x0fHoloPokemonMove\x12\x0e\n\nMOVE_UNSET\x10\x00\x12\x1c\n\x18V0001_MOVE_THUNDER_SHOCK\x10\x01\x12\x1b\n\x17V0002_MOVE_QUICK_ATTACK\x10\x02\x12\x16\n\x12V0003_MOVE_SCRATCH\x10\x03\x12\x14\n\x10V0004_MOVE_EMBER\x10\x04\x12\x18\n\x14V0005_MOVE_VINE_WHIP\x10\x05\x12\x15\n\x11V0006_MOVE_TACKLE\x10\x06\x12\x19\n\x15V0007_MOVE_RAZOR_LEAF\x10\x07\x12\x18\n\x14V0008_MOVE_TAKE_DOWN\x10\x08\x12\x18\n\x14V0009_MOVE_WATER_GUN\x10\t\x12\x13\n\x0fV0010_MOVE_BITE\x10\n\x12\x14\n\x10V0011_MOVE_POUND\x10\x0b\x12\x1a\n\x16V0012_MOVE_DOUBLE_SLAP\x10\x0c\x12\x13\n\x0fV0013_MOVE_WRAP\x10\r\x12\x19\n\x15V0014_MOVE_HYPER_BEAM\x10\x0e\x12\x13\n\x0fV0015_MOVE_LICK\x10\x0f\x12\x19\n\x15V0016_MOVE_DARK_PULSE\x10\x10\x12\x13\n\x0fV0017_MOVE_SMOG\x10\x11\x12\x15\n\x11V0018_MOVE_SLUDGE\x10\x12\x12\x19\n\x15V0019_MOVE_METAL_CLAW\x10\x13\x12\x18\n\x14V0020_MOVE_VICE_GRIP\x10\x14\x12\x1a\n\x16V0021_MOVE_FLAME_WHEEL\x10\x15\x12\x17\n\x13V0022_MOVE_MEGAHORN\x10\x16\x12\x1a\n\x16V0023_MOVE_WING_ATTACK\x10\x17\x12\x1b\n\x17V0024_MOVE_FLAMETHROWER\x10\x18\x12\x1b\n\x17V0025_MOVE_SUCKER_PUNCH\x10\x19\x12\x12\n\x0eV0026_MOVE_DIG\x10\x1a\x12\x17\n\x13V0027_MOVE_LOW_KICK\x10\x1b\x12\x19\n\x15V0028_MOVE_CROSS_CHOP\x10\x1c\x12\x19\n\x15V0029_MOVE_PSYCHO_CUT\x10\x1d\x12\x16\n\x12V0030_MOVE_PSYBEAM\x10\x1e\x12\x19\n\x15V0031_MOVE_EARTHQUAKE\x10\x1f\x12\x19\n\x15V0032_MOVE_STONE_EDGE\x10 \x12\x18\n\x14V0033_MOVE_ICE_PUNCH\x10!\x12\x1a\n\x16V0034_MOVE_HEART_STAMP\x10\"\x12\x18\n\x14V0035_MOVE_DISCHARGE\x10#\x12\x1b\n\x17V0036_MOVE_FLASH_CANNON\x10$\x12\x13\n\x0fV0037_MOVE_PECK\x10%\x12\x19\n\x15V0038_MOVE_DRILL_PECK\x10&\x12\x17\n\x13V0039_MOVE_ICE_BEAM\x10\'\x12\x17\n\x13V0040_MOVE_BLIZZARD\x10(\x12\x18\n\x14V0041_MOVE_AIR_SLASH\x10)\x12\x18\n\x14V0042_MOVE_HEAT_WAVE\x10*\x12\x18\n\x14V0043_MOVE_TWINEEDLE\x10+\x12\x19\n\x15V0044_MOVE_POISON_JAB\x10,\x12\x19\n\x15V0045_MOVE_AERIAL_ACE\x10-\x12\x18\n\x14V0046_MOVE_DRILL_RUN\x10.\x12\x1d\n\x19V0047_MOVE_PETAL_BLIZZARD\x10/\x12\x19\n\x15V0048_MOVE_MEGA_DRAIN\x10\x30\x12\x17\n\x13V0049_MOVE_BUG_BUZZ\x10\x31\x12\x1a\n\x16V0050_MOVE_POISON_FANG\x10\x32\x12\x1a\n\x16V0051_MOVE_NIGHT_SLASH\x10\x33\x12\x14\n\x10V0052_MOVE_SLASH\x10\x34\x12\x1a\n\x16V0053_MOVE_BUBBLE_BEAM\x10\x35\x12\x19\n\x15V0054_MOVE_SUBMISSION\x10\x36\x12\x1a\n\x16V0055_MOVE_KARATE_CHOP\x10\x37\x12\x18\n\x14V0056_MOVE_LOW_SWEEP\x10\x38\x12\x17\n\x13V0057_MOVE_AQUA_JET\x10\x39\x12\x18\n\x14V0058_MOVE_AQUA_TAIL\x10:\x12\x18\n\x14V0059_MOVE_SEED_BOMB\x10;\x12\x17\n\x13V0060_MOVE_PSYSHOCK\x10<\x12\x19\n\x15V0061_MOVE_ROCK_THROW\x10=\x12\x1c\n\x18V0062_MOVE_ANCIENT_POWER\x10>\x12\x18\n\x14V0063_MOVE_ROCK_TOMB\x10?\x12\x19\n\x15V0064_MOVE_ROCK_SLIDE\x10@\x12\x18\n\x14V0065_MOVE_POWER_GEM\x10\x41\x12\x1b\n\x17V0066_MOVE_SHADOW_SNEAK\x10\x42\x12\x1b\n\x17V0067_MOVE_SHADOW_PUNCH\x10\x43\x12\x1a\n\x16V0068_MOVE_SHADOW_CLAW\x10\x44\x12\x1b\n\x17V0069_MOVE_OMINOUS_WIND\x10\x45\x12\x1a\n\x16V0070_MOVE_SHADOW_BALL\x10\x46\x12\x1b\n\x17V0071_MOVE_BULLET_PUNCH\x10G\x12\x1a\n\x16V0072_MOVE_MAGNET_BOMB\x10H\x12\x19\n\x15V0073_MOVE_STEEL_WING\x10I\x12\x18\n\x14V0074_MOVE_IRON_HEAD\x10J\x12\x1f\n\x1bV0075_MOVE_PARABOLIC_CHARGE\x10K\x12\x14\n\x10V0076_MOVE_SPARK\x10L\x12\x1c\n\x18V0077_MOVE_THUNDER_PUNCH\x10M\x12\x16\n\x12V0078_MOVE_THUNDER\x10N\x12\x1a\n\x16V0079_MOVE_THUNDERBOLT\x10O\x12\x16\n\x12V0080_MOVE_TWISTER\x10P\x12\x1c\n\x18V0081_MOVE_DRAGON_BREATH\x10Q\x12\x1b\n\x17V0082_MOVE_DRAGON_PULSE\x10R\x12\x1a\n\x16V0083_MOVE_DRAGON_CLAW\x10S\x12\x1e\n\x1aV0084_MOVE_DISARMING_VOICE\x10T\x12\x1c\n\x18V0085_MOVE_DRAINING_KISS\x10U\x12\x1d\n\x19V0086_MOVE_DAZZLING_GLEAM\x10V\x12\x18\n\x14V0087_MOVE_MOONBLAST\x10W\x12\x19\n\x15V0088_MOVE_PLAY_ROUGH\x10X\x12\x1b\n\x17V0089_MOVE_CROSS_POISON\x10Y\x12\x1a\n\x16V0090_MOVE_SLUDGE_BOMB\x10Z\x12\x1a\n\x16V0091_MOVE_SLUDGE_WAVE\x10[\x12\x18\n\x14V0092_MOVE_GUNK_SHOT\x10\\\x12\x17\n\x13V0093_MOVE_MUD_SHOT\x10]\x12\x18\n\x14V0094_MOVE_BONE_CLUB\x10^\x12\x17\n\x13V0095_MOVE_BULLDOZE\x10_\x12\x17\n\x13V0096_MOVE_MUD_BOMB\x10`\x12\x1a\n\x16V0097_MOVE_FURY_CUTTER\x10\x61\x12\x17\n\x13V0098_MOVE_BUG_BITE\x10\x62\x12\x1a\n\x16V0099_MOVE_SIGNAL_BEAM\x10\x63\x12\x18\n\x14V0100_MOVE_X_SCISSOR\x10\x64\x12\x1b\n\x17V0101_MOVE_FLAME_CHARGE\x10\x65\x12\x1a\n\x16V0102_MOVE_FLAME_BURST\x10\x66\x12\x19\n\x15V0103_MOVE_FIRE_BLAST\x10g\x12\x14\n\x10V0104_MOVE_BRINE\x10h\x12\x1a\n\x16V0105_MOVE_WATER_PULSE\x10i\x12\x14\n\x10V0106_MOVE_SCALD\x10j\x12\x19\n\x15V0107_MOVE_HYDRO_PUMP\x10k\x12\x16\n\x12V0108_MOVE_PSYCHIC\x10l\x12\x18\n\x14V0109_MOVE_PSYSTRIKE\x10m\x12\x18\n\x14V0110_MOVE_ICE_SHARD\x10n\x12\x17\n\x13V0111_MOVE_ICY_WIND\x10o\x12\x1b\n\x17V0112_MOVE_FROST_BREATH\x10p\x12\x15\n\x11V0113_MOVE_ABSORB\x10q\x12\x19\n\x15V0114_MOVE_GIGA_DRAIN\x10r\x12\x19\n\x15V0115_MOVE_FIRE_PUNCH\x10s\x12\x19\n\x15V0116_MOVE_SOLAR_BEAM\x10t\x12\x19\n\x15V0117_MOVE_LEAF_BLADE\x10u\x12\x19\n\x15V0118_MOVE_POWER_WHIP\x10v\x12\x15\n\x11V0119_MOVE_SPLASH\x10w\x12\x13\n\x0fV0120_MOVE_ACID\x10x\x12\x19\n\x15V0121_MOVE_AIR_CUTTER\x10y\x12\x18\n\x14V0122_MOVE_HURRICANE\x10z\x12\x1a\n\x16V0123_MOVE_BRICK_BREAK\x10{\x12\x12\n\x0eV0124_MOVE_CUT\x10|\x12\x14\n\x10V0125_MOVE_SWIFT\x10}\x12\x1a\n\x16V0126_MOVE_HORN_ATTACK\x10~\x12\x14\n\x10V0127_MOVE_STOMP\x10\x7f\x12\x18\n\x13V0128_MOVE_HEADBUTT\x10\x80\x01\x12\x1a\n\x15V0129_MOVE_HYPER_FANG\x10\x81\x01\x12\x14\n\x0fV0130_MOVE_SLAM\x10\x82\x01\x12\x19\n\x14V0131_MOVE_BODY_SLAM\x10\x83\x01\x12\x14\n\x0fV0132_MOVE_REST\x10\x84\x01\x12\x18\n\x13V0133_MOVE_STRUGGLE\x10\x85\x01\x12\x1f\n\x1aV0134_MOVE_SCALD_BLASTOISE\x10\x86\x01\x12$\n\x1fV0135_MOVE_HYDRO_PUMP_BLASTOISE\x10\x87\x01\x12\x1a\n\x15V0136_MOVE_WRAP_GREEN\x10\x88\x01\x12\x19\n\x14V0137_MOVE_WRAP_PINK\x10\x89\x01\x12 \n\x1bV0200_MOVE_FURY_CUTTER_FAST\x10\xc8\x01\x12\x1d\n\x18V0201_MOVE_BUG_BITE_FAST\x10\xc9\x01\x12\x19\n\x14V0202_MOVE_BITE_FAST\x10\xca\x01\x12!\n\x1cV0203_MOVE_SUCKER_PUNCH_FAST\x10\xcb\x01\x12\"\n\x1dV0204_MOVE_DRAGON_BREATH_FAST\x10\xcc\x01\x12\"\n\x1dV0205_MOVE_THUNDER_SHOCK_FAST\x10\xcd\x01\x12\x1a\n\x15V0206_MOVE_SPARK_FAST\x10\xce\x01\x12\x1d\n\x18V0207_MOVE_LOW_KICK_FAST\x10\xcf\x01\x12 \n\x1bV0208_MOVE_KARATE_CHOP_FAST\x10\xd0\x01\x12\x1a\n\x15V0209_MOVE_EMBER_FAST\x10\xd1\x01\x12 \n\x1bV0210_MOVE_WING_ATTACK_FAST\x10\xd2\x01\x12\x19\n\x14V0211_MOVE_PECK_FAST\x10\xd3\x01\x12\x19\n\x14V0212_MOVE_LICK_FAST\x10\xd4\x01\x12 \n\x1bV0213_MOVE_SHADOW_CLAW_FAST\x10\xd5\x01\x12\x1e\n\x19V0214_MOVE_VINE_WHIP_FAST\x10\xd6\x01\x12\x1f\n\x1aV0215_MOVE_RAZOR_LEAF_FAST\x10\xd7\x01\x12\x1d\n\x18V0216_MOVE_MUD_SHOT_FAST\x10\xd8\x01\x12\x1e\n\x19V0217_MOVE_ICE_SHARD_FAST\x10\xd9\x01\x12!\n\x1cV0218_MOVE_FROST_BREATH_FAST\x10\xda\x01\x12!\n\x1cV0219_MOVE_QUICK_ATTACK_FAST\x10\xdb\x01\x12\x1c\n\x17V0220_MOVE_SCRATCH_FAST\x10\xdc\x01\x12\x1b\n\x16V0221_MOVE_TACKLE_FAST\x10\xdd\x01\x12\x1a\n\x15V0222_MOVE_POUND_FAST\x10\xde\x01\x12\x18\n\x13V0223_MOVE_CUT_FAST\x10\xdf\x01\x12\x1f\n\x1aV0224_MOVE_POISON_JAB_FAST\x10\xe0\x01\x12\x19\n\x14V0225_MOVE_ACID_FAST\x10\xe1\x01\x12\x1f\n\x1aV0226_MOVE_PSYCHO_CUT_FAST\x10\xe2\x01\x12\x1f\n\x1aV0227_MOVE_ROCK_THROW_FAST\x10\xe3\x01\x12\x1f\n\x1aV0228_MOVE_METAL_CLAW_FAST\x10\xe4\x01\x12!\n\x1cV0229_MOVE_BULLET_PUNCH_FAST\x10\xe5\x01\x12\x1e\n\x19V0230_MOVE_WATER_GUN_FAST\x10\xe6\x01\x12\x1b\n\x16V0231_MOVE_SPLASH_FAST\x10\xe7\x01\x12(\n#V0232_MOVE_WATER_GUN_FAST_BLASTOISE\x10\xe8\x01\x12\x1d\n\x18V0233_MOVE_MUD_SLAP_FAST\x10\xe9\x01\x12!\n\x1cV0234_MOVE_ZEN_HEADBUTT_FAST\x10\xea\x01\x12\x1e\n\x19V0235_MOVE_CONFUSION_FAST\x10\xeb\x01\x12!\n\x1cV0236_MOVE_POISON_STING_FAST\x10\xec\x01\x12\x1b\n\x16V0237_MOVE_BUBBLE_FAST\x10\xed\x01\x12!\n\x1cV0238_MOVE_FEINT_ATTACK_FAST\x10\xee\x01\x12\x1f\n\x1aV0239_MOVE_STEEL_WING_FAST\x10\xef\x01\x12\x1e\n\x19V0240_MOVE_FIRE_FANG_FAST\x10\xf0\x01\x12\x1f\n\x1aV0241_MOVE_ROCK_SMASH_FAST\x10\xf1\x01*\xd1 \n\rHoloPokemonId\x12\x11\n\rPOKEMON_UNSET\x10\x00\x12\x1b\n\x17V0001_POKEMON_BULBASAUR\x10\x01\x12\x19\n\x15V0002_POKEMON_IVYSAUR\x10\x02\x12\x1a\n\x16V0003_POKEMON_VENUSAUR\x10\x03\x12\x1c\n\x18V0004_POKEMON_CHARMANDER\x10\x04\x12\x1c\n\x18V0005_POKEMON_CHARMELEON\x10\x05\x12\x1b\n\x17V0006_POKEMON_CHARIZARD\x10\x06\x12\x1a\n\x16V0007_POKEMON_SQUIRTLE\x10\x07\x12\x1b\n\x17V0008_POKEMON_WARTORTLE\x10\x08\x12\x1b\n\x17V0009_POKEMON_BLASTOISE\x10\t\x12\x1a\n\x16V0010_POKEMON_CATERPIE\x10\n\x12\x19\n\x15V0011_POKEMON_METAPOD\x10\x0b\x12\x1c\n\x18V0012_POKEMON_BUTTERFREE\x10\x0c\x12\x18\n\x14V0013_POKEMON_WEEDLE\x10\r\x12\x18\n\x14V0014_POKEMON_KAKUNA\x10\x0e\x12\x1a\n\x16V0015_POKEMON_BEEDRILL\x10\x0f\x12\x18\n\x14V0016_POKEMON_PIDGEY\x10\x10\x12\x1b\n\x17V0017_POKEMON_PIDGEOTTO\x10\x11\x12\x19\n\x15V0018_POKEMON_PIDGEOT\x10\x12\x12\x19\n\x15V0019_POKEMON_RATTATA\x10\x13\x12\x1a\n\x16V0020_POKEMON_RATICATE\x10\x14\x12\x19\n\x15V0021_POKEMON_SPEAROW\x10\x15\x12\x18\n\x14V0022_POKEMON_FEAROW\x10\x16\x12\x17\n\x13V0023_POKEMON_EKANS\x10\x17\x12\x17\n\x13V0024_POKEMON_ARBOK\x10\x18\x12\x19\n\x15V0025_POKEMON_PIKACHU\x10\x19\x12\x18\n\x14V0026_POKEMON_RAICHU\x10\x1a\x12\x1b\n\x17V0027_POKEMON_SANDSHREW\x10\x1b\x12\x1b\n\x17V0028_POKEMON_SANDSLASH\x10\x1c\x12\x19\n\x15V0029_POKEMON_NIDORAN\x10\x1d\x12\x1a\n\x16V0030_POKEMON_NIDORINA\x10\x1e\x12\x1b\n\x17V0031_POKEMON_NIDOQUEEN\x10\x1f\x12\x19\n\x15V0032_POKEMON_NIDORAN\x10 \x12\x1a\n\x16V0033_POKEMON_NIDORINO\x10!\x12\x1a\n\x16V0034_POKEMON_NIDOKING\x10\"\x12\x1a\n\x16V0035_POKEMON_CLEFAIRY\x10#\x12\x1a\n\x16V0036_POKEMON_CLEFABLE\x10$\x12\x18\n\x14V0037_POKEMON_VULPIX\x10%\x12\x1b\n\x17V0038_POKEMON_NINETALES\x10&\x12\x1c\n\x18V0039_POKEMON_JIGGLYPUFF\x10\'\x12\x1c\n\x18V0040_POKEMON_WIGGLYTUFF\x10(\x12\x17\n\x13V0041_POKEMON_ZUBAT\x10)\x12\x18\n\x14V0042_POKEMON_GOLBAT\x10*\x12\x18\n\x14V0043_POKEMON_ODDISH\x10+\x12\x17\n\x13V0044_POKEMON_GLOOM\x10,\x12\x1b\n\x17V0045_POKEMON_VILEPLUME\x10-\x12\x17\n\x13V0046_POKEMON_PARAS\x10.\x12\x1a\n\x16V0047_POKEMON_PARASECT\x10/\x12\x19\n\x15V0048_POKEMON_VENONAT\x10\x30\x12\x1a\n\x16V0049_POKEMON_VENOMOTH\x10\x31\x12\x19\n\x15V0050_POKEMON_DIGLETT\x10\x32\x12\x19\n\x15V0051_POKEMON_DUGTRIO\x10\x33\x12\x18\n\x14V0052_POKEMON_MEOWTH\x10\x34\x12\x19\n\x15V0053_POKEMON_PERSIAN\x10\x35\x12\x19\n\x15V0054_POKEMON_PSYDUCK\x10\x36\x12\x19\n\x15V0055_POKEMON_GOLDUCK\x10\x37\x12\x18\n\x14V0056_POKEMON_MANKEY\x10\x38\x12\x1a\n\x16V0057_POKEMON_PRIMEAPE\x10\x39\x12\x1b\n\x17V0058_POKEMON_GROWLITHE\x10:\x12\x1a\n\x16V0059_POKEMON_ARCANINE\x10;\x12\x19\n\x15V0060_POKEMON_POLIWAG\x10<\x12\x1b\n\x17V0061_POKEMON_POLIWHIRL\x10=\x12\x1b\n\x17V0062_POKEMON_POLIWRATH\x10>\x12\x16\n\x12V0063_POKEMON_ABRA\x10?\x12\x19\n\x15V0064_POKEMON_KADABRA\x10@\x12\x1a\n\x16V0065_POKEMON_ALAKAZAM\x10\x41\x12\x18\n\x14V0066_POKEMON_MACHOP\x10\x42\x12\x19\n\x15V0067_POKEMON_MACHOKE\x10\x43\x12\x19\n\x15V0068_POKEMON_MACHAMP\x10\x44\x12\x1c\n\x18V0069_POKEMON_BELLSPROUT\x10\x45\x12\x1c\n\x18V0070_POKEMON_WEEPINBELL\x10\x46\x12\x1c\n\x18V0071_POKEMON_VICTREEBEL\x10G\x12\x1b\n\x17V0072_POKEMON_TENTACOOL\x10H\x12\x1c\n\x18V0073_POKEMON_TENTACRUEL\x10I\x12\x19\n\x15V0074_POKEMON_GEODUDE\x10J\x12\x1a\n\x16V0075_POKEMON_GRAVELER\x10K\x12\x17\n\x13V0076_POKEMON_GOLEM\x10L\x12\x18\n\x14V0077_POKEMON_PONYTA\x10M\x12\x1a\n\x16V0078_POKEMON_RAPIDASH\x10N\x12\x1a\n\x16V0079_POKEMON_SLOWPOKE\x10O\x12\x19\n\x15V0080_POKEMON_SLOWBRO\x10P\x12\x1b\n\x17V0081_POKEMON_MAGNEMITE\x10Q\x12\x1a\n\x16V0082_POKEMON_MAGNETON\x10R\x12\x1b\n\x17V0083_POKEMON_FARFETCHD\x10S\x12\x17\n\x13V0084_POKEMON_DODUO\x10T\x12\x18\n\x14V0085_POKEMON_DODRIO\x10U\x12\x16\n\x12V0086_POKEMON_SEEL\x10V\x12\x19\n\x15V0087_POKEMON_DEWGONG\x10W\x12\x18\n\x14V0088_POKEMON_GRIMER\x10X\x12\x15\n\x11V0089_POKEMON_MUK\x10Y\x12\x1a\n\x16V0090_POKEMON_SHELLDER\x10Z\x12\x1a\n\x16V0091_POKEMON_CLOYSTER\x10[\x12\x18\n\x14V0092_POKEMON_GASTLY\x10\\\x12\x19\n\x15V0093_POKEMON_HAUNTER\x10]\x12\x18\n\x14V0094_POKEMON_GENGAR\x10^\x12\x16\n\x12V0095_POKEMON_ONIX\x10_\x12\x19\n\x15V0096_POKEMON_DROWZEE\x10`\x12\x17\n\x13V0097_POKEMON_HYPNO\x10\x61\x12\x18\n\x14V0098_POKEMON_KRABBY\x10\x62\x12\x19\n\x15V0099_POKEMON_KINGLER\x10\x63\x12\x19\n\x15V0100_POKEMON_VOLTORB\x10\x64\x12\x1b\n\x17V0101_POKEMON_ELECTRODE\x10\x65\x12\x1b\n\x17V0102_POKEMON_EXEGGCUTE\x10\x66\x12\x1b\n\x17V0103_POKEMON_EXEGGUTOR\x10g\x12\x18\n\x14V0104_POKEMON_CUBONE\x10h\x12\x19\n\x15V0105_POKEMON_MAROWAK\x10i\x12\x1b\n\x17V0106_POKEMON_HITMONLEE\x10j\x12\x1c\n\x18V0107_POKEMON_HITMONCHAN\x10k\x12\x1b\n\x17V0108_POKEMON_LICKITUNG\x10l\x12\x19\n\x15V0109_POKEMON_KOFFING\x10m\x12\x19\n\x15V0110_POKEMON_WEEZING\x10n\x12\x19\n\x15V0111_POKEMON_RHYHORN\x10o\x12\x18\n\x14V0112_POKEMON_RHYDON\x10p\x12\x19\n\x15V0113_POKEMON_CHANSEY\x10q\x12\x19\n\x15V0114_POKEMON_TANGELA\x10r\x12\x1c\n\x18V0115_POKEMON_KANGASKHAN\x10s\x12\x18\n\x14V0116_POKEMON_HORSEA\x10t\x12\x18\n\x14V0117_POKEMON_SEADRA\x10u\x12\x19\n\x15V0118_POKEMON_GOLDEEN\x10v\x12\x19\n\x15V0119_POKEMON_SEAKING\x10w\x12\x18\n\x14V0120_POKEMON_STARYU\x10x\x12\x19\n\x15V0121_POKEMON_STARMIE\x10y\x12\x19\n\x15V0122_POKEMON_MR_MIME\x10z\x12\x19\n\x15V0123_POKEMON_SCYTHER\x10{\x12\x16\n\x12V0124_POKEMON_JYNX\x10|\x12\x1c\n\x18V0125_POKEMON_ELECTABUZZ\x10}\x12\x18\n\x14V0126_POKEMON_MAGMAR\x10~\x12\x18\n\x14V0127_POKEMON_PINSIR\x10\x7f\x12\x19\n\x14V0128_POKEMON_TAUROS\x10\x80\x01\x12\x1b\n\x16V0129_POKEMON_MAGIKARP\x10\x81\x01\x12\x1b\n\x16V0130_POKEMON_GYARADOS\x10\x82\x01\x12\x19\n\x14V0131_POKEMON_LAPRAS\x10\x83\x01\x12\x18\n\x13V0132_POKEMON_DITTO\x10\x84\x01\x12\x18\n\x13V0133_POKEMON_EEVEE\x10\x85\x01\x12\x1b\n\x16V0134_POKEMON_VAPOREON\x10\x86\x01\x12\x1a\n\x15V0135_POKEMON_JOLTEON\x10\x87\x01\x12\x1a\n\x15V0136_POKEMON_FLAREON\x10\x88\x01\x12\x1a\n\x15V0137_POKEMON_PORYGON\x10\x89\x01\x12\x1a\n\x15V0138_POKEMON_OMANYTE\x10\x8a\x01\x12\x1a\n\x15V0139_POKEMON_OMASTAR\x10\x8b\x01\x12\x19\n\x14V0140_POKEMON_KABUTO\x10\x8c\x01\x12\x1b\n\x16V0141_POKEMON_KABUTOPS\x10\x8d\x01\x12\x1d\n\x18V0142_POKEMON_AERODACTYL\x10\x8e\x01\x12\x1a\n\x15V0143_POKEMON_SNORLAX\x10\x8f\x01\x12\x1b\n\x16V0144_POKEMON_ARTICUNO\x10\x90\x01\x12\x19\n\x14V0145_POKEMON_ZAPDOS\x10\x91\x01\x12\x1a\n\x15V0146_POKEMON_MOLTRES\x10\x92\x01\x12\x1a\n\x15V0147_POKEMON_DRATINI\x10\x93\x01\x12\x1c\n\x17V0148_POKEMON_DRAGONAIR\x10\x94\x01\x12\x1c\n\x17V0149_POKEMON_DRAGONITE\x10\x95\x01\x12\x19\n\x14V0150_POKEMON_MEWTWO\x10\x96\x01\x12\x16\n\x11V0151_POKEMON_MEW\x10\x97\x01*n\n\x08Platform\x12\x12\n\x0ePLATFORM_UNSET\x10\x00\x12\x10\n\x0cPLATFORM_IOS\x10\x01\x12\x14\n\x10PLATFORM_ANDROID\x10\x02\x12\x10\n\x0cPLATFORM_OSX\x10\x03\x12\x14\n\x10PLATFORM_WINDOWS\x10\x04*\xe9\x01\n\x12TutorialCompletion\x12\x10\n\x0cLEGAL_SCREEN\x10\x00\x12\x14\n\x10\x41VATAR_SELECTION\x10\x01\x12\x14\n\x10\x41\x43\x43OUNT_CREATION\x10\x02\x12\x13\n\x0fPOKEMON_CAPTURE\x10\x03\x12\x12\n\x0eNAME_SELECTION\x10\x04\x12\x11\n\rPOKEMON_BERRY\x10\x05\x12\x0c\n\x08USE_ITEM\x10\x06\x12\"\n\x1e\x46IRST_TIME_EXPERIENCE_COMPLETE\x10\x07\x12\x15\n\x11POKESTOP_TUTORIAL\x10\x08\x12\x10\n\x0cGYM_TUTORIAL\x10\tP\x00\x62\x06proto3')
   ,
   dependencies=[holoholo__shared__pb2.DESCRIPTOR,])
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
@@ -64,8 +64,8 @@ _UPDATETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20147,
-  serialized_end=20284,
+  serialized_start=19912,
+  serialized_end=20049,
 )
 _sym_db.RegisterEnumDescriptor(_UPDATETYPE)
 
@@ -91,8 +91,8 @@ _ENUMSCALEMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20286,
-  serialized_end=20336,
+  serialized_start=20051,
+  serialized_end=20101,
 )
 _sym_db.RegisterEnumDescriptor(_ENUMSCALEMODE)
 
@@ -126,8 +126,8 @@ _FOVSIDE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20338,
-  serialized_end=20401,
+  serialized_start=20103,
+  serialized_end=20166,
 )
 _sym_db.RegisterEnumDescriptor(_FOVSIDE)
 
@@ -149,8 +149,8 @@ _REMOTECONFIGURATIONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20403,
-  serialized_end=20463,
+  serialized_start=20168,
+  serialized_end=20228,
 )
 _sym_db.RegisterEnumDescriptor(_REMOTECONFIGURATIONTYPE)
 
@@ -256,8 +256,8 @@ _COMMAND = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20466,
-  serialized_end=20762,
+  serialized_start=20231,
+  serialized_end=20527,
 )
 _sym_db.RegisterEnumDescriptor(_COMMAND)
 
@@ -279,8 +279,8 @@ _TARGETTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20764,
-  serialized_end=20815,
+  serialized_start=20529,
+  serialized_end=20580,
 )
 _sym_db.RegisterEnumDescriptor(_TARGETTYPE)
 
@@ -310,8 +310,8 @@ _EFFECT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20817,
-  serialized_end=20901,
+  serialized_start=20582,
+  serialized_end=20666,
 )
 _sym_db.RegisterEnumDescriptor(_EFFECT)
 
@@ -337,8 +337,8 @@ _POKEMONCREATECONTEXT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=20903,
-  serialized_end=21001,
+  serialized_start=20668,
+  serialized_end=20766,
 )
 _sym_db.RegisterEnumDescriptor(_POKEMONCREATECONTEXT)
 
@@ -364,8 +364,8 @@ _PLAYERAVATARTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21003,
-  serialized_end=21096,
+  serialized_start=20768,
+  serialized_end=20861,
 )
 _sym_db.RegisterEnumDescriptor(_PLAYERAVATARTYPE)
 
@@ -395,8 +395,8 @@ _TEAM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21098,
-  serialized_end=21161,
+  serialized_start=20863,
+  serialized_end=20926,
 )
 _sym_db.RegisterEnumDescriptor(_TEAM)
 
@@ -486,8 +486,8 @@ _HOLOPOKEMONTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21164,
-  serialized_end=21642,
+  serialized_start=20929,
+  serialized_end=21407,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOPOKEMONTYPE)
 
@@ -513,8 +513,8 @@ _HOLOPOKEMONCLASS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21644,
-  serialized_end=21743,
+  serialized_start=21409,
+  serialized_end=21508,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOPOKEMONCLASS)
 
@@ -560,8 +560,8 @@ _HOLOPOKEMONNATURE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=21746,
-  serialized_end=22024,
+  serialized_start=21511,
+  serialized_end=21789,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOPOKEMONNATURE)
 
@@ -603,8 +603,8 @@ _HOLOPOKEMONMOVEMENTTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=22027,
-  serialized_end=22288,
+  serialized_start=21792,
+  serialized_end=22053,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOPOKEMONMOVEMENTTYPE)
 
@@ -666,8 +666,8 @@ _HOLOITEMCATEGORY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=22291,
-  serialized_end=22637,
+  serialized_start=22056,
+  serialized_end=22402,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOITEMCATEGORY)
 
@@ -741,8 +741,8 @@ _HOLOITEMEFFECT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=22640,
-  serialized_end=23180,
+  serialized_start=22405,
+  serialized_end=22945,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOITEMEFFECT)
 
@@ -852,8 +852,8 @@ _HOLOACTIVITYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23183,
-  serialized_end=23935,
+  serialized_start=22948,
+  serialized_end=23700,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOACTIVITYTYPE)
 
@@ -1019,8 +1019,8 @@ _HOLOBADGETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=23938,
-  serialized_end=24871,
+  serialized_start=23703,
+  serialized_end=24636,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOBADGETYPE)
 
@@ -1054,8 +1054,8 @@ _CAMERAINTERPOLATION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=24874,
-  serialized_end=25024,
+  serialized_start=24639,
+  serialized_end=24789,
 )
 _sym_db.RegisterEnumDescriptor(_CAMERAINTERPOLATION)
 
@@ -1125,8 +1125,8 @@ _CAMERATARGET = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=25027,
-  serialized_end=25535,
+  serialized_start=24792,
+  serialized_end=25300,
 )
 _sym_db.RegisterEnumDescriptor(_CAMERATARGET)
 
@@ -1860,8 +1860,8 @@ _HOLOPOKEMONMOVE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=25538,
-  serialized_end=30533,
+  serialized_start=25303,
+  serialized_end=30298,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOPOKEMONMOVE)
 
@@ -2483,8 +2483,8 @@ _HOLOPOKEMONID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=30536,
-  serialized_end=34713,
+  serialized_start=30301,
+  serialized_end=34478,
 )
 _sym_db.RegisterEnumDescriptor(_HOLOPOKEMONID)
 
@@ -2518,8 +2518,8 @@ _PLATFORM = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=34715,
-  serialized_end=34825,
+  serialized_start=34480,
+  serialized_end=34590,
 )
 _sym_db.RegisterEnumDescriptor(_PLATFORM)
 
@@ -2573,8 +2573,8 @@ _TUTORIALCOMPLETION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=34828,
-  serialized_end=35061,
+  serialized_start=34593,
+  serialized_end=34826,
 )
 _sym_db.RegisterEnumDescriptor(_TUTORIALCOMPLETION)
 
@@ -3154,8 +3154,8 @@ _NIANTIC_HOLOHOLO_ENCOUNTER_ENCOUNTERRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19040,
-  serialized_end=19120,
+  serialized_start=18805,
+  serialized_end=18885,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_ENCOUNTER_ENCOUNTERRESULT)
 
@@ -3180,8 +3180,8 @@ _NIANTIC_HOLOHOLO_GYM_GYMMINIMAPDOT_DOTSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19147,
-  serialized_end=19190,
+  serialized_start=18912,
+  serialized_end=18955,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_GYM_GYMMINIMAPDOT_DOTSTATE)
 
@@ -3206,8 +3206,8 @@ _NIANTIC_HOLOHOLO_GYM_ATTACKAFFECTOR_FXPRIORITY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19210,
-  serialized_end=19258,
+  serialized_start=18975,
+  serialized_end=19023,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_GYM_ATTACKAFFECTOR_FXPRIORITY)
 
@@ -3236,8 +3236,8 @@ _NIANTIC_HOLOHOLO_GYM_APPROACHMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19260,
-  serialized_end=19339,
+  serialized_start=19025,
+  serialized_end=19104,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_GYM_APPROACHMODE)
 
@@ -3258,8 +3258,8 @@ _NIANTIC_HOLOHOLO_MAP_MAPSPAWNPOINT_VISIBILITYTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19366,
-  serialized_end=19401,
+  serialized_start=19131,
+  serialized_end=19166,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_MAP_MAPSPAWNPOINT_VISIBILITYTYPE)
 
@@ -3292,8 +3292,8 @@ _NIANTIC_HOLOHOLO_MAP_MAPGESTUREHANDLER_PANGESTURETYPE = _descriptor.EnumDescrip
   ],
   containing_type=None,
   options=None,
-  serialized_start=19424,
-  serialized_end=19500,
+  serialized_start=19189,
+  serialized_end=19265,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_MAP_MAPGESTUREHANDLER_PANGESTURETYPE)
 
@@ -3314,8 +3314,8 @@ _NIANTIC_HOLOHOLO_MAP_POKEMONENCOUNTERRESPONSE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19502,
-  serialized_end=19554,
+  serialized_start=19267,
+  serialized_end=19319,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_MAP_POKEMONENCOUNTERRESPONSE)
 
@@ -3336,8 +3336,8 @@ _NIANTIC_HOLOHOLO_MAP_DAYPERIOD = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19556,
-  serialized_end=19587,
+  serialized_start=19321,
+  serialized_end=19352,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_MAP_DAYPERIOD)
 
@@ -3358,8 +3358,8 @@ _NIANTIC_HOLOHOLO_ITEMS_INCUBATIONRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19598,
-  serialized_end=19642,
+  serialized_start=19363,
+  serialized_end=19407,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_ITEMS_INCUBATIONRESULT)
 
@@ -3380,8 +3380,8 @@ _NIANTIC_HOLOHOLO_ITEMS_BUFFSELECTIONSTATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19644,
-  serialized_end=19692,
+  serialized_start=19409,
+  serialized_end=19457,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_ITEMS_BUFFSELECTIONSTATE)
 
@@ -3402,8 +3402,8 @@ _NIANTIC_HOLOHOLO_USERTASKS_TASKCOMPLETIONRESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19707,
-  serialized_end=19754,
+  serialized_start=19472,
+  serialized_end=19519,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_USERTASKS_TASKCOMPLETIONRESULT)
 
@@ -3424,8 +3424,8 @@ _NIANTIC_HOLOHOLO_DEFERREDINVOKE_DEFERMODE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19774,
-  serialized_end=19814,
+  serialized_start=19539,
+  serialized_end=19579,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_DEFERREDINVOKE_DEFERMODE)
 
@@ -3450,8 +3450,8 @@ _NIANTIC_HOLOHOLO_ASSETS_ASSETREQUESTPRIORITY = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19826,
-  serialized_end=19888,
+  serialized_start=19591,
+  serialized_end=19653,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_ASSETS_ASSETREQUESTPRIORITY)
 
@@ -3512,8 +3512,8 @@ _NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE_STATE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=19918,
-  serialized_end=20144,
+  serialized_start=19683,
+  serialized_end=19909,
 )
 _sym_db.RegisterEnumDescriptor(_NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE_STATE)
 
@@ -9197,158 +9197,6 @@ _SFIDAACTIONLOGOUTPROTO = _descriptor.Descriptor(
 )
 
 
-_DOWNLOADSETTINGSPROTO = _descriptor.Descriptor(
-  name='DownloadSettingsProto',
-  full_name='Holoholo.Rpc.DownloadSettingsProto',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Sha1', full_name='Holoholo.Rpc.DownloadSettingsProto.Sha1', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=16833,
-  serialized_end=16870,
-)
-
-
-_DOWNLOADSETTINGSOUTPROTO = _descriptor.Descriptor(
-  name='DownloadSettingsOutProto',
-  full_name='Holoholo.Rpc.DownloadSettingsOutProto',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Error', full_name='Holoholo.Rpc.DownloadSettingsOutProto.Error', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='Sha1', full_name='Holoholo.Rpc.DownloadSettingsOutProto.Sha1', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='Values', full_name='Holoholo.Rpc.DownloadSettingsOutProto.Values', index=2,
-      number=3, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=16872,
-  serialized_end=16943,
-)
-
-
-_DOWNLOADSETTINGSACTIONPROTO = _descriptor.Descriptor(
-  name='DownloadSettingsActionProto',
-  full_name='Holoholo.Rpc.DownloadSettingsActionProto',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Sha1', full_name='Holoholo.Rpc.DownloadSettingsActionProto.Sha1', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=16945,
-  serialized_end=16988,
-)
-
-
-_DOWNLOADSETTINGSRESPONSEPROTO = _descriptor.Descriptor(
-  name='DownloadSettingsResponseProto',
-  full_name='Holoholo.Rpc.DownloadSettingsResponseProto',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='Error', full_name='Holoholo.Rpc.DownloadSettingsResponseProto.Error', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='Sha1', full_name='Holoholo.Rpc.DownloadSettingsResponseProto.Sha1', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b("").decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-    _descriptor.FieldDescriptor(
-      name='Values', full_name='Holoholo.Rpc.DownloadSettingsResponseProto.Values', index=2,
-      number=3, type=12, cpp_type=9, label=1,
-      has_default_value=False, default_value=_b(""),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      options=None),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=16990,
-  serialized_end=17066,
-)
-
-
 _TRADINGSEARCHPROTO = _descriptor.Descriptor(
   name='TradingSearchProto',
   full_name='Holoholo.Rpc.TradingSearchProto',
@@ -9382,8 +9230,8 @@ _TRADINGSEARCHPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17068,
-  serialized_end=17114,
+  serialized_start=16833,
+  serialized_end=16879,
 )
 
 
@@ -9420,8 +9268,8 @@ _TRADINGSEARCHOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17116,
-  serialized_end=17226,
+  serialized_start=16881,
+  serialized_end=16991,
 )
 
 
@@ -9458,8 +9306,8 @@ _TRADINGOFFERPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17228,
-  serialized_end=17289,
+  serialized_start=16993,
+  serialized_end=17054,
 )
 
 
@@ -9496,8 +9344,8 @@ _TRADINGOFFEROUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17291,
-  serialized_end=17395,
+  serialized_start=17056,
+  serialized_end=17160,
 )
 
 
@@ -9541,8 +9389,8 @@ _POLLFORTRADERESPONSEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17397,
-  serialized_end=17483,
+  serialized_start=17162,
+  serialized_end=17248,
 )
 
 
@@ -9579,8 +9427,8 @@ _POLLFORTRADERESPONSEOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17486,
-  serialized_end=17640,
+  serialized_start=17251,
+  serialized_end=17405,
 )
 
 
@@ -9617,8 +9465,8 @@ _TRADINGRESULTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17642,
-  serialized_end=17701,
+  serialized_start=17407,
+  serialized_end=17466,
 )
 
 
@@ -9648,8 +9496,8 @@ _TRADINGRESULTOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17703,
-  serialized_end=17792,
+  serialized_start=17468,
+  serialized_end=17557,
 )
 
 
@@ -9679,8 +9527,8 @@ _UPGRADEPOKEMONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17794,
-  serialized_end=17834,
+  serialized_start=17559,
+  serialized_end=17599,
 )
 
 
@@ -9717,8 +9565,8 @@ _UPGRADEPOKEMONOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17837,
-  serialized_end=17981,
+  serialized_start=17602,
+  serialized_end=17746,
 )
 
 
@@ -9755,8 +9603,8 @@ _USEITEMPOTIONPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=17983,
-  serialized_end=18056,
+  serialized_start=17748,
+  serialized_end=17821,
 )
 
 
@@ -9793,8 +9641,8 @@ _USEITEMPOTIONOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18058,
-  serialized_end=18164,
+  serialized_start=17823,
+  serialized_end=17929,
 )
 
 
@@ -9831,8 +9679,8 @@ _USEITEMREVIVEPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18166,
-  serialized_end=18239,
+  serialized_start=17931,
+  serialized_end=18004,
 )
 
 
@@ -9869,8 +9717,8 @@ _USEITEMREVIVEOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18241,
-  serialized_end=18347,
+  serialized_start=18006,
+  serialized_end=18112,
 )
 
 
@@ -9921,8 +9769,8 @@ _USEITEMGYMPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18349,
-  serialized_end=18467,
+  serialized_start=18114,
+  serialized_end=18232,
 )
 
 
@@ -9959,8 +9807,8 @@ _USEITEMGYMOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18469,
-  serialized_end=18571,
+  serialized_start=18234,
+  serialized_end=18336,
 )
 
 
@@ -9990,8 +9838,8 @@ _USEITEMXPBOOSTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18573,
-  serialized_end=18628,
+  serialized_start=18338,
+  serialized_end=18393,
 )
 
 
@@ -10028,8 +9876,8 @@ _USEITEMXPBOOSTOUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18631,
-  serialized_end=18777,
+  serialized_start=18396,
+  serialized_end=18542,
 )
 
 
@@ -10066,8 +9914,8 @@ _USEITEMEGGINCUBATORPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18779,
-  serialized_end=18841,
+  serialized_start=18544,
+  serialized_end=18606,
 )
 
 
@@ -10104,8 +9952,8 @@ _USEITEMEGGINCUBATOROUTPROTO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=18844,
-  serialized_end=19000,
+  serialized_start=18609,
+  serialized_end=18765,
 )
 
 
@@ -10129,8 +9977,8 @@ _NIANTIC_HOLOHOLO_ENCOUNTER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19027,
-  serialized_end=19120,
+  serialized_start=18792,
+  serialized_end=18885,
 )
 
 _NIANTIC_HOLOHOLO_GYM_GYMMINIMAPDOT = _descriptor.Descriptor(
@@ -10153,8 +10001,8 @@ _NIANTIC_HOLOHOLO_GYM_GYMMINIMAPDOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19130,
-  serialized_end=19190,
+  serialized_start=18895,
+  serialized_end=18955,
 )
 
 _NIANTIC_HOLOHOLO_GYM_ATTACKAFFECTOR = _descriptor.Descriptor(
@@ -10177,8 +10025,8 @@ _NIANTIC_HOLOHOLO_GYM_ATTACKAFFECTOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19192,
-  serialized_end=19258,
+  serialized_start=18957,
+  serialized_end=19023,
 )
 
 _NIANTIC_HOLOHOLO_GYM = _descriptor.Descriptor(
@@ -10201,8 +10049,8 @@ _NIANTIC_HOLOHOLO_GYM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19123,
-  serialized_end=19339,
+  serialized_start=18888,
+  serialized_end=19104,
 )
 
 _NIANTIC_HOLOHOLO_MAP_MAPSPAWNPOINT = _descriptor.Descriptor(
@@ -10225,8 +10073,8 @@ _NIANTIC_HOLOHOLO_MAP_MAPSPAWNPOINT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19349,
-  serialized_end=19401,
+  serialized_start=19114,
+  serialized_end=19166,
 )
 
 _NIANTIC_HOLOHOLO_MAP_MAPGESTUREHANDLER = _descriptor.Descriptor(
@@ -10249,8 +10097,8 @@ _NIANTIC_HOLOHOLO_MAP_MAPGESTUREHANDLER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19403,
-  serialized_end=19500,
+  serialized_start=19168,
+  serialized_end=19265,
 )
 
 _NIANTIC_HOLOHOLO_MAP = _descriptor.Descriptor(
@@ -10274,8 +10122,8 @@ _NIANTIC_HOLOHOLO_MAP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19342,
-  serialized_end=19587,
+  serialized_start=19107,
+  serialized_end=19352,
 )
 
 _NIANTIC_HOLOHOLO_ITEMS = _descriptor.Descriptor(
@@ -10299,8 +10147,8 @@ _NIANTIC_HOLOHOLO_ITEMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19589,
-  serialized_end=19692,
+  serialized_start=19354,
+  serialized_end=19457,
 )
 
 _NIANTIC_HOLOHOLO_USERTASKS = _descriptor.Descriptor(
@@ -10323,8 +10171,8 @@ _NIANTIC_HOLOHOLO_USERTASKS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19694,
-  serialized_end=19754,
+  serialized_start=19459,
+  serialized_end=19519,
 )
 
 _NIANTIC_HOLOHOLO_DEFERREDINVOKE = _descriptor.Descriptor(
@@ -10347,8 +10195,8 @@ _NIANTIC_HOLOHOLO_DEFERREDINVOKE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19756,
-  serialized_end=19814,
+  serialized_start=19521,
+  serialized_end=19579,
 )
 
 _NIANTIC_HOLOHOLO_ASSETS = _descriptor.Descriptor(
@@ -10371,8 +10219,8 @@ _NIANTIC_HOLOHOLO_ASSETS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19816,
-  serialized_end=19888,
+  serialized_start=19581,
+  serialized_end=19653,
 )
 
 _NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE = _descriptor.Descriptor(
@@ -10395,8 +10243,8 @@ _NIANTIC_HOLOHOLO_SFIDA_SFIDASERVICE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19901,
-  serialized_end=20144,
+  serialized_start=19666,
+  serialized_end=19909,
 )
 
 _NIANTIC_HOLOHOLO_SFIDA = _descriptor.Descriptor(
@@ -10418,8 +10266,8 @@ _NIANTIC_HOLOHOLO_SFIDA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19891,
-  serialized_end=20144,
+  serialized_start=19656,
+  serialized_end=19909,
 )
 
 _NIANTIC_HOLOHOLO = _descriptor.Descriptor(
@@ -10441,8 +10289,8 @@ _NIANTIC_HOLOHOLO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19015,
-  serialized_end=20144,
+  serialized_start=18780,
+  serialized_end=19909,
 )
 
 _NIANTIC = _descriptor.Descriptor(
@@ -10464,8 +10312,8 @@ _NIANTIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=19003,
-  serialized_end=20144,
+  serialized_start=18768,
+  serialized_end=19909,
 )
 
 _ASSETDIGESTREQUESTPROTO.fields_by_name['Platform'].enum_type = _PLATFORM
@@ -10778,10 +10626,6 @@ DESCRIPTOR.message_types_by_name['GetActionLogRequest'] = _GETACTIONLOGREQUEST
 DESCRIPTOR.message_types_by_name['GetActionLogResponse'] = _GETACTIONLOGRESPONSE
 DESCRIPTOR.message_types_by_name['SfidaActionLogProto'] = _SFIDAACTIONLOGPROTO
 DESCRIPTOR.message_types_by_name['SfidaActionLogOutProto'] = _SFIDAACTIONLOGOUTPROTO
-DESCRIPTOR.message_types_by_name['DownloadSettingsProto'] = _DOWNLOADSETTINGSPROTO
-DESCRIPTOR.message_types_by_name['DownloadSettingsOutProto'] = _DOWNLOADSETTINGSOUTPROTO
-DESCRIPTOR.message_types_by_name['DownloadSettingsActionProto'] = _DOWNLOADSETTINGSACTIONPROTO
-DESCRIPTOR.message_types_by_name['DownloadSettingsResponseProto'] = _DOWNLOADSETTINGSRESPONSEPROTO
 DESCRIPTOR.message_types_by_name['TradingSearchProto'] = _TRADINGSEARCHPROTO
 DESCRIPTOR.message_types_by_name['TradingSearchOutProto'] = _TRADINGSEARCHOUTPROTO
 DESCRIPTOR.message_types_by_name['TradingOfferProto'] = _TRADINGOFFERPROTO
@@ -11674,34 +11518,6 @@ SfidaActionLogOutProto = _reflection.GeneratedProtocolMessageType('SfidaActionLo
   # @@protoc_insertion_point(class_scope:Holoholo.Rpc.SfidaActionLogOutProto)
   ))
 _sym_db.RegisterMessage(SfidaActionLogOutProto)
-
-DownloadSettingsProto = _reflection.GeneratedProtocolMessageType('DownloadSettingsProto', (_message.Message,), dict(
-  DESCRIPTOR = _DOWNLOADSETTINGSPROTO,
-  __module__ = 'remaining_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.DownloadSettingsProto)
-  ))
-_sym_db.RegisterMessage(DownloadSettingsProto)
-
-DownloadSettingsOutProto = _reflection.GeneratedProtocolMessageType('DownloadSettingsOutProto', (_message.Message,), dict(
-  DESCRIPTOR = _DOWNLOADSETTINGSOUTPROTO,
-  __module__ = 'remaining_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.DownloadSettingsOutProto)
-  ))
-_sym_db.RegisterMessage(DownloadSettingsOutProto)
-
-DownloadSettingsActionProto = _reflection.GeneratedProtocolMessageType('DownloadSettingsActionProto', (_message.Message,), dict(
-  DESCRIPTOR = _DOWNLOADSETTINGSACTIONPROTO,
-  __module__ = 'remaining_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.DownloadSettingsActionProto)
-  ))
-_sym_db.RegisterMessage(DownloadSettingsActionProto)
-
-DownloadSettingsResponseProto = _reflection.GeneratedProtocolMessageType('DownloadSettingsResponseProto', (_message.Message,), dict(
-  DESCRIPTOR = _DOWNLOADSETTINGSRESPONSEPROTO,
-  __module__ = 'remaining_pb2'
-  # @@protoc_insertion_point(class_scope:Holoholo.Rpc.DownloadSettingsResponseProto)
-  ))
-_sym_db.RegisterMessage(DownloadSettingsResponseProto)
 
 TradingSearchProto = _reflection.GeneratedProtocolMessageType('TradingSearchProto', (_message.Message,), dict(
   DESCRIPTOR = _TRADINGSEARCHPROTO,

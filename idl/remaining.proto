@@ -649,24 +649,6 @@ message SfidaActionLogOutProto{
   repeated ActionLogEntry Log = 2;
 }
 
-//Easier to fix because of the mismatched names
-message DownloadSettingsProto {
-  string Sha1 = 1;
-}
-message DownloadSettingsOutProto{
-  string Error = 1;
-  string Sha1 = 2;
-  bytes Values = 3;
-}
-
-message DownloadSettingsActionProto {
-  string Sha1 = 1;
-}
-message DownloadSettingsResponseProto {
-  string Error = 1;
-  string Sha1 = 2;
-  bytes Values = 3;
-}
 message TradingSearchProto {
   double Lat = 1;
   double Lng = 2;
