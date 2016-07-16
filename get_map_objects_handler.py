@@ -49,6 +49,7 @@ class GetMapObjectsHandler:
     f.write(dump)
 
   def response(self, mor, env):
+    gps = self.request_location.pop(env.response_id)
     features = []
     bulk = []
 
@@ -137,7 +138,6 @@ class GetMapObjectsHandler:
         features.append(f)
 
       for poke in cell.NearbyPokemon:
-        gps = self.request_location.pop(env.response_id)
         if poke.EncounterId not in self.pokeLocation.keys():
           self.pokeLocation[poke.EncounterId] = []
 
