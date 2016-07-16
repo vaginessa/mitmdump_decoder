@@ -33,7 +33,6 @@ mismatched_apis = {
   'DOWNLOAD_REMOTE_CONFIG_VERSION': 'GET_REMOTE_CONFIG_VERSIONS',
 }
 
-
 #http://stackoverflow.com/questions/28867596/deserialize-protobuf-in-python-from-class-name
 def deserialize(message, typ):
   import importlib
@@ -52,6 +51,11 @@ def underscore_to_camelcase(value):
   c = camelcase()
   return "".join(c.next()(x) if x else '_' for x in value.split("_"))
 
+
+def start(context, argv):
+  context.filter_methods = argv[1:]
+  print("Filter methods: %s; Empty is no filtering" % context.filter_methods)
+
 getMapObjects = GetMapObjectsHandler()
 
 methods_for_request = {}
@@ -66,8 +70,11 @@ def request(context, flow):
     key = parameter.key
     value = parameter.value
     methods_for_request[env.request_id].append(key)
-
     name = Method.Name(key)
+    if (len(context.filter_methods) > 0 and name not in context.filter_methods):
+      print("Skipping method %s" % name)
+      continue
+
     name = mismatched_apis.get(name, name) #return class name when not the same as method
     klass = underscore_to_camelcase(name) + "Proto"
     try:
@@ -84,11 +91,14 @@ def response(context, flow):
     env = RpcResponseEnvelopeProto()
     env.ParseFromString(flow.response.content)
 
-    keys = methods_for_request[env.response_id]
+    keys = methods_for_request.pop(env.response_id)
     for value in env.returns:
       key = keys.popleft()
-
       name = Method.Name(key)
+      if (len(context.filter_methods) > 0 and name not in context.filter_methods):
+        print("Skipping method %s" % name)
+        continue
+
       name = mismatched_apis.get(name, name) #return class name when not the same as method
       klass = underscore_to_camelcase(name) + "OutProto"
 
