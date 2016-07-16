@@ -54,7 +54,6 @@ class GetMapObjectsHandler:
 
     for cell in mor.MapCell:
       for fort in cell.Fort:
-
         props = {
             "id": fort.FortId,
             "LastModifiedMs": fort.LastModifiedMs,
@@ -113,8 +112,8 @@ class GetMapObjectsHandler:
 
       for pokemon in cell.WildPokemon:
         p = Point((pokemon.Longitude, pokemon.Latitude))
-        f = Feature(geometry=p, id="wild" + str(pokemon.EncounterId), properties={
-          "id": "wild" + str(pokemon.EncounterId),
+        f = Feature(geometry=p, id="wild%s" % pokemon.EncounterId, properties={
+          "id": "wild%s" % pokemon.EncounterId,
           "type": "wild",
           "TimeTillHiddenMs": pokemon.TimeTillHiddenMs,
           "WillDisappear": pokemon.TimeTillHiddenMs + pokemon.LastModifiedMs,
@@ -127,8 +126,8 @@ class GetMapObjectsHandler:
 
       for pokemon in cell.CatchablePokemon:
         p = Point((pokemon.Longitude, pokemon.Latitude))
-        f = Feature(geometry=p, id="catchable" + str(pokemon.EncounterId), properties={
-          "id": "catchable" + str(pokemon.EncounterId),
+        f = Feature(geometry=p, id="catchable%s" % pokemon.EncounterId, properties={
+          "id": "catchable%s"  % pokemon.EncounterId,
           "type": "catchable",
           "ExpirationTimeMs": pokemon.ExpirationTimeMs,
           "title": "Catchable %s" % Custom_PokemonName.Name(pokemon.PokedexTypeId),
@@ -152,8 +151,8 @@ class GetMapObjectsHandler:
           lat, lon = self.triangulate(self.pokeLocation[poke.EncounterId][0],self.pokeLocation[poke.EncounterId][1],self.pokeLocation[poke.EncounterId][2])
           if not math.isnan(lat) and not math.isnan(lon) :
             p = Point((lon, lat))
-            f = Feature(geometry=p, id="nearby" + str(poke.EncounterId), properties={
-              "id": "nearby" + str(poke.EncounterId),
+            f = Feature(geometry=p, id="nearby%s" % poke.EncounterId, properties={
+              "id": "nearby%s" % poke.EncounterId,
               "type": "nearby",
               "title": "Nearby %s" % Custom_PokemonName.Name(poke.PokedexNumber),
               "marker-color": "FFFFFF",
