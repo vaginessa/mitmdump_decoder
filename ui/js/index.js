@@ -26,7 +26,7 @@ var gmo = L.realtime({url: 'get_map_objects.json', type: 'json'}, autoloadOption
 
 var loaded = false;
 gmo.on('update', function(updateEvent) {
-  if(!loaded){ // && updateEvent.features.length > 0) {
+  if(!loaded && Object.keys(updateEvent.features).length > 0) {
     loaded = true;
     //Set the view after the first load
     map.fitBounds(gmo.getBounds(), {maxZoom: 16});
