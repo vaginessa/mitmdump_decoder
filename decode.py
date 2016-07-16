@@ -5,6 +5,8 @@ import sys
 import numpy
 import math
 import requests
+from collections import deque
+
 ##Make a secrets.py with bearer= and endpoint=
 try:
   from secrets import bearer, endpoint
@@ -44,7 +46,7 @@ mismatched_apis = {
   'DOWNLOAD_REMOTE_CONFIG_VERSION': 'GET_REMOTE_CONFIG_VERSIONS',
 }
 
-request_api = {} #Match responses to their requests
+methods_for_request = {}
 pokeLocation = {}
 request_location = {}
 
@@ -137,179 +139,181 @@ def request(context, flow):
   if flow.match("~d pgorelease.nianticlabs.com"):
     env = RpcRequestEnvelopeProto()
     env.ParseFromString(flow.request.content)
-    if ( len(env.parameter) == 0 ):
-      print 'Failed - empty request parameters'
-      return
-    key = env.parameter[0].key
-    value = env.parameter[0].value
+    request_location[env.request_id] = (env.lat, env.long)
 
-    request_api[env.request_id] = key
-    request_location[env.request_id] = (env.lat,env.long)
+    methods_for_request[env.request_id] = deque([])
+    for parameter in env.parameter:
+      key = parameter.key
+      value = parameter.value
+      methods_for_request[env.request_id].append(key)
 
-    name = Method.Name(key)
-    name = mismatched_apis.get(name, name) #return class name when not the same as method
-    klass = underscore_to_camelcase(name) + "Proto"
-    try:
-      mor = deserialize(value, "." + klass)
-      print("Deserialized Request %s" % name)
-    except:
-      print("Missing Request API: %s" % name)
+      name = Method.Name(key)
+      name = mismatched_apis.get(name, name) #return class name when not the same as method
+      klass = underscore_to_camelcase(name) + "Proto"
+      try:
+        mor = deserialize(value, "." + klass)
+        print("Deserialized Request %s" % name)
+      except:
+        print("Missing Request API: %s" % name)
 
-    if (key == GET_MAP_OBJECTS):
-      features = []
-      props = {
-          "id": "player",
-          "marker-symbol": "pitch",
-          "title": "You",
-          "marker-size": "large",
-          "marker-color": "663399",
-          "type": "player"
-      }
-      p = Point((mor.PlayerLng, mor.PlayerLat))
-      f = Feature(geometry=p, id="player", properties=props)
-      features.append(f)
-      fc = FeatureCollection(features)
-      dump = geojson.dumps(fc, sort_keys=True)
-      f = open('ui/player.json', 'w')
-      f.write(dump)
+      if (key == GET_MAP_OBJECTS):
+        features = []
+        props = {
+            "id": "player",
+            "marker-symbol": "pitch",
+            "title": "You",
+            "marker-size": "large",
+            "marker-color": "663399",
+            "type": "player"
+        }
+        p = Point((mor.PlayerLng, mor.PlayerLat))
+        f = Feature(geometry=p, id="player", properties=props)
+        features.append(f)
+        fc = FeatureCollection(features)
+        dump = geojson.dumps(fc, sort_keys=True)
+        f = open('ui/player.json', 'w')
+        f.write(dump)
 
 def response(context, flow):
   with decoded(flow.response):
     if flow.match("~d pgorelease.nianticlabs.com"):
       env = RpcResponseEnvelopeProto()
       env.ParseFromString(flow.response.content)
-      key = request_api[env.response_id]
-      value = env.returns[0]
 
-      name = Method.Name(key)
-      name = mismatched_apis.get(name, name) #return class name when not the same as method
-      klass = underscore_to_camelcase(name) + "OutProto"
-      try:
-        mor = deserialize(value, "." + klass)
-        print("Deserialized Response %s" % name)
-      except:
-        print("Missing Response API: %s" % name)
+      keys = methods_for_request[env.response_id]
+      for value in env.returns:
+        key = keys.popleft()
 
+        name = Method.Name(key)
+        name = mismatched_apis.get(name, name) #return class name when not the same as method
+        klass = underscore_to_camelcase(name) + "OutProto"
 
-      if (key == GET_MAP_OBJECTS):
-        features = []
-        bulk = []
-
-        for cell in mor.MapCell:
-          for fort in cell.Fort:
-
-            props = {
-                "id": fort.FortId,
-                "LastModifiedMs": fort.LastModifiedMs,
-                }
-
-            if fort.FortType == CHECKPOINT:
-              props["marker-symbol"] = "circle"
-              props["title"] = "PokéStop"
-              props["type"] = "pokestop"
-              props["lure"] = fort.HasField('FortLureInfo')
-            else:
-              props["marker-symbol"] = "town-hall"
-              props["marker-size"] = "large"
-              props["type"] = "gym"
-
-            if fort.Team == BLUE:
-              props["marker-color"] = "0000FF"
-              props["title"] = "Blue Gym"
-            elif fort.Team == RED:
-              props["marker-color"] = "FF0000"
-              props["title"] = "Red Gym"
-            elif fort.Team == YELLOW:
-              props["marker-color"] = "FF0000"
-              props["title"] = "Yellow Gym"
-            else:
-              props["marker-color"] = "808080"
-
-            p = Point((fort.Longitude, fort.Latitude))
-            f = Feature(geometry=p, id=fort.FortId, properties=props)
-            features.append(f)
-            bulk.append(createItem("gym", fort.FortId, p, f.properties))
-
-          for spawn in cell.SpawnPoint:
-            p = Point((spawn.Longitude, spawn.Latitude))
-            f = Feature(geometry=p, id=len(features), properties={
-              "type": "spawn",
-              "id": len(features),
-              "title": "spawn",
-              "marker-color": "00FF00",
-              "marker-symbol": "garden",
-              "marker-size": "small",
-              })
-            features.append(f)
-            bulk.append(createItem("spawnpoint", 0, p, f.properties))
-
-          for spawn in cell.DecimatedSpawnPoint:
-            p = Point((spawn.Longitude, spawn.Latitude))
-            f = Feature(geometry=p, id=len(features), properties={
-              "id": len(features),
-              "type": "decimatedspawn",
-              "title": "Decimated spawn",
-              "marker-color": "000000",
-              "marker-symbol": "monument"
-              })
-            features.append(f)
-
-          for pokemon in cell.WildPokemon:
-            p = Point((pokemon.Longitude, pokemon.Latitude))
-            f = Feature(geometry=p, id="wild" + str(pokemon.EncounterId), properties={
-              "id": "wild" + str(pokemon.EncounterId),
-              "type": "wild",
-              "TimeTillHiddenMs": pokemon.TimeTillHiddenMs,
-              "WillDisappear": pokemon.TimeTillHiddenMs + pokemon.LastModifiedMs,
-              "title": "Wild %s" % Custom_PokemonName.Name(pokemon.Pokemon.PokemonId),
-              "marker-color": "FF0000",
-              "marker-symbol": "suitcase"
-              })
-            features.append(f)
-            bulk.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
-
-          for pokemon in cell.CatchablePokemon:
-            p = Point((pokemon.Longitude, pokemon.Latitude))
-            f = Feature(geometry=p, id="catchable" + str(pokemon.EncounterId), properties={
-              "id": "catchable" + str(pokemon.EncounterId),
-              "type": "catchable",
-              "ExpirationTimeMs": pokemon.ExpirationTimeMs,
-              "title": "Catchable %s" % Custom_PokemonName.Name(pokemon.PokedexTypeId),
-              "marker-color": "000000",
-              "marker-symbol": "circle"
-              })
-            features.append(f)
-
-          for poke in cell.NearbyPokemon:
-            gps = request_location[env.response_id]
-            if poke.EncounterId in pokeLocation:
-              add = True
-              for loc in pokeLocation[poke.EncounterId]:
-                if gps[0] == loc[0] and gps[1] == loc[1]:
-                  add = False
-              if add:
-                pokeLocation[poke.EncounterId].append((gps[0], gps[1], poke.DistanceMeters/1000))
-            else:
-              pokeLocation[poke.EncounterId] = [(gps[0], gps[1], poke.DistanceMeters/1000)]
-            if len(pokeLocation[poke.EncounterId]) >= 3:
-              lat, lon = triangulate(pokeLocation[poke.EncounterId][0],pokeLocation[poke.EncounterId][1],pokeLocation[poke.EncounterId][2])
-              if not math.isnan(lat) and not math.isnan(lon) :
-                p = Point((lon, lat))
-                f = Feature(geometry=p, id="nearby" + str(poke.EncounterId), properties={
-                  "id": "nearby" + str(poke.EncounterId),
-                  "type": "nearby",
-                  "title": "Nearby %s" % Custom_PokemonName.Name(poke.PokedexNumber),
-                  "marker-color": "FFFFFF",
-                  "marker-symbol": "dog-park"
-                  })
-                bulk.append(createItem("pokemon", poke.EncounterId, p, f.properties))
-                features.append(f)
+        try:
+          mor = deserialize(value, "." + klass)
+          print("Deserialized Response %s" % name)
+        except:
+          print("Missing Response API: %s" % name)
 
 
-        fc = FeatureCollection(features)
-        dump = geojson.dumps(fc, sort_keys=True)
-        dumpToMap(bulk)
-        f = open('ui/get_map_objects.json', 'w')
-        f.write(dump)
+        if (key == GET_MAP_OBJECTS):
+          features = []
+          bulk = []
+
+          for cell in mor.MapCell:
+            for fort in cell.Fort:
+
+              props = {
+                  "id": fort.FortId,
+                  "LastModifiedMs": fort.LastModifiedMs,
+                  }
+
+              if fort.FortType == CHECKPOINT:
+                props["marker-symbol"] = "circle"
+                props["title"] = "PokéStop"
+                props["type"] = "pokestop"
+                props["lure"] = fort.HasField('FortLureInfo')
+              else:
+                props["marker-symbol"] = "town-hall"
+                props["marker-size"] = "large"
+                props["type"] = "gym"
+
+              if fort.Team == BLUE:
+                props["marker-color"] = "0000FF"
+                props["title"] = "Blue Gym"
+              elif fort.Team == RED:
+                props["marker-color"] = "FF0000"
+                props["title"] = "Red Gym"
+              elif fort.Team == YELLOW:
+                props["marker-color"] = "FF0000"
+                props["title"] = "Yellow Gym"
+              else:
+                props["marker-color"] = "808080"
+
+              p = Point((fort.Longitude, fort.Latitude))
+              f = Feature(geometry=p, id=fort.FortId, properties=props)
+              features.append(f)
+              bulk.append(createItem("gym", fort.FortId, p, f.properties))
+
+            for spawn in cell.SpawnPoint:
+              p = Point((spawn.Longitude, spawn.Latitude))
+              f = Feature(geometry=p, id=len(features), properties={
+                "type": "spawn",
+                "id": len(features),
+                "title": "spawn",
+                "marker-color": "00FF00",
+                "marker-symbol": "garden",
+                "marker-size": "small",
+                })
+              features.append(f)
+              bulk.append(createItem("spawnpoint", 0, p, f.properties))
+
+            for spawn in cell.DecimatedSpawnPoint:
+              p = Point((spawn.Longitude, spawn.Latitude))
+              f = Feature(geometry=p, id=len(features), properties={
+                "id": len(features),
+                "type": "decimatedspawn",
+                "title": "Decimated spawn",
+                "marker-color": "000000",
+                "marker-symbol": "monument"
+                })
+              features.append(f)
+
+            for pokemon in cell.WildPokemon:
+              p = Point((pokemon.Longitude, pokemon.Latitude))
+              f = Feature(geometry=p, id="wild" + str(pokemon.EncounterId), properties={
+                "id": "wild" + str(pokemon.EncounterId),
+                "type": "wild",
+                "TimeTillHiddenMs": pokemon.TimeTillHiddenMs,
+                "WillDisappear": pokemon.TimeTillHiddenMs + pokemon.LastModifiedMs,
+                "title": "Wild %s" % Custom_PokemonName.Name(pokemon.Pokemon.PokemonId),
+                "marker-color": "FF0000",
+                "marker-symbol": "suitcase"
+                })
+              features.append(f)
+              bulk.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
+
+            for pokemon in cell.CatchablePokemon:
+              p = Point((pokemon.Longitude, pokemon.Latitude))
+              f = Feature(geometry=p, id="catchable" + str(pokemon.EncounterId), properties={
+                "id": "catchable" + str(pokemon.EncounterId),
+                "type": "catchable",
+                "ExpirationTimeMs": pokemon.ExpirationTimeMs,
+                "title": "Catchable %s" % Custom_PokemonName.Name(pokemon.PokedexTypeId),
+                "marker-color": "000000",
+                "marker-symbol": "circle"
+                })
+              features.append(f)
+
+            for poke in cell.NearbyPokemon:
+              gps = request_location[env.response_id]
+              if poke.EncounterId in pokeLocation:
+                add = True
+                for loc in pokeLocation[poke.EncounterId]:
+                  if gps[0] == loc[0] and gps[1] == loc[1]:
+                    add = False
+                if add:
+                  pokeLocation[poke.EncounterId].append((gps[0], gps[1], poke.DistanceMeters/1000))
+              else:
+                pokeLocation[poke.EncounterId] = [(gps[0], gps[1], poke.DistanceMeters/1000)]
+              if len(pokeLocation[poke.EncounterId]) >= 3:
+                lat, lon = triangulate(pokeLocation[poke.EncounterId][0],pokeLocation[poke.EncounterId][1],pokeLocation[poke.EncounterId][2])
+                if not math.isnan(lat) and not math.isnan(lon) :
+                  p = Point((lon, lat))
+                  f = Feature(geometry=p, id="nearby" + str(poke.EncounterId), properties={
+                    "id": "nearby" + str(poke.EncounterId),
+                    "type": "nearby",
+                    "title": "Nearby %s" % Custom_PokemonName.Name(poke.PokedexNumber),
+                    "marker-color": "FFFFFF",
+                    "marker-symbol": "dog-park"
+                    })
+                  bulk.append(createItem("pokemon", poke.EncounterId, p, f.properties))
+                  features.append(f)
+
+
+          fc = FeatureCollection(features)
+          dump = geojson.dumps(fc, sort_keys=True)
+          dumpToMap(bulk)
+          f = open('ui/get_map_objects.json', 'w')
+          f.write(dump)
 
 # vim: set tabstop=2 shiftwidth=2 expandtab : #
