@@ -68,6 +68,7 @@ def request(context, flow):
     env.ParseFromString(flow.request.content)
   except Exception, e:
     print("Deserializating Envelop exception: %s" % e)
+    return
 
   context.methods_for_request[env.request_id] = deque([])
   for parameter in env.parameter:
@@ -98,6 +99,7 @@ def response(context, flow):
       env.ParseFromString(flow.response.content)
     except Exception, e:
       print("Deserializating Envelop exception: %s" % e)
+      return
 
     keys = context.methods_for_request.pop(env.response_id)
     for value in env.returns:
