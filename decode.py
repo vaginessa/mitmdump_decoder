@@ -62,8 +62,11 @@ methods_for_request = {}
 
 @concurrent
 def request(context, flow):
-  env = RpcRequestEnvelopeProto()
-  env.ParseFromString(flow.request.content)
+  try:
+    env = RpcRequestEnvelopeProto()
+    env.ParseFromString(flow.request.content)
+  except Exception, e:
+    print("Deserializating Envelop exception: %s" % e)
 
   methods_for_request[env.request_id] = deque([])
   for parameter in env.parameter:
@@ -72,7 +75,6 @@ def request(context, flow):
     methods_for_request[env.request_id].append(key)
     name = Method.Name(key)
     if (len(context.filter_methods) > 0 and name not in context.filter_methods):
-      print("Skipping method %s" % name)
       continue
 
     name = mismatched_apis.get(name, name) #return class name when not the same as method
@@ -88,15 +90,17 @@ def request(context, flow):
 
 def response(context, flow):
   with decoded(flow.response):
-    env = RpcResponseEnvelopeProto()
-    env.ParseFromString(flow.response.content)
+    try:
+      env = RpcResponseEnvelopeProto()
+      env.ParseFromString(flow.response.content)
+    except Exception, e:
+      print("Deserializating Envelop exception: %s" % e)
 
     keys = methods_for_request.pop(env.response_id)
     for value in env.returns:
       key = keys.popleft()
       name = Method.Name(key)
       if (len(context.filter_methods) > 0 and name not in context.filter_methods):
-        print("Skipping method %s" % name)
         continue
 
       name = mismatched_apis.get(name, name) #return class name when not the same as method
