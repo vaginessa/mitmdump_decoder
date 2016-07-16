@@ -53,12 +53,11 @@ def underscore_to_camelcase(value):
 
 
 def start(context, argv):
+  context.methods_for_request = {}
   context.filter_methods = argv[1:]
   print("Filter methods: %s; Empty is no filtering" % context.filter_methods)
 
 getMapObjects = GetMapObjectsHandler()
-
-methods_for_request = {}
 
 @concurrent
 def request(context, flow):
@@ -68,11 +67,11 @@ def request(context, flow):
   except Exception, e:
     print("Deserializating Envelop exception: %s" % e)
 
-  methods_for_request[env.request_id] = deque([])
+  context.methods_for_request[env.request_id] = deque([])
   for parameter in env.parameter:
     key = parameter.key
     value = parameter.value
-    methods_for_request[env.request_id].append(key)
+    context.methods_for_request[env.request_id].append(key)
     name = Method.Name(key)
     if (len(context.filter_methods) > 0 and name not in context.filter_methods):
       continue
@@ -81,7 +80,7 @@ def request(context, flow):
     klass = underscore_to_camelcase(name) + "Proto"
     try:
       mor = deserialize(value, "." + klass)
-      print("Deserialized Request %s" % name)
+      print("Deserialized Request %i: %s" % (env.request_id, name))
     except:
       print("Missing Request API: %s" % name)
 
@@ -96,7 +95,7 @@ def response(context, flow):
     except Exception, e:
       print("Deserializating Envelop exception: %s" % e)
 
-    keys = methods_for_request.pop(env.response_id)
+    keys = context.methods_for_request.pop(env.response_id)
     for value in env.returns:
       key = keys.popleft()
       name = Method.Name(key)
@@ -108,7 +107,7 @@ def response(context, flow):
 
       try:
         mor = deserialize(value, "." + klass)
-        print("Deserialized Response %s" % name)
+        print("Deserialized Response %i: %s" % (env.response_id, name))
       except:
         print("Missing Response API: %s" % name)
 
