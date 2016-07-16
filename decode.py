@@ -58,7 +58,7 @@ def createItem(t, uid, point, meta):
   data = {"type" : t,
           "uid" : uid,
           "location" : point,
-          "meta" : meta
+          "properties" : meta
   }
   return data
 
@@ -260,6 +260,7 @@ def response(context, flow):
               "id": "wild" + str(pokemon.EncounterId),
               "type": "wild",
               "TimeTillHiddenMs": pokemon.TimeTillHiddenMs,
+              "WillDisappear": pokemon.TimeTillHiddenMs + pokemon.LastModifiedMs,
               "title": "Wild %s" % Custom_PokemonName.Name(pokemon.Pokemon.PokemonId),
               "marker-color": "FF0000",
               "marker-symbol": "suitcase"
@@ -278,7 +279,6 @@ def response(context, flow):
               "marker-symbol": "circle"
               })
             features.append(f)
-            bulk.append(createItem("pokemon", pokemon.EncounterId, p, f.properties))
 
           for poke in cell.NearbyPokemon:
             gps = request_location[env.response_id]
