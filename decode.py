@@ -58,49 +58,47 @@ methods_for_request = {}
 
 @concurrent
 def request(context, flow):
-  if flow.match("~d pgorelease.nianticlabs.com"):
-    env = RpcRequestEnvelopeProto()
-    env.ParseFromString(flow.request.content)
+  env = RpcRequestEnvelopeProto()
+  env.ParseFromString(flow.request.content)
 
-    methods_for_request[env.request_id] = deque([])
-    for parameter in env.parameter:
-      key = parameter.key
-      value = parameter.value
-      methods_for_request[env.request_id].append(key)
+  methods_for_request[env.request_id] = deque([])
+  for parameter in env.parameter:
+    key = parameter.key
+    value = parameter.value
+    methods_for_request[env.request_id].append(key)
 
-      name = Method.Name(key)
-      name = mismatched_apis.get(name, name) #return class name when not the same as method
-      klass = underscore_to_camelcase(name) + "Proto"
-      try:
-        mor = deserialize(value, "." + klass)
-        print("Deserialized Request %s" % name)
-      except:
-        print("Missing Request API: %s" % name)
+    name = Method.Name(key)
+    name = mismatched_apis.get(name, name) #return class name when not the same as method
+    klass = underscore_to_camelcase(name) + "Proto"
+    try:
+      mor = deserialize(value, "." + klass)
+      print("Deserialized Request %s" % name)
+    except:
+      print("Missing Request API: %s" % name)
 
-      if (key == GET_MAP_OBJECTS):
-        getMapObjects.request(mor, env)
+    if (key == GET_MAP_OBJECTS):
+      getMapObjects.request(mor, env)
 
 def response(context, flow):
   with decoded(flow.response):
-    if flow.match("~d pgorelease.nianticlabs.com"):
-      env = RpcResponseEnvelopeProto()
-      env.ParseFromString(flow.response.content)
+    env = RpcResponseEnvelopeProto()
+    env.ParseFromString(flow.response.content)
 
-      keys = methods_for_request[env.response_id]
-      for value in env.returns:
-        key = keys.popleft()
+    keys = methods_for_request[env.response_id]
+    for value in env.returns:
+      key = keys.popleft()
 
-        name = Method.Name(key)
-        name = mismatched_apis.get(name, name) #return class name when not the same as method
-        klass = underscore_to_camelcase(name) + "OutProto"
+      name = Method.Name(key)
+      name = mismatched_apis.get(name, name) #return class name when not the same as method
+      klass = underscore_to_camelcase(name) + "OutProto"
 
-        try:
-          mor = deserialize(value, "." + klass)
-          print("Deserialized Response %s" % name)
-        except:
-          print("Missing Response API: %s" % name)
+      try:
+        mor = deserialize(value, "." + klass)
+        print("Deserialized Response %s" % name)
+      except:
+        print("Missing Response API: %s" % name)
 
-        if (key == GET_MAP_OBJECTS):
-          getMapObjects.response(mor, env)
+      if (key == GET_MAP_OBJECTS):
+        getMapObjects.response(mor, env)
 
 # vim: set tabstop=2 shiftwidth=2 expandtab : #
