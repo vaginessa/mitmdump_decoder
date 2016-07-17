@@ -88,7 +88,7 @@ class GetMapObjectsHandler:
           props["marker-color"] = "FF0000"
           props["title"] = "Red Gym"
         elif fort.Team == YELLOW:
-          props["marker-color"] = "FF0000"
+          props["marker-color"] = "FBFC5E"
           props["title"] = "Yellow Gym"
         else:
           props["marker-color"] = "808080"
@@ -235,6 +235,8 @@ class GetMapObjectsHandler:
 
     # only one case shown here
     z = numpy.sqrt(pow(DistA,2) - pow(x,2) - pow(y,2))
+    if numpy.isnan(z):
+      raise Exception("NaN z value")
 
     #triPt is an array with ECEF x,y,z of trilateration point
     triPt = P1 + x*ex + y*ey + z*ez
