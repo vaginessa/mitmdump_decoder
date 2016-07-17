@@ -27,6 +27,14 @@ class GetMapObjectsHandler:
   def __init__(self):
     self.pokeLocation = {}
     self.request_location = {}
+    self._player = geojson.dumps(FeatureCollection([]))
+    self._gmo = geojson.dumps(FeatureCollection([]))
+
+  def player(self):
+    return self._player
+
+  def get_map_objects(self):
+    return self._gmo
 
   def request(self, mor, env):
     self.request_location[env.request_id] = (env.lat, env.long)
@@ -45,6 +53,7 @@ class GetMapObjectsHandler:
     features.append(f)
     fc = FeatureCollection(features)
     dump = geojson.dumps(fc, sort_keys=True)
+    self._player = dump
     f = open('ui/player.json', 'w')
     f.write(dump)
 
