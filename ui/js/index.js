@@ -30,6 +30,11 @@ gmo.on('update', function(updateEvent) {
     loaded = true;
     //Set the view after the first load
     map.fitBounds(gmo.getBounds(), {maxZoom: 16});
+  } else {
+    if ("geolocation" in navigator){
+      //This will ask the user to use their location data.
+      map.locate({setView : true});
+    }
   }
 });
 
