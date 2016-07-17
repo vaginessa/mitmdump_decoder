@@ -93,7 +93,6 @@ def start(context, argv):
 
 getMapObjects = GetMapObjectsHandler()
 
-@concurrent
 def request(context, flow):
   if not flow.match("~u plfe"):
     return
