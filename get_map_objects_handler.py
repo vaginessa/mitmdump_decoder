@@ -1,6 +1,7 @@
 import numpy
 import math
-import requests
+# Make pokedex requests async
+from requests_futures.sessions import FuturesSession
 from geojson import GeometryCollection, Point, Feature, FeatureCollection
 import geojson
 
@@ -22,6 +23,7 @@ try:
 except:
   bearer = ""
   endpoint = ""
+requests = FuturesSession()
 
 class GetMapObjectsHandler:
   def __init__(self):
