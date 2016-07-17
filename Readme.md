@@ -33,7 +33,7 @@ pip install numpy geojson protobuf>=3.0.0a3 mitmproxy requests-futures
   * `curl -O https://bootstrap.pypa.io/get-pip.py`
   * `sudo python get-pip.py`
 * Install the needed pip packages 
-  * `sudo pip install numpy geojson protobuf>=3.0.0a3 mitmproxy requests-futures`
+  * `sudo pip install numpy geojson mitmproxy requests-futures`
 
 ## Running
 
