@@ -121,6 +121,7 @@ def request(context, flow):
     except:
       print("Missing Request API: %s" % name)
 
+    print(mor)
     if (key == GET_MAP_OBJECTS):
       getMapObjects.request(mor, env)
 
@@ -151,6 +152,7 @@ def response(context, flow):
       except:
         print("Missing Response API: %s" % name)
 
+      print(mor)
       if (key == GET_MAP_OBJECTS):
         getMapObjects.response(mor, env)
 
