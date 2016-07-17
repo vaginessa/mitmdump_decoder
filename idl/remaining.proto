@@ -649,15 +649,6 @@ message SfidaActionLogOutProto{
   repeated ActionLogEntry Log = 2;
 }
 
-
-message DownloadSettingsActionProto {
-  string Sha1 = 1;
-}
-message DownloadSettingsResponseProto {
-  string Error = 1;
-  string Sha1 = 2;
-  bytes Values = 3;
-}
 message TradingSearchProto {
   double Lat = 1;
   double Lng = 2;
